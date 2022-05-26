@@ -21,7 +21,7 @@
                    <p class="excerpt">{{ $post->excerpt }}</p>
                    <div class="meta">
                        <div><a class='date' href="#"><span class="icon-calendar"></span>  {{ $post->created_at->diffForHumans() }}</a></div>
-                       <div><a href="#"><span class="icon-user2"></span> {{ $post->author->name }}</a></div>
+                       <div><a href="#"><span class="icon-user2" title="small picture of the logo compay"></span> NewCastle-Founodation</a></div>
                         <div class="comments-count">
                             <a href="{{ route('posts.show', $post) }}#post-comments">
                                 <span class="icon-chat"></span> {{ $post->comments_count }}
