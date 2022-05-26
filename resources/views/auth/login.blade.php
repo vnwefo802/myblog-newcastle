@@ -48,7 +48,7 @@
                 @endif
 
 
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 mx-5" href="{{ route('register') }}">
                     {{ __('Register') }}
                 </a>
 
