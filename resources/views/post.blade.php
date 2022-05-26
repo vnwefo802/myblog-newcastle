@@ -1,6 +1,8 @@
 @extends('main_layouts.master')
 
 @section('title', $post->title . ' | MyBlog')
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 
 @section('custom_css')
 
@@ -112,6 +114,9 @@
 				</div>
 			</div>	
 		</div>
+
+
+
 @endsection
 
 @section('custom_js')

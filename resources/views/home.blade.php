@@ -30,6 +30,13 @@
                    </div>
                 </div>
             </div>
+
+
+
+
+
+
+            
             @empty
                 <p class='lead'>There are no posts to show.</p>
 
