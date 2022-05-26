@@ -1,5 +1,5 @@
 @extends("admin_dashboard.layouts.app")
-<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<!-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> -->
 
 		@section("wrapper")
 		<!--start page wrapper -->
@@ -144,9 +144,6 @@
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Status</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Views</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Actions</th>
-                            <td class="pr-8">
-                                <button class="w-32 px-5 py-1 text-sm text-indigo-700 transition duration-150 ease-in-out bg-gray-100 rounded opacity-0 cursor-default focus:outline-none focus:border-gray-800 focus:shadow-outline-gray hover:bg-gray-300">Start Session</button>
-                            </td>
                         </tr>
                     </thead>
                     <tbody role="rowgroup" >
@@ -175,7 +172,7 @@
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
                                 <div class="flex items-center">
                                     <a  href="{{ route('admin.posts.edit', $post) }}">
-                                        <div aria-label="Edit row" role="button" class="p-2 text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
+                                        <div aria-label="Edit row" role="button" class="w-[33px] text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
                                             <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg4.svg" alt="Edit">
                                         </div>
                                     </a>
