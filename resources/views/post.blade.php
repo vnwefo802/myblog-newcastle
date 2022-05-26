@@ -24,6 +24,14 @@
 								<div class="classes class-single">
 									<div class="classes-img" style="background-image: url({{ asset($post->image ? 'storage/' . $post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }});">
 									</div>
+                                   
+                                   <div> {{ $post->title }}</div>
+
+                                   {{-- clock goes here --}}
+                                   <div>
+                                       <span>Posted {{ $post->created_at->diffForHumans() }}</span>
+                                   </div>
+
 									<div class="desc desc2">
 										{!! $post->body !!}
 									</div>
