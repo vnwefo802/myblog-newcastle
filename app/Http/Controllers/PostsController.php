@@ -17,7 +17,7 @@ class PostsController extends Controller
 
         $tags = Tag::latest()->take(50)->get();
 
-        return view('post', [
+        return view('post.post', [
             'post' => $post,
             'recent_posts' => $recent_posts,
             'categories' => $categories,

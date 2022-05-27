@@ -8,6 +8,6 @@ class VolunteerController extends Controller
 {
     public function volunteer()
     {
-        return view('volunteer');
+        return view('volunteer.volunteer');
     }
 }
