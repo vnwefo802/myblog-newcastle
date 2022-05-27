@@ -9,7 +9,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
     <meta property="og:image" content=""/>
@@ -73,6 +73,7 @@
                         <div class="col-md-10 text-right menu-1">
                             <ul>
                                 <li><a href="{{ route('home') }}">Home</a></li>
+                                <li><a href="{{ route('blog') }}">Blog</a></li>
                                 <li class="has-dropdown">
                                     <a href="{{ route('categories.index') }}">Categories</a>
                                     <ul class="dropdown">

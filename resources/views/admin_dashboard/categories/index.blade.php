@@ -2,90 +2,6 @@
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 		@section("wrapper")
-		{{-- <!--start page wrapper -->
-		<div class="page-wrapper">
-			<div class="page-content">
-				<!--breadcrumb-->
-				<div class="mb-3 page-breadcrumb d-none d-sm-flex align-items-center">
-					<div class="breadcrumb-title pe-3">Categories</div>
-					<div class="ps-3">
-						<nav aria-label="breadcrumb">
-							<ol class="p-0 mb-0 breadcrumb">
-								<li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i class="bx bx-home-alt"></i></a>
-								</li>
-								<li class="breadcrumb-item active" aria-current="page">All Categories</li>
-							</ol>
-						</nav>
-					</div>
-				</div>
-				<!--end breadcrumb-->
-
-				<div class="card">
-					<div class="card-body">
-						<div class="gap-3 mb-4 d-lg-flex align-items-center">
-							<div class="position-relative">
-								<input type="text" class="form-control ps-5 radius-30" placeholder="Search Order"> <span class="position-absolute top-50 product-show translate-middle-y"><i class="bx bx-search"></i></span>
-							</div>
-						  <div class="ms-auto"><a href="{{ route('admin.categories.create') }}" class="mt-2 btn btn-primary radius-30 mt-lg-0"><i class="bx bxs-plus-square"></i>Add New Category</a></div>
-						</div>
-						<div class="table-responsive">
-							<table class="table mb-0">
-								<thead class="table-light">
-									<tr>
-										<th>Category#</th>
-										<th>Category Name</th>
-										<th>Creator</th>
-                                        <th>Related Posts</th>
-										<th>Created at</th>
-										<th>Actions</th>
-									</tr>
-								</thead>
-								<tbody>
-                                    @foreach($categories as $category)
-									<tr>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
-												</div>
-												<div class="ms-2">
-													<h6 class="mb-0 font-14">#P-{{ $category->id }}</h6>
-												</div>
-											</div>
-										</td>
-										<td>{{ $category->name }} </td>
-                                        <td>{{ $category->user->name }}</td>
-                                        <td>
-                                            <a class='btn btn-primary btn-sm' href="{{ route('admin.categories.show', $category) }}">Related Posts</a>
-                                        </td>
-                                        <td>{{ $category->created_at->diffForHumans() }}</td>
-                                        <td>
-											<div class="d-flex order-actions">
-												<a href="{{ route('admin.categories.edit', $category) }}" class=""><i class='bx bxs-edit'></i></a>
-												<a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $category->id }}').submit();" class="ms-3"><i class='bx bxs-trash'></i></a>
-
-                                                <form method='post' action="{{ route('admin.categories.destroy', $category) }}" id='delete_form_{{ $category->id }}'>@csrf @method('DELETE')</form>
-                                            </div>
-										</td>
-									</tr>
-                                    @endforeach
-								</tbody>
-							</table>
-						</div>
-
-                        <div class='mt-4'>
-                        {{ $categories->links() }}
-                        </div>
-
-					</div>
-				</div>
-
-
-			</div>
-		</div> --}}
-		<!--end page wrapper -->
-		{{-- @endsection --}}
-
 
 
 
@@ -93,20 +9,6 @@
     <div class="page-content">
         <div class="container mx-auto bg-white rounded shadow dark:bg-gray-800">
             <div class="flex flex-col items-start justify-between w-full p-8 lg:flex-row lg:items-stretch">
-                <div class="flex flex-col items-start w-full lg:w-1/4 xl:w-1/3 lg:flex-row lg:items-center">
-                    <div class="relative w-full mb-2 lg:mb-0 lg:mr-4">
-                        <div class="absolute inset-0 z-0 w-5 h-5 m-auto mr-2 xl:mr-4">
-                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg2.svg" alt="arrow down">
-                        </div>
-                        <select aria-label="Selected tab" class="relative z-10 block w-full px-2 py-2 text-sm text-gray-600 bg-transparent border border-gray-300 rounded appearance-none cursor-pointer focus:outline-none focus:border-gray-800 focus:shadow-outline-gray form-select xl:px-3 dark:border-gray-200 dark:text-gray-400">
-                            <option class="text-sm text-gray-600 dark:text-gray-400">Inactive</option>
-                            <option class="text-sm text-gray-600 dark:text-gray-400">Inactive</option>
-                            <option selected="" class="text-sm text-gray-600 dark:text-gray-400">Representatives</option>
-                            <option class="text-sm text-gray-600 dark:text-gray-400">Inactive</option>
-                            <option class="text-sm text-gray-600 dark:text-gray-400">Inactive</option>
-                        </select>
-                    </div>
-                </div>
                 <div class="flex flex-col items-start justify-end w-full gap-2 lg:ml-24 lg:flex-row lg:items-center">
                     <div class="flex flex-col items-start w-full lg:w-1/4 xl:w-1/3 lg:flex-row lg:items-center">
                         <div class="relative w-full mb-2 lg:mb-0">

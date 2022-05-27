@@ -6,20 +6,6 @@
     <div class="page-content">
         <div class="container mx-auto bg-white rounded shadow dark:bg-gray-800">
             <div class="flex flex-col items-start justify-between w-full p-8 lg:flex-row lg:items-stretch">
-                <div class="flex flex-col items-start w-full lg:w-1/4 xl:w-1/3 lg:flex-row lg:items-center">
-                    <div class="relative w-full mb-2 lg:mb-0 lg:mr-4">
-                        <div class="absolute inset-0 z-0 w-5 h-5 m-auto mr-2 xl:mr-4">
-                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg2.svg" alt="arrow down">
-                        </div>
-                        <select aria-label="Selected tab" class="relative z-10 block w-full px-2 py-2 text-sm text-gray-600 bg-transparent border border-gray-300 rounded appearance-none cursor-pointer focus:outline-none focus:border-gray-800 focus:shadow-outline-gray form-select xl:px-3 dark:border-gray-200 dark:text-gray-400">
-                            <option class="text-sm text-gray-600 dark:text-gray-400">Inactive</option>
-                            <option class="text-sm text-gray-600 dark:text-gray-400">Inactive</option>
-                            <option selected="" class="text-sm text-gray-600 dark:text-gray-400">Representatives</option>
-                            <option class="text-sm text-gray-600 dark:text-gray-400">Inactive</option>
-                            <option class="text-sm text-gray-600 dark:text-gray-400">Inactive</option>
-                        </select>
-                    </div>
-                </div>
                 <div class="flex flex-col items-start justify-end w-full gap-2 lg:ml-24 lg:flex-row lg:items-center">
                     <div class="flex flex-col items-start w-full lg:w-1/4 xl:w-1/3 lg:flex-row lg:items-center">
                         <div class="relative w-full mb-2 lg:mb-0">
