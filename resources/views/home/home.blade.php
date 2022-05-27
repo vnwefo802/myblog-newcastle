@@ -1,6 +1,7 @@
 @extends('main_layouts.master')
 
 @section('title', 'Home')
+{{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}">  --}}
 
 @section('content')
 
@@ -194,10 +195,10 @@
 <div class="relative pt-16">
     <div class="absolute z-0 w-full mt-4 bg-gray-100 h-72 dark:bg-gray-900"></div>
     <h2 role="heading" class="relative z-20 flex justify-center px-4 py-12 text-2xl font-semibold leading-6 text-gray-800 dark:text-white 2xl:px-20 md:px-6">OUR WEEKLY <span class="pl-2 font-bold">BLOG.</span></h2>
-    <div class="relative z-40 flex flex-col items-center justify-center w-full px-8 pt-6 sm:flex-row sm:flex-wrap sm:justify-between">
+    <div class="relative z-40 flex flex-col items-center justify-center w-full px-8 pt-6 md:flex-row sm:flex-col sm:justify-between">
         <!-- blog post one -->
         @foreach($recentPosts as $recent_post)
-        <div class="pb-8 2xl:w-auto xl:w-96 lg:w-72 md:w-56 sm:w-64 w-80 sm:pb-0 relative">
+        <div class="pb-8 2xl:w-auto xl:w-96 lg:w-72 md:w-56 sm:w-64 w-80 sm:pb-0 max-w-[380px]">
             <!-- post image -->
             <div class="relative w-full">
                 
@@ -223,12 +224,12 @@
             </div>
         </div>
         @endforeach
-        
-        <!-- more posts -->
-        <div class="flex items-center justify-center w-full mt-12">
-            <a href="/blog"><button class="px-6 py-3 font-semibold text-white bg-indigo-700 rounded hover:opacity-90 lg:text-2xl lg:px-12 lg:py-6">More Blog Posts →</button></a>
-        </div>
+    </div>    
+    <!-- more posts -->
+    <div class="flex items-center justify-center w-full mt-12">
+        <a href="/blog"><button class="px-6 py-3 font-semibold text-white bg-indigo-700 rounded hover:opacity-90 lg:text-2xl lg:px-12 lg:py-6">More Blog Posts →</button></a>
     </div>
+    
 </div>
 
 @endsection
