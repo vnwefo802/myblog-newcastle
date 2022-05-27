@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="" />
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
-    
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ asset('blog_template/css/animate.css') }}">
     <!-- Icomoon Icon Fonts-->
