@@ -200,13 +200,15 @@
         <div class="pb-8 2xl:w-auto xl:w-96 lg:w-72 md:w-56 sm:w-64 w-80 sm:pb-0">
             <!-- post image -->
             <div class="relative w-full">
-                <div class="absolute bottom-0 left-0 py-4 text-base font-medium leading-6 text-gray-800 bg-white px-7 dark:text-white">Music</div>
+                
+                {{-- <div class="absolute bottom-0 left-0 py-4 text-base font-medium leading-6 text-gray-800 bg-white px-7 dark:text-white">{{  $category->name }}</div> --}}
+
                 {{-- this is the code --}}
                 {{-- <img class="w-full" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="image of a person"  width="500" height="600"> --}}
                 <img class="w-full" src="https://i.ibb.co/6W2Yvdj/muzik.png" alt="music keyboard" />
             </div>
             <!-- post content -->
-            <p class="pt-4 text-base font-semibold leading-normal text-gray-800 lg:w-72 dark:text-white">How playing music every morning can boost your creativity?</p>
+            <p class="pt-4 text-base font-semibold leading-normal text-gray-800 lg:w-72 dark:text-white">{{$post->title}}</p>
             <!-- read more buton -->
             <a href="/blog/single-blog-post"><button class="flex items-center p-2 pt-4 text-base font-medium leading-4 text-indigo-700 xl:pt-7 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:text-indigo-600 focus:outline-none">
                 Read more
