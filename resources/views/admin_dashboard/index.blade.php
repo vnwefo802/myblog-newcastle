@@ -2,516 +2,84 @@
 @section("style")
     <link href="{{ asset('admin_dashboard_assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
 @endsection
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 @section("wrapper")
-    <div class="page-wrapper">
-        <div class="page-content">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
-                <div class="col">
-                    <div class="card radius-10 border-start border-0 border-3 border-info">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <p class="mb-0 text-secondary">Total Orders</p>
-                                    <h4 class="my-1 text-info">4805</h4>
-                                    <p class="mb-0 font-13">+2.5% from last week</p>
-                                </div>
-                                <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto"><i class='bx bxs-cart'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card radius-10 border-start border-0 border-3 border-danger">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <p class="mb-0 text-secondary">Total Revenue</p>
-                                    <h4 class="my-1 text-danger">$84,245</h4>
-                                    <p class="mb-0 font-13">+5.4% from last week</p>
-                                </div>
-                                <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto"><i class='bx bxs-wallet'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card radius-10 border-start border-0 border-3 border-success">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <p class="mb-0 text-secondary">Bounce Rate</p>
-                                    <h4 class="my-1 text-success">34.6%</h4>
-                                    <p class="mb-0 font-13">-4.5% from last week</p>
-                                </div>
-                                <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto"><i class='bx bxs-bar-chart-alt-2' ></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card radius-10 border-start border-0 border-3 border-warning">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <p class="mb-0 text-secondary">Total Customers</p>
-                                    <h4 class="my-1 text-warning">8.4K</h4>
-                                    <p class="mb-0 font-13">+8.4% from last week</p>
-                                </div>
-                                <div class="widgets-icons-2 rounded-circle bg-gradient-blooker text-white ms-auto"><i class='bx bxs-group'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--end row-->
+<a id="navbarDropdown" class="text-base leading-4 text-white cursor-pointer" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+    {{ Auth::user()->name }}<br> Alexis Enache
+</a>
 
-            <div class="row">
-                <div class="col-12 col-lg-8">
-                    <div class="card radius-10">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <h6 class="mb-0">Sales Overview</h6>
-                                </div>
-                                <div class="dropdown ms-auto">
-                                    <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="javascript:;">Action</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center ms-auto font-13 gap-2 my-3">
-                                <span class="border px-1 rounded cursor-pointer"><i class="bx bxs-circle me-1" style="color: #14abef"></i>Sales</span>
-                                <span class="border px-1 rounded cursor-pointer"><i class="bx bxs-circle me-1" style="color: #ffc107"></i>Visits</span>
-                            </div>
-                            <div class="chart-container-1">
-                                <canvas id="chart1"></canvas>
-                            </div>
-                        </div>
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-xl-3 g-0 row-group text-center border-top">
-                            <div class="col">
-                                <div class="p-3">
-                                    <h5 class="mb-0">24.15M</h5>
-                                    <small class="mb-0">Overall Visitor <span> <i class="bx bx-up-arrow-alt align-middle"></i> 2.43%</span></small>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="p-3">
-                                    <h5 class="mb-0">12:38</h5>
-                                    <small class="mb-0">Visitor Duration <span> <i class="bx bx-up-arrow-alt align-middle"></i> 12.65%</span></small>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="p-3">
-                                    <h5 class="mb-0">639.82</h5>
-                                    <small class="mb-0">Pages/Visit <span> <i class="bx bx-up-arrow-alt align-middle"></i> 5.62%</span></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="card radius-10">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <h6 class="mb-0">Trending Products</h6>
-                                </div>
-                                <div class="dropdown ms-auto">
-                                    <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="javascript:;">Action</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="chart-container-2 mt-4">
-                                <canvas id="chart2"></canvas>
-                            </div>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Jeans <span class="badge bg-success rounded-pill">25</span>
-                            </li>
-                            <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">T-Shirts <span class="badge bg-danger rounded-pill">10</span>
-                            </li>
-                            <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Shoes <span class="badge bg-primary rounded-pill">65</span>
-                            </li>
-                            <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Lingerie <span class="badge bg-warning text-dark rounded-pill">14</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!--end row-->
 
-            <div class="card radius-10">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div>
-                            <h6 class="mb-0">Recent Orders</h6>
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="container mx-auto ">
+            <div>
+                <div class="py-16 bg-indigo-500 rounded-tl rounded-tr xl:rounded-bl xl:rounded-tr-none">
+                    <div class="grid grid-cols-2 grid-rows-4 gap-1 px-8 mx-auto xl:w-5/6 xl:px-0">
+                        <!-- total posts -->
+                        <div class="relative p-6 bg-green-100 rounded shadow-lg ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="float-left w-12 h-12 mt-4 mr-2">
+                                <path d="M256 0v128h128L256 0zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM272 416h-160C103.2 416 96 408.8 96 400C96 391.2 103.2 384 112 384h160c8.836 0 16 7.162 16 16C288 408.8 280.8 416 272 416zM272 352h-160C103.2 352 96 344.8 96 336C96 327.2 103.2 320 112 320h160c8.836 0 16 7.162 16 16C288 344.8 280.8 352 272 352zM288 272C288 280.8 280.8 288 272 288h-160C103.2 288 96 280.8 96 272C96 263.2 103.2 256 112 256h160C280.8 256 288 263.2 288 272z"/>
+                            </svg>
+                            <h1 class="pt-4 font-bold leading-none text-gray-800 dark:text-gray-100">Total Posts</h1>
+                            <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $post->count() }}</h2>
                         </div>
-                        <div class="dropdown ms-auto">
-                            <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="javascript:;">Action</a>
-                                </li>
-                                <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                                </li>
-                            </ul>
+                        <!-- tags -->
+                        <div class="relative p-6 bg-pink-100 rounded shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="float-left w-12 h-12 mt-4 mr-2">
+                                <path d="M48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L418.7 226.7C443.7 251.7 443.7 292.3 418.7 317.3L285.3 450.7C260.3 475.7 219.7 475.7 194.7 450.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5V80C0 53.49 21.49 32 48 32L48 32zM112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176z"/>
+                            </svg>
+                            <h1 class="pt-4 font-bold leading-none text-gray-800 dark:text-gray-100">Tags</h1>
+                            <h2 class="m-2 ml-5 text-lg font-semibold">{{ $tag->count() }}</h2>
                         </div>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table align-middle mb-0">
-                            <thead class="table-light">
-                            <tr>
-                                <th>Product</th>
-                                <th>Photo</th>
-                                <th>Product ID</th>
-                                <th>Status</th>
-                                <th>Amount</th>
-                                <th>Date</th>
-                                <th>Shipping</th>
-                            </tr>
-                            </thead>
-                            <tbody><tr>
-                                <td>Iphone 5</td>
-                                <td><img src="{{ asset('admin_dashboard_assets/images/products/01.png') }}" class="product-img-2" alt="product img"></td>
-                                <td>#9405822</td>
-                                <td><span class="badge bg-gradient-quepal text-white shadow-sm w-100">Paid</span></td>
-                                <td>$1250.00</td>
-                                <td>03 Feb 2020</td>
-                                <td><div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-gradient-quepal" role="progressbar" style="width: 100%"></div>
-                                    </div></td>
-                            </tr>
+                        <!-- total Authers -->
+                        <div class="relative p-6 bg-purple-100 rounded shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="float-left w-12 h-12 mt-4 mr-2">
+                                <path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"/>
+                            </svg>
+                            <h1 class="pt-4 font-bold leading-none text-gray-800 dark:text-gray-100">Total Authers</h1>
+                            <h2 class="m-2 ml-5 text-lg font-semibold">12</h2>
+                        </div>
+                        <!-- today Authers -->
+                        <div class="relative p-6 bg-orange-100 rounded shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="float-left w-12 h-12 mt-4 mr-2">
+                                <path d="M496 224c-79.63 0-144 64.38-144 144s64.38 144 144 144s144-64.38 144-144S575.6 224 496 224zM544 384h-54.25C484.4 384 480 379.6 480 374.3V304c0-8.836 7.164-16 16-16c8.838 0 16 7.164 16 16v48h32c8.838 0 16 7.164 16 15.1S552.8 384 544 384zM224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM320 368c0-19.3 3.221-37.82 8.961-55.2C311.9 307.2 293.6 304 274.7 304H173.3C77.61 304 0 381.7 0 477.4C0 496.5 15.52 512 34.66 512H395C349.7 480.2 320 427.6 320 368z"/>
+                            </svg>
+                            <h1 class="pt-4 font-bold leading-none text-gray-800 dark:text-gray-100">Todays Authers</h1>
+                            <h2 class="m-2 ml-5 text-lg font-semibold">3</h2>
 
-                            <tr>
-                                <td>Earphone GL</td>
-                                <td><img src="{{ asset('admin_dashboard_assets/images/products/02.png')  }}" class="product-img-2" alt="product img"></td>
-                                <td>#8304620</td>
-                                <td><span class="badge bg-gradient-blooker text-white shadow-sm w-100">Pending</span></td>
-                                <td>$1500.00</td>
-                                <td>05 Feb 2020</td>
-                                <td><div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-gradient-blooker" role="progressbar" style="width: 60%"></div>
-                                    </div></td>
-                            </tr>
-
-                            <tr>
-                                <td>HD Hand Camera</td>
-                                <td><img src="{{ asset('admin_dashboard_assets/images/products/03.png')  }}" class="product-img-2" alt="product img"></td>
-                                <td>#4736890</td>
-                                <td><span class="badge bg-gradient-bloody text-white shadow-sm w-100">Failed</span></td>
-                                <td>$1400.00</td>
-                                <td>06 Feb 2020</td>
-                                <td><div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-gradient-bloody" role="progressbar" style="width: 70%"></div>
-                                    </div></td>
-                            </tr>
-
-                            <tr>
-                                <td>Clasic Shoes</td>
-                                <td><img src="{{ asset('admin_dashboard_assets/images/products/04.png')  }}" class="product-img-2" alt="product img"></td>
-                                <td>#8543765</td>
-                                <td><span class="badge bg-gradient-quepal text-white shadow-sm w-100">Paid</span></td>
-                                <td>$1200.00</td>
-                                <td>14 Feb 2020</td>
-                                <td><div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-gradient-quepal" role="progressbar" style="width: 100%"></div>
-                                    </div></td>
-                            </tr>
-                            <tr>
-                                <td>Sitting Chair</td>
-                                <td><img src="{{ asset('admin_dashboard_assets/images/products/06.png')  }}" class="product-img-2" alt="product img"></td>
-                                <td>#9629240</td>
-                                <td><span class="badge bg-gradient-blooker text-white shadow-sm w-100">Pending</span></td>
-                                <td>$1500.00</td>
-                                <td>18 Feb 2020</td>
-                                <td><div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-gradient-blooker" role="progressbar" style="width: 60%"></div>
-                                    </div></td>
-                            </tr>
-                            <tr>
-                                <td>Hand Watch</td>
-                                <td><img src="{{ asset('admin_dashboard_assets/images/products/05.png')  }}" class="product-img-2" alt="product img"></td>
-                                <td>#8506790</td>
-                                <td><span class="badge bg-gradient-bloody text-white shadow-sm w-100">Failed</span></td>
-                                <td>$1800.00</td>
-                                <td>21 Feb 2020</td>
-                                <td><div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-gradient-bloody" role="progressbar" style="width: 40%"></div>
-                                    </div></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        </div>
+                        <!-- pending posts -->
+                        <div class="relative p-6 bg-teal-100 rounded shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class='float-left w-12 h-12 mt-4 mr-2'>
+                                <path d="M256 31.1c-141.4 0-255.1 93.12-255.1 208c0 49.62 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734c1.249 3 4.021 4.766 7.271 4.766c66.25 0 115.1-31.76 140.6-51.39c32.63 12.25 69.02 19.39 107.4 19.39c141.4 0 255.1-93.13 255.1-207.1S397.4 31.1 256 31.1zM127.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S145.7 271.1 127.1 271.1zM256 271.1c-17.75 0-31.1-14.25-31.1-31.1s14.25-32 31.1-32s31.1 14.25 31.1 32S273.8 271.1 256 271.1zM383.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S401.7 271.1 383.1 271.1z"/>
+                            </svg>
+                            <h1 class="pt-4 font-bold leading-none text-gray-800 dark:text-gray-100">Pending Post</h1>
+                            <h2 class="m-2 ml-5 text-lg font-semibold">2</h2>
+                        </div>
+                        <!-- categories -->
+                        <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
+                                <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
+                            </svg>
+                            <h1 class="pt-4 font-bold leading-none text-gray-800 dark:text-gray-100">Categories</h1>
+                            <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $Categories->count() }}</h2>
+                        </div>
+                        <!-- page settings -->
+                        <div class="relative col-span-2 p-6 rounded shadow-lg bg-slate-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-12 h-12 mt-4 mr-2">
+                                <path d="M495.9 166.6C499.2 175.2 496.4 184.9 489.6 191.2L446.3 230.6C447.4 238.9 448 247.4 448 256C448 264.6 447.4 273.1 446.3 281.4L489.6 320.8C496.4 327.1 499.2 336.8 495.9 345.4C491.5 357.3 486.2 368.8 480.2 379.7L475.5 387.8C468.9 398.8 461.5 409.2 453.4 419.1C447.4 426.2 437.7 428.7 428.9 425.9L373.2 408.1C359.8 418.4 344.1 427 329.2 433.6L316.7 490.7C314.7 499.7 307.7 506.1 298.5 508.5C284.7 510.8 270.5 512 255.1 512C241.5 512 227.3 510.8 213.5 508.5C204.3 506.1 197.3 499.7 195.3 490.7L182.8 433.6C167 427 152.2 418.4 138.8 408.1L83.14 425.9C74.3 428.7 64.55 426.2 58.63 419.1C50.52 409.2 43.12 398.8 36.52 387.8L31.84 379.7C25.77 368.8 20.49 357.3 16.06 345.4C12.82 336.8 15.55 327.1 22.41 320.8L65.67 281.4C64.57 273.1 64 264.6 64 256C64 247.4 64.57 238.9 65.67 230.6L22.41 191.2C15.55 184.9 12.82 175.3 16.06 166.6C20.49 154.7 25.78 143.2 31.84 132.3L36.51 124.2C43.12 113.2 50.52 102.8 58.63 92.95C64.55 85.8 74.3 83.32 83.14 86.14L138.8 103.9C152.2 93.56 167 84.96 182.8 78.43L195.3 21.33C197.3 12.25 204.3 5.04 213.5 3.51C227.3 1.201 241.5 0 256 0C270.5 0 284.7 1.201 298.5 3.51C307.7 5.04 314.7 12.25 316.7 21.33L329.2 78.43C344.1 84.96 359.8 93.56 373.2 103.9L428.9 86.14C437.7 83.32 447.4 85.8 453.4 92.95C461.5 102.8 468.9 113.2 475.5 124.2L480.2 132.3C486.2 143.2 491.5 154.7 495.9 166.6V166.6zM256 336C300.2 336 336 300.2 336 255.1C336 211.8 300.2 175.1 256 175.1C211.8 175.1 176 211.8 176 255.1C176 300.2 211.8 336 256 336z"/>
+                            </svg>
+                            <h1 class="pt-4 font-bold leading-none text-gray-800 dark:text-gray-100">Page Setting</h1>
+                            <h2 class="m-2 ml-5 text-lg font-semibold">23</h2>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-            <div class="row">
-                <div class="col-12 col-lg-7 col-xl-8 d-flex">
-                    <div class="card radius-10 w-100">
-                        <div class="card-header bg-transparent">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <h6 class="mb-0">Recent Orders</h6>
-                                </div>
-                                <div class="dropdown ms-auto">
-                                    <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="javascript:;">Action</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-7 col-xl-8 border-end">
-                                    <div id="geographic-map-2"></div>
-                                </div>
-                                <div class="col-lg-5 col-xl-4">
-
-                                    <div class="mb-4">
-                                        <p class="mb-2"><i class="flag-icon flag-icon-us me-1"></i> USA <span class="float-end">70%</span></p>
-                                        <div class="progress" style="height: 7px;">
-                                            <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 70%"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <p class="mb-2"><i class="flag-icon flag-icon-ca me-1"></i> Canada <span class="float-end">65%</span></p>
-                                        <div class="progress" style="height: 7px;">
-                                            <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 65%"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <p class="mb-2"><i class="flag-icon flag-icon-gb me-1"></i> England <span class="float-end">60%</span></p>
-                                        <div class="progress" style="height: 7px;">
-                                            <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 60%"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <p class="mb-2"><i class="flag-icon flag-icon-au me-1"></i> Australia <span class="float-end">55%</span></p>
-                                        <div class="progress" style="height: 7px;">
-                                            <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 55%"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <p class="mb-2"><i class="flag-icon flag-icon-in me-1"></i> India <span class="float-end">50%</span></p>
-                                        <div class="progress" style="height: 7px;">
-                                            <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="width: 50%"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-0">
-                                        <p class="mb-2"><i class="flag-icon flag-icon-cn me-1"></i> China <span class="float-end">45%</span></p>
-                                        <div class="progress" style="height: 7px;">
-                                            <div class="progress-bar bg-dark progress-bar-striped" role="progressbar" style="width: 45%"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-5 col-xl-4 d-flex">
-                    <div class="card w-100 radius-10">
-                        <div class="card-body">
-                            <div class="card radius-10 border shadow-none">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <p class="mb-0 text-secondary">Total Likes</p>
-                                            <h4 class="my-1">45.6M</h4>
-                                            <p class="mb-0 font-13">+6.2% from last week</p>
-                                        </div>
-                                        <div class="widgets-icons-2 bg-gradient-cosmic text-white ms-auto"><i class='bx bxs-heart-circle'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card radius-10 border shadow-none">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <p class="mb-0 text-secondary">Comments</p>
-                                            <h4 class="my-1">25.6K</h4>
-                                            <p class="mb-0 font-13">+3.7% from last week</p>
-                                        </div>
-                                        <div class="widgets-icons-2 bg-gradient-ibiza text-white ms-auto"><i class='bx bxs-comment-detail'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card radius-10 mb-0 border shadow-none">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <p class="mb-0 text-secondary">Total Shares</p>
-                                            <h4 class="my-1">85.4M</h4>
-                                            <p class="mb-0 font-13">+4.6% from last week</p>
-                                        </div>
-                                        <div class="widgets-icons-2 bg-gradient-moonlit text-white ms-auto"><i class='bx bxs-share-alt'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div><!--end row-->
-
-            <div class="row row-cols-1 row-cols-lg-3">
-                <div class="col d-flex">
-                    <div class="card radius-10 w-100">
-                        <div class="card-body">
-                            <p class="font-weight-bold mb-1 text-secondary">Weekly Revenue</p>
-                            <div class="d-flex align-items-center mb-4">
-                                <div>
-                                    <h4 class="mb-0">$89,540</h4>
-                                </div>
-                                <div class="">
-                                    <p class="mb-0 align-self-center font-weight-bold text-success ms-2">4.4% <i class="bx bxs-up-arrow-alt mr-2"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="chart-container-0">
-                                <canvas id="chart3"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col d-flex">
-                    <div class="card radius-10 w-100">
-                        <div class="card-header bg-transparent">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <h6 class="mb-0">Orders Summary</h6>
-                                </div>
-                                <div class="dropdown ms-auto">
-                                    <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="javascript:;">Action</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="chart-container-1">
-                                <canvas id="chart4"></canvas>
-                            </div>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Completed <span class="badge bg-gradient-quepal rounded-pill">25</span>
-                            </li>
-                            <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Pending <span class="badge bg-gradient-ibiza rounded-pill">10</span>
-                            </li>
-                            <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Process <span class="badge bg-gradient-deepblue rounded-pill">65</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col d-flex">
-                    <div class="card radius-10 w-100">
-                        <div class="card-header bg-transparent">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <h6 class="mb-0">Top Selling Categories</h6>
-                                </div>
-                                <div class="dropdown ms-auto">
-                                    <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="javascript:;">Action</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="chart-container-0">
-                                <canvas id="chart5"></canvas>
-                            </div>
-                        </div>
-                        <div class="row row-group border-top g-0">
-                            <div class="col">
-                                <div class="p-3 text-center">
-                                    <h4 class="mb-0 text-danger">$45,216</h4>
-                                    <p class="mb-0">Clothing</p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="p-3 text-center">
-                                    <h4 class="mb-0 text-success">$68,154</h4>
-                                    <p class="mb-0">Electronic</p>
-                                </div>
-                            </div>
-                        </div><!--end row-->
-                    </div>
-                </div>
-            </div><!--end row-->
-
         </div>
     </div>
+</div>
+
 @endsection
 
 @section("script")
