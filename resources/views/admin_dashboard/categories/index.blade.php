@@ -89,9 +89,8 @@
 
 
 
-
-        All Categories
-
+<div class="page-wrapper">
+    <div class="page-content">
         <div class="container mx-auto bg-white rounded shadow dark:bg-gray-800">
             <div class="flex flex-col items-start justify-between w-full p-8 lg:flex-row lg:items-stretch">
                 <div class="flex flex-col items-start w-full lg:w-1/4 xl:w-1/3 lg:flex-row lg:items-center">
@@ -145,20 +144,14 @@
                     </thead>
                     <tbody role="rowgroup" >
                         @foreach ($categories as $category)
-
                         <tr role="row" class="h-24 transition duration-150 ease-in-out border-t border-b border-gray-300 cursor-pointer hover:border-indigo-300 hover:shadow-md">
                             <td class="pl-8 pr-6 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">{{$category->id}}</td>
-
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $category->user->name }}</td>
                             <td class="pr-6">
-
                                 {{$category->name}}
                             </td>
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $category->created_at->diffForHumans() }}</td>
-
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">  <a class='btn btn-primary btn-sm' href="{{ route('admin.categories.show', $category) }}">Related Posts</a></td>
-
-
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
                                 <div class="flex items-center">
                                     <a  href="{{ route('admin.categories.edit', $category) }}">
@@ -174,16 +167,12 @@
                                             </div>
                                         </button>
                                     </a>
-
                                     {{-- Delete --}}
                                     <form method='post' action="{{ route('admin.categories.destroy', $category) }}" id='delete_form_{{ $category->id }}'>@csrf @method('DELETE')</form>
-
-
                                 </div>
                             </td>
                         </tr>
                         @endforeach
-
                     </tbody>
                 </table>
             </div>
@@ -204,21 +193,22 @@
             <input placeholder="0" id="totalPage" type="text" class="flex items-center w-10 px-2 mr-2 text-base font-normal text-gray-800 bg-white border border-gray-300 rounded dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:shadow-outline-gray focus:border focus:border-indigo-700" value="30" />
             <p class="-mt-1 text-base text-gray-800 dark:text-gray-100 fot-normal">per page</p>
         </div>
+    </div>
+</div>
+
+@endsection
 
 
-		@endsection
+@section("script")
 
+<script>
+    $(document).ready(function () {
 
-    @section("script")
+        setTimeout(() => {
+            $(".general-message").fadeOut();
+        }, 5000);
 
-    <script>
-        $(document).ready(function () {
+    });
 
-            setTimeout(() => {
-                $(".general-message").fadeOut();
-            }, 5000);
-
-        });
-
-    </script>
-    @endsection
+</script>
+@endsection
