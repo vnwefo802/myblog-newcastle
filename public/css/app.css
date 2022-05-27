@@ -629,6 +629,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[26px\] {
   height: 26px;
 }
+.h-3 {
+  height: 0.75rem;
+}
+.h-\[38px\] {
+  height: 38px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -679,6 +685,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[26px\] {
   width: 26px;
+}
+.w-\[162px\] {
+  width: 162px;
+}
+.w-\[50px\] {
+  width: 50px;
+}
+.w-\[100px\] {
+  width: 100px;
+}
+.w-\[95px\] {
+  width: 95px;
+}
+.w-\[90px\] {
+  width: 90px;
 }
 .min-w-full {
   min-width: 100%;
@@ -844,6 +865,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-blue-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+}
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
@@ -894,6 +923,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-indigo-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
+}
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 .fill-current {
   fill: currentColor;
@@ -1232,6 +1265,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -1263,6 +1300,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:border:focus {
   border-width: 1px;
 }
+.focus\:border-2:focus {
+  border-width: 2px;
+}
 .focus\:border-indigo-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(165 180 252 / var(--tw-border-opacity));
@@ -1286,6 +1326,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:border-blue-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(147 197 253 / var(--tw-border-opacity));
+}
+.focus\:border-blue-900:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 58 138 / var(--tw-border-opacity));
 }
 .focus\:bg-gray-100:focus {
   --tw-bg-opacity: 1;
