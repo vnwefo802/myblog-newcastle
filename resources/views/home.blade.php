@@ -208,7 +208,9 @@
                 {{-- <img class="w-full" src="https://i.ibb.co/6W2Yvdj/muzik.png" alt="music keyboard" /> --}}
             </div>
             <!-- post content -->
-            <p class="pt-4 text-base font-semibold leading-normal text-gray-800 lg:w-72 dark:text-white">{{$post->title}}</p>
+            <p class="pt-4 text-base font-semibold leading-normal text-gray-800 lg:w-72 dark:text-white"> <a href="{{ route('posts.show', $recent_post) }}">
+                {{ \Str::limit( $recent_post->title, 20) }}
+                </a></p>
             <!-- read more buton -->
             <a href="/blog/single-blog-post"><button class="flex items-center p-2 pt-4 text-base font-medium leading-4 text-indigo-700 xl:pt-7 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:text-indigo-600 focus:outline-none">
                 Read more
