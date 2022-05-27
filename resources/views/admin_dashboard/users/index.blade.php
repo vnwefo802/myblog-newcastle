@@ -1,7 +1,7 @@
 @extends("admin_dashboard.layouts.app")
 		
 		@section("wrapper")
-		<!--start page wrapper -->
+	{{	<!--start page wrapper -->
 		<div class="page-wrapper">
 			<div class="page-content">
 				<!--breadcrumb-->
@@ -87,7 +87,7 @@
 
 
 			</div>
-		</div>
+		</div>-}}
 		<!--end page wrapper -->
 		@endsection
 	

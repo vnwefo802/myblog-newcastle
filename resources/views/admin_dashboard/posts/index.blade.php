@@ -92,7 +92,8 @@
 
 
 
-
+<div class="page-wrapper">
+    <div class="page-content">
         <div class="container mx-auto bg-white rounded shadow dark:bg-gray-800">
             <div class="flex flex-col items-start justify-between w-full p-8 lg:flex-row lg:items-stretch">
                 <div class="flex flex-col items-start w-full lg:w-1/4 xl:w-1/3 lg:flex-row lg:items-center">
@@ -172,15 +173,15 @@
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
                                 <div class="flex items-center">
                                     <a  href="{{ route('admin.posts.edit', $post) }}">
-                                        <div aria-label="Edit row" role="button" class="w-[33px] text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
-                                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg4.svg" alt="Edit">
+                                        <div aria-label="Edit row" role="button" class="w-[26px] h-[26px] text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
+                                            <img class="w-[25px] h-[25px]" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg4.svg" alt="Edit">
                                         </div>
                                     </a>
 
                                     <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $post->id }}').submit();" >
-                                        <button type="submit"class="border border-transparent rounded focus:outline-none focus:border-gray-800 focus:shadow-outline-gray" href="javascript: void(0)">
-                                            <div aria-label="Delete" role="button" class="p-2 text-red-500 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
-                                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
+                                        <button type="submit"class="w-[26px] h-[26px]" href="javascript: void(0)">
+                                            <div aria-label="Delete" role="button" class="w-[26px] h-[26px] mt-1 text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
+                                                    <img class="w-[25px] h-[25px]" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
                                             </div>
                                         </button>
                                     </a>
@@ -214,21 +215,22 @@
             <input placeholder="0" id="totalPage" type="text" class="flex items-center w-10 px-2 mr-2 text-base font-normal text-gray-800 bg-white border border-gray-300 rounded dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:shadow-outline-gray focus:border focus:border-indigo-700" value="30" />
             <p class="-mt-1 text-base text-gray-800 dark:text-gray-100 fot-normal">per page</p>
         </div>
+    </div>
+</div>
+<!--end page wrapper -->
+@endsection
 
-		<!--end page wrapper -->
-		@endsection
 
+@section("script")
 
-    @section("script")
+<script>
+$(document).ready(function () {
 
-    <script>
-        $(document).ready(function () {
+    setTimeout(() => {
+        $(".general-message").fadeOut();
+    }, 5000);
 
-            setTimeout(() => {
-                $(".general-message").fadeOut();
-            }, 5000);
+});
 
-        });
-
-    </script>
-    @endsection
+</script>
+@endsection
