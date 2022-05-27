@@ -16,7 +16,7 @@ class HomeController extends Controller
         $category = Category::findOrFail(1);
         // $category = Category::orderBy('id', 'DESC');
         $recentPosts = Post::latest()->take(3)->get();
-        return view('home', compact('recentPosts', 'post', 'category'));
+        return view('home.home', compact('recentPosts', 'post', 'category'));
 
     }
 }
