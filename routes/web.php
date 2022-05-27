@@ -30,11 +30,21 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\VolunteerController;
+use App\Http\Controllers\DonateController;
+use App\Http\Controllers\BlogController;
 
 
 // Front User Routes
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('/volunteer', [VolunteerController::class, 'volunteer'])->name('volunteer');
+Route::get('/donate', [DonateController::class, 'donate'])->name('donate');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+
+
 
 Route::get('/posts/{post:slug}', [PostsController::class, 'show'])->name('posts.show');
 Route::post('/posts/{post:slug}', [PostsController::class, 'addComment'])->name('posts.add_comment');
