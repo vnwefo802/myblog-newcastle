@@ -603,6 +603,10 @@
                     "type": "custom"
                 },
                 {
+                    "url": "https://fruitcake.nl",
+                    "type": "custom"
+                },
+                {
                     "url": "https://github.com/barryvdh",
                     "type": "github"
                 }
@@ -729,6 +733,11 @@
                     "homepage": "https://github.com/GrahamCampbell"
                 },
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
@@ -834,6 +843,11 @@
                     "homepage": "https://github.com/GrahamCampbell"
                 },
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
@@ -920,6 +934,11 @@
                 "MIT"
             ],
             "authors": [{
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
