@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
         // Create roles and users
         \App\Models\Role::factory(1)->create();
         \App\Models\Role::factory(1)->create(['name' => 'admin']);
-        
+
         $blog_routes = Route::getRoutes();
         $permissions_ids = [];
         foreach($blog_routes as $route)
@@ -42,12 +42,12 @@ class DatabaseSeeder extends Seeder
                 $permissions_ids[] = $permission->id;
             }
         }
-        
+
         \App\Models\Role::where('name', 'admin')->first()->permissions()->sync( $permissions_ids );
 
         $users = \App\Models\User::factory(10)->create();
         \App\Models\User::factory()->create([
-            'name' => 'ahmed',
+            'name' => 'newcastle-foundation',
             'email' => 'newcastle-foundation@gmail.com',
             'role_id' => 2
         ]);
@@ -58,13 +58,13 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Category::factory(10)->create();
         \App\Models\Category::factory()->create(['name' => 'Uncategorized']);
-        
+
         $posts = \App\Models\Post::factory(50)->create();
-        
+
         \App\Models\Comment::factory(100)->create();
 
         \App\Models\Tag::factory(10)->create();
-        
+
         foreach($posts as $post)
         {
             $tags_ids = [];

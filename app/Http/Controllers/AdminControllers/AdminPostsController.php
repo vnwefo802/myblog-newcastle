@@ -33,7 +33,7 @@ class AdminPostsController extends Controller
             'categories' => Category::pluck('name', 'id')
         ]);
     }
-    
+
     public function store(Request $request)
     {
         $validated = $request->validate($this->rules);
@@ -60,9 +60,19 @@ class AdminPostsController extends Controller
             $tag_ob = Tag::create(['name' => trim($tag)]);
             $tags_ids[] = $tag_ob->id;
         }
-        
+
         if(count($tags_ids) > 0)
             $post->tags()->sync( $tags_ids );
+
+                // approve posts
+            // if(isset($request->status))
+            // {
+            //     $post->status = true;
+            // }else {
+            //     $post->status = false;
+            // }
+            // $post->is_approved = true;
+            // $post->save();  //end approv posts
 
         return redirect()->route('admin.posts.create')->with('success', 'Post has been created.');
     }
@@ -71,7 +81,7 @@ class AdminPostsController extends Controller
     {
         //
     }
-    
+
     public function edit(Post $post)
     {
         $tags = '';
@@ -81,19 +91,19 @@ class AdminPostsController extends Controller
             if($key !== count($post->tags) - 1)
                 $tags .= ', ';
         }
-        
+
         return view('admin_dashboard.posts.edit', [
             'post' => $post,
             'tags' => $tags,
             'categories' => Category::pluck('name', 'id')
         ]);
     }
-    
+
     public function update(Request $request, Post $post)
     {
         $this->rules['thumbnail'] = 'nullable|file|mimes:jpg,png,webp,svg,jpeg|dimensions:max_width=800,max_height=300';
         $validated = $request->validate($this->rules);
-        
+
         $post->update($validated);
 
         if($request->has('thumbnail'))
@@ -120,13 +130,41 @@ class AdminPostsController extends Controller
                 $tags_ids[] = $tag_ob->id;
             }
         }
-        
+
         if(count($tags_ids) > 0)
             $post->tags()->syncWithoutDetaching( $tags_ids );
-        
+
+        // approve posts
+        //     if(isset($request->status))
+        // {
+        //     $post->status = true;
+        // }else {
+        //     $post->status = false;
+        // }
+        // $post->is_approved = true;
+        // $post->save();  // approve posts end
 
         return redirect()->route('admin.posts.edit', $post)->with('success', 'Post has been updated.');
     }
+
+
+
+    // approvel posts pending
+    // public function approval($id)
+    // {
+    //     $post = Post::find($id);
+    //     if ($post->is_approved == false)
+    //     {
+    //         $post->is_approved = true;
+    //         $post->save();
+
+            // Toastr::success('success','Post Successfully Approved :)');
+        // }
+        // else {
+        //     Toastr::info('This Post is already approved','Info');
+        // }
+    //     return redirect()->back()->with('success','Post Successfully Approved :)');
+    // }
 
     public function destroy(Post $post)
     {
