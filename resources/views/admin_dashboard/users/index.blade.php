@@ -1,5 +1,5 @@
 @extends("admin_dashboard.layouts.app")
-		
+
 		@section("wrapper")
 <div class="page-wrapper">
     <div class="page-content">
@@ -44,21 +44,21 @@
 					@foreach($users as $user)
 
                         <tr role="row" class="h-24 transition duration-150 ease-in-out border-t border-b border-gray-300 cursor-pointer hover:border-indigo-300 hover:shadow-md">
-                            <td class="pl-8 pr-6 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $user->id }}</td>
+                            <td class="pl-8 pr-6 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap ">{{ $user->id }}</td>
 							<td>
 								<img class="w-[50px]" src="{{ $user->image ? asset('storage/' . $user->image->path) : asset('storage/placeholders/user_placeholder.jpg') }}">
 							</td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $user->name }} </td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $user->email }}</td>
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ \Str::limit($user->name, 15) }} </td>
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ \Str::limit($user->email, 25) }}</td>
 
 
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $user->role->name }}</td>
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ $user->role->name }}</td>
 							<td>
 								<a class='w-[100px] p-2 bg-blue-500 text-white border-2 border-blue-500 hover:bg-blue-700 focus:border-blue-900' href="{{ route('admin.users.show', $user) }}">Related Posts</a>
 							</td>
 							<td>{{ $user->created_at->diffForHumans() }}</td>
 
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">
                                 <div class="flex items-center">
                                     <a  href="{{ route('admin.users.edit', $user) }}">
                                         <div aria-label="Edit row" role="button" class="w-[26px] h-[26px] text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
@@ -91,13 +91,13 @@
 </div>
 		<!--end page wrapper -->
 		@endsection
-	
+
 
     @section("script")
 
     <script>
         $(document).ready(function () {
-        
+
             setTimeout(() => {
                 $(".general-message").fadeOut();
             }, 5000);

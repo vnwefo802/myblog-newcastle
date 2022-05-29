@@ -1,5 +1,5 @@
 @extends("admin_dashboard.layouts.app")
-		
+
 		@section("wrapper")
 <div class="page-wrapper">
     <div class="page-content">
@@ -42,15 +42,15 @@
 					@foreach($comments as $comment)
 
                         <tr role="row" class="h-24 transition duration-150 ease-in-out border-t border-b border-gray-300 cursor-pointer hover:border-indigo-300 hover:shadow-md">
-                            <td class="pl-8 pr-6 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $comment->id }}</td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $comment->user->name }}  </td>
+                            <td class="pl-8 pr-6 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap ">{{ $comment->id }}</td>
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ $comment->user->name }}  </td>
 							<td>{{ \Str::limit($comment->the_comment, 60) }} </td>
-                        
+
 							<td>
 								<a class='w-[90px] py-2 bg-blue-500 text-white hover:bg-blue-700' href="{{ route('posts.show', $comment->post->slug) }}#comment_{{ $comment->id }}">Related Posts</a>
 							</td>
 							<td>{{ $comment->created_at->diffForHumans() }}</td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">
 								<div class="flex items-center">
                                     <a  href="{{ route('admin.comments.edit', $comment) }}">
                                         <div aria-label="Edit row" role="button" class="p-2 text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
@@ -80,13 +80,13 @@
 </div>
 		<!--end page wrapper -->
 		@endsection
-	
+
 
     @section("script")
 
     <script>
         $(document).ready(function () {
-        
+
             setTimeout(() => {
                 $(".general-message").fadeOut();
             }, 5000);

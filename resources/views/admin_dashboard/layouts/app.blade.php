@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/semi-dark.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/header-colors.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/my_style.css') }}" />
-    <title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
+    <title>NewCastle-Founodation</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 </head>
@@ -59,7 +59,7 @@
 		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
 		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2022. All right reserved.</p>
+			<p class="mb-0">    Copyright &copy; <?php echo date('Y'); ?> {{ config('app.name', 'NewCastle-Founodation') }}. All Rights Reserved</p>
 		</footer>
 	</div>
 	<!--end wrapper-->

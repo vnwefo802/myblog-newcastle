@@ -4,9 +4,9 @@
     <h3 class="sidebar-heading">Recent Blog</h3>
     @foreach($recentPosts as $recent_post)
     <div class="f-blog">
-        <a 
-        href="{{ route('posts.show', $recent_post) }}" 
-        class="blog-img" 
+        <a
+        href="{{ route('posts.show', $recent_post) }}"
+        class="blog-img"
         style="background-image: url({{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }});">
         </a>
         <div class="desc">
@@ -16,7 +16,7 @@
                 {{ \Str::limit( $recent_post->title, 20) }}
                 </a>
             </h2>
-            <p>{{ \Str::limit($recent_post->excerpt, 50) }}</p>
+            <p>{{ \Str::limit($recent_post->excerpt, 20) }}</p>
         </div>
     </div>
     @endforeach

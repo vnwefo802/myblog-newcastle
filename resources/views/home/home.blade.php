@@ -1,9 +1,9 @@
-@extends('main_layouts.master')
+@extends('layouts.app')
+
 
 @section('title', 'Home')
-{{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}">  --}}
-
 @section('content')
+
 
 <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
     <div class="relative z-40 flex flex-col items-center justify-center max-w-2xl py-10 md:py-32">
@@ -201,11 +201,11 @@
         <div class="pb-8 2xl:w-auto xl:w-96 lg:w-72 md:w-56 sm:w-64 w-80 sm:pb-0 max-w-[380px]">
             <!-- post image -->
             <div class="relative w-full">
-                
+
                 {{-- <div class="absolute bottom-0 left-0 py-4 text-base font-medium leading-6 text-gray-800 bg-white px-7 dark:text-white">{{  $category->name }}</div> --}}
 
                 {{-- this is the code --}}
-                 <img class="w-full max-w-[500px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="image of a person"  width="500" height="600"> 
+                 <img class="w-full max-w-[500px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="image of a person"  width="500" height="600">
                 {{-- <img class="w-full" src="https://i.ibb.co/6W2Yvdj/muzik.png" alt="music keyboard" /> --}}
             </div>
             <!-- post content -->
@@ -224,12 +224,12 @@
             </div>
         </div>
         @endforeach
-    </div>    
+    </div>
     <!-- more posts -->
     <div class="flex items-center justify-center w-full mt-12">
         <a href="/blog"><button class="px-6 py-3 font-semibold text-white bg-indigo-700 rounded hover:opacity-90 lg:text-2xl lg:px-12 lg:py-6">More Blog Posts →</button></a>
     </div>
-    
+
 </div>
 
 @endsection
