@@ -31,7 +31,7 @@
                         </li>
                         <li> <a href="{{ route('admin.posts.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Post</a>
                         </li>
-                        
+
                     </ul>
                 </li>
 
@@ -47,7 +47,7 @@
                         </li>
                         <li> <a href="{{ route('admin.categories.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Category</a>
                         </li>
-                        
+
                     </ul>
                 </li>
 
@@ -70,7 +70,7 @@
                         </li>
                         <li> <a href="{{ route('admin.comments.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Comment</a>
                         </li>
-                        
+
                     </ul>
                 </li>
 
@@ -88,10 +88,10 @@
                         </li>
                         <li> <a href="{{ route('admin.roles.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Role</a>
                         </li>
-                        
+
                     </ul>
-                </li>    
-                
+                </li>
+
                 <li>
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class='bx bx-user'></i>
@@ -104,9 +104,9 @@
                         </li>
                         <li> <a href="{{ route('admin.users.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New User</a>
                         </li>
-                        
+
                     </ul>
-                </li>    
+                </li>
 
 
                 <li>
@@ -124,7 +124,7 @@
                 </li>
 
                 <hr>
-                
+
                 <li>
                     <a target='_blank' href="{{ route('home') }}">
                     <div class="parent-icon"><i class='bx bx-pointer'></i></div>

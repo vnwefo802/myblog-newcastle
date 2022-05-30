@@ -47,14 +47,14 @@
                     <tbody role="rowgroup" >
                         @foreach ($categories as $category)
                         <tr role="row" class="h-24 transition duration-150 ease-in-out border-t border-b border-gray-300 cursor-pointer hover:border-indigo-300 hover:shadow-md">
-                            <td class="pl-8 pr-6 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">{{$category->id}}</td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $category->user->name }}</td>
+                            <td class="pl-8 pr-6 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap ">{{$category->id}}</td>
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ $category->user->name }}</td>
                             <td class="pr-6">
                                 {{$category->name}}
                             </td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">{{ $category->created_at->diffForHumans() }}</td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">  <a class='btn btn-primary btn-sm' href="{{ route('admin.categories.show', $category) }}">Related Posts</a></td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ $category->created_at->diffForHumans() }}</td>
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">  <a class='btn btn-primary btn-sm' href="{{ route('admin.categories.show', $category) }}">Related Posts</a></td>
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">
                                 <div class="flex items-center">
                                     <a  href="{{ route('admin.categories.edit', $category) }}">
                                         <div aria-label="Edit row" role="button" class="p-2 text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
@@ -84,16 +84,16 @@
             <a class="mr-2 text-gray-600 border border-transparent rounded sm:mr-5 focus:outline-none focus:border-gray-800 focus:shadow-outline-gray" aria-label="Previous Page" role="link" href="javascript: void(0)">
                 <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg7.svg" alt="Previous">
             </a>
-            <p class="text-base text-gray-800 dark:text-gray-100 fot-normal">Page</p>
+            <p class="text-base text-gray-800  fot-normal">Page</p>
             <label for="selectedPage" class="hidden"></label>
-            <input placeholder="0" id="selectedPage" type="text" class="flex items-center w-8 px-2 mx-2 text-base font-normal text-gray-800 bg-white border border-gray-300 rounded dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:shadow-outline-gray focus:border focus:border-indigo-700" value="4" />
-            <p class="text-base text-gray-800 dark:text-gray-100 fot-normal">of 20</p>
+            <input placeholder="0" id="selectedPage" type="text" class="flex items-center w-8 px-2 mx-2 text-base font-normal text-gray-800 bg-white border border-gray-300 rounded dark:bg-gray-800  focus:outline-none focus:shadow-outline-gray focus:border focus:border-indigo-700" value="4" />
+            <p class="text-base text-gray-800  fot-normal">of 20</p>
             <a class="mx-2 text-gray-600 border border-transparent rounded sm:mx-5 focus:outline-none focus:border-gray-800 focus:shadow-outline-gray" aria-label="Next Page" role="link" href="javascript: void(0)">
                 <img class="transform rotate-180" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg7.svg" alt="Previous">
             </a>
             <label for="totalPage" class="hidden"></label>
-            <input placeholder="0" id="totalPage" type="text" class="flex items-center w-10 px-2 mr-2 text-base font-normal text-gray-800 bg-white border border-gray-300 rounded dark:bg-gray-800 dark:text-gray-100 focus:outline-none focus:shadow-outline-gray focus:border focus:border-indigo-700" value="30" />
-            <p class="-mt-1 text-base text-gray-800 dark:text-gray-100 fot-normal">per page</p>
+            <input placeholder="0" id="totalPage" type="text" class="flex items-center w-10 px-2 mr-2 text-base font-normal text-gray-800 bg-white border border-gray-300 rounded dark:bg-gray-800  focus:outline-none focus:shadow-outline-gray focus:border focus:border-indigo-700" value="30" />
+            <p class="-mt-1 text-base text-gray-800  fot-normal">per page</p>
         </div>
     </div>
 </div>

@@ -9,7 +9,6 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
     <meta property="og:image" content=""/>
@@ -39,7 +38,7 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="{{ asset('blog_template/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('blog_template/css/owl.theme.default.min.css') }}">
-    
+
     <!-- Flaticons  -->
     <link rel="stylesheet" href="{{ asset('blog_template/fonts/flaticon/font/flaticon.css') }}">
 
@@ -60,10 +59,10 @@
 
     </head>
     <body>
-        
+
     <div id="page">
         <nav class="colorlib-nav" role="navigation">
-            
+
             <div class="top-menu">
                 <div class="container">
                     <div class="row">
@@ -84,20 +83,22 @@
                                 </li>
                                 <li><a href="{{ route('about') }}">About</a></li>
                                 <li><a href="{{ route('contact.create') }}">Contact</a></li>
-                                
+                                <li><a href="{{ route('volunteer') }}">Volunteer</a></li>
+                                <li ><a href="{{ route('donate') }}">Donate</a></li>
+
                                 @guest
                                 <li class="btn-cta"><a href="{{ route('login') }}"><span>Sign in</span></a></li>
                                 @endguest
 
                                 @auth
-                                
+
                                 <li class="has-dropdown">
                                     <a href="#">{{ auth()->user()->name }} <span class="caret"></span></a>
                                     <ul class="dropdown">
                                         <li>
-                                            <a 
+                                            <a
                                             onclick="event.preventDefault();
-                                            document.getElementById('nav-logout-form').submit()" 
+                                            document.getElementById('nav-logout-form').submit()"
                                             href="#">Logout</a>
 
                                             <form id="nav-logout-form" action="{{ route('logout') }}" method="POST">
@@ -118,7 +119,7 @@
         <aside id="colorlib-hero">
             <div class="flexslider">
                 <ul class="slides">
-                
+
                 </ul>
             </div>
         </aside>
@@ -127,7 +128,7 @@
 
 
 
-        
+
         <div class="relative flex justify-start md:justify-center md:items-end ">
             <img class="absolute z-0 object-cover w-full h-full dark:hidden top-10 xl:mt-10" loading="lazy" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">
             <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center">
@@ -145,59 +146,59 @@
                             <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
                                 <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">COMMUNITY</h2>
                                 <a href=" $allfooter->community_link_1 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                     $allfooter->community1 
+                                     $allfooter->community1
                                 </button></a>
                                 <a href=" $allfooter->community_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                     $allfooter->community2 
+                                     $allfooter->community2
                                 </button></a>
                                 <a href=" $allfooter->community_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                     $allfooter->community3 
+                                     $allfooter->community3
                                 </button></a>
                                 <a href=" $allfooter->community_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                    $allfooter->community4 
+                                    $allfooter->community4
                                 </button></a>
                             </div>
-        
+
                             {{-- ROLE 2 --}}
                             <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
                                 <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">BLOG</h2>
                                 <a href=" $allfooter->blog_link_1 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                     $allfooter->blog1 
+                                     $allfooter->blog1
                                 </button></a>
                                 <a href=" $allfooter->blog_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
                                     $allfooter->blog2
                                 </button></a>
                                 <a href=" $allfooter->blog_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                     $allfooter->blog3 
+                                     $allfooter->blog3
                                 </button></a>
                                 <a href=" $allfooter->blog_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                    $allfooter->blog4 
+                                    $allfooter->blog4
                                 </button></a>
                                 <a href=" $allfooter->blog_link_5 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                     $allfooter->blog5 
+                                     $allfooter->blog5
                                 </button></a>
-                            </div> 
+                            </div>
                             <div class="flex flex-col items-start justify-start space-y-6 xl:w-72">
                                 <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">CONTACT US</h2>
                                 <a href=" $allfooter->contact_link_1 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                     $allfooter->contact1 
+                                     $allfooter->contact1
                                 </button></a>
                                 <a href="{{ $allfooter->contact_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                    $allfooter->contact2 
+                                    $allfooter->contact2
                                 </button></a>
                                 <a href=" $allfooter->contact_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                     $allfooter->contact3 
+                                     $allfooter->contact3
                                 </button></a>
                                 <a href=" $allfooter->contact_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                     $allfooter->contact4 
+                                     $allfooter->contact4
                                 </button></a>
                                 <a href=" $allfooter->contact_link_5 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                                    $allfooter->contact5 
+                                    $allfooter->contact5
                                 </button></a>
                             </div>
-                        </div> 
-        
-        
+                        </div>
+
+
                     <div class="flex flex-col-reverse items-center w-full mt-12 xl:justify-between xl:flex-row xl:items-start ">
                         <p class="mt-10 text-sm leading-none text-white md:mt-12 xl:mt-0" >  &copy; <?php echo date('Y'); ?> {{ config('app.name', 'NewCastle-Founodation') }}. All Rights Reserved</p>
                         <div class="flex flex-col items-start justify-start w-full mt-10 space-y-4 md:mt-12 xl:mt-0 md:flex-row md:justify-center md:w-auto md:space-y-0 md:items-center md:space-x-4 xl:space-x-6">
@@ -233,17 +234,17 @@
                                     <path class="fill-white" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
                                 </svg>
                             </button></a>
-                        </div> 
+                        </div>
                     </div>
                 </div>
-        
+
             </div>
     </div>
 
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
     </div>
-    
+
     <!-- jQuery -->
     <script src="{{ asset('blog_template/js/jquery.min.js') }}"></script>
     <!-- jQuery Easing -->

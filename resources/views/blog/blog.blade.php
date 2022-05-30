@@ -17,8 +17,8 @@
                 class="blog-img"
                 style="background-image: url({{ asset('storage/' . $post->image->path. '')  }});"></a>
                 <div class="text">
-                   <h3 class="heading"><a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a></h3>
-                   <p class="excerpt">{{ $post->excerpt }}</p>
+                   <h3 class="heading"><a href="{{ route('posts.show', $post) }}">{{ \Str::limit($post->title, 35) }}</a></h3>
+                   <p class="excerpt">{{ \Str::limit($post->excerpt, 35) }}</p>
                    <div class="meta">
                        <div><a class='date' href="#"><span class="icon-calendar"></span>  {{ $post->created_at->diffForHumans() }}</a></div>
                        <div><a href="#"><span class="icon-user2"></span> NewCastle-Founodation</a></div>
@@ -36,7 +36,7 @@
 
 
 
-            
+
             @empty
                 <p class='lead'>There are no posts to show.</p>
 
