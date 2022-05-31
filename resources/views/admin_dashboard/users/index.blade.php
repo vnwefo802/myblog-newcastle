@@ -1,6 +1,6 @@
 @extends("admin_dashboard.layouts.app")
 
-		@section("wrapper")
+        @section("wrapper")
 <div class="page-wrapper">
     <div class="page-content">
         <div class="container mx-auto bg-white rounded shadow dark:bg-gray-800">
@@ -22,7 +22,7 @@
                         <img class="px-2" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg1dark.svg" alt="search">search
                     </button>
                     <a href="{{ route('admin.users.create') }}" class=" w-[162px] h-[38px]">
-                        <button class="py-2 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 border border-transparent rounded focus:shadow-outline-gray lg:my-0 lg:ml-2 xl:ml-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600 w-[162px] h-[38px]" > Add New Post </button>
+                        <button class="py-2 px-3 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 border border-transparent rounded focus:shadow-outline-gray lg:my-0 lg:ml-2 xl:ml-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600 w-[162px] h-[38px]" > Add New Post </button>
                     </a>
                 </div>
             </div>
@@ -41,22 +41,22 @@
                         </tr>
                     </thead>
                     <tbody role="rowgroup" >
-					@foreach($users as $user)
+                    @foreach($users as $user)
 
                         <tr role="row" class="h-24 transition duration-150 ease-in-out border-t border-b border-gray-300 cursor-pointer hover:border-indigo-300 hover:shadow-md">
                             <td class="pl-8 pr-6 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap ">{{ $user->id }}</td>
-							<td>
-								<img class="w-[50px]" src="{{ $user->image ? asset('storage/' . $user->image->path) : asset('storage/placeholders/user_placeholder.jpg') }}">
-							</td>
+                            <td>
+                                <img class="w-16" src="{{ $user->image ? asset('storage/' . $user->image->path) : asset('storage/placeholders/user_placeholder.jpg') }}">
+                            </td>
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ \Str::limit($user->name, 15) }} </td>
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ \Str::limit($user->email, 30) }}</td>
 
 
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ $user->role->name }}</td>
-							<td>
-								<a class='w-[100px] p-2 bg-blue-500 text-white border-2 border-blue-500 hover:bg-blue-700 focus:border-blue-900' href="{{ route('admin.users.show', $user) }}">Related Posts</a>
-							</td>
-							<td>{{ $user->created_at->diffForHumans() }}</td>
+                            <td>
+                                <a class='w-[100px] p-2 bg-blue-500 text-white border-2 border-blue-500 hover:bg-blue-700 focus:border-blue-900' href="{{ route('admin.users.show', $user) }}">Related Posts</a>
+                            </td>
+                            <td>{{ $user->created_at->diffForHumans() }}</td>
 
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">
                                 <div class="flex items-center">
@@ -66,7 +66,7 @@
                                         </div>
                                     </a>
 
-									<a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $user->id }}').submit();" >
+                                    <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $user->id }}').submit();" >
                                         <button type="submit"class="w-[26px] h-[26px]" href="javascript: void(0)">
                                             <div aria-label="Delete" role="button" class="w-[26px] h-[26px] mt-1 text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
                                                     <img class="w-[25px] h-[25px]" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
@@ -89,8 +89,8 @@
         </div>
     </div>
 </div>
-		<!--end page wrapper -->
-		@endsection
+        <!--end page wrapper -->
+        @endsection
 
 
     @section("script")
