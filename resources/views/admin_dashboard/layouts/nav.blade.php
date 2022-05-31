@@ -130,6 +130,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{ route('admin.home.edit') }}">
+                    <div class="parent-icon"><i class='bx bx-info-square'></i></div>
+                        <div class="menu-title">Home</div>
+                    </a>
+                </li>
+
                 <hr>
 
                 <li>
