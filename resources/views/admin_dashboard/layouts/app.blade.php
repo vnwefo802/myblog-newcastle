@@ -165,7 +165,7 @@
             </div>
         </div>
     </div>
-    $( function() {
+    {{--$( function() {
         var availableTags = [
           "ActionScript",
           "AppleScript",
@@ -190,7 +190,7 @@
           "Scala",
           "Scheme"
         ];
-        $( "#search_post" ).autocomplete({
+        $( "#search_post" ).autocomplete({--}}
     <!--end switcher-->
 	<!-- Bootstrap JS -->
 	<script src="{{ asset('admin_dashboard_assets/js/bootstrap.bundle.min.js') }}"></script>
