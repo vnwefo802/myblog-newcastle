@@ -40,7 +40,29 @@
 
 
          
-                                       
+                                    <div class='row'>
+                                            <div class='col-md-8'>
+                                                <div class="mb-3">
+                                                    <label for="Logo" class="form-label">Logo</label>
+                                                    <input name='Logo' type='file' class="form-control" id="Logo">
+                                                
+                                                    @error('Logo')
+                                                        <p class='text-danger'>{{ $message }}</p>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class='row'>
+                                            <div class='col-md-8'>
+                                                <div class="mb-3">
+                                                    <label for="Video" class="form-label">Video</label>
+                                                    <input name='Video' type='file' class="form-control" id="Video">
+                                                
+                                                    @error('Video')
+                                                        <p class='text-danger'>{{ $message }}</p>
+                                                    @enderror
+                                                </div>
+                                            </div>
+
                                     <!-- button_1 -->
                                     <div class="mb-3">
                                             <label for="button_1" class="form-label">Button 1</label>
@@ -210,15 +232,7 @@
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
-
-                                        <label for="Logo" class="form-label">Logo</label>
-                                        <div class='col-md-4'>
-                                                <div class='user-image p-2'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->Logo) }}' >
-                                                </div>
-                                            </div>
-                                        
-
+                                    
                                         <button class='btn btn-primary text-blue-500 hover:text-white' type='submit'>Update</button>
                                         
                                     </div>
