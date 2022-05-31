@@ -37,11 +37,9 @@
                             <th role="columnheader" class="pl-8 pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Created at</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Category Name</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Creator</th>
+                            <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Created At</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Related Posts</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Actions</th>
-                            <td class="pr-8">
-                                <button class="w-32 px-5 py-1 text-sm text-indigo-700 transition duration-150 ease-in-out bg-gray-100 rounded opacity-0 cursor-default focus:outline-none focus:border-gray-800 focus:shadow-outline-gray hover:bg-gray-300">Start Session</button>
-                            </td>
                         </tr>
                     </thead>
                     <tbody role="rowgroup" >

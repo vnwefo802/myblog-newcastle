@@ -2627,9 +2627,19 @@ video {
 .right-px {
   right: 1px;
 }
+<<<<<<< HEAD
+.hover\:bg-slate-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+.hover\:from-blue-800:hover {
+  --tw-gradient-from: #1e40af;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(30 64 175 / 0));
+=======
 
 .right-0\.5 {
   right: 0.125rem;
+>>>>>>> 76907b90795203603680379ede900df1168eb9fa
 }
 
 .right-1\.5 {
@@ -2679,9 +2689,18 @@ video {
 .-right-8 {
   right: -2rem;
 }
+<<<<<<< HEAD
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.hover\:opacity-90:hover {
+  opacity: 0.9;
+=======
 
 .-right-9 {
   right: -2.25rem;
+>>>>>>> 76907b90795203603680379ede900df1168eb9fa
 }
 
 .-right-10 {

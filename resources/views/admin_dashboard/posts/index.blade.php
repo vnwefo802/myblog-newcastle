@@ -76,7 +76,7 @@
 
                                     <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $post->id }}').submit();" >
                                         <button type="submit"class="w-[26px] h-[26px]" href="javascript: void(0)">
-                                            <div aria-label="Delete" role="button" class="w-[26px] h-[26px] mt-1 text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
+                                            <div aria-label="Delete" role="button" class="w-[26px] h-[26px] text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
                                                     <img class="w-[25px] h-[25px]" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
                                             </div>
                                         </button>
