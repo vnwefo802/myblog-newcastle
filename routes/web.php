@@ -85,4 +85,7 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'check_permissions']
 
     Route::get('donate', [AdminDonateController::class, 'edit'])->name('donate.edit');
     Route::post('donate', [AdminDonateController::class, 'update'])->name('donate.update');
+
+    Route::get('home', [AdminHomeController::class, 'edit'])->name('home.edit');
+    Route::post('home', [AdminHomeController::class, 'update'])->name('home.update');
 });
