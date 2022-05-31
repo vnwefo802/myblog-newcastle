@@ -12,11 +12,11 @@
     <div class="page-wrapper">
         <div class="page-content">
             <!--breadcrumb-->
-            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="mb-3 page-breadcrumb d-none d-sm-flex align-items-center">
                 <div class="breadcrumb-title pe-3">About</div>
                 <div class="ps-3">
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb mb-0 p-0">
+                        <ol class="p-0 mb-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i class="bx bx-home-alt"></i></a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">Donate Page</li>
@@ -27,21 +27,21 @@
             <!--end breadcrumb-->
 
             <div class="card">
-                <div class="card-body p-4">
+                <div class="p-4 card-body">
                     <h5 class="card-title">Edit Donate Page</h5>
                     <hr/>
 
-                    <form action="{{ route('admin.donate.update') }}" method='post' >
+                    <form action="{{ route('admin.donate.update') }}" method='POST' >
                         @csrf
 
-                        <div class="form-body mt-4">
+                        <div class="mt-4 form-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="border border-3 p-4 rounded">
+                                    <div class="p-4 border rounded border-3">
 
                                         <div class="mb-3">
                                             <label for="donate_title" class="form-label">Top Title</label>
-                                            <textarea name='about_first_text' class="form-control" id="donate_title">{{ $alldonate->donate_title }}</textarea>
+                                            <textarea name='donate_title' class="form-control" id="donate_title">{{ $alldonate->donate_title }}</textarea>
 
                                             @error('donate_title')
                                                 <p class='text-danger'>{{ $message }}</p>
@@ -50,7 +50,7 @@
 
                                         <div class="mb-3">
                                             <label for="donate_first_short_title" class="form-label">second Title</label>
-                                            <textarea name='donate_first_short_title' class="form-control" id="about_second_text">{{ $alldonate->donate_first_short_title }}</textarea>
+                                            <textarea name='donate_first_short_title' class="form-control" id="donate_first_short_title">{{ $alldonate->donate_first_short_title }}</textarea>
 
                                             @error('donate_first_short_title')
                                                 <p class='text-danger'>{{ $message }}</p>

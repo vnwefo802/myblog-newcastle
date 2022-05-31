@@ -13,16 +13,16 @@ class AdminDonateController extends Controller
     public function edit ()
     {
         $alldonate = Donate::find(1);
-        
+
         return view('admin_dashboard.donate.edit', compact('alldonate'));
     }
     // public function update(Request $request, Donate $alldonate)
     // {
 
-        public function Update(Request $request)
+        public function update(Request $request)
         {
-            $donate_id = $request->id;
-    
+
+            $donate_id = 1;
             Donate::findOrFail($donate_id)->update([
                     'donate_title' => $request->donate_title,
             'donate_first_short_title' => $request->donate_first_short_title,
@@ -30,9 +30,9 @@ class AdminDonateController extends Controller
             'donate_project_title' => $request->donate_project_title,
             'donate_objectives__title' => $request->donate_objectives__title,
             'donate_values_title' => $request->donate_values_title,
-          
-                    
-                ]); 
+
+
+                ]);
         // $request->validate([
         //     'donate_title' => $request->,
         //     'donate_first_short_title' => '|max:',
@@ -59,7 +59,8 @@ class AdminDonateController extends Controller
 
         // $alldonate::find(1)->update($request->all());
 
-        return redirect()->route('donate.edit')->with('success','Donate updated successfully');
+
+        return redirect()->route('admin.donate.edit')->with('success','Donate updated successfully');
 
     }
 }
