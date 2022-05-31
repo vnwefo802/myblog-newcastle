@@ -60,7 +60,7 @@
                                         {{-- third title --}}
                                         <div class="mb-3">
                                             <label for="donate_second_short_title" class="form-label">third Title</label>
-                                            <textarea name='donate_first_short_title' class="form-control" id="donate_second_short_title">{{ $alldonate->donate_second_short_title }}</textarea>
+                                            <textarea name='donate_second_short_title' class="form-control" id="donate_second_short_title">{{ $alldonate->donate_second_short_title }}</textarea>
 
                                             @error('donate_first_short_title')
                                                 <p class='text-danger'>{{ $message }}</p>
