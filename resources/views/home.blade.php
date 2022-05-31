@@ -8,7 +8,7 @@
 <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
     <div class="relative z-40 flex flex-col items-center justify-center max-w-2xl py-10 md:py-32">
         <h1 class="text-2xl font-semibold leading-8 text-center text-white lg:text-6xl md:text-lg lg:leading-tight md:leading-10 text-shadow-xl">Filling the gaps in education and health for communities less fortunate</h1>
-        <p class="mt-6 text-sm leading-6 text-center text-white lg:text-base drop-shadow-2xl text-shadow-xl">Our goal is to make sure that everyone has access to health services and educational material. We are committed to making it easier for communities in need and would appreciate any support that you would like to give.</p>
+        {{-- <p class="mt-6 text-sm leading-6 text-center text-white lg:text-base drop-shadow-2xl text-shadow-xl">Our goal is to make sure that everyone has access to health services and educational material. We are committed to making it easier for communities in need and would appreciate any support that you would like to give.</p> --}}
         <!-- donate and volunteer buttons -->
        <div class="flex flex-row">
             <a href="/volunteer" class="inline-block"><button class="flex items-center py-4 mt-12 text-sm bg-blue-700 rounded-md mr-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
@@ -111,9 +111,9 @@
             <div class="m-2">
                 <div>
                     <h3 class="text-lg font-semibold">The Agudele Project</h3>
-                    <p class="text-lg my-9">In the community at Agudene in Udenu LGA of Nsukka, Enugu State, we provided over 50 plus classroom desks. Used text books, exercise books, including school drum set, school bags, uniforms for both junior and senior primary.  We included a scholarship fund for the girl child. These motivated the villagers and the other villages in the locality to release their girls and wards to come to school.</p>
+                    {{-- <p class="text-lg my-9">In the community at Agudene in Udenu LGA of Nsukka, Enugu State, we provided over 50 plus classroom desks. Used text books, exercise books, including school drum set, school bags, uniforms for both junior and senior primary.  We included a scholarship fund for the girl child. These motivated the villagers and the other villages in the locality to release their girls and wards to come to school.</p> --}}
                     <a href="/donate">
-                        <button class="text-white border-2 rounded bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-800 hover:to-green-800 h-14 w-44 m-9 drop-shadow-md hover:drop-shadow-xl hover:bg-blue-500">Find Out More →</button>
+                        <button class="text-white border-2 rounded bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-800 hover:to-green-800 h-14 w-44 my-9 drop-shadow-md hover:drop-shadow-xl hover:bg-blue-500">Find Out More →</button>
                     </a>
                 </div>
             </div>
@@ -127,7 +127,7 @@
         <!-- contant of make a difference including the buttons -->
         <div class="w-full px-6 py-10 text-white bg-indigo-800 lg:w-2/5 xl:py-24 xl:px-8">
             <h2 class="text-3xl font-semibold lg:w-10/12">Make a Difference</h2>
-            <p class="py-6 text-lg">If you're looking for random facts, you've arrived at the correct webpage. The Random Fact Generator has thousands of facts ready to be revealed with a simple click of a mouse.</p>
+            {{-- <p class="py-6 text-lg">If you're looking for random facts, you've arrived at the correct webpage. The Random Fact Generator has thousands of facts ready to be revealed with a simple click of a mouse.</p> --}}
             <div class="flex items-center">
                 <a href="/volunteer" class="inline-block">
                     <button class="flex items-center py-4 mt-12 text-sm bg-blue-700 rounded-md mr-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">

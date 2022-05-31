@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('homes', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('short_title')->nullable();
             $table->string('video')->nullable();
             $table->string('button_1')->nullable();
             $table->string('button_2')->nullable();
@@ -31,13 +30,12 @@ return new class extends Migration
             $table->string('project_title')->nullable();
             $table->string('project_image')->nullable();
             $table->string('project_short_title')->nullable();
-            $table->text('project_long_description')->nullable();
             $table->string('project_button')->nullable();
             $table->string('difference_title')->nullable();
-            $table->string('difference_short_description')->nullable();
             $table->string('difference_button_1')->nullable();
             $table->string('difference_button_2')->nullable();
             $table->string('difference_image')->nullable();
+            $table->string('Logo')->nullable();
 
 
 

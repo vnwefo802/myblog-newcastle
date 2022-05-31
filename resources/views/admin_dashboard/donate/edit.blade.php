@@ -106,7 +106,7 @@
                                         {{-- Our Values end --}}
 
 
-                                        <button class='btn btn-primary' type='submit'>Update</button>
+                                        <button class='btn btn-primary text-blue-500 hover:text-white' type='submit'>Update</button>
 
                                     </div>
                                 </div>
