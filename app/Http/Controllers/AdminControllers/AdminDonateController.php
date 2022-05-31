@@ -16,8 +16,6 @@ class AdminDonateController extends Controller
 
         return view('admin_dashboard.donate.edit', compact('alldonate'));
     }
-    // public function update(Request $request, Donate $alldonate)
-    // {
 
         public function update(Request $request)
         {
