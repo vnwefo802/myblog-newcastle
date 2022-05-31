@@ -15,16 +15,16 @@ return new class extends Migration
     {
         Schema::create('donates', function (Blueprint $table) {
             $table->id();
-            $table->string('donate_title');
-            $table->text('donate_first_short_title');
-            $table->text('donate_second_short_title');
+            $table->string('donate_title')->nullable();
+            $table->text('donate_first_short_title')->nullable();
+            $table->text('donate_second_short_title')->nullable();
 
-            $table->text('donate_project_title');
+            $table->text('donate_project_title')->nullable();
 
-            $table->text('donate_objectives__title');
-           
-            $table->text('donate_values_title');
-            
+            $table->text('donate_objectives__title')->nullable();
+
+            $table->text('donate_values_title')->nullable();
+
             $table->timestamps();
         });
     }
