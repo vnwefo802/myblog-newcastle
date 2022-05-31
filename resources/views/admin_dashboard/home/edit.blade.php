@@ -12,13 +12,13 @@
         <div class="page-content">
             <!--breadcrumb-->
             <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-                <div class="breadcrumb-title pe-3">About</div>
+                <div class="breadcrumb-title pe-3">Home</div>
                 <div class="ps-3">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mb-0 p-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">About Page</li>
+                            <li class="breadcrumb-item active" aria-current="page">Home Page</li>
                         </ol>
                     </nav>
                 </div>
@@ -27,7 +27,7 @@
           
             <div class="card">
                 <div class="card-body p-4">
-                    <h5 class="card-title">Edit About Page</h5>
+                    <h5 class="card-title">Edit Home Page</h5>
                     <hr/>
 
                     <form action="{{ route('admin.home.update') }}" method='post' enctype='multipart/form-data'>
@@ -39,206 +39,180 @@
                                     <div class="border border-3 p-4 rounded">
 
 
+         
+                                       
+                                    <!-- button_1 -->
                                     <div class="mb-3">
+                                            <label for="button_1" class="form-label">Button 1</label>
+                                            <textarea name='button_1'  id='button_1' class="form-control" rows="3">{{ old("button_1", $allhome->button_1) }}</textarea>
+                                        
+                                            @error('button_1')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
+                                        <!-- button_2 -->
+                                    <div class="mb-3">
+                                            <label for="button_2" class="form-label">Button 2</label>
+                                            <textarea name='button_2'  id='button_2' class="form-control" rows="3">{{ old("button_2", $allhome->button_2) }}</textarea>
+                                        
+                                            @error('button_2')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
+                                        <!-- box_title_1 -->
+                                    <div class="mb-3">
+                                            <label for="box_title_1" class="form-label">Box Title 1</label>
+                                            <textarea name='box_title_1'  id='box_title_1' class="form-control" rows="3">{{ old("box_title_1", $allhome->box_title_1) }}</textarea>
+                                        
+                                            @error('box_title_1')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
+                                        <!-- box_title_2 -->
+                                    <div class="mb-3">
+                                            <label for="box_title_2" class="form-label">Box Title 2</label>
+                                            <textarea name='box_title_2'  id='box_title_2' class="form-control" rows="3">{{ old("box_title_2", $allhome->box_title_2) }}</textarea>
+                                        
+                                            @error('box_title_2')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
+                                        <!-- box_title_3 -->
+                                    <div class="mb-3">
+                                            <label for="title" class="form-label">Box Title 3</label>
+                                            <textarea name='title'  id='title' class="form-control" rows="3">{{ old("box_title_3", $allhome->box_title_3) }}</textarea>
+                                        
+                                            @error('box_title_3')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
+                                        <!-- box_title_4 -->
+                                    <div class="mb-3">
+                                            <label for="box_title_4" class="form-label">Box Title 4</label>
+                                            <textarea name='box_title_4'  id='box_title_4' class="form-control" rows="3">{{ old("box_title_4", $allhome->box_title_4) }}</textarea>
+                                        
+                                            @error('box_title_4')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
+                                        <!-- project_title -->
+                                    <div class="mb-3">
+                                            <label for="project_title" class="form-label">Project Title</label>
+                                            <textarea name='project_title'  id='project_title' class="form-control" rows="3">{{ old("project_title", $allhome->project_title) }}</textarea>
+                                        
+                                            @error('project_title')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
+                                        <!-- project_button -->
+                                    <div class="mb-3">
+                                            <label for="project_button" class="form-label">Project Button</label>
+                                            <textarea name='project_button'  id='project_button' class="form-control" rows="3">{{ old("project_button", $allhome->project_button) }}</textarea>
+                                        
+                                            @error('project_button')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
+                                        <!-- difference_button_1 -->
+                                    <div class="mb-3">
+                                            <label for="difference_button_1" class="form-label">Difference Button 1</label>
+                                            <textarea name='difference_button_1'  id='difference_button_1' class="form-control" rows="3">{{ old("difference_button_1", $allhome->difference_button_1) }}</textarea>
+                                        
+                                            @error('difference_button_1')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
+                                        <!-- difference_button_2 -->
+                                    <div class="mb-3">
+                                            <label for="difference_button_2" class="form-label">Difference Button 2</label>
+                                            <textarea name='difference_button_2'  id='difference_button_2' class="form-control" rows="3">{{ old("difference_button_2", $allhome->difference_button_2) }}</textarea>
+                                        
+                                            @error('difference_button_2')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
                                         <!-- title -->
-                                            <label for="title" class="form-label">title</label>
-                                            <textarea name='title'  id='title' class="form-control" rows="3">{{ old("title", $setting->title) }}</textarea>
+                                        <div class="mb-3">
+                                            <label for="title" class="form-label">Title</label>
+                                            <textarea name='title'  id='title' class="form-control" rows="3">{{ old("title", $allhome->title) }}</textarea>
                                         
                                             @error('title')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
 
-                                        <!-- short_title -->
+                                        <!-- box_short_description_1 -->
                                         <div class="mb-3">
-                                            <label for="short_title" class="form-label">Top Text</label>
-                                            <textarea name='short_title' class="form-control" id="short_title">{{ $setting->short_title }}</textarea>
-                                        
-                                            @error('short_title')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>  
-                                        <!-- short_title end -->
-
-                                        <!-- button_1 -->
-                                        <div class="mb-3">
-                                            <label for="button_1" class="form-label">Bottom Text</label>
-                                            <textarea name='button_1' class="form-control" id="button_1">{{ $setting->button_1 }}</textarea>
-                                        
-                                            @error('button_1')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-                                        <!-- button_1 end -->
-
-                                         <!-- button_2 -->
-                                         <div class="mb-3">
-                                            <label for="button_2" class="form-label">Bottom Text</label>
-                                            <textarea name='button_2' class="form-control" id="button_2">{{ $setting->button_2 }}</textarea>
-                                        
-                                            @error('button_2')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-                                        <!-- button_2 end -->
-
-                                        <!-- box_title_1 -->
-                                        <div class="mb-3">
-                                            <label for="box_title_1" class="form-label">Bottom Text</label>
-                                            <textarea name='box_title_1' class="form-control" id="box_title_1">{{ $setting->box_title_1 }}</textarea>
-                                        
-                                            @error('box_title_1')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-                                        <!-- box_title_1 end -->
-
-                                        <!-- box_title_2 -->
-                                        <div class="mb-3">
-                                            <label for="box_title_1" class="form-label">Bottom Text</label>
-                                            <textarea name='box_title_2' class="form-control" id="box_title_2">{{ $setting->box_title_2 }}</textarea>
-                                        
-                                            @error('box_title_2')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-                                        <!-- box_title_2 end -->
-
-                                         <!-- box_title_3 -->
-                                         <div class="mb-3">
-                                            <label for="box_title_3" class="form-label">Bottom Text</label>
-                                            <textarea name='box_title_3' class="form-control" id="box_title_3">{{ $setting->box_title_3 }}</textarea>
-                                        
-                                            @error('box_title_3')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-                                        <!-- box_title_3 end -->
-
-
-                                         <!-- box_title_4 -->
-                                         <div class="mb-3">
-                                            <label for="box_title_4" class="form-label">Bottom Text</label>
-                                            <textarea name='box_title_4' class="form-control" id="box_title_4">{{ $setting->box_title_4 }}</textarea>
-                                        
-                                            @error('box_title_4')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-                                        <!-- box_title_4 end -->
-
-                                         <!-- box_short_description_1 -->
-                                         <div class="mb-3">
-                                            <label for="box_short_description_1" class="form-label">Bottom Text</label>
-                                            <textarea name='box_short_description_1' class="form-control" id="box_short_description_1">{{ $setting->box_short_description_1 }}</textarea>
+                                            <label for="box_short_description_1" class="form-label">Box Short Description 1</label>
+                                            <textarea name='box_short_description_1'  id='box_short_description_1' class="form-control" rows="3">{{ old("box_short_description_1", $allhome->box_short_description_1) }}</textarea>
                                         
                                             @error('box_short_description_1')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <!-- box_short_description_1 end -->
-
 
                                         <!-- box_short_description_2 -->
                                         <div class="mb-3">
-                                            <label for="box_short_description_2" class="form-label">Bottom Text</label>
-                                            <textarea name='box_short_description_2' class="form-control" id="box_short_description_2">{{ $setting->box_short_description_2 }}</textarea>
+                                            <label for="box_short_description_2" class="form-label">Box Short Description 2</label>
+                                            <textarea name='box_short_description_2'  id='box_short_description_2' class="form-control" rows="3">{{ old("box_short_description_2", $allhome->box_short_description_2) }}</textarea>
                                         
                                             @error('box_short_description_2')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <!-- box_short_description_2 end -->
-
 
                                         <!-- box_short_description_3 -->
                                         <div class="mb-3">
-                                            <label for="box_short_description_3" class="form-label">Bottom Text</label>
-                                            <textarea name='box_short_description_3' class="form-control" id="box_short_description_3">{{ $setting->box_short_description_3 }}</textarea>
+                                            <label for="box_short_description_3" class="form-label">Box Short Description 3</label>
+                                            <textarea name='box_short_description_3'  id='box_short_description_3' class="form-control" rows="3">{{ old("box_short_description_3", $allhome->box_short_description_3) }}</textarea>
                                         
                                             @error('box_short_description_3')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <!-- box_short_description_3 end -->
 
-                                           <!-- box_short_description_4 -->
-                                           <div class="mb-3">
-                                            <label for="box_short_description_4" class="form-label">Bottom Text</label>
-                                            <textarea name='box_short_description_4' class="form-control" id="box_short_description_4">{{ $setting->box_short_description_4 }}</textarea>
+                                        <!-- box_short_description_4 -->
+                                        <div class="mb-3">
+                                            <label for="box_short_description_4" class="form-label">Box Short Description 4</label>
+                                            <textarea name='box_short_description_4'  id='box_short_description_4' class="form-control" rows="3">{{ old("box_short_description_4", $allhome->box_short_description_4) }}</textarea>
                                         
                                             @error('box_short_description_4')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <!-- box_short_description_3 end -->
 
-                                        <div class='row'>
-                                            <div class='col-md-8'>
-                                                <div class="mb-3">
-                                                    <label for="about_first_image" class="form-label">First Image</label>
-                                                    <input name='about_first_image' type='file' class="form-control" id="about_first_image">
-                                                
-                                                    @error('about_first_image')
-                                                        <p class='text-danger'>{{ $message }}</p>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class='col-md-4'>
-                                                <div class='user-image p-2'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_first_image) }}' >
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class='row'>
-                                            <div class='col-md-8'>
-                                                <div class="mb-3">
-                                                    <label for="about_second_image" class="form-label">Second Image</label>
-                                                    <input name='about_second_image' type='file' class="form-control" id="about_second_image">
-                                                
-                                                    @error('about_second_image')
-                                                        <p class='text-danger'>{{ $message }}</p>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class='col-md-4'>
-                                                <div class='user-image p-2'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_second_image) }}' >
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
+                                        <!-- project_short_title -->
                                         <div class="mb-3">
-                                            <label for="about_our_mission" class="form-label">About Our Mission</label>
-                                            <textarea name='about_our_mission'  id='about_our_mission' class="form-control" id="our_mission" rows="3">{{ old("about_our_mission", $setting->about_our_mission) }}</textarea>
+                                            <label for="project_short_title" class="form-label">Project Short Title</label>
+                                            <textarea name='project_short_title'  id='project_short_title' class="form-control" rows="3">{{ old("project_short_title", $allhome->project_short_title) }}</textarea>
                                         
-                                            @error('about_our_mission')
+                                            @error('project_short_title')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
 
+                                        <!-- difference_title -->
                                         <div class="mb-3">
-                                            <label for="about_our_vision" class="form-label">About Our Vision</label>
-                                            <textarea name='about_our_vision'  id='about_our_vision' class="form-control" rows="3">{{ old("about_our_vision", $setting->about_our_vision) }}</textarea>
+                                            <label for="difference_title" class="form-label">Difference Title</label>
+                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{ old("difference_title", $allhome->difference_title) }}</textarea>
                                         
-                                            @error('about_our_vision')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-
-
-                                        <div class="mb-3">
-                                            <label for="about_services" class="form-label">About Services</label>
-                                            <textarea name='about_services'  id='about_services' class="form-control" rows="3">{{ old("about_services", $setting->about_services) }}</textarea>
-                                        
-                                            @error('about_services')
+                                            @error('difference_title')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
                                         
 
-                                        <button class='btn btn-primary' type='submit'>Update</button>
+                                        <button class='btn btn-primary text-blue-500 hover:text-white' type='submit'>Update</button>
                                         
                                     </div>
                                 </div>
@@ -276,9 +250,13 @@
             });
         }
 
-        initTinyMCE('about_our_mission');
-        initTinyMCE('about_our_vision');
-        initTinyMCE('about_services');
+        initTinyMCE('title');
+        initTinyMCE('box_short_description_1');
+        initTinyMCE('box_short_description_2');
+        initTinyMCE('box_short_description_3');
+        initTinyMCE('box_short_description_4');
+        initTinyMCE('project_short_title');
+        initTinyMCE('difference_title');
 
     });
 
