@@ -210,6 +210,13 @@
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
+
+                                        <label for="Logo" class="form-label">Logo</label>
+                                        <div class='col-md-4'>
+                                                <div class='user-image p-2'>
+                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->Logo) }}' >
+                                                </div>
+                                            </div>
                                         
 
                                         <button class='btn btn-primary text-blue-500 hover:text-white' type='submit'>Update</button>
