@@ -54,37 +54,15 @@
 
 <!-- Info about what donations do -->
 <div class="mx-5 md:mx-20 my-10">
-    <h3 class="text-2xl md:text-4xl text-slate-800 mb-5 text-center font-semibold">{{ $alldonate->donate_project_title }}</h3>
-    <p class="text-sm md:text-lg text-slate-600 text-center md:text-left">
-        <span class="text-lg md:text-xl text-slate-700 font-semibold">{{ $alldonate->donate_first_project__short_title }}</span><br>
-        {{ $alldonate->donate_second_project__short_title }}
-        <br><br>
-        <span class="text-lg md:text-xl text-slate-700 font-semibold">{{ $alldonate->donate_first_project__long_description }}</span><br>
-        {{ $alldonate->donate_second_project__long_description }}
-    </p>
+    <h3 class="text-2xl md:text-4xl text-slate-800 mb-5 text-center font-semibold">{!! $alldonate->donate_project_title !!}</h3>
 </div>
 
 <div class="px-5 md:px-20 py-10 flex flex-wrap">
     <div class="inline-block mx-5 md:my-2">
-    <h4 class="text-4xl ml-4 font-bold leading-6 text-gray-900">{{ $alldonate->donate_objectives__title }}</h4>
-    <ul class="list-disc py-2 px-4 mt-6 font-semibold leadin-6 text-gray-700 text-l">
-        <li>{{ $alldonate->donate_first__Objectives__description }}</li>
-        <li>{{ $alldonate->donate_second__Objectives__description }}</li>
-        <li>{{ $alldonate->donate_third__Objectives__description }}</li>
-        <li>{{ $alldonate->donate_fourth__Objectives__description }}</li>
-        <li>{{ $alldonate->donate_fifth__Objectives__description }}</li>
-        <li>{{ $alldonate->donate_sixth__Objectives__description }}</li>
-    </ul>
+    <h4 class="text-4xl ml-4 font-bold leading-6 text-gray-900">{!! $alldonate->donate_objectives__title !!}</h4>
 </div>
     <div class="inline-block mx-5 md:">
-        <h5 class=" pr-4 ml-4 text-4xl font-bold leading-6 text-gray-900">{{ $alldonate->donate_values_title }}</h5>
-        <ul class="list-disc font-semibold leading-6 py-10 text-gray-700 text-l">
-            <li>{{ $alldonate->donate_first__Values__description }}</li>
-            <li>{{ $alldonate->donate_second__Values__description }}</li>
-            <li>{{ $alldonate->donate_third__Values__description }}</li>
-            <li>{{ $alldonate->donate_fourth__Values__description }}</li>
-            <li>{{ $alldonate->donate_fifth__Values__description }}</li>
-        </ul>
+        <h5 class=" pr-4 ml-4 text-4xl font-bold leading-6 text-gray-900">{!! $alldonate->donate_values_title !!}</h5>
     </div>
 </div>
 
