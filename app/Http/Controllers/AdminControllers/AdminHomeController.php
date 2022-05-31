@@ -20,7 +20,7 @@ class AdminHomeController extends Controller
 
         public function Update(Request $request)
         {
-            $home_id = $request->id;
+            $home_id = 1;
     
             Home::findOrFail($home_id)->update([
             'title' => $request->title,
@@ -47,7 +47,7 @@ class AdminHomeController extends Controller
                     
                 ]); 
 
-        return redirect()->route('home.edit')->with('success','Home updated successfully');
+        return redirect()->route('admin.home.edit')->with('success','Home updated successfully');
 
     }
 }
