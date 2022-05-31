@@ -19,7 +19,7 @@ class BlogController extends Controller
 
         $tags = Tag::latest()->take(50)->get();
 
-        return view('blog.blog', [
+        return view('blog', [
             'posts' => $posts,
             'recent_posts' => $recent_posts,
             'categories' => $categories,
