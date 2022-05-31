@@ -30,6 +30,9 @@
     <title>NewCastle-Founodation</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
 </head>
 
 <body>
@@ -62,8 +65,12 @@
 			<p class="mb-0">    Copyright &copy; <?php echo date('Y'); ?> {{ config('app.name', 'NewCastle-Founodation') }}. All Rights Reserved</p>
 		</footer>
 	</div>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
 	<!--end wrapper-->
     <!--start switcher-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
     <div class="switcher-wrapper">
         <div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
         </div>
@@ -158,6 +165,32 @@
             </div>
         </div>
     </div>
+    $( function() {
+        var availableTags = [
+          "ActionScript",
+          "AppleScript",
+          "Asp",
+          "BASIC",
+          "C",
+          "C++",
+          "Clojure",
+          "COBOL",
+          "ColdFusion",
+          "Erlang",
+          "Fortran",
+          "Groovy",
+          "Haskell",
+          "Java",
+          "JavaScript",
+          "Lisp",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Scheme"
+        ];
+        $( "#search_post" ).autocomplete({
     <!--end switcher-->
 	<!-- Bootstrap JS -->
 	<script src="{{ asset('admin_dashboard_assets/js/bootstrap.bundle.min.js') }}"></script>

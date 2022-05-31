@@ -76,7 +76,12 @@ class DatabaseSeeder extends Seeder
             $post->image()->save( \App\Models\Image::factory()->make() );
         }
 
-        \App\Models\Setting::factory(1)->create();
+        // \App\Models\Setting::factory(1)->create();
+        \App\Models\Donate::factory()->create();
+        \App\Models\Home::factory()->create();
+        \App\Models\Footer::factory()->create();
+        // \App\Models\About::factory(1)->create();
+
 
     }
 }

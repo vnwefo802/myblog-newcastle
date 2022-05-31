@@ -15,13 +15,32 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->text('about_first_text');
-            $table->text('about_second_text');
-            $table->string('about_first_image');
-            $table->string('about_second_image');
+            // $table->text('about_first_text');
+            // $table->text('about_second_text');
+      
             $table->text('about_our_vision');
             $table->text('about_our_mission');
             $table->text('about_services');
+
+
+
+            $table->string('about_first_image');
+            $table->string('about_second_image');
+            $table->string('about_third_image');
+            $table->string('about_fourth_image');
+            $table->string('about_fifth_image');
+
+            $table->text('about_first_member_name');
+            $table->text('about_second_member_name');
+            $table->text('about_third_member_name');
+            $table->text('about_fourth_member_name');
+            $table->text('about_fifth_member_name');
+
+            $table->text('about_first_member_role');
+            $table->text('about_second_member_role');
+            $table->text('about_third_member_role');
+            $table->text('about_fourth_member_role');
+            $table->text('about_fifth_member_role');
             $table->timestamps();
         });
     }

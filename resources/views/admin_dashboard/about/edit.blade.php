@@ -91,7 +91,63 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+                                        <div class='row'>
+                                            <div class='col-md-8'>
+                                                <div class="mb-3">
+                                                    <label for="about_third_image" class="form-label">Second Image</label>
+                                                    <input name='about_third_image' type='file' class="form-control" id="about_third_image">
+                                                
+                                                    @error('about_third_image')
+                                                        <p class='text-danger'>{{ $message }}</p>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class='col-md-4'>
+                                                <div class='user-image p-2'>
+                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_third_image) }}' >
+                                                </div>
+                                            </div>
+                                        </div>
                                         
+
+                                        <div class='row'>
+                                            <div class='col-md-8'>
+                                                <div class="mb-3">
+                                                    <label for="about_fourth_image" class="form-label">Second Image</label>
+                                                    <input name='about_fourth_image' type='file' class="form-control" id="about_fourth_image">
+                                                
+                                                    @error('about_fourth_image')
+                                                        <p class='text-danger'>{{ $message }}</p>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class='col-md-4'>
+                                                <div class='user-image p-2'>
+                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_fourth_image) }}' >
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                          <div class='row'>
+                                            <div class='col-md-8'>
+                                                <div class="mb-3">
+                                                    <label for="about_fifth_image" class="form-label">Second Image</label>
+                                                    <input name='about_fifth_image' type='file' class="form-control" id="about_fifth_image">
+                                                
+                                                    @error('about_fifth_image')
+                                                        <p class='text-danger'>{{ $message }}</p>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class='col-md-4'>
+                                                <div class='user-image p-2'>
+                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_fifth_image) }}' >
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="mb-3">
                                             <label for="about_our_mission" class="form-label">About Our Mission</label>
                                             <textarea name='about_our_mission'  id='about_our_mission' class="form-control" id="our_mission" rows="3">{{ old("about_our_mission", $setting->about_our_mission) }}</textarea>

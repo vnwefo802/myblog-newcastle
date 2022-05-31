@@ -123,6 +123,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{ route('admin.donate.edit') }}">
+                    <div class="parent-icon"><i class='bx bx-info-square'></i></div>
+                        <div class="menu-title">Donate</div>
+                    </a>
+                </li>
+
                 <hr>
 
                 <li>

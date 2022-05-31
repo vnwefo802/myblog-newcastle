@@ -23,6 +23,7 @@ use App\Http\Controllers\AdminControllers\AdminRolesController;
 use App\Http\Controllers\AdminControllers\AdminUsersController;
 use App\Http\Controllers\AdminControllers\AdminContactsController;
 use App\Http\Controllers\AdminControllers\AdminSettingController;
+use App\Http\Controllers\AdminControllers\AdminDonateController;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
@@ -33,7 +34,6 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\BlogController;
-
 
 // Front User Routes
 
@@ -82,4 +82,7 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'check_permissions']
 
     Route::get('about', [AdminSettingController::class, 'edit'])->name('setting.edit');
     Route::post('about', [AdminSettingController::class, 'update'])->name('setting.update');
+
+    Route::get('donate', [AdminDonateController::class, 'edit'])->name('donate.edit');
+    Route::post('donate', [AdminDonateController::class, 'update'])->name('donate.update');
 });
