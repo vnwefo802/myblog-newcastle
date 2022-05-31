@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\AdminControllers;
 
+use App\Models\Donate;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class AdminHomeController extends Controller
 {
