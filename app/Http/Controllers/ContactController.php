@@ -13,7 +13,7 @@ class ContactController extends Controller
 {
     public function create()
     {
-        return view('contact.contact');
+        return view('contact');
     }
 
     public function store()
