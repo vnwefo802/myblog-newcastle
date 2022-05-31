@@ -280,7 +280,7 @@
 
 
                                         <div class="mb-3">
-                                            <label for="about_our_mission" class="form-label">About Our Mission</label>
+                                            <label for="about_our_mission" class="form-label">Our Mission projects</label>
                                             <textarea name='about_our_mission'  id='about_our_mission' class="form-control" id="our_mission" rows="3">{{ old("about_our_mission", $alldonate->about_our_mission) }}</textarea>
 
                                             @error('about_our_mission')
@@ -289,7 +289,7 @@
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="about_our_vision" class="form-label">About Our Vision</label>
+                                            <label for="about_our_vision" class="form-label">Our Objectives</label>
                                             <textarea name='about_our_vision'  id='about_our_vision' class="form-control" rows="3">{{ old("about_our_vision", $alldonate->about_our_vision) }}</textarea>
 
                                             @error('about_our_vision')
@@ -299,7 +299,7 @@
 
 
                                         <div class="mb-3">
-                                            <label for="about_services" class="form-label">About Services</label>
+                                            <label for="about_services" class="form-label">Our Values</label>
                                             <textarea name='about_services'  id='about_services' class="form-control" rows="3">{{ old("about_services", $alldonate->about_services) }}</textarea>
 
                                             @error('about_services')
