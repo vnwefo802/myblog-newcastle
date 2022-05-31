@@ -24,6 +24,7 @@ use App\Http\Controllers\AdminControllers\AdminUsersController;
 use App\Http\Controllers\AdminControllers\AdminContactsController;
 use App\Http\Controllers\AdminControllers\AdminSettingController;
 use App\Http\Controllers\AdminControllers\AdminDonateController;
+use App\Http\Controllers\AdminControllers\AdminHomeController;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
