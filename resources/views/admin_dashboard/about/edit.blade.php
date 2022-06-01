@@ -38,23 +38,17 @@
                                 <div class="col-lg-12">
                                     <div class="border border-3 p-4 rounded">
 
-                                        <div class="mb-3">
-                                            <label for="about_first_text" class="form-label">Top Text</label>
-                                            <textarea name='about_first_text' class="form-control" id="about_first_text">{{ $setting->about_first_text }}</textarea>
+                                    <div class="mb-3">
+                                            <label for="about_text" class="form-label">About Our Mission</label>
+                                            <textarea name='about_text'  id='about_first_text' class="form-control" id="about_text" rows="3">{{ old("about_text", $setting->about_text) }}</textarea>
                                         
-                                            @error('about_first_text')
+                                            @error('about_text')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
 
-                                        <div class="mb-3">
-                                            <label for="about_second_text" class="form-label">Bottom Text</label>
-                                            <textarea name='about_second_text' class="form-control" id="about_second_text">{{ $setting->about_second_text }}</textarea>
-                                        
-                                            @error('about_second_text')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
+                                       
+
 
                                         <div class='row'>
                                             <div class='col-md-8'>
@@ -214,10 +208,11 @@
                 toolbar_mode: 'floating',
             });
         }
-
+        
         initTinyMCE('about_our_mission');
         initTinyMCE('about_our_vision');
         initTinyMCE('about_services');
+        initTinyMCE('about_text');
 
     });
 

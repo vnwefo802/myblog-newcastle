@@ -8,7 +8,7 @@
     <div class="m-5">
         <h3 class="py-10 ml-4 text-4xl font-bold leading-6 text-gray-900">About Us</h3>
         <p class="px-4 mt-6 font-semibold leading-6 text-gray-700 text-l">
- {!! $setting->about_services !!}
+ {!! $setting->about_text !!}
         </p>
     </div>
 </div>
