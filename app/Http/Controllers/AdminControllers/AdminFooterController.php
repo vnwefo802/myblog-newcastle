@@ -11,9 +11,9 @@ class AdminFooterController extends Controller
     // Admin.footer.edit
     public function edit ()
     {
-        $allfooter = Footer::find(1);
+        $hpp = Footer::find(1);
         
-        return view('admin_dashboard.footer.edit', compact('allfooter'));
+        return view('admin_dashboard.footer.edit', compact('hpp'));
     }
 
      // public function update(Request $request, Footer $allfooter)
@@ -29,7 +29,6 @@ class AdminFooterController extends Controller
             'twitter' => $request->twitter,
             'instagram' => $request->instagram,
             'youtube' => $request->youtube,
-            'copyright' => $request->copyright,
             'community1' => $request->community1,
             'community2' => $request->community2,
             'community3' => $request->community3,
