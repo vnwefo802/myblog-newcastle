@@ -79,6 +79,8 @@
                     <a href="{{ route('about') }}" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-blue-500" id="abouthl" aria-label="About">About</a>
                     {{-- Blog --}}
                     <a href="{{ route('blog') }}"><button type="button" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500" id="bloghl" aria-label="Blog">Blog</button></a>
+                    {{-- category --}}
+                    <a href="{{ route('categories.index') }}"><button type="button" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500" id="category" aria-label="Category">Category</button></a>
                     {{-- Contact Us --}}
                     <a href="{{route('contact.create')}}" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500" id="contacthl" aria-label="contact" >Contact Us</a>
                     <script>
