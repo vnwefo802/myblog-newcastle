@@ -38,7 +38,13 @@
                                 <div class="col-lg-12">
                                     <div class="border border-3 p-4 rounded">
 
-
+                                    <!-- Existing Logo -->
+                                    <span>Existing Logo</span>
+                                    <div class='col-md-4'>
+                                                <div class='user-image p-2'>
+                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_first_image) }}' >
+                                                </div>
+                                            </div>
                                     <!-- Logo -->
                                     <div class='row'>
                                             <div class='col-md-8'>
@@ -52,6 +58,13 @@
                                                 </div>
                                             </div>
                                     
+                                    <!-- Existing Favicon -->
+                                    <span>Existing Favicon</span>
+                                    <div class='col-md-4'>
+                                                <div class='user-image p-2'>
+                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_first_image) }}' >
+                                                </div>
+                                            </div>
                                     <!-- Favicon -->
                                     <div class='row'>
                                             <div class='col-md-8'>

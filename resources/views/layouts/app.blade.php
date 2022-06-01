@@ -80,6 +80,8 @@
                     <a href="{{ route('about') }}" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-blue-500" id="abouthl" aria-label="About">About</a>
                     {{-- Blog --}}
                     <a href="{{ route('blog') }}"><button type="button" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500" id="bloghl" aria-label="Blog">Blog</button></a>
+                    {{-- category --}}
+                    <a href="{{ route('categories.index') }}"><button type="button" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500" id="category" aria-label="Category">Category</button></a>
                     {{-- Contact Us --}}
                     <a href="{{route('contact.create')}}" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500" id="contacthl" aria-label="contact" >Contact Us</a>
                     <script>
@@ -297,8 +299,8 @@
                         <a href=" $allfooter->blog_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
                             $allfooter->blog4
                         </button></a>
-                        <a href=" $allfooter->blog_link_5 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                             $allfooter->blog5
+                        <a href="#"><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                            {{ $hpp->blog5}}
                         </button></a>
                     </div>
                     <div class="flex flex-col items-start justify-start space-y-6 xl:w-72">
