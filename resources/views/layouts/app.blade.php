@@ -300,7 +300,7 @@
                             $allfooter->blog4
                         </button></a>
                         <a href="#"><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            {{ $hpp->blog5}}
+                            $hpp->blog5
                         </button></a>
                     </div>
                     <div class="flex flex-col items-start justify-start space-y-6 xl:w-72">

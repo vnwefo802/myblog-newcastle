@@ -23,7 +23,7 @@ class AdminPostsController extends Controller
     public function index()
     {
         return view('admin_dashboard.posts.index', [
-            'posts' => Post::with('category')->orderBy('id', 'DESC')->get(),
+            'posts' => Post::with('category')->orderBy('id', 'DESC')->paginate(25),
         ]);
     }
 
@@ -170,6 +170,6 @@ class AdminPostsController extends Controller
     {
         $post->tags()->delete();
         $post->delete();
-        return redirect()->route('admin.posts.index')->with('success', 'Post has been Deleted.');
+        return redirect()->route('admin.posts.index')->with('success', 'Post has been Deleted');
     }
 }
