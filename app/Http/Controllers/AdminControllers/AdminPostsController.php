@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class AdminPostsController extends Controller
 {
@@ -74,7 +76,8 @@ class AdminPostsController extends Controller
             // $post->is_approved = true;
             // $post->save();  //end approv posts
 
-        return redirect()->route('admin.posts.create')->with('success', 'Post has been created.');
+            Alert::success('success', 'Post has been created.');
+        return redirect()->route('admin.posts.create');
     }
 
     public function show($id)
@@ -103,7 +106,7 @@ class AdminPostsController extends Controller
     {
         $this->rules['thumbnail'] = 'nullable|file|mimes:jpg,png,webp,svg,jpeg|dimensions:max_width=800,max_height=300';
         $validated = $request->validate($this->rules);
-
+        $validated['approved'] = $request->input('approved') !== null;
         $post->update($validated);
 
         if($request->has('thumbnail'))
@@ -144,7 +147,8 @@ class AdminPostsController extends Controller
         // $post->is_approved = true;
         // $post->save();  // approve posts end
 
-        return redirect()->route('admin.posts.edit', $post)->with('success', 'Post has been updated.');
+        Alert::success('success', 'Post has been updated.');
+        return redirect()->route('admin.posts.edit', $post);
     }
 
 

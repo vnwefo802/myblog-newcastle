@@ -6,6 +6,8 @@ namespace App\Http\Controllers\AdminControllers;
 use App\Models\Donate;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class AdminDonateController extends Controller
 {
@@ -58,7 +60,10 @@ class AdminDonateController extends Controller
         // $alldonate::find(1)->update($request->all());
 
 
-        return redirect()->route('admin.donate.edit')->with('success','Donate updated successfully');
+        //sweetalert
+        Alert::success('success','Donate updated successfully');
+
+        return redirect()->route('admin.donate.edit');
 
     }
 }

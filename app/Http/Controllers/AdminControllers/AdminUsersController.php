@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 use App\Models\Role;
 use App\Models\User;
@@ -44,7 +46,7 @@ class AdminUsersController extends Controller
         if($request->has('image'))
         {
             $image = $request->file('image');
-            
+
             $filename = $image->getClientOriginalName();
             $file_extension = $image->getClientOriginalExtension();
             $path = $image->store('images', 'public');
@@ -56,7 +58,10 @@ class AdminUsersController extends Controller
             ]);
         }
 
-        return redirect()->route('admin.users.create')->with('success', 'User has been created.');
+        //sweetalert
+        Alert::success('success', 'User has been created.');
+
+        return redirect()->route('admin.users.create');
     }
 
     public function edit(User $user)
@@ -73,17 +78,17 @@ class AdminUsersController extends Controller
             'user' => $user
         ]);
     }
-    
+
     public function update(Request $request, User $user)
     {
         $this->rules['password'] = 'nullable|min:3|max:20';
         $this->rules['email'] = ['required', 'email', Rule::unique('users')->ignore($user)];
 
         $validated = $request->validate($this->rules);
-        
+
         if($validated['password'] === null)
             unset($validated['password']);
-        else 
+        else
             $validated['password'] = Hash::make($request->input('password'));
 
         $user->update($validated);
@@ -102,9 +107,12 @@ class AdminUsersController extends Controller
             ]);
         }
 
-        return redirect()->route('admin.users.edit', $user)->with('success', 'User has been updated.');
+        //sweetalert
+        Alert::success('success', 'User has been updated.');
+
+        return redirect()->route('admin.users.edit', $user);
     }
-    
+
     public function destroy(User $user)
     {
         if($user->id === auth()->id())
