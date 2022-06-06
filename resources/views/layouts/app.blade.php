@@ -32,13 +32,10 @@
 
 {{-- kyle start --}}
 
-@php
-    $allcontact = App\Models\Contact::find(1);
-    @endphp
 
 <header>
 <div class="hidden py-1 text-base text-center text-white bg-black md:block">
-    <p class="inline-block"><a href="tel:07847583948"><i class="mx-2 fa-solid fa-phone"></i> $allcontact->Phone_number </a></p> <p class="inline-block"><a href="mailto:$allcontact->email "><i class="mx-2 fa-solid fa-envelope"></i> $allcontact->email </a></p>
+    <p class="inline-block"><a href="tel:07847583948"><i class="mx-2 fa-solid fa-phone"></i>07723817654</a></p> <p class="inline-block"><a href="mailto:$allcontact->email "><i class="mx-2 fa-solid fa-envelope"></i>newcastlefoundation@gmail.com</a></p>
 </div>
 </header>
 
@@ -68,10 +65,8 @@
             <!--            Secondary Navbar Items            -->
             <!-- ============================================ -->
             {{-- Dividers --}}
-            <div class="pl-2"></div>
-            <div class="pl-96"></div>
             {{-- Main Content --}}
-            <div class="items-center hidden space-x-1 md:flex">
+            <div class="items-center hidden space-x-1 md:flex float-right">
                 {{-- Home --}}
                 <div class="items-center hidden space-x-1 md:flex md:sticky">
                     <a href="/" class=" {request()->is('Home')} py-4 px-2 text-gray-500 md:text-sm text-base lg:text-lg font-semibold " id="homehl"  aria-label="Home">Home</a>
@@ -242,7 +237,7 @@
 
 {{-- kyle ed --}}
 
-
+<script src="{{ asset('js/functions.js') }}"></script>
 
 
 <main>
@@ -363,6 +358,6 @@
     </div>
 
 
-
+    <script src="{{ asset('js/functions.js') }}"></script>
 </body>
 </html>

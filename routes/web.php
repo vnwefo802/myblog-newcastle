@@ -46,7 +46,11 @@ Route::get('/volunteer', [VolunteerController::class, 'volunteer'])->name('volun
 Route::get('/donate', [DonateController::class, 'donate'])->name('donate');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
-
+// // Paypal Donation Form
+// Route::get( 'donation-form',  [ DonationController::class, 'donationForm' ] );
+// Route::get( 'donation/success',  [ DonationController::class, 'donationSuccess' ] )->name('donation.success');
+// Route::get( 'donation/cancelled',  [ DonationController::class, 'donationCancelled' ] )->name('donation.cancelled');
+// Route::get( 'donation/notify_url',  [ DonationController::class, 'donationNotify' ] )->name('donation.notify');
 
 Route::get('/posts/{post:slug}', [PostsController::class, 'show'])->name('posts.show');
 Route::post('/posts/{post:slug}', [PostsController::class, 'addComment'])->name('posts.add_comment');

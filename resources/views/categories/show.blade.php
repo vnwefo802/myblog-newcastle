@@ -12,7 +12,7 @@
 
                 @forelse($posts as $post)
 
-                <div class="w-[750px] h-[175px] border-[1px] max-h-[175px] container my-4">
+                <div class="w-[800px] h-[175px] mr-20 border-[1px] max-h-[175px] container my-4">
                     <a href="{{ route('posts.show', $post) }}" class="blog-img" ><img src="{{asset('storage/' . $post->image->path. '')}}" alt="" class="w-[300px] h-[175px] float-left"></a>
                     <div class="ml-3 mt-2 float-left">
                         <h3 class="text-2xl "><a href="{{ route('posts.show', $post) }}" class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
@@ -85,9 +85,9 @@
                     <div class="">
                         <h3 class="text-xl">Tags</h3>
                         <div class="m-2">
-                            <ul>
+                            <ul class="flex flex-row flex-wrap w-[250px]">
                             @foreach($tags as $tag)
-                                <li class="px-3 border-l-4 rounded py-1 border-white hover:border-blue-500 hover:bg-gray-300"><a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a></li>
+                                <li class="mx-1 my-1 bg-blue-400 text-white rounded-full px-1 hover:bg-blue-600"><a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a></li>
                             @endforeach
                             </ul>
                         </div>

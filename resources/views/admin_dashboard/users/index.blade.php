@@ -36,7 +36,7 @@
                             <th role="columnheader" class="pl-8 pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">User ID</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Image</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">User Name</th>
-                            <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">User Email</th>
+                            <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 ">User Email</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Role</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Related Posts</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Created at</th>
@@ -51,13 +51,13 @@
                             <td>
                                 <img class="w-16" src="{{ $user->image ? asset('storage/' . $user->image->path) : asset('storage/placeholders/user_placeholder.jpg') }}">
                             </td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ \Str::limit($user->name, 15) }} </td>
-                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ \Str::limit($user->email, 30) }}</td>
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800  whitespace-no-wrap ">{{ \Str::limit($user->name, 15) }} </td>
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap w-[200px]">{{ \Str::limit($user->email, 30) }}</td>
 
 
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">{{ $user->role->name }}</td>
                             <td>
-                                <a class='w-[100px] p-2 bg-blue-500 text-white border-2 border-blue-500 hover:bg-blue-700 focus:border-blue-900' href="{{ route('admin.users.show', $user) }}">Related Posts</a>
+                                <a class='w-[100px] py-2 bg-blue-500 text-white border-2 border-blue-500 hover:bg-blue-700 focus:border-blue-900' href="{{ route('admin.users.show', $user) }}">Related Posts</a>
                             </td>
                             <td>{{ $user->created_at->diffForHumans() }}</td>
 
