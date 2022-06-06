@@ -22,7 +22,6 @@ class FooterFactory extends Factory
             'twitter'=>'',
             'instagram'=>'',
             'youtube'=>'',
-            'copyright'=>'© 2022 newcastlefoundation. All Rights Reserved',
             'community1'=>'About us',
             'community2'=>'Who We Are',
             'community3'=>'What We Do',

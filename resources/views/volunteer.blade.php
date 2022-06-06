@@ -89,11 +89,7 @@
                                     <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg2.svg" alt="mail">
                                      <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg2dark.svg" alt="mail">
                                 </div>
-                                <input tabindex="0" aria-label="Enter email address" id="email2" name="email" required class="w-full bg-transparent text-gray-800 dark:text-gray-100 focus:outline-none focus:border focus:border-indigo-700 font-normal py-3 flex items-center pl-16 text-sm border-green-400 rounded border shadow" placeholder="example@gmail.com" />
-                            </div>
-                            <div class="flex justify-between items-center pt-1 text-green-700">
-                                <p class="text-xs">Email submission success!</p>
-                               <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg3.svg" alt="success">
+                                <input tabindex="0" aria-label="Enter email address" id="email2" name="email" required class="w-full bg-transparent text-gray-800 dark:text-gray-100 focus:outline-none focus:border focus:border-indigo-700 font-normal py-3 flex items-center pl-16 text-sm border-gray-300 rounded border shadow" placeholder="example@gmail.com" />
                             </div>
                         </div>
                         <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
@@ -112,39 +108,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
-                            <label for="StreetAddress" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Street Address</label>
-                            <input tabindex="0" aria-label="Enter street address" type="text" id="StreetAddress" name="streetAddress" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="" />
-                        </div>
-                        <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
+                        <div class="xl:w-3/5 lg:w-3/5 md:w-3/5 mx-auto flex flex-col mb-6">
                             <label for="Country" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Country</label>
                             <input tabindex="0" aria-label="Enter country" type="text" id="Country" name="country" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="California" />
-                        </div>
-                    </div>
-                    <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
-                        <label for="State/Province" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">State/Province</label>
-                        <input tabindex="0" aria-label="Enter state or province"     type="text" id="State/Province" name="state" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="California" />
-                    </div>
-                    <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
-                        <div class="flex items-center pb-2">
-                            <label for="ZIP" class="text-sm font-bold text-gray-800 dark:text-gray-100">ZIP/Postal Code</label>
-                            <div class="ml-2 cursor-pointer text-gray-600 dark:text-gray-400">
-                                <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg1.svg" alt="information">
-                                <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg1dark.svg" alt="information">
-                            </div>
-                        </div>
-
-                        <input tabindex="0" aria-label="Enter zip code" type="text" id="ZIP" name="zip" class="border border-red-400 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="e.g 86745" />
-                        <div class="flex justify-between items-center pt-1 text-red-700">
-                            <p class="text-xs">Incorrect Zip Code</p>
-                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg5.svg" alt="error">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="w-full py-4 sm:px-12 px-4 bg-gray-100 dark:bg-gray-700 mt-6 flex justify-end rounded-bl rounded-br">
-            <button role="button" aria-label="restore form" class="btn text-sm focus:outline-none text-gray-600 dark:text-gray-400 border border-gray-300 dark:hover:border-gray-500 py-2 px-6 mr-4 rounded hover:bg-gray-200 transition duration-150 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">Restore</button>
             <button role="button" aria-label="save form" class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-2 text-sm focus:outline-none" type="submit">Save</button>
         </div>
     </form>

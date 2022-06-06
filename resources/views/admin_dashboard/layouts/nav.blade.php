@@ -119,7 +119,7 @@
                 <li>
                     <a href="{{ route('admin.setting.edit') }}">
                     <div class="parent-icon"><i class='bx bx-info-square'></i></div>
-                        <div class="menu-title">Setting</div>
+                        <div class="menu-title">About</div>
                     </a>
                 </li>
 
@@ -134,6 +134,13 @@
                     <a href="{{ route('admin.home.edit') }}">
                     <div class="parent-icon"><i class='bx bx-info-square'></i></div>
                         <div class="menu-title">Home</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('admin.footer.edit') }}">
+                    <div class="parent-icon"><i class='bx bx-info-square'></i></div>
+                        <div class="menu-title">Footer</div>
                     </a>
                 </li>
 

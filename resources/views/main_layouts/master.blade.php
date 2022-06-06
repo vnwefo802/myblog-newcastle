@@ -69,7 +69,7 @@
                         <div class="col-md-2">
                             <div id="colorlib-logo"><a href="{{ route('home') }}">Blog</a></div>
                         </div>
-                        <div class="col-md-10 text-right menu-1">
+                        <div class="text-right col-md-10 menu-1">
                             <ul>
                                 <li><a href="{{ route('home') }}">Home</a></li>
                                 <li><a href="{{ route('blog') }}">Blog</a></li>

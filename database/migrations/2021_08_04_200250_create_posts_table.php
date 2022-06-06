@@ -26,7 +26,7 @@ class CreatePostsTable extends Migration
 
             $table->integer('views')->default(0);
             $table->string('status')->default('published');
-            // $table->boolean('is_approved')->default(0);
+            $table->boolean('approved')->default(0);
 
 
             $table->timestamps();

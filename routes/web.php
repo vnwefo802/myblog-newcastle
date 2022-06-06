@@ -25,6 +25,7 @@ use App\Http\Controllers\AdminControllers\AdminContactsController;
 use App\Http\Controllers\AdminControllers\AdminSettingController;
 use App\Http\Controllers\AdminControllers\AdminDonateController;
 use App\Http\Controllers\AdminControllers\AdminHomeController;
+use App\Http\Controllers\AdminControllers\AdminFooterController;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
@@ -93,4 +94,7 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'check_permissions']
 
     Route::get('home', [AdminHomeController::class, 'edit'])->name('home.edit');
     Route::post('home', [AdminHomeController::class, 'update'])->name('home.update');
+
+    Route::get('footer', [AdminFooterController::class, 'edit'])->name('footer.edit');
+    Route::post('footer', [AdminFooterController::class, 'update'])->name('footer.update');
 });

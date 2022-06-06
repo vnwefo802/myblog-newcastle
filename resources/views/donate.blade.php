@@ -57,8 +57,8 @@
             <option value="WelfareNsukka">Welfare for Nsukka</option>
         </select>
         </div>
-        <div class="my-10 md:inline-block md:my-10">
-        <input type="submit" class="p-4 ml-5 text-white transition-colors bg-green-600 rounded hover:bg-white hover:text-green-600 hover:cursor-pointer" value="Donate" title="Donate">
+        <div class="md:inline-block my-10 md:my-10">
+        <input type="submit" class="p-4 ml-5 bg-green-600 text-white hover:bg-white cursor-pointer hover:text-green-600 hover:cursor-pointer rounded transition-colors" value="Donate" title="Donate">
         </div>
     </form>
 </div>

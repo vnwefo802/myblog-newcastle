@@ -201,9 +201,12 @@
 	<script src="{{ asset('admin_dashboard_assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
 	<!--app JS-->
 	<script src="{{ asset('admin_dashboard_assets/js/app.js') }}"></script>
-    @include('sweetalert::alert')
+    {{-- confirm deletion --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 	@yield("script")
+    @include('sweetalert::alert')
 </body>
 
 </html>
