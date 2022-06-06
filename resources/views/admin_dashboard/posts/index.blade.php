@@ -1,5 +1,6 @@
 @extends("admin_dashboard.layouts.app")
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
 
        @section("wrapper")
 <div class="page-wrapper">
@@ -28,7 +29,7 @@
                </div>
            </div>
            <div class="w-full overflow-x-scroll xl:overflow-x-hidden">
-               <table class="min-w-full bg-white rounded dark:bg-gray-800">
+               <table id="example2" class="min-w-full bg-white rounded dark:bg-gray-800">
                    <thead>
                        <tr class="w-full h-16 py-8 border-b border-gray-300 dark:border-gray-200 bg-indigo-50">
                            <th role="columnheader" class="pl-8 pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Post ID</th>
@@ -103,12 +104,10 @@
                            </td>
                        </tr>
                        @endforeach
-                       {{ $posts->links() }}
-
                     </tbody>
+                    {{ $posts->links() }}
                 </table>
             </div>
-            {{ $posts->links() }}
        </div>
        <div class="container flex items-center justify-center pt-8 mx-auto sm:justify-end">
            <a class="mr-2 text-gray-600 border border-transparent rounded sm:mr-5 focus:outline-none focus:border-gray-800 focus:shadow-outline-gray" aria-label="Previous Page" role="link" href="javascript: void(0)">
@@ -132,6 +131,9 @@
 
 
 @section("script")
+<script src="{{ asset('admin_dashboard_assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+
+
 @if (session('success') == 'Post has been Deleted')
 <script>
     Swal.fire(
@@ -143,6 +145,13 @@
 @endif
 <script>
 $(document).ready(function () {
+
+ // search
+ var table = $('#example2').DataTable( {
+				lengthChange: false,
+				buttons: ['excel']
+			} );
+            // end search
 
    setTimeout(() => {
        $(".general-message").fadeOut();
