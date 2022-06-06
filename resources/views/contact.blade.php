@@ -13,67 +13,61 @@
                     <div class="flex items-center justify-center w-full my-12">
                         <form onsubmit="return false;" autocomplete="off" method="POST">
                             @csrf
-                        <div class="px-8 py-12 bg-white rounded shadow top-40 dark:bg-gray-800 lg:px-28">
-                            <p class="text-xl font-bold leading-7 text-center text-gray-700 md:text-3xl dark:text-white">Contact Us <br>We Usually Reply within 24 Hours</p>
-                            <div class="items-center mt-12 md:flex">
+                            <div class="px-8 py-12 bg-white rounded shadow top-40 dark:bg-gray-800 lg:px-28">
+                                <p class="text-xl font-bold leading-7 text-center text-gray-700 md:text-3xl dark:text-white">Contact Us <br>We Usually Reply within 24 Hours</p>
+                                <div class="items-center mt-12 md:flex">
+                                    {{-- first_name --}}
+                                    <div class="flex flex-col md:w-72">
+                                        <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name" />
+                                        <small class='error text-danger first_name'></small>
+                                    </div>
 
-                                {{-- first_name --}}
-                                <div class="flex flex-col md:w-72">
-                                    <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name" />
-							<small class='error text-danger first_name'></small>
+                                    <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0">
+                                        <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Lastname' name="last_name" />
+                                        <small class='error text-danger last_name'></small>
+                                    </div>
                                 </div>
 
-                                <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0">
-                                    <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Lastname' name="last_name" />
-                                    <small class='error text-danger last_name'></small>
-                                 </div>
-                                 
-                               
+                                <div class="items-center mt-8 md:flex">
+                                    <div class="flex flex-col md:w-72 mb-7">
+                                        <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Phone Number</label>
+                                        <input tabindex="0" role="input" arial-label="Please input your phone number" type="number" name="phone_num" require class="p-3 mt-4 text-base leading-none text-gray-900 placeholder-gray-300 bg-gray-100 border border-gray-200 rounded focus:oultine-none focus:border-indigo-700" placeholder="01234567890" />
+                                    </div>
+                                    <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
+                                        <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Country</label>
+                                        <input tabindex="0" arial-label="Please input country name" type="Country" name="Country" require class="p-3 mt-4 text-base leading-none text-gray-900 placeholder-gray-300 bg-gray-100 border border-gray-200 rounded focus:oultine-none focus:border-indigo-700" placeholder="Country Name" />
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col mt-8 md:w-[375px] md:mt-0">
+                                    <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" />
+                                    <small class='error text-danger email'></small>
+                                </div>
+
+                                <div>
+                                    <div class="flex flex-col w-full mt-8">
+                                        <x-blog.form.input value='{{ old("subject") }}' required='false' name="subject" placeholder='Your Subject' />
+                                        <small class='error text-danger subject'></small>
+                                    </div>
+
+                                    <div class="flex flex-col w-full mt-8">
+                                        <x-blog.form.textarea value='{{ old("message") }}' placeholder='What you want to tell us.' name="message" />
+                                        <small class='error text-danger message'></small>
+                                    </div>
+                                </div>
+                                <p class="mt-4 text-xs leading-3 text-gray-600 dark:text-gray-200">By clicking submit you agree to our terms of service, privacy policy and how we use data as stated</p>
+                                <div class="flex items-center justify-center w-full">
+                                    <input type="submit" class="px-10 py-4 text-base font-semibold leading-none text-white bg-indigo-700 rounded mt-9 hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none send-message-btn" value="Send Message">
+
+                                    {{-- <input type="submit" value="Send Message" class="btn btn-primary send-message-btn"> --}}       
+                                </div>
                             </div>
-
-                            <div class="items-center mt-8 md:flex">
-                                <div class="flex flex-col md:w-72 mb-7">
-                                    <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Phone Number</label>
-                                    <input tabindex="0" role="input" arial-label="Please input your phone number" type="number" name="phone_num" require class="p-3 mt-4 text-base leading-none text-gray-900 placeholder-gray-300 bg-gray-100 border border-gray-200 rounded focus:oultine-none focus:border-indigo-700" placeholder="01234567890" />
-                                </div>
-                                <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
-                                    <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Country</label>
-                                    <input tabindex="0" arial-label="Please input country name" type="Country" name="Country" require class="p-3 mt-4 text-base leading-none text-gray-900 placeholder-gray-300 bg-gray-100 border border-gray-200 rounded focus:oultine-none focus:border-indigo-700" placeholder="Country Name" />
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col mt-8 md:w-[375px] md:mt-0">
-                                <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" />
-                                <small class='error text-danger email'></small>
-                             </div>
-
-                            <div>
-                                <div class="flex flex-col w-full mt-8">
-                                   <x-blog.form.input value='{{ old("subject") }}' required='false' name="subject" placeholder='Your Subject' />
-							<small class='error text-danger subject'></small>
-                                </div>
-
-                                <div class="flex flex-col w-full mt-8">
-                                    <x-blog.form.textarea value='{{ old("message") }}' placeholder='What you want to tell us.' name="message" />
-                                    <small class='error text-danger message'></small>
-                                </div>
-
-
-                            </div>
-                            <p class="mt-4 text-xs leading-3 text-gray-600 dark:text-gray-200">By clicking submit you agree to our terms of service, privacy policy and how we use data as stated</p>
-                            <div class="flex items-center justify-center w-full">
-                                <input type="submit" class="px-10 py-4 text-base font-semibold leading-none text-white bg-indigo-700 rounded mt-9 hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none send-message-btn" value="Send Message">
-
-                                {{-- <input type="submit" value="Send Message" class="btn btn-primary send-message-btn"> --}}                           </div>
-                        </div>
-                    </form>
+                        </form>
                     <x-blog.message :status="'success'" />
 
                     </div>
                 </div>
             </div>
-
-
             <div class="flex flex-col w-full lg:flex-row md:flex-row gap-x-6">
                 <div class="lg:max-w-[302px] md:max-w-[336px] max-w-[343px] w-full lg:max-h-[232px] md:max-h-[216px] max-h-[216px] bg-gray-100 lg:py-12 md:py-11 py-12 px-8 lg:mb-0 md:mb-0 mb-4">
                     <svg class="mx-auto mb-6 cursor-pointer" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
