@@ -32,13 +32,10 @@
 
 {{-- kyle start --}}
 
-@php
-    $allcontact = App\Models\Contact::find(1);
-    @endphp
 
 <header>
 <div class="hidden py-1 text-base text-center text-white bg-black md:block">
-    <p class="inline-block"><a href="tel:07847583948"><i class="mx-2 fa-solid fa-phone"></i> $allcontact->Phone_number </a></p> <p class="inline-block"><a href="mailto:$allcontact->email "><i class="mx-2 fa-solid fa-envelope"></i> $allcontact->email </a></p>
+    <p class="inline-block"><a href="tel:07847583948"><i class="mx-2 fa-solid fa-phone"></i>07723817654</a></p> <p class="inline-block"><a href="mailto:$allcontact->email "><i class="mx-2 fa-solid fa-envelope"></i>newcastlefoundation@gmail.com</a></p>
 </div>
 </header>
 

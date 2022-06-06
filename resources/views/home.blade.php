@@ -197,6 +197,7 @@
     <h2 role="heading" class="relative z-20 flex justify-center px-4 py-12 text-2xl font-semibold leading-6 text-gray-800 dark:text-white 2xl:px-20 md:px-6">OUR WEEKLY <span class="pl-2 font-bold">BLOG.</span></h2>
     <div class="relative z-40 flex flex-col items-center justify-center w-full px-8 pt-6 md:flex-row sm:flex-col sm:justify-between">
         <!-- blog post one -->
+        @if (!$recentPosts->isEmpty())
         @foreach($recentPosts as $recent_post)
         <div class="pb-8 2xl:w-auto xl:w-96 lg:w-72 md:w-56 sm:w-64 w-80 sm:pb-0 max-w-[380px]">
             <!-- post image -->
@@ -224,6 +225,9 @@
             </div>
         </div>
         @endforeach
+        @else
+            <h1>No weekly posts available</h1>
+        @endif
     </div>
     <!-- more posts -->
     <div class="flex items-center justify-center w-full mt-12">
