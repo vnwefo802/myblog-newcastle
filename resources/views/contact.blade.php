@@ -31,23 +31,21 @@
                                
                             </div>
 
-                            <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0">
-                                <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" />
-                         <small class='error text-danger email'></small>
-                             </div>
-
-
                             <div class="items-center mt-8 md:flex">
-                                <div class="flex flex-col md:w-72">
+                                <div class="flex flex-col md:w-72 mb-7">
                                     <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Phone Number</label>
                                     <input tabindex="0" role="input" arial-label="Please input your phone number" type="number" name="phone_num" require class="p-3 mt-4 text-base leading-none text-gray-900 placeholder-gray-300 bg-gray-100 border border-gray-200 rounded focus:oultine-none focus:border-indigo-700" placeholder="01234567890" />
                                 </div>
-                                <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0">
+                                <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
                                     <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Country</label>
                                     <input tabindex="0" arial-label="Please input country name" type="Country" name="Country" require class="p-3 mt-4 text-base leading-none text-gray-900 placeholder-gray-300 bg-gray-100 border border-gray-200 rounded focus:oultine-none focus:border-indigo-700" placeholder="Country Name" />
                                 </div>
                             </div>
 
+                            <div class="flex flex-col mt-8 md:w-[375px] md:mt-0">
+                                <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" />
+                                <small class='error text-danger email'></small>
+                             </div>
 
                             <div>
                                 <div class="flex flex-col w-full mt-8">

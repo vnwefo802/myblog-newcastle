@@ -722,6 +722,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-ml-px {
   margin-left: -1px;
 }
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
 .block {
   display: block;
 }
@@ -2604,6 +2607,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-3 {
+    width: 0.75rem;
+  }
+
+  .md\:w-\[333px\] {
+    width: 333px;
+  }
+
+  .md\:w-\[375px\] {
+    width: 375px;
   }
 
   .md\:max-w-\[744px\] {
