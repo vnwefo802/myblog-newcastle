@@ -5,6 +5,8 @@ namespace App\Http\Controllers\AdminControllers;
 use App\Models\Footer;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class AdminFooterController extends Controller
 {
@@ -12,7 +14,7 @@ class AdminFooterController extends Controller
     public function edit ()
     {
         $hpp = Footer::find(1);
-        
+
         return view('admin_dashboard.footer.edit', compact('hpp'));
     }
 
@@ -22,7 +24,7 @@ class AdminFooterController extends Controller
         public function Update(Request $request)
         {
             $footer_id = 1;
-    
+
             Footer::findOrFail($footer_id)->update([
             'title' => $request->title,
             'facebook' => $request->facebook,
@@ -57,10 +59,12 @@ class AdminFooterController extends Controller
             'contact_link_3' => $request->contact_link_3,
             'contact_link_4' => $request->contact_link_4,
             'contact_link_5' => $request->contact_link_5,
-                    
-        ]); 
 
-        return redirect()->route('admin.footer.edit')->with('success','Footer updated successfully');
+        ]);
+
+          //sweetalert
+          Alert::success('success','Footer updated successfully');
+        return redirect()->route('admin.footer.edit');
 
     }
 }
