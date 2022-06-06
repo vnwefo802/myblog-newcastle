@@ -42,6 +42,18 @@ class AdminPostsController extends Controller
         $validated['user_id'] = auth()->id();
         $post = Post::create($validated);
 
+        // approve new posts
+        // if(auth()->user()->role == 'admin'){
+
+
+        // }
+        //  else{
+
+        //  $current_post->approved;
+
+        //  }
+
+
         if($request->has('thumbnail'))
         {
             $thumbnail = $request->file('thumbnail');
