@@ -116,7 +116,7 @@
                 @endguest
 
                 {{-- Volunteer --}}
-                <a href="{{route('volunteer')}}" class="inline-flex items-center justify-center w-full h-12 text-base font-semibold text-white transition duration-200 bg-blue-400 border-2 border-blue-400 rounded md:px-1 lg:px-6 hover:border-blue-500 md:w-auto hover:bg-blue-500 focus:shadow-outline focus:outline-none dark:focus:ring-blue-500 md:text-sm lg:text-base" aria-label="Volunteer">
+                <a href="{{route('volunteer.create')}}" class="inline-flex items-center justify-center w-full h-12 text-base font-semibold text-white transition duration-200 bg-blue-400 border-2 border-blue-400 rounded md:px-1 lg:px-6 hover:border-blue-500 md:w-auto hover:bg-blue-500 focus:shadow-outline focus:outline-none dark:focus:ring-blue-500 md:text-sm lg:text-base" aria-label="Volunteer">
                     Volunteer
                 </a>
 
@@ -171,7 +171,7 @@
             {{-- Blog --}}
             <li><a href="{{route('blog')}}" class="block px-2 py-4 text-sm transition duration-300 border-blue-500 hover:text-indigo-500" aria-label="Blog" id="bloghlm">Blog</a></li>
             {{-- volunteer --}}
-            <li><a href="{{route('volunteer')}}" class="block px-2 py-4 text-sm transition duration-300 border-blue-500 hover:text-indigo-500" aria-label="Volunteer" id="volunteerhlm">Volunteer</a></li>
+            <li><a href="{{route('volunteer.create')}}" class="block px-2 py-4 text-sm transition duration-300 border-blue-500 hover:text-indigo-500" aria-label="Volunteer" id="volunteerhlm">Volunteer</a></li>
             {{-- Blog --}}
             <li><a href="{{route('donate')}}" class="block px-2 py-4 text-sm transition duration-300 border-blue-500 hover:text-indigo-500" aria-label="Donate" id="donatehlm">Donate</a></li>
         </ul>
