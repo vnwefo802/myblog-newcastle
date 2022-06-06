@@ -242,7 +242,7 @@
 
 {{-- kyle ed --}}
 
-
+<script src="{{ asset('js/functions.js') }}"></script>
 
 
 <main>
@@ -363,6 +363,6 @@
     </div>
 
 
-
+    <script src="{{ asset('js/functions.js') }}"></script>
 </body>
 </html>
