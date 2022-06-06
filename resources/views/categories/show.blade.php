@@ -12,7 +12,7 @@
 
                 @forelse($posts as $post)
 
-                <div class="w-[750px] h-[175px] border-[1px] max-h-[175px] container my-4">
+                <div class="w-[800px] h-[175px] mr-20 border-[1px] max-h-[175px] container my-4">
                     <a href="{{ route('posts.show', $post) }}" class="blog-img" ><img src="{{asset('storage/' . $post->image->path. '')}}" alt="" class="w-[300px] h-[175px] float-left"></a>
                     <div class="ml-3 mt-2 float-left">
                         <h3 class="text-2xl "><a href="{{ route('posts.show', $post) }}" class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
