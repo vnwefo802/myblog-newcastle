@@ -25,6 +25,7 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => $this->faker->word(),
+            'short_description' => $this->faker->word(),
             'slug' => $this->faker->unique()->slug(),
             'user_id' => User::all()->random()->id
         ];
