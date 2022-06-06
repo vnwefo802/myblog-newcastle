@@ -1,6 +1,8 @@
 @extends("admin_dashboard.layouts.app")
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+@section("style")
 <link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+@endsection
         @section("wrapper")
 <div class="page-wrapper">
     <div class="page-content">
@@ -72,15 +74,15 @@
 
                     </tbody>
                 </table>
-                {{ $users->links() }}
             </div>
+            <div class='mt-4'>
+                {{ $users->links() }}
+                </div>
+           
         </div>
     </div>
 </div>
-    <?php
-    
-    
-    ?>
+   
         <!--end page wrapper -->
         @endsection
 
