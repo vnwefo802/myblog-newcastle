@@ -60,22 +60,23 @@
 
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">
                                 <div class="flex items-center">
+
+                                    {{-- edit --}}
                                     <a  href="{{ route('admin.users.edit', $user) }}">
-                                        <div aria-label="Edit row" role="button" class="w-[26px] h-[26px] text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
+                                        <div aria-label="Edit row" role="button" class="px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none hover:bg-gray-200 active:bg-blue-200">
                                             <img class="w-[25px] h-[25px]" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg4.svg" alt="Edit">
                                         </div>
                                     </a>
 
-                                    <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $user->id }}').submit();" >
-                                        <button type="submit"class="w-[26px] h-[26px]" href="javascript: void(0)">
-                                            <div aria-label="Delete" role="button" class="w-[26px] h-[26px] mt-1 text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
+                                    <form method='post' action="{{ route('admin.users.destroy', $user) }}" id='delete_form_{{ $user->id }}' class="confirmDelete">@csrf @method('DELETE')
+
+                                        {{-- Delete --}}
+                                       <button type="submit"class="px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none active:bg-red-200 hover:shadow-lg focus:outline-none" href="javascript: void(0)">
+                                            <div aria-label="Delete" role="button" class="w-[26px] h-[26px] mt-1 text-indigo-700  rounded cursor-pointer hover:bg-red-500-200">
                                                     <img class="w-[25px] h-[25px]" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
                                             </div>
                                         </button>
-                                    </a>
-
-                                    {{-- Delete --}}
-                                    <form method='post' action="{{ route('admin.users.destroy', $user) }}" id='delete_form_{{ $user->id }}'>@csrf @method('DELETE')</form>
+                                    </form>
 
 
                                 </div>
@@ -85,6 +86,7 @@
 
                     </tbody>
                 </table>
+                {{ $users->links() }}
             </div>
         </div>
     </div>
@@ -103,6 +105,30 @@
             }, 5000);
 
         });
+
+        $('.confirmDelete').submit(function(e){
+            e.preventDefault();
+            Swal.fire({
+  title: 'Are you sure you want to delete this User?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+    this.submit();
+  }
+
+})
+
+});
 
     </script>
     @endsection

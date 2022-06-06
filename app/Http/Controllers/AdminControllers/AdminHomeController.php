@@ -5,6 +5,8 @@ namespace App\Http\Controllers\AdminControllers;
 use App\Models\Home;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class AdminHomeController extends Controller
 {
@@ -12,7 +14,7 @@ class AdminHomeController extends Controller
     public function edit ()
     {
         $allhome = Home::find(1);
-        
+
         return view('admin_dashboard.home.edit', compact('allhome'));
     }
     // public function update(Request $request, Home $allhome)
@@ -21,7 +23,7 @@ class AdminHomeController extends Controller
         public function Update(Request $request)
         {
             $home_id = 1;
-    
+
             Home::findOrFail($home_id)->update([
             'title' => $request->title,
             'video' => $request->video,
@@ -44,10 +46,12 @@ class AdminHomeController extends Controller
             'difference_button_2' => $request->difference_button_2,
             'difference_image' => $request->difference_image,
             'Logo' => $request->Logo,
-                    
-                ]); 
 
-        return redirect()->route('admin.home.edit')->with('success','Home updated successfully');
+                ]);
+
+                      //sweetalert
+        Alert::success('success','Home updated successfully');
+        return redirect()->route('admin.home.edit');
 
     }
 }

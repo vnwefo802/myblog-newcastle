@@ -55,6 +55,7 @@
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
                     <a href="/" class="flex items-center px-2 py-4" aria-label="Fablogo logo">
+                        <img src="{{ asset('storage/' . $setting->about_third_image) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="NewcastleFoundationLogo" />
                         <!--<img  src="{{ asset('images/FabLogo.webp') }}"  class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Fablogo logo" aria-label="Fablogo logo" >-->
 
                     </a>
@@ -298,8 +299,8 @@
                         <a href=" $allfooter->blog_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
                             $allfooter->blog4
                         </button></a>
-                        <a href=" $allfooter->blog_link_5 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                             $allfooter->blog5
+                        <a href="#"><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                            $hpp->blog5
                         </button></a>
                     </div>
                     <div class="flex flex-col items-start justify-start space-y-6 xl:w-72">

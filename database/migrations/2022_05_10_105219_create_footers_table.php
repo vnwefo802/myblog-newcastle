@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('twitter');
             $table->string('instagram');
             $table->string('youtube');
-            $table->string('copyright');
             //community section
             $table->string('community1');
             $table->string('community2');
