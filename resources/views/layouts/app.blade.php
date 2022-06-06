@@ -54,7 +54,7 @@
                     <!-- ============================================ -->
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
-                    <a href="/" class="flex items-center px-2 py-4" aria-label="Fablogo logo">
+                    <a href="/" class="flex items-center px-2 py-4" aria-label="Fablogo logo">np
                         <!--<img  src="{{ asset('images/FabLogo.webp') }}"  class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Fablogo logo" aria-label="Fablogo logo" >-->
 
                     </a>
