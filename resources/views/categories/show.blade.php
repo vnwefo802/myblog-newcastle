@@ -85,9 +85,9 @@
                     <div class="">
                         <h3 class="text-xl">Tags</h3>
                         <div class="m-2">
-                            <ul>
+                            <ul class="flex flex-row flex-wrap w-[250px]">
                             @foreach($tags as $tag)
-                                <li class="px-3 border-l-4 rounded py-1 border-white hover:border-blue-500 hover:bg-gray-300"><a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a></li>
+                                <li class="mx-1 my-1 bg-blue-400 text-white rounded-full px-1 hover:bg-blue-600"><a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a></li>
                             @endforeach
                             </ul>
                         </div>
