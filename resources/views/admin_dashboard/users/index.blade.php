@@ -1,5 +1,6 @@
 @extends("admin_dashboard.layouts.app")
-
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
         @section("wrapper")
 <div class="page-wrapper">
     <div class="page-content">
@@ -30,7 +31,7 @@
                 </div>
             </div>
             <div class="w-full overflow-x-scroll xl:overflow-x-hidden">
-                <table class="min-w-full bg-white rounded dark:bg-gray-800">
+                <table id="example2" class="min-w-full bg-white rounded dark:bg-gray-800">
                     <thead>
                         <tr class="w-full h-16 py-8 border-b border-gray-300 dark:border-gray-200 bg-indigo-50">
                             <th role="columnheader" class="pl-8 pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">User ID</th>
@@ -103,9 +104,18 @@
 
 
     @section("script")
+<script src="{{ asset('admin_dashboard_assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+
 
     <script>
         $(document).ready(function () {
+
+             // search
+             var table = $('#example2').DataTable( {
+				lengthChange: false,
+				buttons: ['excel']
+			} );
+            // end search
 
             setTimeout(() => {
                 $(".general-message").fadeOut();
