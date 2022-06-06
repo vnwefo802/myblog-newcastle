@@ -11,6 +11,7 @@
             <div class='border '>
                 <div class="m-7">                
                     <h3 class="text-[20px] hover:text-blue-600 font-[400px]"><a href="{{ route('categories.show', $category) }}">{{ $category->name }}</a></h3>
+                    <p class="text-[15px]">{{ $category->short_description }}
                     <div class=" flex flex-row flex-wrap gap-3 m-2 text-sm text-gray-400">
                         <div><a class='date' href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="float-left mt-[2.5px] mr-[2px] w-[12px] h-[12px]">
