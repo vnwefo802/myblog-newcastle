@@ -174,7 +174,7 @@
 
                                     <div class='col-md-6'>
                                         <!-- community_link_4 -->
-                                        <div class="mb-3">
+                                        <div class="mb-7">
                                             <label for="community_link_4" class="form-label">Community Link 4</label>
                                             <input name='community_link_4'  id='community_link_4' class="border rounded h-[38px] w-full" value=' {{-- old("community_link_4", $allfooter->community_link_4) --}}'>
                                         
@@ -183,7 +183,7 @@
                                             @enderror
                                         </div>
                                     </div>
-
+                                    <div class="mb-5"></div>
                                     <div class='col-md-6'>
                                         <!-- blog1 -->
                                         <div class="mb-3">
@@ -304,6 +304,7 @@
                                             @enderror
                                         </div>
                                     </div>
+                                    <div class="mb-5"></div>
 
                                     <div class='col-md-6'>
                                         <!-- contact1 -->
@@ -424,6 +425,8 @@
                                             @enderror
                                         </div>
                                     </div>
+                                    <div class="mb-5"></div>
+
                                     <button class='btn btn-primary' type='submit'>Update</button>
                                 </div>
                             </div> 
