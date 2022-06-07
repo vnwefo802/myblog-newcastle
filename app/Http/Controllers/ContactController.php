@@ -18,7 +18,7 @@ class ContactController extends Controller
 
     public function store()
     {
-        
+
         $data = array();
         $data['success'] = 0;
         $data['errors'] = [];
@@ -26,6 +26,8 @@ class ContactController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
+            'phone_number' => 'required|number',
+            'country' => 'required',
             'subject' => 'nullable|min:5|max:50',
             'message' => 'required|min:5|max:500'
         ];
@@ -35,6 +37,8 @@ class ContactController extends Controller
         {
             $data['errors']['first_name'] = $validated->errors()->first('first_name');
             $data['errors']['last_name'] = $validated->errors()->first('last_name');
+            $data['errors']['last_name'] = $validated->errors()->first('phone_number');
+            $data['errors']['last_name'] = $validated->errors()->first('country');
             $data['errors']['email'] = $validated->errors()->first('email');
             $data['errors']['subject'] = $validated->errors()->first('subject');
             $data['errors']['message'] = $validated->errors()->first('message');
