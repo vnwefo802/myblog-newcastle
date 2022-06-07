@@ -7,12 +7,12 @@
 {{-- hero --}}
 
 
-<div class="bg-gray-100 dark:bg-transparent">
+<div class="bg-gray-100 dark:bg-gray-800">
     <div class="container mx-auto flex flex-col items-center py-12 sm:py-24">
         <div class="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col  mb-5 sm:mb-10">
             <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-gray-800 dark:text-white font-black leading-7 md:leading-10">
             Volunteer Now and Help The
-                <span class="text-indigo-700">Communities</span>
+                <span class="text-indigo-700 dark:text-indigo-300">Communities</span>
                 in Need
             </h1>
             <p class="mt-5 sm:mt-10 lg:w-10/12 text-gray-400 font-normal text-center text-sm sm:text-lg">Do you want to make a difference? Join our volunteer force now and make a differents!</p>
@@ -36,7 +36,7 @@
 
  --}}
 
-<div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-white dark:bg-gray-800 shadow" id="formscroll">
+<div class="dark:text-white px-6 py-4 border-0 rounded relative mb-4 bg-white dark:bg-gray-800 shadow w-[1080px] mx-auto" id="formscroll">
 
     <span class="inline-block align-middle mr-8">
        We take <b class="capitalize">privacy!</b> issues seriously. You can be sure that your personal data is securely protected.
