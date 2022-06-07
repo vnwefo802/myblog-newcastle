@@ -19,7 +19,7 @@
                                 <div class="items-center mt-12 md:flex">
                                     {{-- first_name --}}
                                     <div class="flex flex-col md:w-72">
-                                        <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name" />
+                                        <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name"  />
                                         <small class='error text-danger first_name'></small>
                                     </div>
 
@@ -41,7 +41,7 @@
                                     </div>
                                 </div>
 
-                                <div class="flex flex-col mt-8 md:w-[375px] md:mt-0">
+                                <div class="flex flex-col mt-8 md:mt-0">
                                     <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" />
                                     <small class='error text-danger email'></small>
                                 </div>
