@@ -18,7 +18,6 @@ class CreateVolunteerTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
-            $table->string('city');
             $table->string('phone_number');
             $table->string('country');
             $table->timestamps();
