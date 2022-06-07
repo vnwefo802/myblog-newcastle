@@ -802,6 +802,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-5 {
   height: 1.25rem;
 }
+.h-\[900px\] {
+  height: 900px;
+}
+.h-\[px\] {
+  height: px;
+}
 .max-h-\[175px\] {
   max-height: 175px;
 }
