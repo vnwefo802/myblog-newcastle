@@ -38,16 +38,18 @@ class ContactController extends Controller
             $data['errors']['subject'] = $validated->errors()->first('subject');
             $data['errors']['message'] = $validated->errors()->first('message');
         }
-        else 
+        else
         {
             $attributes = $validated->validated();
             Contact::create($attributes);
 
             Mail::to( env('ADMIN_EMAIL') )->send(new ContactMail(
-                $attributes['first_name'], 
-                $attributes['last_name'], 
-                $attributes['email'], 
-                $attributes['subject'], 
+                $attributes['first_name'],
+                $attributes['last_name'],
+                $attributes['phone_number'],
+                $attributes['country'],
+                $attributes['email'],
+                $attributes['subject'],
                 $attributes['message']
             ));
             $data['success'] = 1;

@@ -7,9 +7,13 @@ Firstname: {{ $firstname }}
 <br>
 Secondname: {{ $secondname }}
 <br>
+Phonenumber: {{ $email }}
+<br>
+Country: {{ $email }}
+<br>
 Email: {{ $email }}
 <br>
-Subject: {{ $subject }} 
+Subject: {{ $subject }}
 <br>
 Message: {{ $message }}
 
