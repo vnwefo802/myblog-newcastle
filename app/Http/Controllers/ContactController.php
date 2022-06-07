@@ -31,7 +31,6 @@ class ContactController extends Controller
             'subject' => 'nullable|min:5|max:50',
             'message' => 'required|min:5|max:500',
             'phone_number' => 'nullable',
-            'country' => 'required|min:2|max:60'
         ];
         $validated = Validator::make(request()->all(), $rules);
 
