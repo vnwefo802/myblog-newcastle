@@ -826,11 +826,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-5 {
   height: 1.25rem;
 }
+.h-\[900px\] {
+  height: 900px;
+}
+.h-\[px\] {
+  height: px;
+}
+.h-\[60px\] {
+  height: 60px;
+}
 .h-\[55px\] {
   height: 55px;
 }
 .h-\[25\.5px\] {
   height: 25.5px;
+}
+.h-2 {
+  height: 0.5rem;
+}
+.h-1 {
+  height: 0.25rem;
 }
 .max-h-\[175px\] {
   max-height: 175px;
@@ -969,6 +984,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[750px\] {
   width: 750px;
+}
+.w-\[75\] {
+  width: 75;
 }
 .min-w-full {
   min-width: 100%;
@@ -1292,6 +1310,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -1543,6 +1565,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .py-14 {
   padding-top: 3.5rem;
