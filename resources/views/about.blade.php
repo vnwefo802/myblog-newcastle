@@ -26,35 +26,35 @@
                     <img src="{{ asset('storage/' . $setting->about_first_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling"/>
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{{$setting->about_first_member_name}}</p>
-                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white"><setting->{{$setting->about_first_member_role}}</setting-></p>
+                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white"><setting->{!! $setting->about_first_member_role !!}</setting-></p>
                     </div>
                 </div>
                 <div class="w-[275px]">
                     <img src="{{ asset('storage/' . $setting->about_second_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman in black dress" />
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{{$setting->about_second_member_name}}</p>
-                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{{$setting->about_second_member_role}}</p>
+                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $setting->about_second_member_role !!}</p>
                     </div>
                 </div>
                 <div class="w-[275px]">
                     <img src="{{ asset('storage/' . $setting->about_third_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{{$setting->about_third_member_name}}</p>
-                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{{$setting->about_third_member_role}}</p>
+                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $setting->about_third_member_role !!}</p>
                     </div>
                 </div>
                 <div class="w-[275px]">
                     <img src="{{ asset('storage/' . $setting->about_fourth_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{{$setting->about_fourth_member_name}}</p>
-                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{{$setting->about_fourth_member_role}}</p>
+                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $setting->about_fourth_member_role !!}</p>
                     </div>
                 </div>
                 <div class="w-[275px]">
                     <img src="{{ asset('storage/' . $setting->about_fifth_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{{$setting->about_fifth_member_name}}</p>
-                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{{$setting->about_fifth_member_role}}</p>
+                        <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $setting->about_fifth_member_role !!}</p>
                     </div>
                 </div>
             </div>
