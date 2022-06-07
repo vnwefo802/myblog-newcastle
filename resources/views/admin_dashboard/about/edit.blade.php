@@ -48,17 +48,15 @@
                                         </div>
 
                                        
-
-
                                         <div class='row'>
                                             <div class='col-md-8'>
-                                                <div class="mb-3">
+                                                <div class="mb-5">
                                                     <label for="about_first_image" class="form-label">First member Image</label>
                                                     <input name='about_first_image' type='file' class="form-control" id="about_first_image">
 
-                                                    <div class="mb-3">
+                                                    <div class="my-3">
                                                         <label for="about_first_member_name" class="form-label"> First member info</label>
-                                                        <textarea name='about_first_member_name'  id='about_first_member_name' class="form-control" rows="3">{{ old("about_first_member_name", $setting->about_first_member_name) }}</textarea>
+                                                        <textarea name='about_first_member_name'  id='about_first_member_name' class="form-control " rows="3">{{ old("about_first_member_name", $setting->about_first_member_name) }}</textarea>
                                                     
                                                         @error('about_first_member_name')
                                                             <p class='text-danger'>{{ $message }}</p>
@@ -75,12 +73,12 @@
 
                                         <div class='row'>
                                             <div class='col-md-8'>
-                                                <div class="mb-3">
+                                                <div class="mb-5">
                                                     <label for="about_second_image" class="form-label">Second member Image</label>
                                                     <input name='about_second_image' type='file' class="form-control" id="about_second_image">
 
-                                                    <div class="mb-3">
-                                                        <label for="about_second_member_name" class="form-label"> second member info</label>
+                                                    <div class="my-3">
+                                                        <label for="about_second_member_name" class="form-label">Second member info</label>
                                                         <textarea name='about_second_member_name'  id='about_second_member_name' class="form-control" rows="3">{{ old("about_second_member_name", $setting->about_second_member_name) }}</textarea>
                                                     
                                                         @error('about_second_member_name')
@@ -99,12 +97,12 @@
 
                                         <div class='row'>
                                             <div class='col-md-8'>
-                                                <div class="mb-3">
+                                                <div class="mb-5">
                                                     <label for="about_third_image" class="form-label">Third member Image</label>
                                                     <input name='about_third_image' type='file' class="form-control" id="about_third_image">
 
-                                                    <div class="mb-3">
-                                                        <label for="about_third_member_name" class="form-label"> Third member info</label>
+                                                    <div class="my-3">
+                                                        <label for="about_third_member_name" class="form-label">Third member info</label>
                                                         <textarea name='about_third_member_name'  id='about_third_member_name' class="form-control" rows="3">{{ old("about_third_member_name", $setting->about_third_member_name) }}</textarea>
                                                     
                                                         @error('about_third_member_name')
@@ -123,12 +121,12 @@
                                         
                                         <div class='row'>
                                             <div class='col-md-8'>
-                                                <div class="mb-3">
+                                                <div class="mb-5">
                                                     <label for="about_fourth_image" class="form-label">Fouth member Image</label>
                                                     <input name='about_fourth_image' type='file' class="form-control" id="about_fourth_image">
                                                 
-                                                    <div class="mb-3">
-                                                        <label for="about_fourth_member_name" class="form-label"> Fouth member info</label>
+                                                    <div class="my-3">
+                                                        <label for="about_fourth_member_name" class="form-label">Fouth member info</label>
                                                         <textarea name='about_fourth_member_name'  id='about_fourth_member_name' class="form-control" rows="3">{{ old("about_fourth_member_name", $setting->about_fourth_member_name) }}</textarea>
                                                     
                                                         @error('about_fourth_member_name')
@@ -146,13 +144,12 @@
 
                                           <div class='row'>
                                             <div class='col-md-8'>
-                                                <div class="mb-3">
+                                                <div class="mb-5">
                                                     <label for="about_fifth_image" class="form-label">Fifth member Image</label>
                                                     <input name='about_fifth_image' type='file' class="form-control" id="about_fifth_image">
-                                                
-                                                    
-                                                    <div class="mb-3">
-                                                        <label for="about_fifth_member_name" class="form-label"> Fifth member info</label>
+
+                                                    <div class="my-3">
+                                                        <label for="about_fifth_member_name" class="form-label">Fifth member info</label>
                                                         <textarea name='about_fourth_member_name'  id='about_fifth_member_name' class="form-control" rows="3">{{ old("about_fifth_member_name", $setting->about_fifth_member_name) }}</textarea>
                                                     
                                                         @error('about_fifth_member_name')
