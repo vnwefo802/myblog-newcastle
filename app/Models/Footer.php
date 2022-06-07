@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Footer extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+  protected $table = 'footers';
+
+    protected $guarded = ['title', 'facebook', 'twitter', 'instagram', 'youtube', 'blog_section', 'community_section', 'contact_us_section'];
 }

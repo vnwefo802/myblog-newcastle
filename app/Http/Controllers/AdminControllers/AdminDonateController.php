@@ -30,9 +30,9 @@ class AdminDonateController extends Controller
             'donate_project_title' => $request->donate_project_title,
             'donate_objectives__title' => $request->donate_objectives__title,
             'donate_values_title' => $request->donate_values_title,
-
-
                 ]);
+
+
         // $request->validate([
         //     'donate_title' => $request->,
         //     'donate_first_short_title' => '|max:',
