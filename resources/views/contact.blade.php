@@ -37,7 +37,7 @@
 
                                     <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
                                         <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" />
-                                <small class='error text-danger country'></small>
+                                        <small class='error text-danger country'></small>
                                     </div>
                                 </div>
 

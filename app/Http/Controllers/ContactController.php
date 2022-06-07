@@ -29,7 +29,9 @@ class ContactController extends Controller
             'phone_number' => 'required|number',
             'country' => 'required',
             'subject' => 'nullable|min:5|max:50',
-            'message' => 'required|min:5|max:500'
+            'message' => 'required|min:5|max:500',
+            'phone_number' => 'nullable',
+            'country' => 'required|min:2|max:60'
         ];
         $validated = Validator::make(request()->all(), $rules);
 
@@ -42,6 +44,9 @@ class ContactController extends Controller
             $data['errors']['email'] = $validated->errors()->first('email');
             $data['errors']['subject'] = $validated->errors()->first('subject');
             $data['errors']['message'] = $validated->errors()->first('message');
+            $data['errors']['phone_number'] = $validated->errors()->first('phone_number');
+            $data['errors']['country'] = $validated->errors()->first('country');
+
         }
         else
         {
@@ -49,13 +54,13 @@ class ContactController extends Controller
             Contact::create($attributes);
 
             Mail::to( env('ADMIN_EMAIL') )->send(new ContactMail(
-                $attributes['first_name'],
-                $attributes['last_name'],
+                $attributes['first_name'], 
+                $attributes['last_name'], 
+                $attributes['email'], 
+                $attributes['subject'], 
+                $attributes['message'],
                 $attributes['phone_number'],
-                $attributes['country'],
-                $attributes['email'],
-                $attributes['subject'],
-                $attributes['message']
+                $attributes['country']
             ));
             $data['success'] = 1;
             $data['message'] = 'Thank you for contacting with us';
