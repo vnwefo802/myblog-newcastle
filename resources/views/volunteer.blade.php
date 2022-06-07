@@ -60,58 +60,46 @@
 
 
 <div>
-    <form id="form" action="{{ route('volunteer.store') }}" method="post" class="container mx-auto bg-white dark:bg-gray-800 shadow rounded">
+    <form id="form" action="{{ route('volunteer.store') }}" method="post" class="container mx-auto w-[1080px] bg-white dark:bg-gray-800 shadow rounded">
         @csrf
         <div class="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5">
             <div class="flex items-center w-11/12 mx-auto">
                 <h1 role="heading"  class="text-lg text-gray-800 dark:text-gray-100 font-bold">Personal Information</h1>
                 <div class="ml-2 cursor-pointer text-gray-600 dark:text-gray-400">
                     <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg1.svg" alt="information">
-                   <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg1dark.svg" alt="information">
+                    <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg1dark.svg" alt="information">
                 </div>
             </div>
         </div>
         <div class="w-11/12 mx-auto">
             <div class="container mx-auto">
-                <div class="my-8 mx-auto xl:w-full xl:mx-0">
-                    <div class="xl:flex lg:flex md:flex flex-wrap justify-between">
+                <div class="my-8 mx-auto xl:w-full xl:mx-0 py-14">
+                    <div class="xl:flex lg:flex md:flex flex-wrap justify-evenly">
                         <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
                             <label for="FirstName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">First Name</label>
-                            <input tabindex="0" aria-label="Enter first name" type="text" name="firstName" required id="FirstName" class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="" />
+                            <input tabindex="0" aria-label="Enter first name" type="text" name="first_name" required id="first_name" class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="" value="{{ old('first_name') }}"/>
                         </div>
                         <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
                             <label for="LastName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Last Name</label>
-                            <input tabindex="0" aria-label="Enter last name" type="text" id="LastName" name="lastName" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="" />
+                            <input tabindex="0" aria-label="Enter last name" type="text" id="last_name" name="last_name" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="" value="{{ old('last_name') }}" />
                         </div>
                         <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
-                            <label for="email2" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Email</label>
+                            <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Email</label>
                             <div class="relative">
                                 <div class="absolute text-gray-600 dark:text-gray-400 flex items-center px-4 border-r h-full">
                                     <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg2.svg" alt="mail">
-                                     <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg2dark.svg" alt="mail">
+                                    <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg2dark.svg" alt="mail">
                                 </div>
-                                <input tabindex="0" aria-label="Enter email address" id="email2" name="email" required class="w-full bg-transparent text-gray-800 dark:text-gray-100 focus:outline-none focus:border focus:border-indigo-700 font-normal py-3 flex items-center pl-16 text-sm border-gray-300 rounded border shadow" placeholder="example@gmail.com" />
+                                <input tabindex="0" aria-label="Enter email address" id="email" name="email" required class="w-full bg-transparent text-gray-800 dark:text-gray-100 focus:outline-none focus:border focus:border-indigo-700 font-normal py-3 flex items-center pl-16 text-sm border-gray-300 rounded border shadow" placeholder="example@gmail.com" value="{{ old('email') }}"/>
                             </div>
                         </div>
                         <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
-                            <label for="City" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">City</label>
-                            <div class="border border-gray-300 dark:border-gray-700 shadow-sm rounded flex relative">
-                                <select aria-label="select a city" type="text" name="city" required id="City" class="bg-white dark:bg-gray-800 appearance-none z-10 pl-3 py-3 w-full text-sm border border-transparent focus:outline-none focus:border-indigo-700 text-gray-800 dark:text-gray-100 rounded">
-                                    <option value="Switzerland">Switzerland</option>
-                                    <option value="America">America</option>
-                                    <option value="Australia">Australia</option>
-                                </select>
-                                <div class="px-4 flex items-center border-l border-gray-300 dark:border-gray-700 flex-col justify-center text-gray-500 dark:text-gray-400 absolute right-0 bottom-0 top-0 mx-auto z-20 pointer-events-none">
-                                   <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg4.svg" alt="arrow up">
-                                   <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg4dark.svg" alt="arrow up">
-                                   <img class="transform rotate-180 dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg4.svg" alt="arrow down">
-                                   <img class="transform rotate-180 dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg4dark.svg" alt="arrow down">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="xl:w-3/5 lg:w-3/5 md:w-3/5 mx-auto flex flex-col mb-6">
                             <label for="Country" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Country</label>
-                            <input tabindex="0" aria-label="Enter country" type="text" id="Country" name="country" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="California" />
+                            <input tabindex="0" aria-label="Enter country" type="text" id="country" name="country" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="" value="{{ old('country') }}"/>
+                        </div>
+                        <div class="xl:w-2/5 lg:w-2/5 md:w-2/5 flex flex-col mb-6">
+                            <label for="phone_number" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Phone Number</label>
+                            <input tabindex="0" aria-label="Enter Phone number" type="text" id="phone_number" name="phone_number" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none bg-transparent focus:border-indigo-700 text-gray-800 dark:text-gray-100" placeholder="" value="{{ old('phone_number') }}"/>
                         </div>
                     </div>
                 </div>
