@@ -46,8 +46,8 @@
 										<td>{{ $volunteer->first_name }}</td>
 										<td>{{ $volunteer->last_name }}</td>
 										<td>{{ $volunteer->email }}</td>
-										<td>{{ $volunteer->subject }}</td>
-										<td>{{ $volunteer->message }}</td>
+										<td>{{ $volunteer->phone_number }}</td>
+										<td>{{ $volunteer->country }}</td>
 										<td>
 											<div class="d-flex order-actions">
 												<a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $volunteer->id }}').submit();" class="ms-3"><i class='bx bxs-trash'></i></a>
