@@ -32,9 +32,7 @@
 
 
 
-{{-- We take privacy issues seriously. You can be sure that your personal data is securely protected.
-
- --}}
+{{-- We take privacy issues seriously. You can be sure that your personal data is securely protected. --}}
 
 <div class="dark:text-white px-6 py-4 border-0 rounded relative mb-4 bg-white dark:bg-gray-800 shadow w-[1080px] mx-auto" id="formscroll">
 
@@ -109,8 +107,6 @@
             <button role="button" aria-label="save form" class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-2 text-sm focus:outline-none" type="submit">Save</button>
         </div>
     </form>
-
-
 </div>
 
 @endsection
