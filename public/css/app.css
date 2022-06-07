@@ -721,26 +721,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-\[10px\] {
   margin-bottom: 10px;
 }
-.mb-\[51px\] {
-  margin-bottom: 51px;
-}
-.mb-\[px\] {
-  margin-bottom: px;
-}
 .mb-\[37px\] {
   margin-bottom: 37px;
 }
 .mb-\[30px\] {
   margin-bottom: 30px;
 }
-.mb-40 {
-  margin-bottom: 10rem;
-}
 .mb-\[40px\] {
   margin-bottom: 40px;
-}
-.mb-\[0px\] {
-  margin-bottom: 0px;
 }
 .block {
   display: block;
