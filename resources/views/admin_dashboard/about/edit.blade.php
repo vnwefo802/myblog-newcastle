@@ -141,8 +141,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                          <div class='row'>
+                                        <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-5">
                                                     <label for="about_fifth_image" class="form-label">Fifth member Image</label>
