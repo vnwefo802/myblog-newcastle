@@ -45,7 +45,7 @@ class AdminHomeController extends Controller
             'difference_button_1' => $request->difference_button_1,
             'difference_button_2' => $request->difference_button_2,
             'difference_image' => $request->difference_image,
-            'Logo' => $request->Logo,
+            // 'Logo' => $request->Logo,
 
                 ]);
 

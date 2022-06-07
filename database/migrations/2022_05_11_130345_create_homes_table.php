@@ -36,8 +36,9 @@ return new class extends Migration
             $table->string('difference_button_2')->nullable();
             $table->string('difference_image')->nullable();
             $table->string('Logo')->nullable();
-
-
+            $table->string('favicon')->nullable();
+            
+            
 
 
 

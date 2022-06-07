@@ -11,6 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="icon" type="image/x-icon" href="/images/newcastlefoundationlogo_icon.ico">
+    {{-- <link rel="icon" type="image/png" href="{{ asset('storage/'.$home->favicon) }}"> --}}
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -55,6 +57,8 @@
                     <!-- ============================================ -->
                     <a href="/" class="flex items-center px-2 py-4" aria-label="NewcastleFoundationLogo">
                         <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Fablogo logo" aria-label="Fablogo logo" >
+                        {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Fablogo logo" aria-label="Fablogo logo" > --}}
+
 
                     </a>
                 </div>
