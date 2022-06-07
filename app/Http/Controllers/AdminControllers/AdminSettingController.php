@@ -19,6 +19,21 @@ class AdminSettingController extends Controller
 
     public function update()
     {
+
+        $setting_id = 1;
+        Setting::findOrFail($setting_id)->update([
+                'about_text' => $request->donate_title,
+        'donate_first_short_title' => $request->donate_first_short_title,
+        'donate_second_short_title' => $request->donate_second_short_title,
+        'donate_project_title' => $request->donate_project_title,
+        'donate_objectives__title' => $request->donate_objectives__title,
+        'donate_values_title' => $request->donate_values_title,
+
+
+            ]);
+
+
+
         $validated = request()->validate([
             'about_first_text' => 'required|min:50,max:500',
             'about_second_text' => 'required|min:50,max:500',
