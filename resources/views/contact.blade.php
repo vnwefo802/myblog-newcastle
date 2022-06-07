@@ -1,6 +1,7 @@
-@extends('main_layouts.master')
+@extends('layouts.app')
 
-@section('title', 'MyBlog | Contact')
+
+@section('title', 'contact')
 
 @section('content')
 
@@ -30,12 +31,13 @@
 
                                 <div class="items-center mt-8 md:flex">
                                     <div class="flex flex-col md:w-72 mb-7">
-                                        <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Phone Number</label>
-                                        <input tabindex="0" role="input" arial-label="Please input your phone number" type="number" name="phone_num" require class="p-3 mt-4 text-base leading-none text-gray-900 placeholder-gray-300 bg-gray-100 border border-gray-200 rounded focus:oultine-none focus:border-indigo-700" placeholder="01234567890" />
+                                        <x-blog.form.input value='{{ old("phone_number") }}' placeholder='Your Phone Number' name="phone_number" />
+                                        <small class='error text-danger phone_number'></small>
                                     </div>
+
                                     <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
-                                        <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Country</label>
-                                        <input tabindex="0" arial-label="Please input country name" type="Country" name="Country" require class="p-3 mt-4 text-base leading-none text-gray-900 placeholder-gray-300 bg-gray-100 border border-gray-200 rounded focus:oultine-none focus:border-indigo-700" placeholder="Country Name" />
+                                        <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" />
+                                <small class='error text-danger country'></small>
                                     </div>
                                 </div>
 
@@ -59,7 +61,7 @@
                                 <div class="flex items-center justify-center w-full">
                                     <input type="submit" class="px-10 py-4 text-base font-semibold leading-none text-white bg-indigo-700 rounded mt-9 hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none send-message-btn" value="Send Message">
 
-                                    {{-- <input type="submit" value="Send Message" class="btn btn-primary send-message-btn"> --}}       
+                                    {{-- <input type="submit" value="Send Message" class="btn btn-primary send-message-btn"> --}}
                                 </div>
                             </div>
                         </form>
