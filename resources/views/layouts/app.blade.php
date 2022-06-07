@@ -68,7 +68,7 @@
             <!-- ============================================ -->
             {{-- Dividers --}}
             {{-- Main Content --}}
-            <div class="items-center hidden space-x-1 md:flex float-right">
+            <div class="items-center hidden float-right space-x-1 md:flex">
                 {{-- Home --}}
                 <div class="items-center hidden space-x-1 md:flex md:sticky">
                     <a href="/" class=" {request()->is('Home')} py-4 px-2 text-gray-500 md:text-sm text-base lg:text-lg font-semibold " id="homehl"  aria-label="Home">Home</a>
@@ -361,5 +361,6 @@
 
 
     <script src="{{ asset('js/functions.js') }}"></script>
+    @yield('custom_js')
 </body>
 </html>

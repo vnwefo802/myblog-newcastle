@@ -1,6 +1,7 @@
-@extends('main_layouts.master')
+@extends('layouts.app')
 
-@section('title', 'MyBlog | Contact')
+
+@section('title', 'contact')
 
 @section('content')
 
@@ -30,12 +31,13 @@
 
                                 <div class="items-center mt-8 md:flex">
                                     <div class="flex flex-col md:w-72 mb-7">
-                                        <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Phone Number' name="last_name" />
-                                        <small class='error text-danger last_name'></small>
+                                        <x-blog.form.input value='{{ old("phone_number") }}' placeholder='Your Phone Number' name="phone_number" />
+                                        <small class='error text-danger phone_number'></small>
                                     </div>
+
                                     <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
-                                        <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Country' name="last_name" />
-                                <small class='error text-danger last_name'></small>
+                                        <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" />
+                                <small class='error text-danger country'></small>
                                     </div>
                                 </div>
 

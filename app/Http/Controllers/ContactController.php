@@ -18,6 +18,7 @@ class ContactController extends Controller
 
     public function store()
     {
+        
         $data = array();
         $data['success'] = 0;
         $data['errors'] = [];
