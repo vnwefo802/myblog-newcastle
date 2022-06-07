@@ -18,6 +18,7 @@ class ContactController extends Controller
 
     public function store()
     {
+        
         $data = array();
         $data['success'] = 0;
         $data['errors'] = [];
@@ -43,7 +44,7 @@ class ContactController extends Controller
             $data['errors']['country'] = $validated->errors()->first('country');
 
         }
-        else 
+        else
         {
             $attributes = $validated->validated();
             Contact::create($attributes);

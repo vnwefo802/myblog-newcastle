@@ -60,7 +60,8 @@
 
 
 <div>
-    <form id="form" class="container mx-auto bg-white dark:bg-gray-800 shadow rounded">
+    <form id="form" action="{{ route('volunteer.store') }}" method="post" class="container mx-auto bg-white dark:bg-gray-800 shadow rounded">
+        @csrf
         <div class="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5">
             <div class="flex items-center w-11/12 mx-auto">
                 <h1 role="heading"  class="text-lg text-gray-800 dark:text-gray-100 font-bold">Personal Information</h1>

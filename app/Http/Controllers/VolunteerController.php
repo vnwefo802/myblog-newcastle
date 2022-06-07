@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 class VolunteerController extends Controller
 {
-    public function volunteer()
+    public function create_volunteer()
     {
         return view('volunteer');
+    }
+
+    public function store_volunteer ()
+    {
+        
     }
 }
