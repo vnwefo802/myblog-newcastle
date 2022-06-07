@@ -58,7 +58,7 @@
                         <div class="">
                             <ul>
                                 @foreach($categories as $category)
-                                <li class="px-3 border-l-4 rounded py-1 border-white hover:border-blue-500 hover:bg-gray-300"><a href="{{ route('categories.show', $category) }}">{{ $category->name }} <span>{{ $category->posts_count }}</span></a></li>
+                                <li class="px-3 mb-[10px] border-l-4 rounded py-1 border-white hover:border-blue-500 hover:bg-gray-300"><a href="{{ route('categories.show', $category) }}">{{ $category->name }} <span class="float-right">{{ $category->posts_count }}</span></a></li>
                                 @endforeach
                             </ul>
                         </div>

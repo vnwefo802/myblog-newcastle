@@ -718,6 +718,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-ml-px {
   margin-left: -1px;
 }
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
 .block {
   display: block;
 }
