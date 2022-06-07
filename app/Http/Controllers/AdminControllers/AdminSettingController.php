@@ -11,9 +11,10 @@ class AdminSettingController extends Controller
 {
     public function edit()
     {
-        return view('admin_dashboard.about.edit', [
-            'setting' => Setting::find(1)
-        ]);
+        $setting = Setting::find(1);
+
+        return view('admin_dashboard.about.edit', compact('setting'));
+
     }
 
     public function update()
