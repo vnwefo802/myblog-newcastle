@@ -36,6 +36,8 @@ class AdminFooterController extends Controller
 
         ]);
 
+        
+
           //sweetalert
           Alert::success('success','Footer updated successfully');
         return redirect()->route('admin.footer.edit');
