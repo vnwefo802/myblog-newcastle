@@ -57,7 +57,7 @@
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
                     <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
-                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" width="250" alt="Newcastle logo" aria-label="Newcastle logo" >
+                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-20 h-12" alt="Newcastle logo" aria-label="Newcastle logo" >
                         {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
 
 
@@ -254,21 +254,21 @@
 
 
 <div class="relative flex justify-start md:justify-center md:items-end ">
-    <img class="absolute z-0 object-cover w-full h-full dark:hidden top-10 xl:mt-10" loading="lazy" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">
+    <img class="absolute z-0 object-cover w-full h-full top-10 xl:mt-10" loading="lazy" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">
     <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center">
         <div class="flex flex-col justify-center">
-            <div class="flex items-center justify-start space-x-4 ">
-                <div class="cursor-pointer mb-8 border rounded shadow">
-                    <a href="/">
-                        <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy" src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
-                    </a>
-                </div>
-            </div>
+
             <div class="justify-center grid w-full grid-cols-1 mt-12 xl:mt-0 sm:grid-cols-4 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
-                <div class="cursor-pointer mb-8 border rounded shadow">
-                    <a href="/">
-                        <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy" src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
-                    </a>
+                <div>
+                    <div class="cursor-pointer mb-8 ">
+                        <a href="/">
+                            <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy" src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
+                        </a>
+                        
+                    </div>
+                    <div class=" text-white">
+                        {!! $footer->title !!}
+                    </div>
                 </div>
                 <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
                     <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">COMMUNITY</h2>
@@ -339,10 +339,10 @@
             <div class="flex flex-col-reverse justify-center w-full mt-16  xl:flex-row xl:items-start ">
                 <div class="flex flex-col items-start justify-start w-full mt-10 space-y-4 md:mt-12 xl:mt-0 md:flex-row md:justify-center md:w-auto md:space-y-0 md:items-center md:space-x-4 xl:space-x-6 mr-7">
                     <button class="text-base leading-none text-white hover:text-gray-300">
-                        <a href="tel:07847583948"><p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>  $allcontact->Phone_number </p>
+                        <a href="tel:07847583948"><p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>  $allfooter->contact_info </p>
                     </button>
                     <button class="text-base leading-none text-white hover:text-gray-300">
-                    <a href="mailto: $allcontact->email "><p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i>  $allcontact->email </p></a>
+                    <a href="mailto: $allfooter->email "><p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i>  $allfooter->email </p></a>
                     </button>
                 </div>
                 <div class="flex items-start justify-start w-full space-x-6 md:justify-end md:w-auto md:items-center ">                    
@@ -355,7 +355,7 @@
                     <!-- facebook -->
                     <a href=" {{ $footer->facebook }} "><button class="w-6 text-white hover:text-gray-200">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="link to facebook">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 12.0645C22.5 6.26602 17.7984 1.56445 12 1.56445C6.20156 1.56445 1.5 6.26602 1.5 12.0645C1.5 17.3051 5.33906 21.649 10.3594 22.4374V15.1005H7.69266V12.0645H10.3594V9.75117C10.3594 7.12008 11.9273 5.66555 14.3255 5.66555C15.4744 5.66555 16.6763 5.87086 16.6763 5.87086V8.45508H15.3516C14.048 8.45508 13.6402 9.26414 13.6402 10.0957V12.0645H16.552L16.087 15.1005H13.6406V22.4384C18.6609 21.6504 22.5 17.3065 22.5 12.0645Z" fill="currentColor"/>
+                            <path class="fill-white" clip-rule="evenodd" d="M22.5 12.0645C22.5 6.26602 17.7984 1.56445 12 1.56445C6.20156 1.56445 1.5 6.26602 1.5 12.0645C1.5 17.3051 5.33906 21.649 10.3594 22.4374V15.1005H7.69266V12.0645H10.3594V9.75117C10.3594 7.12008 11.9273 5.66555 14.3255 5.66555C15.4744 5.66555 16.6763 5.87086 16.6763 5.87086V8.45508H15.3516C14.048 8.45508 13.6402 9.26414 13.6402 10.0957V12.0645H16.552L16.087 15.1005H13.6406V22.4384C18.6609 21.6504 22.5 17.3065 22.5 12.0645Z" fill="currentColor"/>
                             </svg>
                     </button></a>
                     <!-- youtube -->

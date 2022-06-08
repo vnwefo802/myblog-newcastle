@@ -34,7 +34,7 @@
 
 {{-- We take privacy issues seriously. You can be sure that your personal data is securely protected. --}}
 
-<div class="dark:text-white px-6 py-4 border-0 rounded relative mb-4 bg-white dark:bg-gray-800 shadow w-[1080px] mx-auto" id="formscroll">
+<div class="dark:text-white px-6 py-4 border-0 rounded relative mt-4 mb-4 bg-white dark:bg-gray-800 shadow w-[1080px] mx-auto" id="formscroll">
 
     <span class="inline-block mr-8 align-middle">
        We take <b class="capitalize">privacy!</b> issues seriously. You can be sure that your personal data is securely protected.
