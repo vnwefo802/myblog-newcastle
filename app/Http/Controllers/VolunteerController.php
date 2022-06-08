@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\volunteer;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class VolunteerController extends Controller
 {
@@ -11,13 +14,23 @@ class VolunteerController extends Controller
         return view('volunteer');
     }
 
-    public function store_volunteer ()
+
+
+    public function store_volunteer (Request $request)
     {
-            // 'first_name' => 'required',
-            // 'last_name' => 'required',
-            // 'email' => 'required',
-            // 'phone_number' => 'required|number|max:20|min:6',
-            // 'country' => 'required'
-            
+        $request->validate([
+            'first_name' => 'required|max:100|min:3',
+            'last_name' => 'required|max:100|min:3',
+            'email' => 'required|min:3|email',
+            'phone_number' => 'required|numeric',
+            'country' => 'required'
+        ]);
+
+        volunteer::create($request->all());
+
+        Alert::success('success','message has been sent.');
+        return redirect()->route('volunteer.create');
+
     }
+
 }
