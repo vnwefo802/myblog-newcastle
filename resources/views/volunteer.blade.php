@@ -70,16 +70,6 @@
             </div>
         </div>
 
-        @if ($errors->any())
-    <div class="alert alert-danger">
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
         <div class="w-11/12 mx-auto">
             <div class="container mx-auto">
                 <div class="mx-auto my-8 xl:w-full xl:mx-0 py-14">
@@ -118,6 +108,17 @@
             <button role="button" aria-label="save form" class="px-8 py-2 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 rounded confirmDelete focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600 focus:outline-none" type="submit">Save</button>
         </div>
     </form>
+    
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 </div>
 
 @endsection
