@@ -22,10 +22,12 @@ class AdminHomeController extends Controller
 
         public function Update(Request $request)
         {
-
-
             $allhome_id = 1;
-            Home::findOrFail($allhome_id)->update([
+
+            $file1 = $request->file('difference_image');
+
+
+            $updater = [
             'title' => $request->title,
             'video' => $request->video,
             'button_1' => $request->button_1,
@@ -45,7 +47,7 @@ class AdminHomeController extends Controller
             'logo' => $request->logo,
             'favicon' => $request->favicon,
 
-           ]);
+        ];
 
 
             $validated = request()->validate([
@@ -57,10 +59,7 @@ class AdminHomeController extends Controller
             'box_title_2' => 'required|min:4,max:800',
             'box_title_3' => 'required|min:4,max:800',
             'box_title_4' => 'required|min:4,max:800',
-            // 'box_short_description_1' => 'required|min:4,max:800',
-            // 'box_short_description_2' => 'required|min:4,max:800',
-            // 'box_short_description_3' => 'required|min:4,max:800',
-            // 'box_short_description_4' => 'required|min:4,max:800',
+
             'project_title' => 'required|min:4,max:800',
             'project_image' => 'nullable|image',
             'project_short_title' => 'required|min:4,max:800',
