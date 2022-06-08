@@ -60,8 +60,9 @@ class HomeFactory extends Factory
             'difference_button_1'=>'Volunteer',
             'difference_button_2'=>'Donate',
             'difference_image'=>'',
-            'logo'=>'',
-            'favicon'=>'',
+            'logo'=>'storage/setting/CnYQFPeshrwXGRcHH61FAAk849KXo5eFoOVVuukm.jpg',
+            'favicon'=>'storage/setting/7HW4A6LIvMyTgWx4CSmnKFhjgTWfuLJhUoTCKTz1.jpg',
+
         ];
     }
 }
