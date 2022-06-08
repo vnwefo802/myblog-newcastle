@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <link rel="icon" type="image/x-icon" href="/images/newcastlefoundationlogo_icon.ico">
     {{-- <link rel="icon" type="image/png" href="{{ asset('storage/'.$home->favicon) }}"> --}}

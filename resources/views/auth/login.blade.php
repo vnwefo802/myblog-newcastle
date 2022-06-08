@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('title', 'MyBlog | Home')
+@section('title', 'Log In')
 
 @section('content')
 <x-guest-layout>

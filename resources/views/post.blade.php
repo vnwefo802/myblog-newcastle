@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $post->title . ' | MyBlog')
+@section('title', $post->title . ' | Blog')
 
 @section('custom_css')
 
