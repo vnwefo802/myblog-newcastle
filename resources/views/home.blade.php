@@ -119,7 +119,7 @@
     <div class="lg:flex lg:mt-6 xl:-mt-6">
         <!-- contant of make a difference including the buttons -->
         <div class="w-full px-6 py-10 text-white bg-indigo-800 lg:w-2/5 xl:py-24 xl:px-8">
-            <h2 class="text-3xl font-semibold lg:w-10/12">{!! $allhome->difference !!}</h2>
+            <h2 class="text-3xl font-semibold lg:w-10/12">{!! $allhome->difference_title !!}</h2>
             <div class="flex items-center">
                 <a href="/volunteer" class="inline-block">
                     <button class="flex items-center py-4 mt-12 text-sm bg-blue-700 rounded-md mr-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">

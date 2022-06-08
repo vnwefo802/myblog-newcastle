@@ -38,15 +38,15 @@
                                 <div class="col-lg-12">
                                     <div class="p-4 border rounded border-3">
 
-                                    <!-- Existing Logo -->
-                                    <span>Existing Logo</span>
-                                    <div class='col-md-4'>
-                                                <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->logo) }}' >
-                                                </div>
+                                        <!-- Existing Logo -->
+                                        <span>Existing Logo</span>
+                                        <div class='col-md-4'>
+                                            <div class='p-2 user-image'>
+                                                <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allhome->logo) }}" >
                                             </div>
-                                    <!-- Logo -->
-                                    <div class='row'>
+                                        </div>
+                                        <!-- Logo -->
+                                        <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
                                                     <label for="logo" class="form-label">Logo</label>
@@ -58,15 +58,15 @@
                                                 </div>
                                             </div>
 
-                                    <!-- Existing Favicon -->
-                                    <span>Existing Favicon</span>
-                                    <div class='col-md-4'>
+                                        <!-- Existing Favicon -->
+                                        <span>Existing Favicon</span>
+                                        <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->favicon) }}' >
+                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allhome->favicon) }}" >
                                                 </div>
                                             </div>
-                                    <!-- Favicon -->
-                                    <div class='row'>
+                                        <!-- Favicon -->
+                                        <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
                                                     <label for="favicon" class="form-label" title="This is the image to the left of the text in the tab.">Favicon</label>
@@ -78,8 +78,8 @@
                                                 </div>
                                             </div>
 
-                                    <!-- Video -->
-                                    <div class='row'>
+                                        <!-- Video -->
+                                        <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
                                                     <label for="Video" class="form-label">Video</label>
@@ -91,8 +91,8 @@
                                                 </div>
                                             </div>
 
-                                    <!-- title -->
-                                    <div class="mb-3">
+                                        <!-- title -->
+                                        <div class="mb-3">
                                             <label for="title" class="form-label">Title</label>
                                             <textarea name='title'  id='title' class="form-control" rows="3">{{ old("title", $allhome->title) }}</textarea>
 
@@ -101,8 +101,8 @@
                                             @enderror
                                         </div>
 
-                                    <!-- button_1 -->
-                                    <div class="mb-3">
+                                        <!-- button_1 -->
+                                        <div class="mb-3">
                                             <label for="button_1" class="form-label">Button 1</label>
                                             <textarea name='button_1'  id='button_1' class="form-control" rows="3">{{ old("button_1", $allhome->button_1) }}</textarea>
 
@@ -112,7 +112,7 @@
                                         </div>
 
                                         <!-- button_2 -->
-                                    <div class="mb-3">
+                                        <div class="mb-3">
                                             <label for="button_2" class="form-label">Button 2</label>
                                             <textarea name='button_2'  id='button_2' class="form-control" rows="3">{{ old("button_2", $allhome->button_2) }}</textarea>
 
@@ -143,7 +143,7 @@
                                         </div>
 
                                         <!-- Box Title 3  -->
-                                      <div class="mb-3">
+                                        <div class="mb-3">
                                             <label for="box_title_3" class="form-label">Box Title 3</label>
                                             <textarea name='box_title_3'  id='box_title_3' class="form-control" rows="3">{{ old("box_title_3", $allhome->box_title_3) }}</textarea>
 
@@ -153,7 +153,7 @@
                                         </div>
 
                                         <!-- Box Title 4 -->
-                                    <div class="mb-3">
+                                        <div class="mb-3">
                                             <label for="box_title_4" class="form-label">Box Title 4</label>
                                             <textarea name='box_title_4'  id='box_title_4' class="form-control" rows="3">{{ old("box_title_4", $allhome->box_title_4) }}</textarea>
 
@@ -184,7 +184,7 @@
                                         </div>
 
                                         <!-- project_button -->
-                                    <div class="mb-3">
+                                        <div class="mb-3">
                                             <label for="project_button" class="form-label">Project Button</label>
                                             <textarea name='project_button'  id='project_button' class="form-control" rows="3">{{ old("project_button", $allhome->project_button) }}</textarea>
 
@@ -194,7 +194,7 @@
                                         </div>
 
                                         <!-- difference_button_1 -->
-                                    <div class="mb-3">
+                                        <div class="mb-3">
                                             <label for="difference_button_1" class="form-label">Difference Button 1</label>
                                             <textarea name='difference_button_1'  id='difference_button_1' class="form-control" rows="3">{{ old("difference_button_1", $allhome->difference_button_1) }}</textarea>
 
@@ -204,7 +204,7 @@
                                         </div>
 
                                         <!-- difference_button_2 -->
-                                    <div class="mb-3">
+                                        <div class="mb-3">
                                             <label for="difference_button_2" class="form-label">Difference Button 2</label>
                                             <textarea name='difference_button_2'  id='difference_button_2' class="form-control" rows="3">{{ old("difference_button_2", $allhome->difference_button_2) }}</textarea>
 
@@ -236,7 +236,7 @@
                                         <!-- difference -->
                                         <div class="mb-3">
                                             <label for="difference_title" class="form-label">Difference Title</label>
-                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{ old("difference_title", $allhome->difference) }}</textarea>
+                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{   old("difference_title", $allhome->difference_title }}</textarea>
 
                                             @error('difference')
                                                 <p class='text-danger'>{{ $message }}</p>
@@ -244,7 +244,7 @@
                                         </div>
 
 
-                                        <button class='text-blue-500 btn btn-primary hover:text-white' type='submit'>Update</button>
+                                        <button class="btn btn-primary text-white" type='submit'>Update</button>
 
                                     </div>
                                 </div>
