@@ -2,6 +2,10 @@
 
 @section('title', 'Donate')
 
+<head>
+<meta name="description" content="Donate to help communities in need.">
+</head>
+
 @section('content')
 {{-- <form action="https://www.sandbox.paypal.com/donate" method="post" target="_top">
     <input type="hidden" name="hosted_button_id" value="5CK9H6TCMR4VU" />

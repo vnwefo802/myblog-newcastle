@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta name="description" content="the Website of the newcastle fondation charity"> -->
-    <!-- CSRF Token -->
+    @yield('meta')
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
@@ -56,13 +55,8 @@
                     <!-- ============================================ -->
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
-<<<<<<< HEAD
                     <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo"> <!-- class="w-[163px] h-[55px]" -->
-                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[163px] h-[55px]"  alt="Newcastle logo" aria-label="Newcastle logo" >
-=======
-                    <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
-                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-64" alt="Newcastle logo" aria-label="Newcastle logo" >
->>>>>>> feaf09f745eb7de1baf7f5251860656eb8bdba64
+                        <img src="{{ asset('storage/'.$allhome->logo) }}" class="w-[163px] h-[55px]"  alt="Newcastle logo" aria-label="Newcastle logo" >
                         {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
 
 
@@ -269,7 +263,7 @@
                         <a href="/">
                             <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy" src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
                         </a>
-                        
+
                     </div>
                     <div class=" text-white">
                         {!! $footer->title !!}
@@ -344,13 +338,13 @@
             <div class="flex flex-col-reverse justify-center w-full mt-16  xl:flex-row xl:items-start ">
                 <div class="flex flex-col items-start justify-start w-full mt-10 space-y-4 md:mt-12 xl:mt-0 md:flex-row md:justify-center md:w-auto md:space-y-0 md:items-center md:space-x-4 xl:space-x-6 mr-7">
                     <button class="text-base leading-none text-white hover:text-gray-300">
-                        <a href="tel:07847583948"><p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>  $allfooter->contact_info </p>
+                        <a href="tel:07847583948"><p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>  {!! $footer->contact_info !!}</p>
                     </button>
                     <button class="text-base leading-none text-white hover:text-gray-300">
-                    <a href="mailto: $allfooter->email "><p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i>  $allfooter->email </p></a>
+                    <a href="mailto: $allfooter->email "><p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i> {!! $footer->email !!} </p></a>
                     </button>
                 </div>
-                <div class="flex items-start justify-start w-full space-x-6 md:justify-end md:w-auto md:items-center ">                    
+                <div class="flex items-start justify-start w-full space-x-6 md:justify-end md:w-auto md:items-center ">
                     <!-- twitter -->
                     <a href=" {{ $footer->twitter }} "><button class="w-6 text-white hover:text-gray-200">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="link to twiter">
