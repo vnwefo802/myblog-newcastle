@@ -57,7 +57,7 @@
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
                     <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo"> <!-- class="w-[163px] h-[55px]" -->
-                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[163px] h-[55px]"  alt="Newcastle logo" aria-label="Newcastle logo" >
+                        <img src="{{ asset('storage/'.$allhome->logo) }}" class="w-[163px] h-[55px]"  alt="Newcastle logo" aria-label="Newcastle logo" >
                         {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
 
 
@@ -264,7 +264,7 @@
                         <a href="/">
                             <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy" src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
                         </a>
-                        
+
                     </div>
                     <div class=" text-white">
                         {!! $footer->title !!}
@@ -345,7 +345,7 @@
                     <a href="mailto: $allfooter->email "><p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i>  $allfooter->email </p></a>
                     </button>
                 </div>
-                <div class="flex items-start justify-start w-full space-x-6 md:justify-end md:w-auto md:items-center ">                    
+                <div class="flex items-start justify-start w-full space-x-6 md:justify-end md:w-auto md:items-center ">
                     <!-- twitter -->
                     <a href=" {{ $footer->twitter }} "><button class="w-6 text-white hover:text-gray-200">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="link to twiter">
