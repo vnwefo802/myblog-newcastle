@@ -265,7 +265,7 @@
                         </a>
 
                     </div>
-                    <div class=" text-white">
+                    <div class="text-white">
                         {!! $footer->title !!}
                     </div>
                 </div>

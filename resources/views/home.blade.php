@@ -112,7 +112,7 @@
             <!-- informatio about the project -->
             <div class="m-2">
                 <div>
-                    <h3 class="text-lg font-semibold">{!! project_short_title !!}</h3>
+                    <h3 class="text-lg font-semibold"></h3>
                     <p class="text-lg my-9">In the community at Agudene in Udenu LGA of Nsukka, Enugu State, we provided over 50 plus classroom desks. Used text books, exercise books, including school drum set, school bags, uniforms for both junior and senior primary.  We included a scholarship fund for the girl child. These motivated the villagers and the other villages in the locality to release their girls and wards to come to school.</p>
                     <a href="/donate">
                         <button class="text-white border-2 rounded bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-800 hover:to-green-800 h-14 w-44 my-9 drop-shadow-md hover:drop-shadow-xl hover:bg-blue-500">Find Out More →</button>
