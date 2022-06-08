@@ -1,7 +1,7 @@
 @extends("admin_dashboard.layouts.app")
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
-
+@section('title', 'Admin - Comments')
 		@section("wrapper")
 <div class="page-wrapper">
     <div class="page-content">

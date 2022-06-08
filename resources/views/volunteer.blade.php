@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Volunteer')
-
+<head>
+<meta name="description" content="Volunteer and Help Communities in Need.">
+</head>
 @section('content')
 
 {{-- hero --}}
@@ -34,7 +36,7 @@
 
 {{-- We take privacy issues seriously. You can be sure that your personal data is securely protected. --}}
 
-<div class="dark:text-white px-6 py-4 border-0 rounded relative mb-4 bg-white dark:bg-gray-800 shadow w-[1080px] mx-auto" id="formscroll">
+<div class="dark:text-white px-6 py-4 border-0 rounded relative mt-4 mb-4 bg-white dark:bg-gray-800 shadow w-[1080px] mx-auto" id="formscroll">
 
     <span class="inline-block mr-8 align-middle">
        We take <b class="capitalize">privacy!</b> issues seriously. You can be sure that your personal data is securely protected.
@@ -70,16 +72,6 @@
             </div>
         </div>
 
-        @if ($errors->any())
-    <div class="alert alert-danger">
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
         <div class="w-11/12 mx-auto">
             <div class="container mx-auto">
                 <div class="mx-auto my-8 xl:w-full xl:mx-0 py-14">
@@ -87,10 +79,16 @@
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="FirstName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">First Name</label>
                             <input tabindex="0" aria-label="Enter first name" type="text" name="first_name" required id="first_name" class="py-3 pl-3 text-sm text-gray-800 bg-transparent border border-gray-300 rounded shadow-sm dark:border-gray-700 focus:outline-none focus:border-indigo-700 dark:text-gray-100" placeholder="" value="{{ old('first_name') }}"/>
+                            @error('first_name')
+                                <p class='text-red-500'>{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="LastName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Last Name</label>
                             <input tabindex="0" aria-label="Enter last name" type="text" id="last_name" name="last_name" required class="py-3 pl-3 text-sm text-gray-800 bg-transparent border border-gray-300 rounded shadow-sm dark:border-gray-700 focus:outline-none focus:border-indigo-700 dark:text-gray-100" placeholder="" value="{{ old('last_name') }}" />
+                            @error('last_name')
+                                <p class='text-red-500'>{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Email</label>
@@ -100,15 +98,24 @@
                                     <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg2dark.svg" alt="mail">
                                 </div>
                                 <input tabindex="0" aria-label="Enter email address" id="email" name="email" required class="flex items-center w-full py-3 pl-16 text-sm font-normal text-gray-800 bg-transparent border border-gray-300 rounded shadow dark:text-gray-100 focus:outline-none focus:border focus:border-indigo-700" placeholder="example@gmail.com" value="{{ old('email') }}"/>
+                                @error('email')
+                                    <p class='text-red-500'>{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="Country" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Country</label>
                             <input tabindex="0" aria-label="Enter country" type="text" id="country" name="country" required class="py-3 pl-3 text-sm text-gray-800 bg-transparent border border-gray-300 rounded shadow-sm dark:border-gray-700 focus:outline-none focus:border-indigo-700 dark:text-gray-100" placeholder="" value="{{ old('country') }}"/>
+                            @error('country')
+                                <p class='text-red-500'>{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="phone_number" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Phone Number</label>
                             <input tabindex="0" aria-label="Enter Phone number" type="text" id="phone_number" name="phone_number" required class="py-3 pl-3 text-sm text-gray-800 bg-transparent border border-gray-300 rounded shadow-sm dark:border-gray-700 focus:outline-none focus:border-indigo-700 dark:text-gray-100" placeholder="" value="{{ old('phone_number') }}"/>
+                            @error('phone_number')
+                                <p class='text-red-500'>{{ $message }}</p>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -118,6 +125,8 @@
             <button role="button" aria-label="save form" class="px-8 py-2 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 rounded confirmDelete focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600 focus:outline-none" type="submit">Save</button>
         </div>
     </form>
+    
+
 </div>
 
 @endsection

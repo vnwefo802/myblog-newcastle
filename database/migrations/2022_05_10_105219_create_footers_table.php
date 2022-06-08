@@ -24,7 +24,8 @@ return new class extends Migration
             $table->text('twitter')->nullable();
             $table->text('instagram')->nullable();
             $table->text('youtube')->nullable();
-
+            $table->text('contact_info')->nullable();
+            $table->text('email')->nullable();
 
             //community section
             $table->text('community_section')->nullable();

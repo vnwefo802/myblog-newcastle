@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 
-@section('title', 'contact')
+@section('title', 'Contact')
 
 @section('content')
 
@@ -19,50 +19,50 @@
                                 <div class="items-center mt-12 md:flex">
                                     {{-- first_name --}}
                                     <div class="flex flex-col md:w-72">
-                                        <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name"  />
+                                        <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name" class="py-2 px-4" />
                                         <small class='error text-danger first_name'></small>
                                     </div>
 
                                     <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0">
-                                        <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Lastname' name="last_name" />
+                                        <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Lastname' name="last_name" class="py-2 px-4" />
                                         <small class='error text-danger last_name'></small>
                                     </div>
                                 </div>
 
                                 <div class="items-center mt-8 md:flex">
                                     <div class="flex flex-col md:w-72 mb-7">
-                                        <x-blog.form.input value='{{ old("phone_number") }}' placeholder='Your Phone Number' name="phone_number" />
+                                        <x-blog.form.input value='{{ old("phone_number") }}' placeholder='Your Phone Number' name="phone_number" class="py-2 px-4" />
                                         <small class='error text-danger phone_number'></small>
                                     </div>
 
                                     <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
-                                        <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" />
+                                        <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" class="py-2 px-4" />
                                         <small class='error text-danger country'></small>
                                     </div>
                                 </div>
 
                                 <div class="flex flex-col mt-8 md:mt-0">
-                                    <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" />
+                                    <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" class="py-2 px-4" />
                                     <small class='error text-danger email'></small>
                                 </div>
 
                                 <div>
                                     <div class="flex flex-col w-full mt-8">
-                                        <x-blog.form.input value='{{ old("subject") }}' required='false' name="subject" placeholder='Your Subject' />
+                                        <x-blog.form.input value='{{ old("subject") }}' required='false' name="subject" placeholder='Your Subject' class="py-2 px-4" />
                                         <small class='error text-danger subject'></small>
                                     </div>
 
                                     <div class="flex flex-col w-full mt-8">
-                                        <x-blog.form.textarea value='{{ old("message") }}' placeholder='What you want to tell us.' name="message" />
+                                        <x-blog.form.textarea value='{{ old("message") }}' placeholder='What you want to tell us.' name="message" class="py-2 px-4" />
                                         <small class='error text-danger message'></small>
                                     </div>
                                 </div>
                                 <p class="mt-4 text-xs leading-3 text-gray-600 dark:text-gray-200">By clicking submit you agree to our terms of service, privacy policy and how we use data as stated</p>
-                                <div class="flex items-center justify-center w-full">
+                                {{-- <div class="flex items-center justify-center w-full"> --}}
                                     <input type="submit" class="px-10 py-4 text-base font-semibold leading-none text-white bg-indigo-700 rounded mt-9 hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none send-message-btn" value="Send Message">
 
                                     {{-- <input type="submit" value="Send Message" class="btn btn-primary send-message-btn"> --}}
-                                </div>
+                                {{-- </div> --}}
                             </div>
                         </form>
                     <x-blog.message :status="'success'" />
@@ -144,6 +144,8 @@
 		let csrf_token = $($this).parents("form").find("input[name='_token']").val()
 		let first_name = $($this).parents("form").find("input[name='first_name']").val()
 		let last_name = $($this).parents("form").find("input[name='last_name']").val()
+		let phone_number = $($this).parents("form").find("input[name='phone_number']").val()
+		let country = $($this).parents("form").find("input[name='country']").val()
 		let email = $($this).parents("form").find("input[name='email']").val()
 		let subject = $($this).parents("form").find("input[name='subject']").val()
 		let message = $($this).parents("form").find("textarea[name='message']").val()
@@ -152,6 +154,8 @@
 		formData.append('_token', csrf_token);
 		formData.append('first_name', first_name);
 		formData.append('last_name', last_name);
+		formData.append('phone_number', phone_number);
+		formData.append('country', country);
 		formData.append('email', email);
 		formData.append('subject', subject);
 		formData.append('message', message);
@@ -171,7 +175,7 @@
 					$(".global-message").fadeIn()
 					$(".global-message").text(data.message)
 
-					clearData($($this).parents("form"), ['first_name', 'last_name', 'email', 'subject', 'message']);
+					clearData($($this).parents("form"), ['first_name', 'last_name', 'phone_number', 'country', 'email', 'subject', 'message']);
 
 					setTimeout(() => {
 						$(".global-message").fadeOut()
