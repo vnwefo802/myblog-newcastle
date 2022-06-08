@@ -47,37 +47,26 @@
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
                                 </div>
-                                <!-- Category -->
+                                <!-- contact info -->
                                 <div class="mb-3">
-                                    <label for="title" class="form-label">Category</label>
-                                    <textarea name='title'  id='title' class="form-control" rows="3">{{-- old("title", $allfooter->title) --}}</textarea>
+                                    <label for="contact_info" class="form-label">contact info</label>
+                                    <textarea name='contact_info'  id='contact_info' class="form-control" rows="3">{{-- old("contact_info", $allfooter->contact_info) --}}</textarea>
                                 
-                                    @error('title')
+                                    @error('contact_info')
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
                                 </div>
-                                <!-- Blog -->
+                                <!-- email -->
 
                                 <div class="mb-3">
-                                    <label for="title" class="form-label">Blog</label>
-                                    <textarea name='title'  id='title' class="form-control" rows="3">{{-- old("title", $allfooter->title) --}}</textarea>
+                                    <label for="email" class="form-label">Email</label>
+                                    <textarea name='email'  id='email' class="form-control" rows="3">{{-- old("email", $allfooter->email) --}}</textarea>
                                 
-                                    @error('title')
+                                    @error('email')
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
                                 </div>
-                                <!--Contact Us-->
-                                <div class="mb-3">
-                                    <label for="title" class="form-label">Contact Us</label>
-                                    <textarea name='title'  id='title' class="form-control" rows="3">{{-- old("title", $allfooter->title) --}}</textarea>
                                 
-                                    @error('title')
-                                        <p class='text-danger'>{{ $message }}</p>
-                                    @enderror
-                                </div>
-
-
-
                                 <!-- Facebook -->
                                 <div class="mb-3">
                                     <label for="facebook" class="form-label">Facebook Link</label>

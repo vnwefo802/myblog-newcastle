@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 
-@section('title', 'contact')
+@section('title', 'Contact')
 
 @section('content')
 
@@ -19,41 +19,41 @@
                                 <div class="items-center mt-12 md:flex">
                                     {{-- first_name --}}
                                     <div class="flex flex-col md:w-72">
-                                        <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name"  />
+                                        <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name" class="py-2 px-4" />
                                         <small class='error text-danger first_name'></small>
                                     </div>
 
                                     <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0">
-                                        <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Lastname' name="last_name" />
+                                        <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Lastname' name="last_name" class="py-2 px-4" />
                                         <small class='error text-danger last_name'></small>
                                     </div>
                                 </div>
 
                                 <div class="items-center mt-8 md:flex">
                                     <div class="flex flex-col md:w-72 mb-7">
-                                        <x-blog.form.input value='{{ old("phone_number") }}' placeholder='Your Phone Number' name="phone_number" />
+                                        <x-blog.form.input value='{{ old("phone_number") }}' placeholder='Your Phone Number' name="phone_number" class="py-2 px-4" />
                                         <small class='error text-danger phone_number'></small>
                                     </div>
 
                                     <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
-                                        <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" />
+                                        <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" class="py-2 px-4" />
                                         <small class='error text-danger country'></small>
                                     </div>
                                 </div>
 
                                 <div class="flex flex-col mt-8 md:mt-0">
-                                    <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" />
+                                    <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" class="py-2 px-4" />
                                     <small class='error text-danger email'></small>
                                 </div>
 
                                 <div>
                                     <div class="flex flex-col w-full mt-8">
-                                        <x-blog.form.input value='{{ old("subject") }}' required='false' name="subject" placeholder='Your Subject' />
+                                        <x-blog.form.input value='{{ old("subject") }}' required='false' name="subject" placeholder='Your Subject' class="py-2 px-4" />
                                         <small class='error text-danger subject'></small>
                                     </div>
 
                                     <div class="flex flex-col w-full mt-8">
-                                        <x-blog.form.textarea value='{{ old("message") }}' placeholder='What you want to tell us.' name="message" />
+                                        <x-blog.form.textarea value='{{ old("message") }}' placeholder='What you want to tell us.' name="message" class="py-2 px-4" />
                                         <small class='error text-danger message'></small>
                                     </div>
                                 </div>
