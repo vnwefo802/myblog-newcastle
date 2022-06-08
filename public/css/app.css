@@ -536,6 +536,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .m-7 {
   margin: 1.75rem;
 }
+.m-9 {
+  margin: 2.25rem;
+}
 .mx-20 {
   margin-left: 5rem;
   margin-right: 5rem;
@@ -1616,6 +1619,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pt-3 {
+  padding-top: 0.75rem;
+}
 .text-left {
   text-align: left;
 }
@@ -2572,8 +2578,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
   .sm\:flex-col {
     flex-direction: column;
+  }
+
+  .sm\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .sm\:items-center {
@@ -2811,6 +2825,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-top: 8rem;
   }
 
+  .md\:pt-0 {
+    padding-top: 0px;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2987,6 +3005,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pb-20 {
