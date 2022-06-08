@@ -24,35 +24,35 @@
         <div class="grid grid-cols-2 gap-5">
             <div class="grid grid-cols-2 grid-rows-5 gap-4 ">
                 <div class="w-[275px]">
-                    <img src="{{ asset('storage/' . $allabout->about_first_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling"/>
+                    <img src="/{{ $allabout->about_first_image }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling"/>
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_first_member_name !!}</p>
                         {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white"><allabout->{!! $allabout->about_first_member_role !!}</allabout-></p> --}}
                     </div>
                 </div>
                 <div class="w-[275px]">
-                    <img src="url{{ asset('storage/' . $allabout->about_second_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman in black dress" />
+                    <img src="/{{ $allabout->about_second_image }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman in black dress" />
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_second_member_name !!}</p>
                         {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $allabout->about_second_member_role !!}</p> --}}
                     </div>
                 </div>
                 <div class="w-[275px]">
-                    <img src="{{ asset('storage/' . $allabout->about_third_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
+                    <img src="/{{ $allabout->about_third_image }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_third_member_name !!}</p>
                         {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $allabout->about_third_member_role !!}</p> --}}
                     </div>
                 </div>
                 <div class="w-[275px]">
-                    <img src="{{ asset('storage/' . $allabout->about_fourth_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
+                    <img src="/{{ $allabout->about_fourth_image }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_fourth_member_name !!}</p>
                         {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $allabout->about_fourth_member_role !!}</p> --}}
                     </div>
                 </div>
                 <div class="w-[275px]">
-                    <img src="{{ asset('storage/' . $allabout->about_fifth_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
+                    <img src="/{{ $allabout->about_fifth_image }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
                     <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
                         <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_fifth_member_name !!}</p>
                         {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $allabout->about_fifth_member_role !!}</p> --}}

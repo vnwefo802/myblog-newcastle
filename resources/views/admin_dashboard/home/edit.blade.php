@@ -236,7 +236,7 @@
                                         <!-- difference -->
                                         <div class="mb-3">
                                             <label for="difference_title" class="form-label">Difference Title</label>
-                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{   old("difference_title", $allhome->difference_title }}</textarea>
+                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{   old("difference_title", $allhome->difference_title) }}</textarea>
 
                                             @error('difference')
                                                 <p class='text-danger'>{{ $message }}</p>
@@ -244,7 +244,7 @@
                                         </div>
 
 
-                                        <button class="btn btn-primary text-white" type='submit'>Update</button>
+                                        <button class="text-white btn btn-primary" type='submit'>Update</button>
 
                                     </div>
                                 </div>
