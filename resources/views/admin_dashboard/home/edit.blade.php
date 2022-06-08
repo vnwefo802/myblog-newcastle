@@ -42,17 +42,17 @@
                                     <span>Existing Logo</span>
                                     <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->about_first_image) }}' >
+                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->logo) }}' >
                                                 </div>
                                             </div>
                                     <!-- Logo -->
                                     <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="Logo" class="form-label">Logo</label>
-                                                    <input name='Logo' type='file' class="form-control" id="Logo">
+                                                    <label for="logo" class="form-label">Logo</label>
+                                                    <input name='logo' type='file' class="form-control" id="logo">
 
-                                                    @error('Logo')
+                                                    @error('logo')
                                                         <p class='text-danger'>{{ $message }}</p>
                                                     @enderror
                                                 </div>
@@ -62,17 +62,17 @@
                                     <span>Existing Favicon</span>
                                     <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->about_first_image) }}' >
+                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->favicon) }}' >
                                                 </div>
                                             </div>
                                     <!-- Favicon -->
                                     <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="Favicon" class="form-label" title="This is the image to the left of the text in the tab.">Favicon</label>
-                                                    <input name='Favicon' type='file' class="form-control" id="Favicon">
+                                                    <label for="favicon" class="form-label" title="This is the image to the left of the text in the tab.">Favicon</label>
+                                                    <input name='favicon' type='file' class="form-control" id="favicon">
 
-                                                    @error('Favicon')
+                                                    @error('favicon')
                                                         <p class='text-danger'>{{ $message }}</p>
                                                     @enderror
                                                 </div>
@@ -130,7 +130,7 @@
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
-                                   
+
 
                                         <!-- Box Title 2 -->
                                        <div class="mb-3">
@@ -193,16 +193,6 @@
                                             @enderror
                                         </div>
 
-                                        <!-- difference_title -->
-                                        <div class="mb-3">
-                                            <label for="difference_title" class="form-label">Difference Title</label>
-                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{ old("difference_title", $allhome->difference_title) }}</textarea>
-
-                                            @error('difference_title')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-
                                         <!-- difference_button_1 -->
                                     <div class="mb-3">
                                             <label for="difference_button_1" class="form-label">Difference Button 1</label>
@@ -222,6 +212,37 @@
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
+
+                                         <!-- difference image -->
+                                        <div class='col-md-8'>
+                                            <div class="mb-3">
+                                                <label for="difference_image" class="form-label">difference image</label>
+                                                <input name='difference_image' type='file' class="form-control" id="difference_image">
+
+                                                @error('difference_image')
+                                                    <p class='text-danger'>{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                        <div class='col-md-4'>
+                                            <div class='p-2 user-image'>
+                                                <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->difference_image) }}' >
+                                            </div>
+                                        </div>
+                                        <!-- difference image end  -->
+
+
+                                        <!-- difference_title -->
+                                        <div class="mb-3">
+                                            <label for="difference_title" class="form-label">Difference Title</label>
+                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{ old("difference_title", $allhome->difference_title) }}</textarea>
+
+                                            @error('difference_title')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+
 
                                         <button class='text-blue-500 btn btn-primary hover:text-white' type='submit'>Update</button>
 

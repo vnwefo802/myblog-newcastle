@@ -80,14 +80,14 @@ class AdminHomeController extends Controller
                 $path = $difference_image->store('setting', 'public');
                 $validated['difference_image'] = $path;
             }
-    
+
             if(request()->has('logo'))
             {
                 $logo = request()->file('logo');
                 $path = $logo->store('setting', 'public');
                 $validated['logo'] = $path;
             }
-    
+
 
             if(request()->has('favicon'))
             {
@@ -95,7 +95,7 @@ class AdminHomeController extends Controller
                 $path = $favicon->store('setting', 'public');
                 $validated['favicon'] = $path;
             }
-    
+
             Home::find(1)->update($validated);
 
 

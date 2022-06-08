@@ -37,7 +37,8 @@ class HomeFactory extends Factory
             'difference_button_1'=>'Volunteer',
             'difference_button_2'=>'Donate',
             'difference_image'=>'',
-            'Logo'=>'',
+            'logo'=>'',
+            'favicon'=>'',
         ];
     }
 }

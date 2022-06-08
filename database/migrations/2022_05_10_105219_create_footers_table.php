@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
+            $table->text('title')->nullable();
             // $table->text('facebook');
             // $table->text('twitter');
             // $table->text('instagram');
@@ -27,13 +27,13 @@ return new class extends Migration
 
 
             //community section
-            $table->text('community_section');
+            $table->text('community_section')->nullable();
 
             //blog section
-            $table->text('blog_section');
+            $table->text('blog_section')->nullable();
 
             //contact us section
-            $table->text('contact_us_section');
+            $table->text('contact_us_section')->nullable();
 
 
 

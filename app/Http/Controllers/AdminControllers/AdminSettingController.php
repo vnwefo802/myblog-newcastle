@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\AdminControllers;
 
-use App\Models\Setting;
+use App\Models\About;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
@@ -12,7 +12,7 @@ class AdminSettingController extends Controller
 {
     public function edit()
     {
-        $allabout = Setting::find(1);
+        $allabout = About::find(1);
 
         return view('admin_dashboard.about.edit', compact('allabout'));
 
@@ -22,7 +22,7 @@ class AdminSettingController extends Controller
     {
 
         $about_id = 1;
-        Setting::findOrFail($about_id)->update([
+        About::findOrFail($about_id)->update([
          'about_text' => $request->about_text,
         'about_our_vision' => $request->about_our_vision,
         'about_our_mission' => $request->about_our_mission,
@@ -31,6 +31,11 @@ class AdminSettingController extends Controller
         'about_third_member_name' => $request->about_third_member_name,
         'about_fourth_member_name' => $request->about_fourth_member_name,
         'about_fifth_member_name' => $request->about_fifth_member_name,
+        'about_first_image' => $request->about_first_image,
+        'about_second_image' => $request->about_second_image,
+        'about_third_image' => $request->about_third_image,
+        'about_fourth_image' => $request->about_fourth_image,
+        'about_fifth_image' => $request->about_fifth_image,
             ]);
 
 

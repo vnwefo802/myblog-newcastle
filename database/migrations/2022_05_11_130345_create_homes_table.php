@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('homes', function (Blueprint $table) {
             $table->id();
             $table->text('title')->nullable();
-            $table->string('video')->nullable();
+            $table->string('video');
             $table->string('button_1')->nullable();
             $table->string('button_2')->nullable();
             $table->text('box_title_1')->nullable();
@@ -30,17 +30,19 @@ return new class extends Migration
             // $table->string('box_short_description_4')->nullable();
 
             $table->text('project_title')->nullable();
-            $table->string('project_image')->nullable();
+            $table->string('project_image');
             $table->text('project_short_title')->nullable();
             $table->string('project_button')->nullable();
             $table->text('difference_title')->nullable();
             $table->string('difference_button_1')->nullable();
             $table->string('difference_button_2')->nullable();
-            $table->string('difference_image')->nullable();
-            $table->string('Logo')->nullable();
-            $table->string('favicon')->nullable();
-            
-            
+            $table->string('difference_image');
+            $table->string('logo');
+            $table->string('favicon');
+            $table->string('contact')->nullable();
+            $table->string('email')->nullable();
+
+
 
 
 

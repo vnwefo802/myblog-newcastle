@@ -15,25 +15,25 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->text('about_text');
-            $table->text('about_our_vision');
-            $table->text('about_our_mission');
+            $table->text('about_text')->nullable();
+            $table->text('about_our_vision')->nullable();
+            $table->text('about_our_mission')->nullable();
 
 
 
-            $table->string('about_first_image');
-            $table->string('about_second_image');
-            $table->string('about_third_image');
-            $table->string('about_fourth_image');
-            $table->string('about_fifth_image');
+            $table->string('about_first_image')->nullable();
+            $table->string('about_second_image')->nullable();
+            $table->string('about_third_image')->nullable();
+            $table->string('about_fourth_image')->nullable();
+            $table->string('about_fifth_image')->nullable();
 
-            $table->text('about_first_member_name');
-            $table->text('about_second_member_name');
-            $table->text('about_third_member_name');
-            $table->text('about_fourth_member_name');
-            $table->text('about_fifth_member_name');
+            $table->text('about_first_member_name')->nullable();
+            $table->text('about_second_member_name')->nullable();
+            $table->text('about_third_member_name')->nullable();
+            $table->text('about_fourth_member_name')->nullable();
+            $table->text('about_fifth_member_name')->nullable();
 
-          
+
             $table->timestamps();
         });
     }
