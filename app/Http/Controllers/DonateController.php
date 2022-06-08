@@ -14,10 +14,73 @@ use Illuminate\Routing\Controller;
 
 class DonateController extends Controller
 {
+
+    public function index()
+    {
+        return view('donate.index');
+    }
+
     public function donate()
     {
         $alldonate = Donate::findOrFail(1);
         return view('donate', compact('alldonate'));
+    }
+
+    private function calculateOrderAmount($request): int
+    {
+        // Replace this constant with a calculation of the order's amount
+        // Calculate the order total on the server to prevent
+        // people from directly manipulating the amount on the client
+
+        $value = intval($request->session()->get('amount'));
+
+        return $value * 10;
+    }
+
+    public function payment(Request $request)
+    {
+        $request->validate([
+            'amount' => 'required'
+        ]);
+
+
+        $amount = str_replace('.', '', $request->amount);
+
+        $request->session()->put('amount', $amount);
+
+        return view('donate.payment', ['amount' => $request->amount]);
+    }
+
+    public function create(Request $request)
+    {
+        // This is your test secret API key.
+        \Stripe\Stripe::setApiKey('sk_test_51L5rX5AqjU5JuBqtWU0ng1a61VKvokNsmlTYzunUZCHAedVuQS1RXh04Uw29qJnZQphInWmXSppIOOQDG3E3aaQI00ctMIJQOM');
+
+        header('Content-Type: application/json');
+
+        try {
+            // retrieve JSON from POST body
+            $jsonStr = file_get_contents('php://input');
+            $jsonObj = json_decode($jsonStr);
+
+            // Create a PaymentIntent with amount and currency
+            $paymentIntent = \Stripe\PaymentIntent::create([
+                'amount' => $this->calculateOrderAmount($request),
+                'currency' => 'ngn',
+                // 'automatic_payment_methods' => [
+                //     'enabled' => true,
+                // ],
+            ]);
+
+            $output = [
+                'clientSecret' => $paymentIntent->client_secret,
+            ];
+
+            return response()->json($output);
+        } catch (\Error $e) {
+            http_response_code(500);
+            return response()->json(['error' => $e->getMessage()]);
+        }
     }
 
     // public function donationForm( Request $request ){
