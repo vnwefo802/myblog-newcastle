@@ -1,5 +1,5 @@
 @extends("admin_dashboard.layouts.app")
-		
+
     @section("style")
 	<link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
 	@endsection
@@ -10,11 +10,11 @@
 		<div class="page-wrapper">
 			<div class="page-content">
 				<!--breadcrumb-->
-				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+				<div class="mb-3 page-breadcrumb d-none d-sm-flex align-items-center">
 					<div class="breadcrumb-title pe-3">volunteers</div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb mb-0 p-0">
+							<ol class="p-0 mb-0 breadcrumb">
 								<li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i class="bx bx-home-alt"></i></a>
 								</li>
 								<li class="breadcrumb-item active" aria-current="page">All volunteers</li>
@@ -23,7 +23,7 @@
 					</div>
 				</div>
 				<!--end breadcrumb-->
-			  
+
 				<div class="card">
 					<div class="card-body">
                     <div class="card">
@@ -51,8 +51,8 @@
 										<td>
 											<div class="d-flex order-actions">
 												<a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $volunteer->id }}').submit();" class="ms-3"><i class='bx bxs-trash'></i></a>
-											
-                                                <form method='post' action="{{ route('admin.volunteers.destroy', $volunteer) }}" id='delete_form_{{ $volunteer->id }}'>@csrf @method('DELETE')</form>
+
+                                                <form method='post' action="{{ route('admin.volunteer.destroy', $volunteer) }}" id='delete_form_{{ $volunteer->id }}'>@csrf @method('DELETE')</form>
                                             </div>
 										</td>
 									</tr>
@@ -63,7 +63,7 @@
 						</div>
 					</div>
 				</div>
-                        
+
 					</div>
 				</div>
 
@@ -72,7 +72,7 @@
 		</div>
 		<!--end page wrapper -->
 		@endsection
-	
+
 
     @section("script")
 
@@ -84,13 +84,13 @@
 				lengthChange: false,
 				buttons: ['excel']
 			} );
-		 
-			
-		
+
+
+
             setTimeout(() => {
                 $(".general-message").fadeOut();
             }, 5000);
-        
+
         });
 	</script>
     @endsection
