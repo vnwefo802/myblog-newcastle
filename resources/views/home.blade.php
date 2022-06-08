@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+<head>
+<meta name="description" content="Home ofc trying to make a difference.">
+</head>
 
 @section('title', 'Home')
 @section('content')
