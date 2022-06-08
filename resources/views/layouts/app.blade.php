@@ -56,8 +56,13 @@
                     <!-- ============================================ -->
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
+<<<<<<< HEAD
+                    <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo"> <!-- class="w-[163px] h-[55px]" -->
+                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[163px] h-[55px]"  alt="Newcastle logo" aria-label="Newcastle logo" >
+=======
                     <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
                         <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-64" alt="Newcastle logo" aria-label="Newcastle logo" >
+>>>>>>> feaf09f745eb7de1baf7f5251860656eb8bdba64
                         {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
 
 
