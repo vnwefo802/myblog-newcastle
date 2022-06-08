@@ -1,4 +1,5 @@
 @extends("admin_dashboard.layouts.app")
+@section('title', 'Admin - Posts')
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
 

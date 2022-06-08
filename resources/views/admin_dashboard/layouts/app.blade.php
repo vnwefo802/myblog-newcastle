@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/semi-dark.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/header-colors.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/my_style.css') }}" />
-    <title>Admin</title>
+    <title>@yield('title')</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 

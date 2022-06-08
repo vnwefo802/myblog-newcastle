@@ -1,4 +1,5 @@
 @extends("admin_dashboard.layouts.app")
+@section('title', 'Admin - Show Tag')
 		
 		@section("wrapper")
 		<!--start page wrapper -->
