@@ -51,8 +51,8 @@
 
 
 <!-- boxes -->
-<div class="w-full h-full">
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
+<div class="w-full">
+    <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20 border-b-4 border-b-green-400 my-8">
         <div class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <!-- first box -->
             <div class="flex flex-col justify-between p-5 ">
