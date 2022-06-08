@@ -17,6 +17,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    @yield('links')
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -56,7 +57,7 @@
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
                     <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
-                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="h-[55px]" alt="Newcastle logo" aria-label="Newcastle logo" >
+                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" width="250" alt="Newcastle logo" aria-label="Newcastle logo" >
                         {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
 
 
