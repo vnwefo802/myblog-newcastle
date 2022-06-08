@@ -11,7 +11,9 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $posts = Post::latest()->withCount('comments')->paginate(10);
+        $posts = Post::latest()
+        ->approved()
+        ->withCount('comments')->paginate(10);
 
         $recent_posts = Post::latest()->take(5)->get();
 

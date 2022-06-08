@@ -1,4 +1,5 @@
 @extends("admin_dashboard.layouts.app")
+<link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
 		
 		@section("wrapper")
 		<!--start page wrapper -->
@@ -28,7 +29,7 @@
 						  <div class="ms-auto"><a href="{{ route('admin.roles.create') }}" class="btn btn-primary radius-30 mt-2 mt-lg-0"><i class="bx bxs-plus-square"></i>Add New Role</a></div>
 						</div>
 						<div class="table-responsive">
-							<table class="table mb-0">
+							<table id="example2" class="table mb-0">
 								<thead class="table-light">
 									<tr>
 										<th>Role#</th>
@@ -79,9 +80,17 @@
 	
 
     @section("script")
+    <script src="{{ asset('admin_dashboard_assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
 
     <script>
         $(document).ready(function () {
+
+             // search
+             var table = $('#example2').DataTable( {
+				lengthChange: false,
+				buttons: ['excel']
+			} );
+            // end search
         
             setTimeout(() => {
                 $(".general-message").fadeOut();

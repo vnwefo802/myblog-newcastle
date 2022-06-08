@@ -69212,6 +69212,10 @@ video {
     width: 24rem;
   }
 
+  .md\:w-3\/5 {
+    width: 60%;
+  }
+
   .md\:w-auto {
     width: auto;
   }
@@ -98367,6 +98371,9 @@ video {
 
   .lg\:my-0 {
     margin-top: 0px;
+  }
+
+  .lg\:mb-0 {
     margin-bottom: 0px;
   }
 
@@ -100384,8 +100391,12 @@ video {
     width: 5rem;
   }
 
-  .lg\:w-24 {
-    width: 6rem;
+  .lg\:max-w-\[1440px\] {
+    max-width: 1440px;
+  }
+
+  .lg\:max-w-\[302px\] {
+    max-width: 302px;
   }
 
   .lg\:w-28 {

@@ -11,11 +11,11 @@
     <div class="page-wrapper">
         <div class="page-content">
             <!--breadcrumb-->
-            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="mb-3 page-breadcrumb d-none d-sm-flex align-items-center">
                 <div class="breadcrumb-title pe-3">About</div>
                 <div class="ps-3">
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb mb-0 p-0">
+                        <ol class="p-0 mb-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i class="bx bx-home-alt"></i></a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">About Page</li>
@@ -24,46 +24,51 @@
                 </div>
             </div>
             <!--end breadcrumb-->
-          
+
             <div class="card">
-                <div class="card-body p-4">
+                <div class="p-4 card-body">
                     <h5 class="card-title">Edit About Page</h5>
                     <hr/>
 
                     <form action="{{ route('admin.setting.update') }}" method='post' enctype='multipart/form-data'>
                         @csrf
-    
-                        <div class="form-body mt-4">
+
+                        <div class="mt-4 form-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="border border-3 p-4 rounded">
+                                    <div class="p-4 border rounded border-3">
 
                                     <div class="mb-3">
                                             <label for="about_text" class="form-label">About Our Mission</label>
-                                            <textarea name='about_text'  id='about_first_text' class="form-control" id="about_text" rows="3">{{ old("about_text", $setting->about_text) }}</textarea>
-                                        
+                                            <textarea name='about_text' class="form-control" id="about_text" rows="3">{{ old("about_text", $allabout->about_text) }}</textarea>
+
                                             @error('about_text')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
 
-                                       
+
 
 
                                         <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="about_first_image" class="form-label">First Image</label>
+                                                    <label for="about_first_image" class="form-label">First member Image</label>
                                                     <input name='about_first_image' type='file' class="form-control" id="about_first_image">
-                                                
-                                                    @error('about_first_image')
-                                                        <p class='text-danger'>{{ $message }}</p>
-                                                    @enderror
+
+                                                    <div class="mb-3">
+                                                        <label for="about_first_member_name" class="form-label"> First member info</label>
+                                                        <textarea name='about_first_member_name'  id='about_first_member_name' class="form-control" rows="3">{{ old("about_first_member_name", $allabout->about_first_member_name) }}</textarea>
+
+                                                        @error('about_first_member_name')
+                                                            <p class='text-danger'>{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class='col-md-4'>
-                                                <div class='user-image p-2'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_first_image) }}' >
+                                                <div class='p-2 user-image'>
+                                                    <img class='img-fluid img-thumbnail' src="setting/{{ $allabout->about_first_image }}" >
                                                 </div>
                                             </div>
                                         </div>
@@ -71,17 +76,22 @@
                                         <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="about_second_image" class="form-label">Second Image</label>
+                                                    <label for="about_second_image" class="form-label">Second member Image</label>
                                                     <input name='about_second_image' type='file' class="form-control" id="about_second_image">
-                                                
-                                                    @error('about_second_image')
-                                                        <p class='text-danger'>{{ $message }}</p>
-                                                    @enderror
+
+                                                    <div class="mb-3">
+                                                        <label for="about_second_member_name" class="form-label"> second member info</label>
+                                                        <textarea name='about_second_member_name'  id='about_second_member_name' class="form-control" rows="3">{{ old("about_second_member_name", $allabout->about_second_member_name) }}</textarea>
+
+                                                        @error('about_second_member_name')
+                                                            <p class='text-danger'>{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class='col-md-4'>
-                                                <div class='user-image p-2'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_second_image) }}' >
+                                                <div class='p-2 user-image'>
+                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allabout->about_second_image) }}" >
                                                 </div>
                                             </div>
                                         </div>
@@ -90,36 +100,46 @@
                                         <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="about_third_image" class="form-label">Second Image</label>
+                                                    <label for="about_third_image" class="form-label">Third member Image</label>
                                                     <input name='about_third_image' type='file' class="form-control" id="about_third_image">
-                                                
-                                                    @error('about_third_image')
-                                                        <p class='text-danger'>{{ $message }}</p>
-                                                    @enderror
+
+                                                    <div class="mb-3">
+                                                        <label for="about_third_member_name" class="form-label"> Third member info</label>
+                                                        <textarea name='about_third_member_name'  id='about_third_member_name' class="form-control" rows="3">{{ old("about_third_member_name", $allabout->about_third_member_name) }}</textarea>
+
+                                                        @error('about_third_member_name')
+                                                            <p class='text-danger'>{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+
                                                 </div>
                                             </div>
                                             <div class='col-md-4'>
-                                                <div class='user-image p-2'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_third_image) }}' >
+                                                <div class='p-2 user-image'>
+                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allabout->about_third_image) }}" >
                                                 </div>
                                             </div>
                                         </div>
-                                        
 
                                         <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="about_fourth_image" class="form-label">Second Image</label>
+                                                    <label for="about_fourth_image" class="form-label">Fouth member Image</label>
                                                     <input name='about_fourth_image' type='file' class="form-control" id="about_fourth_image">
-                                                
-                                                    @error('about_fourth_image')
-                                                        <p class='text-danger'>{{ $message }}</p>
-                                                    @enderror
+
+                                                    <div class="mb-3">
+                                                        <label for="about_fourth_member_name" class="form-label"> Fouth member info</label>
+                                                        <textarea name='about_fourth_member_name'  id='about_fourth_member_name' class="form-control" rows="3">{{ old("about_fourth_member_name", $allabout->about_fourth_member_name) }}</textarea>
+
+                                                        @error('about_fourth_member_name')
+                                                            <p class='text-danger'>{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class='col-md-4'>
-                                                <div class='user-image p-2'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_fourth_image) }}' >
+                                                <div class='p-2 user-image'>
+                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allabout->about_fourth_image) }}" >
                                                 </div>
                                             </div>
                                         </div>
@@ -127,25 +147,31 @@
                                           <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="about_fifth_image" class="form-label">Second Image</label>
+                                                    <label for="about_fifth_image" class="form-label">Fifth member Image</label>
                                                     <input name='about_fifth_image' type='file' class="form-control" id="about_fifth_image">
-                                                
-                                                    @error('about_fifth_image')
-                                                        <p class='text-danger'>{{ $message }}</p>
-                                                    @enderror
+
+
+                                                    <div class="mb-3">
+                                                        <label for="about_fifth_member_name" class="form-label"> Fifth member info</label>
+                                                        <textarea name='about_fourth_member_name'  id='about_fifth_member_name' class="form-control" rows="3">{{ old("about_fifth_member_name", $allabout->about_fifth_member_name) }}</textarea>
+
+                                                        @error('about_fifth_member_name')
+                                                            <p class='text-danger'>{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class='col-md-4'>
-                                                <div class='user-image p-2'>
-                                                    <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $setting->about_fifth_image) }}' >
+                                                <div class='p-2 user-image'>
+                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allabout->about_fifth_image) }}" >
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="about_our_mission" class="form-label">About Our Mission</label>
-                                            <textarea name='about_our_mission'  id='about_our_mission' class="form-control" id="our_mission" rows="3">{{ old("about_our_mission", $setting->about_our_mission) }}</textarea>
-                                        
+                                            <textarea name='about_our_mission'  id='about_our_mission' class="form-control" id="our_mission" rows="3">{{ old("about_our_mission", $allabout->about_our_mission) }}</textarea>
+
                                             @error('about_our_mission')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
@@ -153,29 +179,22 @@
 
                                         <div class="mb-3">
                                             <label for="about_our_vision" class="form-label">About Our Vision</label>
-                                            <textarea name='about_our_vision'  id='about_our_vision' class="form-control" rows="3">{{ old("about_our_vision", $setting->about_our_vision) }}</textarea>
-                                        
+                                            <textarea name='about_our_vision'  id='about_our_vision' class="form-control" rows="3">{{ old("about_our_vision", $allabout->about_our_vision) }}</textarea>
+
                                             @error('about_our_vision')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
 
 
-                                        <div class="mb-3">
-                                            <label for="about_services" class="form-label">About Services</label>
-                                            <textarea name='about_services'  id='about_services' class="form-control" rows="3">{{ old("about_services", $setting->about_services) }}</textarea>
-                                        
-                                            @error('about_services')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
                                         
 
-                                        <button class='btn btn-primary text-blue-500 hover:text-white' type='submit'>Update</button>
-                                        
+
+                                        <button class='text-blue-500 btn btn-primary hover:text-white' type='submit'>Update</button>
+
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </form>
@@ -192,7 +211,7 @@
 @section("script")
 <script>
     $(document).ready(function () {
-    
+
         setTimeout(() => {
             $(".general-message").fadeOut();
         }, 5000);
@@ -208,10 +227,14 @@
                 toolbar_mode: 'floating',
             });
         }
-        
+
         initTinyMCE('about_our_mission');
+        initTinyMCE('about_first_member_name');
+        initTinyMCE('about_second_member_name');
+        initTinyMCE('about_third_member_name');
+        initTinyMCE('about_fourth_member_name');
+        initTinyMCE('about_fifth_member_name');
         initTinyMCE('about_our_vision');
-        initTinyMCE('about_services');
         initTinyMCE('about_text');
 
     });

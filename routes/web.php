@@ -26,6 +26,8 @@ use App\Http\Controllers\AdminControllers\AdminSettingController;
 use App\Http\Controllers\AdminControllers\AdminDonateController;
 use App\Http\Controllers\AdminControllers\AdminHomeController;
 use App\Http\Controllers\AdminControllers\AdminFooterController;
+use App\Http\Controllers\AdminControllers\AdminVolunteerController;
+
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
@@ -40,13 +42,18 @@ use App\Http\Controllers\BlogController;
 // Front User Routes
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
-
-Route::get('/volunteer', [VolunteerController::class, 'volunteer'])->name('volunteer');
+// volunteer
+Route::get('/volunteer', [VolunteerController::class, 'create_volunteer'])->name('volunteer.create');
+Route::post('/volunteer', [VolunteerController::class, 'store_volunteer'])->name('volunteer.store');
+// volunteer ends
 Route::get('/donate', [DonateController::class, 'donate'])->name('donate');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
-
+// // Paypal Donation Form
+// Route::get( 'donation-form',  [ DonationController::class, 'donationForm' ] );
+// Route::get( 'donation/success',  [ DonationController::class, 'donationSuccess' ] )->name('donation.success');
+// Route::get( 'donation/cancelled',  [ DonationController::class, 'donationCancelled' ] )->name('donation.cancelled');
+// Route::get( 'donation/notify_url',  [ DonationController::class, 'donationNotify' ] )->name('donation.notify');
 
 Route::get('/posts/{post:slug}', [PostsController::class, 'show'])->name('posts.show');
 Route::post('/posts/{post:slug}', [PostsController::class, 'addComment'])->name('posts.add_comment');
@@ -81,6 +88,11 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'check_permissions']
 
     Route::get('contacts', [AdminContactsController::class, 'index'])->name('contacts');
     Route::delete('contacts/{contact}', [AdminContactsController::class, 'destroy'])->name('contacts.destroy');
+
+    // volunteer
+    Route::get('volunteer', [AdminVolunteerController::class, 'index'])->name('volunteer');
+    Route::delete('volunteer/{volunteer}', [AdminVolunteerController::class, 'destroy'])->name('volunteer.destroy');
+
 
     Route::get('about', [AdminSettingController::class, 'edit'])->name('setting.edit');
     Route::post('about', [AdminSettingController::class, 'update'])->name('setting.update');

@@ -69,7 +69,7 @@
                         <div class="col-md-2">
                             <div id="colorlib-logo"><a href="{{ route('home') }}">Blog</a></div>
                         </div>
-                        <div class="col-md-10 text-right menu-1">
+                        <div class="text-right col-md-10 menu-1">
                             <ul>
                                 <li><a href="{{ route('home') }}">Home</a></li>
                                 <li><a href="{{ route('blog') }}">Blog</a></li>
@@ -83,7 +83,7 @@
                                 </li>
                                 <li><a href="{{ route('about') }}">About</a></li>
                                 <li><a href="{{ route('contact.create') }}">Contact</a></li>
-                                <li><a href="{{ route('volunteer') }}">Volunteer</a></li>
+                                <li><a href="{{ route('volunteer.create') }}">Volunteer</a></li>
                                 <li ><a href="{{ route('donate') }}">Donate</a></li>
 
                                 @guest
@@ -267,8 +267,7 @@
     <!-- Main -->
     <script src="{{ asset('blog_template/js/main.js') }}"></script>
 
-    <script src="{{ asset('js/functions.js') }}"></script>
-    @yield('custom_js')
+
 
     </body>
 </html>

@@ -6,6 +6,8 @@ namespace App\Http\Controllers\AdminControllers;
 use App\Models\Donate;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class AdminDonateController extends Controller
 {
@@ -22,15 +24,15 @@ class AdminDonateController extends Controller
 
             $donate_id = 1;
             Donate::findOrFail($donate_id)->update([
-                    'donate_title' => $request->donate_title,
+            'donate_title' => $request->donate_title,
             'donate_first_short_title' => $request->donate_first_short_title,
             'donate_second_short_title' => $request->donate_second_short_title,
             'donate_project_title' => $request->donate_project_title,
             'donate_objectives__title' => $request->donate_objectives__title,
             'donate_values_title' => $request->donate_values_title,
-
-
                 ]);
+
+
         // $request->validate([
         //     'donate_title' => $request->,
         //     'donate_first_short_title' => '|max:',
@@ -58,7 +60,10 @@ class AdminDonateController extends Controller
         // $alldonate::find(1)->update($request->all());
 
 
-        return redirect()->route('admin.donate.edit')->with('success','Donate updated successfully');
+        //sweetalert
+        Alert::success('success','Donate updated successfully');
+
+        return redirect()->route('admin.donate.edit');
 
     }
 }

@@ -7,16 +7,22 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Tag;
+use App\Models\Footer;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $post = Post::findOrFail(1);
-        $category = Category::findOrFail(1);
+
+
+
+        $post = Post::find(1);
+        $category = Category::find(1);
+
+
         // $category = Category::orderBy('id', 'DESC');
         $recentPosts = Post::latest()->take(3)->get();
-        return view('home', compact('recentPosts', 'post', 'category'));
+        return view('home', compact('recentPosts'));
 
     }
 }

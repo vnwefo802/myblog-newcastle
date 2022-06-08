@@ -4,6 +4,8 @@ namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 use App\Models\Post;
 use App\Models\Comment;
@@ -21,7 +23,7 @@ class AdminCommentsController extends Controller
             'comments' => Comment::latest()->paginate(50)
         ]);
     }
-    
+
     public function create()
     {
         return view('admin_dashboard.comments.create', [
@@ -35,9 +37,13 @@ class AdminCommentsController extends Controller
         $validated['user_id'] = auth()->id();
 
         Comment::create($validated);
-        return redirect()->route('admin.comments.create')->with('success', 'Comment has been added.');
+
+        //sweetalert
+        Alert::success('success', 'Comment has been added.');
+        
+        return redirect()->route('admin.comments.create');
     }
-    
+
     public function edit(Comment $comment)
     {
         return view('admin_dashboard.comments.edit', [
@@ -50,9 +56,13 @@ class AdminCommentsController extends Controller
     {
         $validated = $request->validate($this->rules);
         $comment->update($validated);
-        return redirect()->route('admin.comments.edit', $comment)->with('success', 'Comment has been updated.');
+
+        // sweetalert
+        Alert::success('success', 'Comment has been updated.');
+
+        return redirect()->route('admin.comments.edit', $comment);
     }
-    
+
     public function destroy(Comment $comment)
     {
         $comment->delete();
