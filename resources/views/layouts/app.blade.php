@@ -57,7 +57,7 @@
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
                     <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
-                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" width="250" alt="Newcastle logo" aria-label="Newcastle logo" >
+                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[163px] h-[55px] " alt="Newcastle logo" aria-label="Newcastle logo" >
                         {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
 
 
@@ -256,86 +256,88 @@
 <div class="relative flex justify-start md:justify-center md:items-end ">
     <img class="absolute z-0 object-cover w-full h-full dark:hidden top-10 xl:mt-10" loading="lazy" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">
     <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center">
-        <div class="flex flex-col items-start justify-start xl:justify-center xl:space-x-8 xl:flex-row">
-            <div class="flex items-center justify-start space-x-4">
-                <div class="w-12 cursor-pointer">
-                    <img class="w-12" height="47px" loading="lazy" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_svg1.svg" alt="logo">
+        <div class="flex flex-col justify-center">
+            <div class="flex items-center justify-start space-x-4 ">
+                <div class="cursor-pointer mb-8 border rounded shadow">
+                    <a href="/">
+                        <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy" src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
+                    </a>
                 </div>
-                {{-- display comapy name --}}
-                <a class="text-xl font-semibold leading-normal text-white w-60 xl:text-2xl" href="{{ url('/') }}">
-                    {{ config('app.name', 'NewCastle-Founodation') }}
-                </a>
             </div>
-                <div class="grid w-full grid-cols-1 mt-12 xl:mt-0 sm:grid-cols-3 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
-                    <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
-                        <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">COMMUNITY</h2>
-                        <a href="  {!! $footer->community_section !!}">
-                        <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                         {!! $footer->community_section !!}
-                        </button>
+            <div class="justify-center grid w-full grid-cols-1 mt-12 xl:mt-0 sm:grid-cols-4 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
+                <div class="cursor-pointer mb-8 border rounded shadow">
+                    <a href="/">
+                        <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy" src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
+                    </a>
+                </div>
+                <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
+                    <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">COMMUNITY</h2>
+                    <a href="  {!! $footer->community_section !!}">
+                    <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                        {!! $footer->community_section !!}
+                    </button>
                     </a>
 
-                        {{-- <a href=" $allfooter->community_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                             $allfooter->community2
-                        </button></a>
-                        <a href=" $allfooter->community_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                             $allfooter->community3
-                        </button></a>
-                        <a href=" $allfooter->community_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->community4
-                        </button></a> --}}
-                    </div>
+                    {{-- <a href=" $allfooter->community_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                            $allfooter->community2
+                    </button></a>
+                    <a href=" $allfooter->community_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                            $allfooter->community3
+                    </button></a>
+                    <a href=" $allfooter->community_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                        $allfooter->community4
+                    </button></a> --}}
+                </div>
 
-                    {{-- ROLE 2 --}}
-                    <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
-                        <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">BLOG</h2>
-                        <a href=" {!! $footer->blog_section !!} ">
-                       <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            {!! $footer->blog_section !!}
-                        </button>
-                    </a>
+                {{-- ROLE 2 --}}
+                <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
+                    <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">BLOG</h2>
+                    <a href=" {!! $footer->blog_section !!} ">
+                    <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                        {!! $footer->blog_section !!}
+                    </button>
+                </a>
 
-                        {{-- <a href=" $allfooter->blog_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->blog2
-                        </button></a>
-                        <a href=" $allfooter->blog_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                             $allfooter->blog3
-                        </button></a>
-                        <a href=" $allfooter->blog_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->blog4
-                        </button></a>
-                        <a href="#"><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $hpp->blog5
-                        </button></a> --}}
-                    </div>
-
-
-                    <div class="flex flex-col items-start justify-start space-y-6 xl:w-72">
-                        <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">CONTACT US</h2>
-                        <a href=" {!! $footer->contact_us_section !!} ">
-                        <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            {!! $footer->contact_us_section !!}
-                        </button></a>
-
-                        {{-- <a href="{{ $allfooter->contact_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->contact2
-                        </button></a>
-                        <a href=" $allfooter->contact_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                             $allfooter->contact3
-                        </button></a>
-                        <a href=" $allfooter->contact_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                             $allfooter->contact4
-                        </button></a>
-                        <a href=" $allfooter->contact_link_5 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->contact5
-                        </button></a> --}}
-                    </div>
+                    {{-- <a href=" $allfooter->blog_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                        $allfooter->blog2
+                    </button></a>
+                    <a href=" $allfooter->blog_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                            $allfooter->blog3
+                    </button></a>
+                    <a href=" $allfooter->blog_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                        $allfooter->blog4
+                    </button></a>
+                    <a href="#"><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                        $hpp->blog5
+                    </button></a> --}}
                 </div>
 
 
-            <div class="flex flex-col-reverse items-center w-full mt-12 xl:justify-between xl:flex-row xl:items-start ">
-                <p class="mt-10 text-sm leading-none text-white md:mt-12 xl:mt-0" >  &copy; <?php echo date('Y'); ?> {{ config('app.name', 'NewCastle-Founodation') }}. All Rights Reserved</p>
-                <div class="flex flex-col items-start justify-start w-full mt-10 space-y-4 md:mt-12 xl:mt-0 md:flex-row md:justify-center md:w-auto md:space-y-0 md:items-center md:space-x-4 xl:space-x-6">
+                <div class="flex flex-col items-start justify-start space-y-6 xl:w-72">
+                    <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">CONTACT US</h2>
+                    <a href=" {!! $footer->contact_us_section !!} ">
+                    <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                        {!! $footer->contact_us_section !!}
+                    </button></a>
+
+                    {{-- <a href="{{ $allfooter->contact_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                        $allfooter->contact2
+                    </button></a>
+                    <a href=" $allfooter->contact_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                            $allfooter->contact3
+                    </button></a>
+                    <a href=" $allfooter->contact_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                            $allfooter->contact4
+                    </button></a>
+                    <a href=" $allfooter->contact_link_5 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                        $allfooter->contact5
+                    </button></a> --}}
+                </div>
+            </div>
+
+
+            <div class="flex flex-col-reverse justify-center w-full mt-16  xl:flex-row xl:items-start ">
+                <div class="flex flex-col items-start justify-start w-full mt-10 space-y-4 md:mt-12 xl:mt-0 md:flex-row md:justify-center md:w-auto md:space-y-0 md:items-center md:space-x-4 xl:space-x-6 mr-7">
                     <button class="text-base leading-none text-white hover:text-gray-300">
                         <a href="tel:07847583948"><p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>  $allcontact->Phone_number </p>
                     </button>
@@ -343,7 +345,7 @@
                     <a href="mailto: $allcontact->email "><p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i>  $allcontact->email </p></a>
                     </button>
                 </div>
-                 <div class="flex items-start justify-start w-full space-x-6 md:justify-end md:w-auto md:items-center ">
+                <div class="flex items-start justify-start w-full space-x-6 md:justify-end md:w-auto md:items-center ">                    
                     <!-- twitter -->
                     <a href=" {{ $footer->twitter }} "><button class="w-6 text-white hover:text-gray-200">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="link to twiter">
@@ -369,6 +371,9 @@
                         </svg>
                     </button></a>
                 </div>
+            </div>
+            <div class="flex flex-col-reverse justify-center w-full mt-16 lg:flex-row">
+                <p class="mt-10 text-sm leading-none text-white md:mt-12 " >  &copy; <?php echo date('Y'); ?> {{ config('app.name', 'NewCastle-Founodation') }}. All Rights Reserved</p>
             </div>
         </div>
 
