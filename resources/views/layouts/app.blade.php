@@ -264,7 +264,12 @@
                     </a>
                 </div>
             </div>
-            <div class="justify-center grid w-full grid-cols-1 mt-12 xl:mt-0 sm:grid-cols-3 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
+            <div class="justify-center grid w-full grid-cols-1 mt-12 xl:mt-0 sm:grid-cols-4 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
+                <div class="cursor-pointer mb-8 border rounded shadow">
+                    <a href="/">
+                        <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy" src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
+                    </a>
+                </div>
                 <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
                     <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">COMMUNITY</h2>
                     <a href="  {!! $footer->community_section !!}">
