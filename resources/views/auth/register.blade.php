@@ -26,7 +26,7 @@
             <div>
                 <x-label for="name" :value="__('Name')" />
 
-                <x-input id="name" class="block mt-1 w-full py-2 px-4" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input id="name" class="block mt-1 w-full py-2 px-4 border-gray-200" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
             <!-- Email Address -->
