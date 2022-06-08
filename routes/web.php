@@ -44,6 +44,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/volunteer', [VolunteerController::class, 'volunteer'])->name('volunteer');
 Route::get('/donate', [DonateController::class, 'donate'])->name('donate');
+Route::get('/donatee', [DonateController::class, 'index']);
+Route::post('donatee/payment', [DonateController::class, 'payment'])->name('donate.payment');
+Route::post('/create', [DonateController::class, 'create']);
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 // // Paypal Donation Form
