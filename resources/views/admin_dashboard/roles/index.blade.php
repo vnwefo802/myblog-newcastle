@@ -1,4 +1,5 @@
 @extends("admin_dashboard.layouts.app")
+@section('title', 'Admin - Roles')
 <link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
 		
 		@section("wrapper")

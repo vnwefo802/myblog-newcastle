@@ -3,7 +3,7 @@
     @section("style")
 	<link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
 	@endsection
-
+	@section('title', 'Admin - Contact Messages')
 
 		@section("wrapper")
 		<!--start page wrapper -->

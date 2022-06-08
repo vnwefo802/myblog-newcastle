@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
 
+@section('title', 'Admin - Categories')
 		@section("wrapper")
 
 

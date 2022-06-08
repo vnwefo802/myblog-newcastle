@@ -1,6 +1,8 @@
 
 @extends("admin_dashboard.layouts.app")
 
+@section('title', 'Admin - Edit About Page')
+
 @section("style")
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.10.0/tinymce.min.js" integrity="sha512-XNYSOn0laKYg55QGFv1r3sIlQWCAyNKjCa+XXF5uliZH+8ohn327Ewr2bpEnssV9Zw3pB3pmVvPQNrnCTRZtCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endsection
