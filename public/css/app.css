@@ -991,6 +991,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-7xl {
   max-width: 80rem;
 }
+.max-w-\[163px\] {
+  max-width: 163px;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
