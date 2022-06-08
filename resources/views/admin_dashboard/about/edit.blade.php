@@ -68,7 +68,7 @@
                                             </div>
                                             <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src="setting/{{ $allabout->about_first_image }}" >
+                                                    <img class='img-fluid img-thumbnail' src="/{{ $allabout->about_first_image }}" >
                                                 </div>
                                             </div>
                                         </div>
@@ -91,7 +91,7 @@
                                             </div>
                                             <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allabout->about_second_image) }}" >
+                                                    <img class='img-fluid img-thumbnail' src="/{{ $allabout->about_second_image }}" >
                                                 </div>
                                             </div>
                                         </div>
@@ -116,7 +116,7 @@
                                             </div>
                                             <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allabout->about_third_image) }}" >
+                                                    <img class='img-fluid img-thumbnail' src="/{{ $allabout->about_third_image }}" >
                                                 </div>
                                             </div>
                                         </div>
@@ -139,7 +139,7 @@
                                             </div>
                                             <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allabout->about_fourth_image) }}" >
+                                                    <img class='img-fluid img-thumbnail' src="/{{ $allabout->about_fourth_image }}" >
                                                 </div>
                                             </div>
                                         </div>
@@ -163,7 +163,7 @@
                                             </div>
                                             <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allabout->about_fifth_image) }}" >
+                                                    <img class='img-fluid img-thumbnail' src="/{{ $allabout->about_fifth_image }}" >
                                                 </div>
                                             </div>
                                         </div>
