@@ -47,6 +47,36 @@
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
                                 </div>
+                                <!-- Category -->
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Category</label>
+                                    <textarea name='title'  id='title' class="form-control" rows="3">{{-- old("title", $allfooter->title) --}}</textarea>
+                                
+                                    @error('title')
+                                        <p class='text-danger'>{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <!-- Blog -->
+
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Blog</label>
+                                    <textarea name='title'  id='title' class="form-control" rows="3">{{-- old("title", $allfooter->title) --}}</textarea>
+                                
+                                    @error('title')
+                                        <p class='text-danger'>{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <!--Contact Us-->
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Contact Us</label>
+                                    <textarea name='title'  id='title' class="form-control" rows="3">{{-- old("title", $allfooter->title) --}}</textarea>
+                                
+                                    @error('title')
+                                        <p class='text-danger'>{{ $message }}</p>
+                                    @enderror
+                                </div>
+
+
 
                                 <!-- Facebook -->
                                 <div class="mb-3">
