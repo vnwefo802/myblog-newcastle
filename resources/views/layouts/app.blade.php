@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <link rel="icon" type="image/x-icon" href="/images/newcastlefoundationlogo_icon.ico">
     {{-- <link rel="icon" type="image/png" href="{{ asset('storage/'.$home->favicon) }}"> --}}
@@ -57,7 +57,7 @@
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
                     <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
-                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[163px] h-[55px] " alt="Newcastle logo" aria-label="Newcastle logo" >
+                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" width="250" alt="Newcastle logo" aria-label="Newcastle logo" >
                         {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
 
 

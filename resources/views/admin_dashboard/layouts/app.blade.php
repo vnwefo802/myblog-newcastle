@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/semi-dark.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/header-colors.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/my_style.css') }}" />
-    <title>NewCastle-Founodation</title>
+    <title>Admin</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 
