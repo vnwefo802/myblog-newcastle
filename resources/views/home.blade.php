@@ -52,28 +52,28 @@
 
 <!-- boxes -->
 <div class="w-full">
-    <div class="py-16 mx-auto my-8 border-b-4 sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20 border-b-green-400">
+    <div class="py-16 mx-auto my-8 border-b-4 sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
         <div class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <!-- first box -->
-            <div class="flex flex-col justify-between p-5 ">
+            <div class="flex flex-col justify-between p-5 border shadow-md border-slate-200">
                 <div>
                     <h2 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_1 !!}</h2>
                 </div>
             </div>
             <!-- second box -->
-            <div class="flex flex-col justify-between p-5 ">
+            <div class="flex flex-col justify-between p-5 border shadow-md border-slate-200">
                 <div>
                     <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_2 !!}</h3>
                 </div>
             </div>
             <!-- third box -->
-            <div class="flex flex-col justify-between p-5 ">
+            <div class="flex flex-col justify-between p-5 border shadow-md border-slate-200">
                 <div class="m-1">
                     <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_3 !!}</h3>
                 </div>
             </div>
             <!-- fouth box -->
-            <div class="flex flex-col justify-between p-5 ">
+            <div class="flex flex-col justify-between p-5 border shadow-md border-slate-200">
                 <div>
                     <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_4 !!}</h3>
                 </div>
