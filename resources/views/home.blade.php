@@ -107,7 +107,7 @@
             <!-- informatio about the project -->
             <div class="m-2">
                 <div>
-                    <h3 class="text-lg font-semibold">{!! $allhome -> project_short_title !!}</h3>
+                    <h3 class="text-lg font-semibold">{!! $allhome->project_short_title !!}</h3>
                     <a href="/donate">
                         <button class="text-white border-2 rounded bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-800 hover:to-green-800 h-14 w-44 my-9 drop-shadow-md hover:drop-shadow-xl hover:bg-blue-500">{!! $allhome->project_button !!}</button>
                     </a>
@@ -152,40 +152,6 @@
 </div>
 
 
-<!-- MORE FROM US
-<div aria-label="group of cards" class="container px-4 py-12 mx-auto focus:outline-none">
-    <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:pb-10">
-         more from us box one
-        <div aria-label="card 1" class="px-6 py-6 bg-white shadow-lg focus:outline-none dark:bg-gray-800 text-color f-f-l">
-            <h2 class="w-1/2 text-3xl font-bold focus:outline-none dark:text-white">Download the app</h2>
-            <div aria-label="download icon" role="img" class="flex items-end justify-end w-full focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="w-12 h-12"><path d="M144 480C64.47 480 0 415.5 0 336C0 273.2 40.17 219.8 96.2 200.1C96.07 197.4 96 194.7 96 192C96 103.6 167.6 32 256 32C315.3 32 367 64.25 394.7 112.2C409.9 101.1 428.3 96 448 96C501 96 544 138.1 544 192C544 204.2 541.7 215.8 537.6 226.6C596 238.4 640 290.1 640 352C640 422.7 582.7 480 512 480H144zM303 392.1C312.4 402.3 327.6 402.3 336.1 392.1L416.1 312.1C426.3 303.6 426.3 288.4 416.1 279C407.6 269.7 392.4 269.7 383 279L344 318.1V184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184V318.1L256.1 279C247.6 269.7 232.4 269.7 223 279C213.7 288.4 213.7 303.6 223 312.1L303 392.1z"/></svg>
-            </div>
-        </div>
-         more from us box two
-        <div aria-label="card 2" class="px-6 py-6 bg-white shadow-lg focus:outline-none dark:bg-gray-800 text-color f-f-l">
-            <h2 class="w-1/2 text-3xl font-bold focus:outline-none dark:text-white">Effortless onboarding</h2>
-            <div aria-label="onboarding icon " role="img" class="flex items-end justify-end w-full focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-12 h-12"><path d="M32 432C32 458.5 53.49 480 80 480h352c26.51 0 48-21.49 48-48V160H32V432zM160 236C160 229.4 165.4 224 172 224h168C346.6 224 352 229.4 352 236v8C352 250.6 346.6 256 340 256h-168C165.4 256 160 250.6 160 244V236zM480 32H32C14.31 32 0 46.31 0 64v48C0 120.8 7.188 128 16 128h480C504.8 128 512 120.8 512 112V64C512 46.31 497.7 32 480 32z"/></svg>
-            </div>
-        </div>
-         ore from us box three
-        <div aria-label="card 3" class="px-6 py-6 bg-white shadow-lg focus:outline-none dark:bg-gray-800 text-color f-f-l">
-            <h2 class="w-10/12 text-3xl font-bold focus:outline-none dark:text-white">Access from anywhere</h2>
-            <div aria-label="responsive icon" role="img" class="flex items-end justify-end w-full focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-12 h-12"><path d="M0 224C0 188.7 28.65 160 64 160H128V288C128 341 170.1 384 224 384H352V448C352 483.3 323.3 512 288 512H64C28.65 512 0 483.3 0 448V224zM224 352C188.7 352 160 323.3 160 288V64C160 28.65 188.7 0 224 0H448C483.3 0 512 28.65 512 64V288C512 323.3 483.3 352 448 352H224z"/></svg>
-            </div>
-        </div>
-         more form us box four
-        <div aria-label="card 4" class="px-6 py-6 bg-white shadow-lg focus:outline-none dark:bg-gray-800 text-color f-f-l">
-            <h2 class="w-9/12 text-3xl font-bold focus:outline-none dark:text-white">Build &amp; ship rapidly</h2>
-            <div aria-label="success icon" role="img" class="flex items-end justify-end w-full focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-12 h-12"><path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM339.8 211.8C350.7 200.9 350.7 183.1 339.8 172.2C328.9 161.3 311.1 161.3 300.2 172.2L192 280.4L147.8 236.2C136.9 225.3 119.1 225.3 108.2 236.2C97.27 247.1 97.27 264.9 108.2 275.8L172.2 339.8C183.1 350.7 200.9 350.7 211.8 339.8L339.8 211.8z"/></svg>
-            </div>
-        </div>
-    </div>
-</div>
-       -->
 <!-- blog -->
 {{-- <div class="relative pt-16">
     <div class="absolute z-0 w-full mt-4 bg-gray-100 h-72 dark:bg-gray-900"></div>

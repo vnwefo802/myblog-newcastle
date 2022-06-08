@@ -23,12 +23,7 @@ return new class extends Migration
             $table->text('box_title_2')->nullable();
             $table->text('box_title_3')->nullable();
             $table->text('box_title_4')->nullable();
-
-            // $table->string('box_short_description_1')->nullable();
-            // $table->string('box_short_description_2')->nullable();
-            // $table->string('box_short_description_3')->nullable();
-            // $table->string('box_short_description_4')->nullable();
-
+            
             $table->text('project_title')->nullable();
             $table->string('project_image')->nullable();
             $table->text('project_short_title')->nullable();

@@ -235,13 +235,14 @@
 
                                         <!-- difference -->
                                         <div class="mb-3">
-                                            <label for="difference_title" class="form-label">Difference Title</label>
-                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{   old("difference_title", $allhome->difference_title) }}</textarea>
+                                            <label for="difference_title" class="form-label">Box Title 4</label>
+                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{ old("difference_title", $allhome->difference_title) }}</textarea>
 
-                                            @error('difference')
+                                            @error('difference_title')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
+
 
 
                                         <button class="text-white btn btn-primary" type='submit'>Update</button>
@@ -288,7 +289,7 @@
         initTinyMCE('box_title_3');
         initTinyMCE('box_title_4');
         initTinyMCE('project_short_title');
-        initTinyMCE('difference');
+        initTinyMCE('difference_title');
 
     });
 
