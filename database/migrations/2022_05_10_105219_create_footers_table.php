@@ -15,43 +15,28 @@ return new class extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
-            $table->string('facebook');
-            $table->string('twitter');
-            $table->string('instagram');
-            $table->string('youtube');
+            $table->text('title')->nullable();
+            // $table->text('facebook');
+            // $table->text('twitter');
+            // $table->text('instagram');
+            // $table->text('youtube');
+             $table->text('facebook')->nullable();
+            $table->text('twitter')->nullable();
+            $table->text('instagram')->nullable();
+            $table->text('youtube')->nullable();
+
+
             //community section
-            $table->string('community1');
-            $table->string('community2');
-            $table->string('community3');
-            $table->string('community4');
-            $table->string('community_link_1');
-            $table->string('community_link_2');            
-            $table->string('community_link_3');
-            $table->string('community_link_4');
+            $table->text('community_section')->nullable();
+
             //blog section
-            $table->string('blog1');
-            $table->string('blog2');
-            $table->string('blog3');
-            $table->string('blog4');
-            $table->string('blog5');
-            $table->string('blog_link_1');
-            $table->string('blog_link_2');
-            $table->string('blog_link_3');
-            $table->string('blog_link_4');
-            $table->string('blog_link_5');
+            $table->text('blog_section')->nullable();
+
             //contact us section
-            $table->string('contact1');
-            $table->string('contact2');
-            $table->string('contact3');
-            $table->string('contact4');
-            $table->string('contact5');
-            $table->string('contact_link_1');
-            $table->string('contact_link_2');
-            $table->string('contact_link_3');
-            $table->string('contact_link_4');
-            $table->string('contact_link_5');
-            
+            $table->text('contact_us_section')->nullable();
+
+
+
 
             $table->timestamps();
         });

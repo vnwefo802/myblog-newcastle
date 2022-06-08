@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Footer extends Model
 {
     use HasFactory;
+  protected $table = 'footers';
+
     protected $guarded = [];
 }

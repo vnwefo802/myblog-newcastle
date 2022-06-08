@@ -11,11 +11,11 @@
 <div class="page-wrapper">
     <div class="page-content">
         <!--breadcrumb-->
-        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+        <div class="mb-3 page-breadcrumb d-none d-sm-flex align-items-center">
             <div class="breadcrumb-title pe-3">Footer</div>
             <div class="ps-3">
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0 p-0">
+                    <ol class="p-0 mb-0 breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i class="bx bx-footer-alt"></i></a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">Footer</li>
@@ -24,25 +24,25 @@
             </div>
         </div>
         <!--end breadcrumb-->
-        
+
         <div class="card">
-            <div class="card-body p-4">
+            <div class="p-4 card-body">
                 <h5 class="card-title">Edit Footer</h5>
                 <hr/>
 
-                <form action="{{ route('admin.footer.update') }}" method='post' enctype='multipart/form-data'>
+                <form action="{{ route('admin.footer.update') }}" method='post' >
                     @csrf
 
-                    <div class="form-body mt-4">
+                    <div class="mt-4 form-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="border border-3 p-4 rounded">
+                                <div class="p-4 border rounded border-3">
 
                                 <!-- Title -->
                                 <div class="mb-3">
                                     <label for="title" class="form-label">Short Description</label>
-                                    <textarea name='title'  id='title' class="form-control" rows="3">{{-- old("title", $allfooter->title) --}}</textarea>
-                                
+                                    <textarea name='title'  id='title' class="form-control" rows="3">{{ old("title", $footer->title) }}</textarea>
+
                                     @error('title')
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
@@ -81,18 +81,18 @@
                                 <!-- Facebook -->
                                 <div class="mb-3">
                                     <label for="facebook" class="form-label">Facebook Link</label>
-                                    <input name='facebook'  id='facebook' class="border rounded h-[38px] w-full"  value='{{-- old("facebook", $allfooter->facebook) --}}'>
-                                
+                                    <input name='facebook'  id='facebook' class="border rounded h-[38px] w-full"  value='{{old("facebook", $footer->facebook) }}'>
+
                                     @error('facebook')
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
                                 </div>
-                                    
+
                                 <!-- Twitter -->
                                 <div class="mb-3">
                                     <label for="twitter" class="form-label">Twitter Link</label>
-                                    <input name='twitter'  id='twitter' class="border rounded h-[38px] w-full" value='{{-- old("twitter", $allfooter->twitter) --}}'>
-                                
+                                    <input name='twitter'  id='twitter' class="border rounded h-[38px] w-full" value='{{ old("twitter", $footer->twitter) }}'>
+
                                     @error('twitter')
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
@@ -101,8 +101,8 @@
                                 <!-- Instagram -->
                                 <div class="mb-3">
                                     <label for="instagram" class="form-label">Instagram Link</label>
-                                    <input name='instagram'  id='instagram' class="border rounded h-[38px] w-full" value='{{-- old("instagram", $allfooter->instagram) --}}'>
-                                
+                                    <input name='instagram'  id='instagram' class="border rounded h-[38px] w-full" value='{{old("instagram", $footer->instagram) }}'>
+
                                     @error('instagram')
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
@@ -111,14 +111,45 @@
                                 <!-- YouTube -->
                                 <div class="mb-3">
                                     <label for="youtube" class="form-label">Youtube Link</label>
-                                    <input name='youtube'  id='youtube' class="border rounded h-[38px] w-full" value='{{-- old("youtube", $allfooter->youtube) --}}'>
-                                
+                                    <input name='youtube'  id='youtube' class="border rounded h-[38px] w-full" value='{{ old("youtube", $footer->youtube) }}'>
+
                                     @error('youtube')
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
                                 </div>
-                               
-                            </div> 
+
+                                <div class='row'>
+                                    <div class='col-md-6'>
+                                        <div class="mb-3">
+                                            <label for="community_section" class="form-label"> Community Section</label>
+                                            <textarea name='community_section'  id='community_section' class="form-control" rows="3">{{ old("community_section", $footer->community_section) }}</textarea>
+
+                                            @error('community_section')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div>
+                                    <div class="mb-5"></div>
+                                    <div class="mb-3">
+                                        <label for="blog_section" class="form-label"> blog Section</label>
+                                        <textarea name='blog_section'  id='blog_section' class="form-control" rows="3">{{ old("blog_section", $footer->blog_section) }}</textarea>
+
+                                        @error('blog_section')
+                                            <p class='text-danger'>{{ $message }}</p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="contact_us_section" class="form-label"> Contact Us Section</label>
+                                        <textarea name='contact_us_section'  id='contact_us_section' class="form-control" rows="3">{{ old("contact_us_section", $footer->contact_us_section) }}</textarea>
+
+                                        @error('contact_us_section')
+                                            <p class='text-danger'>{{ $message }}</p>
+                                        @enderror
+                                    </div>
+
+                                    <button class='btn btn-primary' type='submit'>Update</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -132,7 +163,7 @@
 @section("script")
 <script>
     $(document).ready(function () {
-    
+
         setTimeout(() => {
             $(".general-message").fadeOut();
         }, 5000);
@@ -150,12 +181,10 @@
         }
 
         initTinyMCE('title');
-        initTinyMCE('box_short_description_1');
-        initTinyMCE('box_short_description_2');
-        initTinyMCE('box_short_description_3');
-        initTinyMCE('box_short_description_4');
-        initTinyMCE('project_short_title');
-        initTinyMCE('difference_title');
+        initTinyMCE('community_section');
+        initTinyMCE('blog_section');
+        initTinyMCE('contact_us_section');
+
 
     });
 
