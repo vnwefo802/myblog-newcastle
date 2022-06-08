@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Volunteer')
-
+<head>
+<meta name="description" content="Volunteer and Help Communities in Need.">
+</head>
 @section('content')
 
 {{-- hero --}}

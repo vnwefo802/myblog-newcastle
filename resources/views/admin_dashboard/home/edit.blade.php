@@ -164,7 +164,7 @@
 
 
                                         <!-- project_title -->
-                                    <div class="mb-3">
+                                        <div class="mb-3">
                                             <label for="project_title" class="form-label">Project Title</label>
                                             <textarea name='project_title'  id='project_title' class="form-control" rows="3">{{ old("project_title", $allhome->project_title) }}</textarea>
 
@@ -227,18 +227,18 @@
 
                                         <div class='col-md-4'>
                                             <div class='p-2 user-image'>
-                                                <img class='img-fluid img-thumbnail' src='{{ asset('storage/' . $allhome->difference_image) }}' >
+                                                <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allhome->difference_image) }}" >
                                             </div>
                                         </div>
                                         <!-- difference image end  -->
 
 
-                                        <!-- difference_title -->
+                                        <!-- difference -->
                                         <div class="mb-3">
                                             <label for="difference_title" class="form-label">Difference Title</label>
-                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{ old("difference_title", $allhome->difference_title) }}</textarea>
+                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{ old("difference_title", $allhome->difference) }}</textarea>
 
-                                            @error('difference_title')
+                                            @error('difference')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
@@ -288,7 +288,7 @@
         initTinyMCE('box_title_3');
         initTinyMCE('box_title_4');
         initTinyMCE('project_short_title');
-        initTinyMCE('difference_title');
+        initTinyMCE('difference');
 
     });
 

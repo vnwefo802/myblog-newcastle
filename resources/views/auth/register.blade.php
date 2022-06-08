@@ -2,7 +2,9 @@
 @extends('layouts.app')
 
 @section('title', 'Register')
-
+<head>
+<meta name="description" content="Register Now!">
+</head>
 @section('content')
 
 
@@ -10,7 +12,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[237px] h-20 fill-current text-gray-500 border" />
+                <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[237px] h-20 fill-current text-gray-500 border" alt="Newcastle Foundation Logo" />
             </a>
         </x-slot>
 

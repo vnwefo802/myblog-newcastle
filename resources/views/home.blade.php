@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+<head>
+<meta name="description" content="Home ofc trying to make a difference.">
+</head>
 
 @section('title', 'Home')
 @section('content')
@@ -56,32 +58,24 @@
             <div class="flex flex-col justify-between p-5 ">
                 <div>
                     <h2 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_1 !!}</h2>
-                    <p class="mb-3 text-lg text-gray-900">Rem dicta accusantium quaerat maiores aperiam, nostrum quae ducimus recusandae at maiores aperiam, nostrum quae
-                    </p>
                 </div>
             </div>
             <!-- second box -->
             <div class="flex flex-col justify-between p-5 ">
                 <div>
                     <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_2 !!}</h3>
-                    <p class="mb-3 text-lg text-gray-900">Our training courses also provide an enhancement your current career path opportunity for progression.
-                    </p>
                 </div>
             </div>
             <!-- third box -->
             <div class="flex flex-col justify-between p-5 ">
                 <div class="m-1">
                     <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_3 !!}</h3>
-                    <p class="mb-3 text-lg text-gray-900">If you're feeling unfulfilled in your current role, our training courses provide the perfect opportunity for you.
-                    </p>
                 </div>
             </div>
             <!-- fouth box -->
             <div class="flex flex-col justify-between p-5 ">
                 <div>
                     <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_4 !!}</h3>
-                    <p class="mb-3 text-lg text-gray-900">including your hobbies can add a lot of value, so why not improve the quality of your hobby by taking our course in it?
-                    </p>
                 </div>
             </div>
         </div>
@@ -110,10 +104,9 @@
             <!-- informatio about the project -->
             <div class="m-2">
                 <div>
-                    <h3 class="text-lg font-semibold">{!! project_short_title !!}</h3>
-                    <p class="text-lg my-9">In the community at Agudene in Udenu LGA of Nsukka, Enugu State, we provided over 50 plus classroom desks. Used text books, exercise books, including school drum set, school bags, uniforms for both junior and senior primary.  We included a scholarship fund for the girl child. These motivated the villagers and the other villages in the locality to release their girls and wards to come to school.</p>
+                    <h3 class="text-lg font-semibold">{!! $allhome -> project_short_title !!}</h3>
                     <a href="/donate">
-                        <button class="text-white border-2 rounded bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-800 hover:to-green-800 h-14 w-44 my-9 drop-shadow-md hover:drop-shadow-xl hover:bg-blue-500">Find Out More →</button>
+                        <button class="text-white border-2 rounded bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-800 hover:to-green-800 h-14 w-44 my-9 drop-shadow-md hover:drop-shadow-xl hover:bg-blue-500">{!! $allhome->project_button !!}</button>
                     </a>
                 </div>
             </div>
@@ -126,12 +119,11 @@
     <div class="lg:flex lg:mt-6 xl:-mt-6">
         <!-- contant of make a difference including the buttons -->
         <div class="w-full px-6 py-10 text-white bg-indigo-800 lg:w-2/5 xl:py-24 xl:px-8">
-            <h2 class="text-3xl font-semibold lg:w-10/12">Make a Difference</h2>
-            {{-- <p class="py-6 text-lg">If you're looking for random facts, you've arrived at the correct webpage. The Random Fact Generator has thousands of facts ready to be revealed with a simple click of a mouse.</p> --}}
+            <h2 class="text-3xl font-semibold lg:w-10/12">{!! $allhome->difference !!}</h2>
             <div class="flex items-center">
                 <a href="/volunteer" class="inline-block">
                     <button class="flex items-center py-4 mt-12 text-sm bg-blue-700 rounded-md mr-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
-                        <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">Volunteer</p>
+                        <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">{!! $allhome->difference_button_1 !!}</p>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z" fill="white" />
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z" fill="white" />
@@ -140,7 +132,7 @@
                 </a>
                 <a href="/donate" class="inline-block">
                     <button class="flex items-center py-4 mt-12 text-sm bg-blue-700 rounded-md ml-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
-                        <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">Donate</p>
+                        <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">{!! $allhome->difference_button_2 !!}</p>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z" fill="white" />
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z" fill="white" />
