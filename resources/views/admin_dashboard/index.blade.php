@@ -1,4 +1,6 @@
 @extends("admin_dashboard.layouts.app")
+
+@section('title', 'Admin - Dashboard')
 @section("style")
     <link href="{{ asset('admin_dashboard_assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
 @endsection
