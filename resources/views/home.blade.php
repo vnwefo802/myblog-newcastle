@@ -36,14 +36,17 @@
       autoplay
       loop
       muted
-      class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
-    >
+      class="absolute z-10 w-auto min-w-full min-h-full max-w-none opacity-99">
       <source
         src="{{asset('images/kids runnig.mp4')}}"
         type="video/mp4"
       />
       Your browser does not support the video tag.
+
+      
     </video>
+
+    <div class="absolute z-20 w-auto min-w-full min-h-full max-w-none bg-black opacity-50"></div>
   </header>
 
 {{-- kid stop --}}
@@ -52,28 +55,28 @@
 
 <!-- boxes -->
 <div class="w-full">
-    <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20 border-b-4  my-8">
+    <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20 border-b-4 border-blue-300  my-8">
         <div class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <!-- first box -->
-            <div class="flex flex-col justify-between p-5 border-slate-200 border shadow-md">
+            <div class="flex flex-col justify-between p-5 shadow-md shadow-zinc-300 text-blue-400">
                 <div>
-                    <h2 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_1 !!}</h2>
+                    {!! $allhome->box_title_1 !!}
                 </div>
             </div>
             <!-- second box -->
-            <div class="flex flex-col justify-between p-5 border-slate-200 border shadow-md">
+            <div class="flex flex-col justify-between p-5 shadow-md shadow-zinc-300 text-blue-400">
                 <div>
-                    <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_2 !!}</h3>
+                    {!! $allhome->box_title_2 !!}
                 </div>
             </div>
             <!-- third box -->
-            <div class="flex flex-col justify-between p-5 border-slate-200 border shadow-md">
+            <div class="flex flex-col justify-between p-5 shadow-md shadow-zinc-300 text-blue-400">
                 <div class="m-1">
-                    <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_3 !!}</h3>
+                    {!! $allhome->box_title_3 !!}
                 </div>
             </div>
             <!-- fouth box -->
-            <div class="flex flex-col justify-between p-5 border-slate-200 border shadow-md">
+            <div class="flex flex-col justify-between p-5 shadow-md shadow-zinc-300 text-blue-400">
                 <div>
                     <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_4 !!}</h3>
                 </div>
@@ -184,7 +187,7 @@
 </div>
        -->
 <!-- blog -->
-<div class="relative pt-16">
+{{-- <div class="relative pt-16">
     <div class="absolute z-0 w-full mt-4 bg-gray-100 h-72 dark:bg-gray-900"></div>
     <h2 role="heading" class="relative z-20 flex justify-center px-4 py-12 text-2xl font-semibold leading-6 text-gray-800 dark:text-white 2xl:px-20 md:px-6">OUR WEEKLY <span class="pl-2 font-bold">BLOG.</span></h2>
     <div class="relative z-40 flex flex-col items-center justify-center w-full px-8 pt-6 md:flex-row sm:flex-col sm:justify-between">
@@ -198,20 +201,20 @@
                 {{-- <div class="absolute bottom-0 left-0 py-4 text-base font-medium leading-6 text-gray-800 bg-white px-7 dark:text-white">{{  $category->name }}</div> --}}
 
                 {{-- this is the code --}}
-                 <img class="w-full max-w-[500px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="image of a person"  width="500" height="600">
+                 {{-- <img class="w-full max-w-[500px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="image of a person"  width="500" height="600"> --}}
                 {{-- <img class="w-full" src="https://i.ibb.co/6W2Yvdj/muzik.png" alt="music keyboard" /> --}}
-            </div>
+            {{-- </div> --}}
             <!-- post content -->
-            <p class="pt-4 text-base font-semibold leading-normal text-gray-800 lg:w-72 dark:text-white"> <a href="{{ route('posts.show', $recent_post) }}">
+            {{-- <p class="pt-4 text-base font-semibold leading-normal text-gray-800 lg:w-72 dark:text-white"> <a href="{{ route('posts.show', $recent_post) }}">
                 {{ \Str::limit( $recent_post->title, 20) }}
-                </a></p>
+                </a></p> --}}
             <!-- read more buton -->
-            <a href="/blog/single-blog-post"><button class="flex items-center p-2 pt-4 text-base font-medium leading-4 text-indigo-700 xl:pt-7 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:text-indigo-600 focus:outline-none">
+            {{-- <a href="/blog/single-blog-post"><button class="flex items-center p-2 pt-4 text-base font-medium leading-4 text-indigo-700 xl:pt-7 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:text-indigo-600 focus:outline-none">
                 Read more
                 <img class="ml-3" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blog-2-svg1.svg" alt="arrow"/>
-            </button></a>
+            </button></a> --}}
             <!-- acount of poster -->
-            <div class="flex items-center pt-4">
+            {{-- <div class="flex items-center pt-4">
                 <img class="w-6 h-6 rounded-full shadow" src="https://tuk-cdn.s3.amazonaws.com/assets/components/avatars/a_2.png" />
                 <p class="ml-2 text-xs leading-3 text-gray-800 dark:text-white">Jennifer Wright</p>
             </div>
@@ -220,12 +223,11 @@
         @else
             <h1>No weekly posts available</h1>
         @endif
-    </div>
+    </div> --}}
     <!-- more posts -->
-    <div class="flex items-center justify-center w-full mt-12">
+    {{-- <div class="flex items-center justify-center w-full mt-12">
         <a href="/blog"><button class="px-6 py-3 font-semibold text-white bg-indigo-700 rounded hover:opacity-90 lg:text-2xl lg:px-12 lg:py-6">More Blog Posts →</button></a>
     </div>
-
-</div>
+</div> --}}
 
 @endsection
