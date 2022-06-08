@@ -1,4 +1,5 @@
 @extends("admin_dashboard.layouts.app")
+@section('title', 'Admin - Show User')
 		
 		@section("wrapper")
 		<!--start page wrapper -->
