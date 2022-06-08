@@ -58,11 +58,11 @@
                                     </div>
                                 </div>
                                 <p class="mt-4 text-xs leading-3 text-gray-600 dark:text-gray-200">By clicking submit you agree to our terms of service, privacy policy and how we use data as stated</p>
-                                <div class="flex items-center justify-center w-full">
+                                {{-- <div class="flex items-center justify-center w-full"> --}}
                                     <input type="submit" class="px-10 py-4 text-base font-semibold leading-none text-white bg-indigo-700 rounded mt-9 hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none send-message-btn" value="Send Message">
 
                                     {{-- <input type="submit" value="Send Message" class="btn btn-primary send-message-btn"> --}}
-                                </div>
+                                {{-- </div> --}}
                             </div>
                         </form>
                     <x-blog.message :status="'success'" />
