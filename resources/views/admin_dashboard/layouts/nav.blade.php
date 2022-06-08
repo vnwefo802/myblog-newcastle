@@ -117,6 +117,12 @@
                 </li>
 
                 <li>
+                    <a href="{{ route('admin.volunteer') }}">
+                    <div class="parent-icon"><i class='bx bx-mail-send'></i></div>
+                        <div class="menu-title">Volunteer</div>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('admin.setting.edit') }}">
                     <div class="parent-icon"><i class='bx bx-info-square'></i></div>
                         <div class="menu-title">About</div>

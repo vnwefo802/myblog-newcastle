@@ -83,7 +83,7 @@
                                 </li>
                                 <li><a href="{{ route('about') }}">About</a></li>
                                 <li><a href="{{ route('contact.create') }}">Contact</a></li>
-                                <li><a href="{{ route('volunteer') }}">Volunteer</a></li>
+                                <li><a href="{{ route('volunteer.create') }}">Volunteer</a></li>
                                 <li ><a href="{{ route('donate') }}">Donate</a></li>
 
                                 @guest
@@ -267,8 +267,7 @@
     <!-- Main -->
     <script src="{{ asset('blog_template/js/main.js') }}"></script>
 
-    <script src="{{ asset('js/functions.js') }}"></script>
-    @yield('custom_js')
+
 
     </body>
 </html>
