@@ -16,14 +16,14 @@ return new class extends Migration
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
             $table->text('title');
-            $table->text('facebook');
-            $table->text('twitter');
-            $table->text('instagram');
-            $table->text('youtube');
-            // $table->text('facebook')->nullable();
-            // $table->text('twitter')->nullable();
-            // $table->text('instagram')->nullable();
-            // $table->text('youtube')->nullable();
+            // $table->text('facebook');
+            // $table->text('twitter');
+            // $table->text('instagram');
+            // $table->text('youtube');
+             $table->text('facebook')->nullable();
+            $table->text('twitter')->nullable();
+            $table->text('instagram')->nullable();
+            $table->text('youtube')->nullable();
 
 
             //community section

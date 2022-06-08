@@ -18,11 +18,10 @@ class AdminFooterController extends Controller
         return view('admin_dashboard.footer.edit', compact('footer'));
     }
 
-     // public function update(Request $request, Footer $allfooter)
-    // {
 
         public function Update(Request $request)
         {
+
             $footer_id = 1;
             Footer::findOrFail($footer_id)->update([
             'title' => $request->title,
@@ -36,7 +35,19 @@ class AdminFooterController extends Controller
 
         ]);
 
+        $validated = request()->validate([
+            'title'=> 'required|min:10,max:500',
+        'facebook' => 'required|min:4,max:800',
+        'twitter' => 'required|min:4,max:800',
+        'instagram' => 'required|min:4,max:800',
+        'youtube' => 'required|min:4,max:800',
+        'blog_section' => 'required|min:4,max:800',
+        'community_section' => 'required|min:4,max:800',
+        'contact_us_section' => 'required|min:4,max:800',
         
+        ]);
+
+        Footer::find(1)->update($validated);
 
           //sweetalert
           Alert::success('success','Footer updated successfully');

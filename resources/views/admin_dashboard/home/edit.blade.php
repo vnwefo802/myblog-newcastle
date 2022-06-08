@@ -121,8 +121,8 @@
                                             @enderror
                                         </div>
 
-                                        <!-- box_title_1 -->
-                                    <div class="mb-3">
+                                        <!-- Box Title 1 -->
+                                        <div class="mb-3">
                                             <label for="box_title_1" class="form-label">Box Title 1</label>
                                             <textarea name='box_title_1'  id='box_title_1' class="form-control" rows="3">{{ old("box_title_1", $allhome->box_title_1) }}</textarea>
 
@@ -130,19 +130,10 @@
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
+                                   
 
-                                        <!-- box_short_description_1 -->
-                                        <div class="mb-3">
-                                            <label for="box_short_description_1" class="form-label">Box Short Description 1</label>
-                                            <textarea name='box_short_description_1'  id='box_short_description_1' class="form-control" rows="3">{{ old("box_short_description_1", $allhome->box_short_description_1) }}</textarea>
-
-                                            @error('box_short_description_1')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-
-                                        <!-- box_title_2 -->
-                                    <div class="mb-3">
+                                        <!-- Box Title 2 -->
+                                       <div class="mb-3">
                                             <label for="box_title_2" class="form-label">Box Title 2</label>
                                             <textarea name='box_title_2'  id='box_title_2' class="form-control" rows="3">{{ old("box_title_2", $allhome->box_title_2) }}</textarea>
 
@@ -151,37 +142,17 @@
                                             @enderror
                                         </div>
 
-                                        <!-- box_short_description_2 -->
-                                        <div class="mb-3">
-                                            <label for="box_short_description_2" class="form-label">Box Short Description 2</label>
-                                            <textarea name='box_short_description_2'  id='box_short_description_2' class="form-control" rows="3">{{ old("box_short_description_2", $allhome->box_short_description_2) }}</textarea>
-
-                                            @error('box_short_description_2')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-
-                                        <!-- box_title_3 -->
-                                    <div class="mb-3">
-                                            <label for="title" class="form-label">Box Title 3</label>
-                                            <textarea name='title'  id='title' class="form-control" rows="3">{{ old("box_title_3", $allhome->box_title_3) }}</textarea>
+                                        <!-- Box Title 3  -->
+                                      <div class="mb-3">
+                                            <label for="box_title_3" class="form-label">Box Title 3</label>
+                                            <textarea name='box_title_3'  id='box_title_3' class="form-control" rows="3">{{ old("box_title_3", $allhome->box_title_3) }}</textarea>
 
                                             @error('box_title_3')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
 
-                                        <!-- box_short_description_3 -->
-                                        <div class="mb-3">
-                                            <label for="box_short_description_3" class="form-label">Box Short Description 3</label>
-                                            <textarea name='box_short_description_3'  id='box_short_description_3' class="form-control" rows="3">{{ old("box_short_description_3", $allhome->box_short_description_3) }}</textarea>
-
-                                            @error('box_short_description_3')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
-
-                                        <!-- box_title_4 -->
+                                        <!-- Box Title 4 -->
                                     <div class="mb-3">
                                             <label for="box_title_4" class="form-label">Box Title 4</label>
                                             <textarea name='box_title_4'  id='box_title_4' class="form-control" rows="3">{{ old("box_title_4", $allhome->box_title_4) }}</textarea>
@@ -191,15 +162,6 @@
                                             @enderror
                                         </div>
 
-                                        <!-- box_short_description_4 -->
-                                        <div class="mb-3">
-                                            <label for="box_short_description_4" class="form-label">Box Short Description 4</label>
-                                            <textarea name='box_short_description_4'  id='box_short_description_4' class="form-control" rows="3">{{ old("box_short_description_4", $allhome->box_short_description_4) }}</textarea>
-
-                                            @error('box_short_description_4')
-                                                <p class='text-danger'>{{ $message }}</p>
-                                            @enderror
-                                        </div>
 
                                         <!-- project_title -->
                                     <div class="mb-3">
@@ -300,10 +262,10 @@
         }
 
         initTinyMCE('title');
-        initTinyMCE('box_short_description_1');
-        initTinyMCE('box_short_description_2');
-        initTinyMCE('box_short_description_3');
-        initTinyMCE('box_short_description_4');
+        initTinyMCE('box_title_1');
+        initTinyMCE('box_title_2');
+        initTinyMCE('box_title_3');
+        initTinyMCE('box_title_4');
         initTinyMCE('project_short_title');
         initTinyMCE('difference_title');
 
