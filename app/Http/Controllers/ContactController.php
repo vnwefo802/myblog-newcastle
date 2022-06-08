@@ -38,13 +38,11 @@ class ContactController extends Controller
         {
             $data['errors']['first_name'] = $validated->errors()->first('first_name');
             $data['errors']['last_name'] = $validated->errors()->first('last_name');
-            $data['errors']['last_name'] = $validated->errors()->first('phone_number');
-            $data['errors']['last_name'] = $validated->errors()->first('country');
+            $data['errors']['phone_number'] = $validated->errors()->first('phone_number');
+            $data['errors']['country'] = $validated->errors()->first('country');
             $data['errors']['email'] = $validated->errors()->first('email');
             $data['errors']['subject'] = $validated->errors()->first('subject');
             $data['errors']['message'] = $validated->errors()->first('message');
-            $data['errors']['phone_number'] = $validated->errors()->first('phone_number');
-            $data['errors']['country'] = $validated->errors()->first('country');
 
         }
         else
@@ -53,13 +51,13 @@ class ContactController extends Controller
             Contact::create($attributes);
 
             Mail::to( env('ADMIN_EMAIL') )->send(new ContactMail(
-                $attributes['first_name'], 
-                $attributes['last_name'], 
-                $attributes['email'], 
-                $attributes['subject'], 
-                $attributes['message'],
+                $attributes['first_name'],
+                $attributes['last_name'],
                 $attributes['phone_number'],
-                $attributes['country']
+                $attributes['country'],
+                $attributes['email'],
+                $attributes['subject'],
+                $attributes['message'],
             ));
             $data['success'] = 1;
             $data['message'] = 'Thank you for contacting with us';
