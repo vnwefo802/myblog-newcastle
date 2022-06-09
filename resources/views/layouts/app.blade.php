@@ -134,15 +134,11 @@
             <!--               Mobile Menu Button             -->
             <!-- ============================================ -->
             <div class="flex items-center md:hidden">
-                {{-- phone icon --}}
-                <a href="tel:07847583948"><i class="mx-2 fa-solid fa-phone"></i></a>
-                {{-- email icon --}}
-                <a class="m-2" href="mailto:example@example.com"><i class="mx-2 fa-solid fa-envelope"></i></a>
                 {{-- login icon --}}
                 <a class="m-2" href="{{ route('login') }}" aria-label="login button"  alt="login button" title="login"><i class="fa-solid fa-user"></i></a>
                 {{-- Sign Up --}}
-                <a aria-label="Sign Up" href="{{ route('register') }}" class="inline-flex items-center justify-center w-full h-12 p-1 px-3 m-2 text-base font-semibold text-white transition duration-200 bg-indigo-800 border-2 border-indigo-800 rounded-full md:px-1 lg:px-6 hover:border-indigo-500 md:w-auto hover:bg-indigo-500 focus:shadow-outline focus:outline-none dark:focus:ring-indigo-500 md:text-sm lg:text-base " aria-label="Sign Up">
-                    Sign Up
+                <a aria-label="Sign Up" href="{{ route('register') }}" class="inline-flex items-center justify-center w-[47px] h-9 m-2 text-base font-semibold text-white transition duration-200 bg-indigo-800 border-2 border-indigo-800 rounded-full md:px-1 lg:px-6 hover:border-indigo-500 md:w-auto hover:bg-indigo-500 focus:shadow-outline focus:outline-none dark:focus:ring-indigo-500 md:text-sm lg:text-base " aria-label="Sign Up">
+                    <span class="text-xs">Sign Up</span>
                 </a>
                 <button class="outline-none mobile-menu-button"  aria-label="Toggle Button">
                     <svg class="w-6 h-6 m-1 text-gray-500 hover:text-indigo-500"alt="Toggle Button"
