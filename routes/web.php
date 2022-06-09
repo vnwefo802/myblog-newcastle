@@ -27,6 +27,7 @@ use App\Http\Controllers\AdminControllers\AdminDonateController;
 use App\Http\Controllers\AdminControllers\AdminHomeController;
 use App\Http\Controllers\AdminControllers\AdminFooterController;
 use App\Http\Controllers\AdminControllers\AdminVolunteerController;
+use App\Http\Controllers\BrandonController;
 
 
 use App\Http\Controllers\HomeController;
@@ -37,6 +38,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\DonateController;
+use App\Http\Controllers\donateconfirmation;
 use App\Http\Controllers\BlogController;
 
 // Front User Routes
@@ -47,8 +49,12 @@ Route::get('/volunteer', [VolunteerController::class, 'create_volunteer'])->name
 Route::post('/volunteer', [VolunteerController::class, 'store_volunteer'])->name('volunteer.store');
 // volunteer ends
 Route::get('/donate', [DonateController::class, 'donate'])->name('donate');
+Route::get('/donate/confirmation', [donateconfirmation::class, 'donateconfirmation'])->name('donateconfirmation');
+
 Route::get('/donatee', [DonateController::class, 'index']);
 Route::post('donatee/payment', [DonateController::class, 'payment'])->name('donate.payment');
+// little kid end
+
 Route::post('/create', [DonateController::class, 'create']);
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
@@ -109,3 +115,5 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'check_permissions']
     Route::get('footer', [AdminFooterController::class, 'edit'])->name('footer.edit');
     Route::post('footer', [AdminFooterController::class, 'update'])->name('footer.update');
 });
+
+Route::get('/brandon', [BrandonController::class, 'index'])->name('brandon.index');

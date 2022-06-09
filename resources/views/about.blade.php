@@ -6,7 +6,6 @@
 
 <div class="flex flex-col items-center justify-center pb-12 bg-gray-200 px-14">
     <div class="m-5">
-        {{-- <h3 class="py-10 ml-4 text-4xl font-bold leading-6 text-gray-900">About Us</h3> --}}
         <p class="px-4 mt-6 font-semibold leading-6 text-gray-700 text-l">
  {!! $allabout->about_text !!}
         </p>
@@ -23,41 +22,8 @@
     <div class="flex flex-wrap items-stretch justify-center gap-4 mt-16 xl:justify-between xl:gap-6">
         <div class="grid grid-cols-2 gap-5">
             <div class="grid grid-cols-2 grid-rows-5 gap-4 ">
-                <div class="w-[275px]">
-                    <img src="{{ asset('storage/' . $allabout->about_first_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling"/>
-                    <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
-                        <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_first_member_name !!}</p>
-                        {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white"><allabout->{!! $allabout->about_first_member_role !!}</allabout-></p> --}}
-                    </div>
-                </div>
-                <div class="w-[275px]">
-                    <img src="url{{ asset('storage/' . $allabout->about_second_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman in black dress" />
-                    <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
-                        <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_second_member_name !!}</p>
-                        {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $allabout->about_second_member_role !!}</p> --}}
-                    </div>
-                </div>
-                <div class="w-[275px]">
-                    <img src="{{ asset('storage/' . $allabout->about_third_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
-                    <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
-                        <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_third_member_name !!}</p>
-                        {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $allabout->about_third_member_role !!}</p> --}}
-                    </div>
-                </div>
-                <div class="w-[275px]">
-                    <img src="{{ asset('storage/' . $allabout->about_fourth_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
-                    <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
-                        <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_fourth_member_name !!}</p>
-                        {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $allabout->about_fourth_member_role !!}</p> --}}
-                    </div>
-                </div>
-                <div class="w-[275px]">
-                    <img src="{{ asset('storage/' . $allabout->about_fifth_image) }}" class="object-cover object-center w-full h-72 rounded-t-md" alt="woman smiling" />
-                    <div class="py-4 text-center bg-white shadow-md dark:bg-gray-800 rounded-b-md">
-                        <p class="text-base font-medium leading-6 text-gray-600 dark:text-white">{!! $allabout->about_fifth_member_name !!}</p>
-                        {{-- <p class="mt-2 text-base leading-6 text-gray-800 dark:text-white">{!! $allabout->about_fifth_member_role !!}</p> --}}
-                    </div>
-                </div>
+            
+              
             </div>
             <div class="flex-col felx">
                 <!-- our mission -->
