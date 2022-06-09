@@ -251,10 +251,8 @@
 </main>
 
 
-
-<div class="relative flex justify-start md:justify-center md:items-end ">
-    <img class="absolute z-0 object-cover w-full h-full top-10 xl:mt-10" loading="lazy" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">
-    <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center">
+<div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 py-8">
+{{-- <img class="absolute dark:hidden top-10 h-full w-full xl:mt-10 z-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">    <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center"> --}}
         <div class="flex flex-col justify-center">
 
             <div class="justify-center grid w-full grid-cols-1 mt-12 xl:mt-0 sm:grid-cols-4 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
