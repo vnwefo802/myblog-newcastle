@@ -16,9 +16,9 @@
 
 
 <div class="pt-[68px]">
-	<div class="w-[1170px] mx-[81px]">
-		<div class="flex flex-row">
-			<div class="w-[780px]">
+	<div class="w-10/12 mx-auto">
+		<div class="flex flex-row ">
+			<div class="lg:w-[780px] ">
 				<div>
 					<div class="px-[15px]">
 						<div class="pb-[119px]">
@@ -103,15 +103,15 @@
 				</div>
 			</div>
 
-			 <!-- SIDEBAR: start -->
-			 <div class="ml-4">
+			<!-- SIDEBAR: start -->
+			<div class="ml-4 md:block hidden lg:w-[266px] w-[175px]  mt-4">
                 <div class="">
                     <div class="mb-[37px]">
                         <h3 class="text-xl mb-[30px]">Categories</h3>
                         <div class="">
                             <ul>
                                 @foreach($categories as $category)
-                                <li class="px-3 mb-[10px] border-l-4 rounded py-1 border-white hover:border-blue-500 hover:bg-gray-300 hover:text-blue-500"><a href="{{ route('categories.show', $category) }}">{{ $category->name }} <span class="float-right">{{ $category->posts_count }}</span></a></li>
+                                <li class="px-3 mb-[10px] border-l-4 rounded py-1 md:border-white border-blue-500 hover:border-blue-500 hover:bg-gray-300 hover:text-blue-500"><a href="{{ route('categories.show', $category) }}">{{ $category->name }} <span class="float-right">{{ $category->posts_count }}</span></a></li>
                                 @endforeach
                             </ul>
                         </div>
@@ -119,18 +119,18 @@
                     <div>
                         <h3 class="text-xl mb-[30px]">Recent Blog</h3>
                         @foreach($recent_posts as $recent_post)
-                        <div class="flex flex-row my-2 mb-[40px]">
+                        <div class="flex lg:flex-row lg:w-[264px] md:w-[100px] lg:mx-0 md:mx-auto md:flex-col my-2 mb-[40px] border">
                             <a href="{{ route('posts.show', $recent_post) }}">
                                 <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="">
                             </a>
-                            <div class="m-2">
-                                <p class="text-sm text-gray-300"><span>{{ $recent_post->created_at->diffForHumans() }}</span></p>
+                            <div class="md:m-2 mx-2">
+                                <p class="md:text-sm text-xs text-gray-300"><span>{{ $recent_post->created_at->diffForHumans() }}</span></p>
                                 <h2>
                                     <a href="{{ route('posts.show', $recent_post) }}">
-                                    {{ \Str::limit( $recent_post->title, 20) }}
+                                        <span class="md:text-base text-sm">{{ \Str::limit( $recent_post->title, 20) }} </span>
                                     </a>
                                 </h2>
-                                <p class="text-gray-500">{{ \Str::limit($recent_post->excerpt, 20) }}</p>
+                                <p class="text-gray-500 md:text-base text-xs">{{ \Str::limit($recent_post->excerpt, 20) }}</p>
                             </div>
                         </div>
                         @endforeach
