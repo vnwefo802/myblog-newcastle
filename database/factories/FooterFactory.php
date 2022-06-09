@@ -24,21 +24,34 @@ class FooterFactory extends Factory
             'youtube'=>'https://www.youtube.com/',
             'contact_info' => '07723817654',
             'email'=> 'Newcastle-Edumed-Fundation@gmail.com',
-            'community_section'=>'About us',
-            // 'community1'=>'About us',
-            // 'community2'=>'Who We Are',
-            // 'community3'=>'What We Do',
-            // 'community4'=>'How Your Help Inpacts Our Work',
 
-            'blog_section'=>'Our Objective',
-            // 'blog2'=>'Current Post',
-            // 'blog3'=>'Past Posts',
-            // 'blog4'=>'Current Projects',
-            // 'blog5'=>'Past Projects',
+            // community_section
+            'community_section'=>'<p><a href="../about" target="_blank" rel="noopener">About<span style="color: #000000;"> </span>us</a></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Who We Are</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>What We Do</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>How Your Help Inpacts Our Work</p>',
 
-            'contact_us_section'=>'Volunteer',
-            // 'contact2'=>'Donate',
-            // 'contact3'=>'FAQ',
+
+            // blog_section
+            'blog_section'=>'<p>Current Post</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Past Posts</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Current Projects</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Past Projects</p>',
+
+            // contact_us_section
+            'contact_us_section'=>'<p>Donate</p>',
 
 
         ];
