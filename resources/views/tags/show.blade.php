@@ -24,7 +24,7 @@
                                 {{ $post->created_at->diffForHumans() }}</span>
                             </a></div>
                             <div><a href="#" class="text-gray-500 text-[12px]"><span class="flex">
-                            <img src="/{{ $allhome-> }}" class="w-20"  alt="Newcastle logo" aria-label="Newcastle logo" >
+                            <img src="/{{ $allhome->logo }}" class="w-20"  alt="Newcastle logo" aria-label="Newcastle logo" >
                                 <span class="ml-2">NewCastle-Founodation</span></span>
                             </a></div>
                             <div class="comments-count">
