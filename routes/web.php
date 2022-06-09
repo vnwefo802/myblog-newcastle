@@ -47,8 +47,12 @@ Route::get('/volunteer', [VolunteerController::class, 'create_volunteer'])->name
 Route::post('/volunteer', [VolunteerController::class, 'store_volunteer'])->name('volunteer.store');
 // volunteer ends
 Route::get('/donate', [DonateController::class, 'donate'])->name('donate');
+
+// little kid
 Route::get('/donatee', [DonateController::class, 'index']);
 Route::post('donatee/payment', [DonateController::class, 'payment'])->name('donate.payment');
+// little kid end
+
 Route::post('/create', [DonateController::class, 'create']);
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
