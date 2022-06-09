@@ -47,7 +47,7 @@
 
 <div class="mx-5 my-5 md:mx-20 md:my-20">
 <h6 class="text-2xl">What Can You Do?</h6>
-<p class="my-2">Join our volunteer force and give resources and monetary gifts to the Newcastle Foundation or to find out about projects, please call us on <a href="tel:07847583948" class="text-blue-500 underline">07847583948</a></p>
+<p class="my-2">Join our volunteer force and give resources and monetary gifts to the Newcastle Foundation or to find out about projects, please call us on <a href="tel:{{ $footer->contact_info }}" class="text-blue-500 underline">{{ $footer->contact_info }}</a></p>
  </div>
 </div>
 
