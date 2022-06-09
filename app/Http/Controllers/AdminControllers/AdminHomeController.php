@@ -53,28 +53,28 @@ class AdminHomeController extends Controller
         ];
 
 
-            $validated = request()->validate([
-                'title'=> 'required|min:10',
-            'video' => 'required',
-            'button_1' => 'required|min:4',
-            'button_2' => 'required|min:4',
-            'box_title_1' => 'required|min:4',
-            'box_title_2' => 'required|min:4',
-            'box_title_3' => 'required|min:4',
-            'box_title_4' => 'required|min:4',
+            // $validated = request()->validate([
+            //     'title'=> 'required|min:10',
+            // 'video' => 'required',
+            // 'button_1' => 'required|min:4',
+            // 'button_2' => 'required|min:4',
+            // 'box_title_1' => 'required|min:4',
+            // 'box_title_2' => 'required|min:4',
+            // 'box_title_3' => 'required|min:4',
+            // 'box_title_4' => 'required|min:4',
 
-            'project_title' => 'required|min:4',
-            'project_image' => 'nullable|image',
-            'project_short_title' => 'required|min:25',
-            'project_button' => 'required|min:4',
-            'difference_title' => 'required|min:24',
-            'difference_button_1' => 'required|min:4',
-            'difference_button_2' => 'required|min:4',
-            'difference_image' => 'nullable|image',
-            'logo' => 'nullable|image',
-            'favicon' => 'nullable|image',
-            ]);
-            Home::find(1)->update($validated);
+            // 'project_title' => 'required|min:4',
+            // 'project_image' => 'nullable|image',
+            // 'project_short_title' => 'required|min:25',
+            // 'project_button' => 'required|min:4',
+            // 'difference_title' => 'required|min:24',
+            // 'difference_button_1' => 'required|min:4',
+            // 'difference_button_2' => 'required|min:4',
+            // 'difference_image' => 'nullable|image',
+            // 'logo' => 'nullable|image',
+            // 'favicon' => 'nullable|image',
+            // ]);
+            // Home::find(1)->update($validated);
 
 
         $filesToUpload = [];
