@@ -43,10 +43,10 @@
       />
       Your browser does not support the video tag.
 
-      
+
     </video>
 
-    <div class="absolute z-20 w-auto min-w-full min-h-full max-w-none bg-black opacity-50"></div>
+    <div class="absolute z-20 w-auto min-w-full min-h-full bg-black opacity-50 max-w-none"></div>
   </header>
 
 {{-- kid stop --}}
@@ -55,28 +55,28 @@
 
 <!-- boxes -->
 <div class="w-full">
-    <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20 border-b-4 border-blue-300  my-8">
+    <div class="py-16 mx-auto my-8 border-b-4 border-blue-300 sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
         <div class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <!-- first box -->
-            <div class="flex flex-col justify-between p-5 shadow-md shadow-zinc-300 text-blue-400">
+            <div class="flex flex-col justify-between p-5 text-blue-400 shadow-md shadow-zinc-300">
                 <div>
                     {!! $allhome->box_title_1 !!}
                 </div>
             </div>
             <!-- second box -->
-            <div class="flex flex-col justify-between p-5 shadow-md shadow-zinc-300 text-blue-400">
+            <div class="flex flex-col justify-between p-5 text-blue-400 shadow-md shadow-zinc-300">
                 <div>
                     {!! $allhome->box_title_2 !!}
                 </div>
             </div>
             <!-- third box -->
-            <div class="flex flex-col justify-between p-5 shadow-md shadow-zinc-300 text-blue-400">
+            <div class="flex flex-col justify-between p-5 text-blue-400 shadow-md shadow-zinc-300">
                 <div class="m-1">
                     {!! $allhome->box_title_3 !!}
                 </div>
             </div>
             <!-- fouth box -->
-            <div class="flex flex-col justify-between p-5 shadow-md shadow-zinc-300 text-blue-400">
+            <div class="flex flex-col justify-between p-5 text-blue-400 shadow-md shadow-zinc-300">
                 <div>
                     <h3 class="mb-2 text-lg font-semibold leading-5">{!! $allhome->box_title_4 !!}</h3>
                 </div>

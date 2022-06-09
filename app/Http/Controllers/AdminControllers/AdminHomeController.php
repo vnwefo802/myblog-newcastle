@@ -43,7 +43,7 @@ class AdminHomeController extends Controller
             'project_image' => $request->project_image,
             'project_short_title' => $request->project_short_title,
             'project_button' => $request->project_button,
-            'difference_title' => $request->difference,
+            'difference_title' => $request->difference_title,
             'difference_button_1' => $request->difference_button_1,
             'difference_button_2' => $request->difference_button_2,
             // 'difference_image' => $request->difference_image,
@@ -53,28 +53,28 @@ class AdminHomeController extends Controller
         ];
 
 
-            // $validated = request()->validate([
-            //     'title'=> 'required|min:10,max:500',
-            // 'video' => 'required',
-            // 'button_1' => 'required|min:4,max:150',
-            // 'button_2' => 'required|min:4,max:150',
-            // 'box_title_1' => 'required|min:4,max:800',
-            // 'box_title_2' => 'required|min:4,max:800',
-            // 'box_title_3' => 'required|min:4,max:800',
-            // 'box_title_4' => 'required|min:4,max:800',
+            $validated = request()->validate([
+                'title'=> 'required|min:10',
+            'video' => 'required',
+            'button_1' => 'required|min:4',
+            'button_2' => 'required|min:4',
+            'box_title_1' => 'required|min:4',
+            'box_title_2' => 'required|min:4',
+            'box_title_3' => 'required|min:4',
+            'box_title_4' => 'required|min:4',
 
-            // 'project_title' => 'required|min:4,max:800',
-            // 'project_image' => 'nullable|image',
-            // 'project_short_title' => 'required|min:4,max:800',
-            // 'project_button' => 'required|min:4,max:800',
-            // 'difference_title' => 'required|min:4,max:800',
-            // 'difference_button_1' => 'required|min:4,max:800',
-            // 'difference_button_2' => 'required|min:4,max:800',
-            // 'difference_image' => 'nullable|image',
-            // 'logo' => 'nullable|image',
-            // 'favicon' => 'nullable|image',
-            // ]);
-            // Home::find(1)->update($validated);
+            'project_title' => 'required|min:4',
+            'project_image' => 'nullable|image',
+            'project_short_title' => 'required|min:25',
+            'project_button' => 'required|min:4',
+            'difference_title' => 'required|min:24',
+            'difference_button_1' => 'required|min:4',
+            'difference_button_2' => 'required|min:4',
+            'difference_image' => 'nullable|image',
+            'logo' => 'nullable|image',
+            'favicon' => 'nullable|image',
+            ]);
+            Home::find(1)->update($validated);
 
 
         $filesToUpload = [];

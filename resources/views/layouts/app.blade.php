@@ -37,7 +37,7 @@
 
 <header>
 <div class="hidden py-1 text-base text-center text-white bg-black md:block">
-    <p class="inline-block"><a href="tel:07847583948"><i class="mx-2 fa-solid fa-phone"></i>{!! $footer->contact_info !!}</a></p> <p class="inline-block"><a href="mailto:$allcontact->email "><i class="mx-2 fa-solid fa-envelope"></i>{!! $footer->email !!}</a></p>
+    <p class="inline-block"><a href="tel:07847583948"><i class="mx-2 fa-solid fa-phone"></i>{{ $footer->contact_info}}</a></p> <p class="inline-block"><a href="mailto:$allcontact->email "><i class="mx-2 fa-solid fa-envelope"></i>{{ $footer->email }}</a></p>
 </div>
 </header>
 
@@ -273,16 +273,6 @@
                         {!! $footer->community_section !!}
                     </button>
                     </a>
-
-                    {{-- <a href=" $allfooter->community_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->community2
-                    </button></a>
-                    <a href=" $allfooter->community_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->community3
-                    </button></a>
-                    <a href=" $allfooter->community_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                        $allfooter->community4
-                    </button></a> --}}
                 </div>
 
                 {{-- ROLE 2 --}}
@@ -294,18 +284,6 @@
                     </button>
                 </a>
 
-                    {{-- <a href=" $allfooter->blog_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                        $allfooter->blog2
-                    </button></a>
-                    <a href=" $allfooter->blog_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->blog3
-                    </button></a>
-                    <a href=" $allfooter->blog_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                        $allfooter->blog4
-                    </button></a>
-                    <a href="#"><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                        $hpp->blog5
-                    </button></a> --}}
                 </div>
 
 
@@ -315,19 +293,6 @@
                     <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
                         {!! $footer->contact_us_section !!}
                     </button></a>
-
-                    {{-- <a href="{{ $allfooter->contact_link_2 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                        $allfooter->contact2
-                    </button></a>
-                    <a href=" $allfooter->contact_link_3 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->contact3
-                    </button></a>
-                    <a href=" $allfooter->contact_link_4 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                            $allfooter->contact4
-                    </button></a>
-                    <a href=" $allfooter->contact_link_5 "><button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
-                        $allfooter->contact5
-                    </button></a> --}}
                 </div>
             </div>
 
@@ -335,10 +300,10 @@
             <div class="flex flex-col-reverse justify-center w-full mt-16 xl:flex-row xl:items-start ">
                 <div class="flex flex-col items-start justify-start w-full mt-10 space-y-4 md:mt-12 xl:mt-0 md:flex-row md:justify-center md:w-auto md:space-y-0 md:items-center md:space-x-4 xl:space-x-6 mr-7">
                     <button class="text-base leading-none text-white hover:text-gray-300">
-                        <a href="tel:07847583948"><p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>  $allfooter->contact_info </p>
+                        <a href="tel:07847583948"><p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>  {{ $footer->contact_info }} </p>
                     </button>
                     <button class="text-base leading-none text-white hover:text-gray-300">
-                    <a href="mailto: $allfooter->email "><p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i>  $allfooter->email </p></a>
+                    <a href="mailto: $allfooter->email "><p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i>  {{ $footer->email }} </p></a>
                     </button>
                 </div>
                 <div class="flex items-start justify-start w-full space-x-6 md:justify-end md:w-auto md:items-center ">
