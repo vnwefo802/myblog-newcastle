@@ -53,10 +53,8 @@
                     <!-- ============================================ -->
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
-                    <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo"> <!-- class="w-[163px] h-[55px]" -->
-                        <img src="/{{ $allhome->logo }}" class="w-[163px] h-[55px] max-w-[163px]"  alt="Newcastle logo" aria-label="Newcastle logo" >
-
-
+                    <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo"> 
+                        <img src="/{{ $allhome->logo }}" class="w-[163px] h-[55px] max-w-[163px]"  alt="Newcastle logo" aria-label="Newcastle logo" ><!-- class="w-[163px] h-[55px] max-w-[163px]" -->
                     </a>
                 </div>
                 <!-- ============================================ -->
@@ -248,7 +246,7 @@
 </main>
 
 
-<div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 py-8">
+<div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 p-8">
 {{-- <img class="absolute dark:hidden top-10 h-full w-full xl:mt-10 z-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">    <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center"> --}}
         <div class="flex flex-col justify-center">
 
