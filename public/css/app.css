@@ -4257,6 +4257,7 @@ video {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -6576,6 +6577,7 @@ video {
 .w-4 {
   width: 1rem;
 }
+
 .w-5 {
   width: 1.25rem;
 }
@@ -21401,6 +21403,7 @@ video {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -85153,11 +85156,6 @@ video {
 
   .md\:leading-9 {
     line-height: 2.25rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   .md\:leading-10 {
