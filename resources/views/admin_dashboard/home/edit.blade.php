@@ -42,14 +42,15 @@
                                         <span>Existing Logo</span>
                                         <div class='col-md-4'>
                                             <div class='p-2 user-image'>
-                                                <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allhome->logo) }}" >
+                                                <img class='img-fluid img-thumbnail' src="/{{ $allhome->logo }}" >
                                             </div>
+
                                         </div>
                                         <!-- Logo -->
                                         <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="logo" class="form-label">Logo</label>
+                                                    <label for="logo" class="form-label">Change Logo</label>
                                                     <input name='logo' type='file' class="form-control" id="logo">
 
                                                     @error('logo')
@@ -62,14 +63,15 @@
                                         <span>Existing Favicon</span>
                                         <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allhome->favicon) }}" >
+
+                                                    <img class='img-fluid img-thumbnail' src=" /{{ $allhome->favicon }}" >
                                                 </div>
                                             </div>
                                         <!-- Favicon -->
                                         <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="favicon" class="form-label" title="This is the image to the left of the text in the tab.">Favicon</label>
+                                                    <label for="favicon" class="form-label" title="This is the image to the left of the text in the tab.">Change Favicon</label>
                                                     <input name='favicon' type='file' class="form-control" id="favicon">
 
                                                     @error('favicon')
@@ -227,7 +229,8 @@
 
                                         <div class='col-md-4'>
                                             <div class='p-2 user-image'>
-                                                <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allhome->difference_image) }}" >
+
+                                                <img class='img-fluid img-thumbnail' src="/{{ $allhome->difference_image }}" >
                                             </div>
                                         </div>
                                         <!-- difference image end  -->

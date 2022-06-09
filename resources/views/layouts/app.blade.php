@@ -9,8 +9,7 @@
 
     <title>@yield('title')</title>
 
-    <link rel="icon" type="image/x-icon" href="/images/newcastlefoundationlogo_icon.ico">
-    {{-- <link rel="icon" type="image/png" href="{{ asset('storage/'.$home->favicon) }}"> --}}
+    <link rel="icon" type="image/x-icon" href="/{{ $allhome->favicon }}">
 
 
     <!-- Scripts -->
@@ -34,7 +33,6 @@
 <body class="{{Request::routeIs('blog.index') ? 'bg-gray-300' : 'bg-white'}} ">
 
 
-{{-- kyle start --}}
 
 
 <header>
@@ -56,8 +54,7 @@
                     <!--                 Website Logo                 -->
                     <!-- ============================================ -->
                     <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo"> <!-- class="w-[163px] h-[55px]" -->
-                        <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[163px] h-[55px] max-w-[163px]"  alt="Newcastle logo" aria-label="Newcastle logo" >
-                        {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
+                        <img src="/{{ $allhome->logo }}" class="w-[163px] h-[55px] max-w-[163px]"  alt="Newcastle logo" aria-label="Newcastle logo" >
 
 
                     </a>
@@ -255,9 +252,9 @@
 {{-- <img class="absolute dark:hidden top-10 h-full w-full xl:mt-10 z-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">    <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center"> --}}
         <div class="flex flex-col justify-center">
 
-            <div class="justify-center grid w-full grid-cols-1 mt-12 xl:mt-0 sm:grid-cols-4 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
+            <div class="grid justify-center w-full grid-cols-1 mt-12 xl:mt-0 sm:grid-cols-4 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
                 <div>
-                    <div class="cursor-pointer mb-8 ">
+                    <div class="mb-8 cursor-pointer ">
                         <a href="/">
                             <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy" src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
                         </a>
@@ -333,7 +330,7 @@
             </div>
 
 
-            <div class="flex flex-col-reverse justify-center w-full mt-16  xl:flex-row xl:items-start ">
+            <div class="flex flex-col-reverse justify-center w-full mt-16 xl:flex-row xl:items-start ">
                 <div class="flex flex-col items-start justify-start w-full mt-10 space-y-4 md:mt-12 xl:mt-0 md:flex-row md:justify-center md:w-auto md:space-y-0 md:items-center md:space-x-4 xl:space-x-6 mr-7">
                     <button class="text-base leading-none text-white hover:text-gray-300">
                         <a href="tel:07847583948"><p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>  $allfooter->contact_info </p>
