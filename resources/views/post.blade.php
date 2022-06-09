@@ -47,9 +47,9 @@
 						<h2 class="text-[30px] font-[400px]">{{ count($post->comments) }} Comments</h2>
 
 						@foreach($post->comments as $comment)
-						<div id="comment_{{ $comment->id }}" class="flex flex-row">
-							<div class="pr-5">
-								<img class="w-[93.4px] h-[80px]" src="{{ $comment->user->image ? asset('storage/' . $comment->user->image->path. '') : 'https://images.assetsdelivery.com/compings_v2/salamatik/salamatik1801/salamatik180100019.jpg'  }}" alt="">
+						<div id="comment_{{ $comment->id }}" class="flex flex-row p-1">
+							<div class=" pr-2 min-w-[65px] min-h-[65px] max-h-[65px] max-w-[65px]">
+								<img class="" src="{{ $comment->user->image ? asset('storage/' . $comment->user->image->path. '') : 'https://images.assetsdelivery.com/compings_v2/salamatik/salamatik1801/salamatik180100019.jpg'  }}" alt="">
 							</div>
 							<div class="flex flex-col">
 								<div class="relative">
@@ -83,10 +83,10 @@
 						<form method="POST" action="{{ route('posts.add_comment', $post) }}">
 							@csrf
 							
-							<div class="">
+							<div class=" mt-2">
 								<div class="">
 									<!-- <label for="message">Message</label> -->
-									<textarea name="the_comment" id="the_comment" class="w-full h-24 border-2" placeholder="Say something about us"></textarea>
+									<textarea name="the_comment" id="the_comment" class="w-full h-24 border-2 p-1" placeholder="Say something about us"></textarea>
 								</div>
 							</div>
 							<div class="form-group">
@@ -103,25 +103,25 @@
 				</div>
 			</div>
 
-			<!-- SIDEBAR: start -->
-            <div class="ml-7">
+			 <!-- SIDEBAR: start -->
+			 <div class="ml-4">
                 <div class="">
-                    <div class="">
-                        <h3 class="text-xl">Categories</h3>
+                    <div class="mb-[37px]">
+                        <h3 class="text-xl mb-[30px]">Categories</h3>
                         <div class="">
                             <ul>
                                 @foreach($categories as $category)
-                                <li class="px-3 border-l-4 rounded py-1 border-white hover:border-blue-500 hover:bg-gray-300"><a href="{{ route('categories.show', $category) }}">{{ $category->name }} <span>{{ $category->posts_count }}</span></a></li>
+                                <li class="px-3 mb-[10px] border-l-4 rounded py-1 border-white hover:border-blue-500 hover:bg-gray-300 hover:text-blue-500"><a href="{{ route('categories.show', $category) }}">{{ $category->name }} <span class="float-right">{{ $category->posts_count }}</span></a></li>
                                 @endforeach
                             </ul>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-xl">Recent Blog</h3>
+                        <h3 class="text-xl mb-[30px]">Recent Blog</h3>
                         @foreach($recent_posts as $recent_post)
-                        <div class="flex flex-row my-2">
+                        <div class="flex flex-row my-2 mb-[40px]">
                             <a href="{{ route('posts.show', $recent_post) }}">
-                                <img class="w-[100px] h-[90px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="">
+                                <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="">
                             </a>
                             <div class="m-2">
                                 <p class="text-sm text-gray-300"><span>{{ $recent_post->created_at->diffForHumans() }}</span></p>
@@ -138,9 +138,9 @@
                     <div class="">
                         <h3 class="text-xl">Tags</h3>
                         <div class="m-2">
-                            <ul>
+                            <ul class="flex flex-row flex-wrap w-[250px]">
                             @foreach($tags as $tag)
-                                <li class="px-3 border-l-4 rounded py-1 border-white hover:border-blue-500 hover:bg-gray-300"><a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a></li>
+                                <li class="mx-1 my-1 bg-blue-500 text-white rounded px-1 hover:bg-blue-700 h-[25.5px]"><a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a></li>
                             @endforeach
                             </ul>
                         </div>
