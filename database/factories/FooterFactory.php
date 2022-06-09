@@ -23,7 +23,7 @@ class FooterFactory extends Factory
             'instagram'=>'https://www.instagram.com/',
             'youtube'=>'https://www.youtube.com/',
             'contact_info' => '07723817654',
-            'email'=> 'newcastlefoundation@gmail.com',
+            'email'=> 'Newcastle-Edumed-Fundation@gmail.com',
             'community_section'=>'About us',
             // 'community1'=>'About us',
             // 'community2'=>'Who We Are',

@@ -50,8 +50,8 @@
                                 <!-- contact info -->
                                 <div class="mb-3">
                                     <label for="contact_info" class="form-label">contact info</label>
-                                    <textarea name='contact_info'  id='contact_info' class="form-control" rows="3">{{-- old("contact_info", $allfooter->contact_info) --}}</textarea>
-                                
+                                    <textarea name='contact_info'  id='contact_info' class="form-control" rows="3">{{ old("contact_info", $footer->contact_info) }}</textarea>
+
                                     @error('contact_info')
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
@@ -60,13 +60,13 @@
 
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <textarea name='email'  id='email' class="form-control" rows="3">{{-- old("email", $allfooter->email) --}}</textarea>
-                                
+                                    <textarea name='email'  id='email' class="form-control" rows="3">{{ old("email", $footer->email) }}</textarea>
+
                                     @error('email')
                                         <p class='text-danger'>{{ $message }}</p>
                                     @enderror
                                 </div>
-                                
+
                                 <!-- Facebook -->
                                 <div class="mb-3">
                                     <label for="facebook" class="form-label">Facebook Link</label>

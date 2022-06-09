@@ -40,7 +40,7 @@ class AppServiceProvider extends ServiceProvider
             View::share('allabout ', $allabout );
 
             $allhome  = Home::find(1);
-            View::share('allhome ', $allhome );
+            View::share('allhome', $allhome );
 
             $footer = Footer::find(1);
             View::share('footer', $footer);

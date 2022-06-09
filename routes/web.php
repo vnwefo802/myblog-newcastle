@@ -27,6 +27,7 @@ use App\Http\Controllers\AdminControllers\AdminDonateController;
 use App\Http\Controllers\AdminControllers\AdminHomeController;
 use App\Http\Controllers\AdminControllers\AdminFooterController;
 use App\Http\Controllers\AdminControllers\AdminVolunteerController;
+use App\Http\Controllers\BrandonController;
 
 
 use App\Http\Controllers\HomeController;
@@ -113,3 +114,5 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'check_permissions']
     Route::get('footer', [AdminFooterController::class, 'edit'])->name('footer.edit');
     Route::post('footer', [AdminFooterController::class, 'update'])->name('footer.update');
 });
+
+Route::get('/brandon', [BrandonController::class, 'index'])->name('brandon.index');
