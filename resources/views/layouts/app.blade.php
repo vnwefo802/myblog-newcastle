@@ -137,7 +137,7 @@
                 {{-- login icon --}}
                 <a class="m-2" href="{{ route('login') }}" aria-label="login button"  alt="login button" title="login"><i class="fa-solid fa-user"></i></a>
                 {{-- Sign Up --}}
-                <a aria-label="Sign Up" href="{{ route('register') }}" class="inline-flex items-center justify-center w-[47px] h-9 m-2 text-base font-semibold text-white transition duration-200 bg-indigo-800 border-2 border-indigo-800 rounded-full md:px-1 lg:px-6 hover:border-indigo-500 md:w-auto hover:bg-indigo-500 focus:shadow-outline focus:outline-none dark:focus:ring-indigo-500 md:text-sm lg:text-base " aria-label="Sign Up">
+                <a aria-label="Sign Up" href="{{ route('register') }}" class="inline-flex items-center justify-center w-[47px] h-7 m-2 text-base font-semibold text-white transition duration-200 bg-indigo-800 border-2 border-indigo-800 rounded-full md:px-1 lg:px-6 hover:border-indigo-500 md:w-auto hover:bg-indigo-500 focus:shadow-outline focus:outline-none dark:focus:ring-indigo-500 md:text-sm lg:text-base " aria-label="Sign Up">
                     <span class="text-xs">Sign Up</span>
                 </a>
                 <button class="outline-none mobile-menu-button"  aria-label="Toggle Button">

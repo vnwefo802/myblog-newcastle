@@ -43,8 +43,9 @@
                     </div>
                 </div>
                 @empty
-                <p class='lead'>There are no posts to show.</p>
-
+                <div class="mb-6">
+                    <p class='lead'>There are no posts to show.</p>
+                </div>
                 @endforelse
             </div>
             <!-- SIDEBAR: start -->
