@@ -29,6 +29,11 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Mukta:wght@500&display=swap" rel="stylesheet">
+
+{{-- Categories Dropdown --}}
+<script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body class="{{Request::routeIs('blog.index') ? 'bg-gray-300' : 'bg-white'}} ">
 
@@ -76,6 +81,28 @@
                     <a href="{{ route('about') }}" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-blue-500" id="abouthl" aria-label="About">About</a>
                     {{-- Blog --}}
                     <a href="{{ route('blog') }}"><button type="button" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500" id="bloghl" aria-label="Blog">Blog</button></a>
+                    {{-- Categories --}}
+                    <div class="">
+                        <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+                          <!-- Dropdown toggle button -->
+                          <button
+                            @mouseover="open = true"
+                            class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-blue-500"
+                          >
+                            <a href="{{ route('categories.index') }}" class="categorieshl">Categories</a>
+                          </button>
+                    
+                          <!-- Dropdown menu -->
+                          <div
+                            x-show="open"
+                            class="absolute right-0 left-2 top-12 w-48 py-2 mt-2 bg-gray-100 rounded-md shadow-xl"
+                          >
+                          @foreach($navbar_categories as $category)
+                          <a href="{{ route('categories.show', $category) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400 hover:text-white">{{ $category->name }}</a>
+                          @endforeach
+                          </div>
+                        </div>
+                      </div>
                     {{-- Contact Us --}}
                     <a href="{{route('contact.create')}}" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500" id="contacthl" aria-label="contact" >Contact Us</a>
                     <script>
@@ -180,6 +207,8 @@
             <li><a href="{{route('contact.create')}}" class="block px-2 py-4 text-sm transition duration-300 border-blue-500 hover:text-indigo-500" aria-label="Contact"  id="contacthlm">Contact us</a></li>
             {{-- Blog --}}
             <li><a href="{{route('blog')}}" class="block px-2 py-4 text-sm transition duration-300 border-blue-500 hover:text-indigo-500" aria-label="Blog" id="bloghlm">Blog</a></li>
+            {{-- Categories --}}
+            <li><a href="{{route('categories.index')}}" class="block px-2 py-4 text-sm transition duration-300 border-blue-500 hover:text-indigo-500" aria-label="Categories" id="categorieshlm">Categories</a></li>
             {{-- volunteer --}}
             <li><a href="{{route('volunteer.create')}}" class="block px-2 py-4 text-sm transition duration-300 border-blue-500 hover:text-indigo-500" aria-label="Volunteer" id="volunteerhlm">Volunteer</a></li>
             {{-- Blog --}}
@@ -212,6 +241,13 @@
         document.getElementById("abouthl").classList.add('text-blue-500');
         document.getElementById("abouthlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
     }
+    //categories page highlight script
+    if(sPage == "/categories"){
+        document.getElementById("categorieshl").classList.remove('text-gray-500');
+        document.getElementById("categorieshl").classList.add('text-blue-500');
+        document.getElementById("categorieshlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
+    }
+        
     //blog page highlight script
     if(sPage == "/blog"){
         document.getElementById("bloghl").classList.remove('text-gray-500');
