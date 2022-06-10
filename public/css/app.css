@@ -518,14 +518,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-50 {
   z-index: 50;
 }
-.order-2 {
-  order: 2;
+.order-1 {
+  order: 1;
 }
 .order-3 {
   order: 3;
 }
-.order-1 {
-  order: 1;
+.order-2 {
+  order: 2;
 }
 .float-right {
   float: right;
@@ -599,10 +599,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -904,9 +900,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-11\/12 {
   width: 91.666667%;
 }
-.w-\[1080px\] {
-  width: 1080px;
-}
 .w-12 {
   width: 3rem;
 }
@@ -915,9 +908,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-20 {
   width: 5rem;
-}
-.w-\[237px\] {
-  width: 237px;
 }
 .w-48 {
   width: 12rem;
@@ -931,8 +921,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[163px\] {
   width: 163px;
 }
-.w-\[47px\] {
-  width: 47px;
+.w-\[60px\] {
+  width: 60px;
 }
 .w-\[21px\] {
   width: 21px;
@@ -969,15 +959,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-5 {
   width: 1.25rem;
-}
-.w-\[px\] {
-  width: px;
-}
-.w-\[50px\] {
-  width: 50px;
-}
-.w-\[60px\] {
-  width: 60px;
 }
 .min-w-full {
   min-width: 100%;
@@ -2612,10 +2593,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 10rem;
   }
 
-  .sm\:w-full {
-    width: 100%;
-  }
-
   .sm\:max-w-xl {
     max-width: 36rem;
   }
@@ -2856,24 +2833,20 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 40%;
   }
 
-  .md\:w-auto {
-    width: auto;
-  }
-
-  .md\:w-\[80px\] {
-    width: 80px;
-  }
-
-  .md\:w-\[66px\] {
-    width: 66px;
-  }
-
   .md\:w-\[190px\] {
     width: 190px;
   }
 
   .md\:w-\[93px\] {
     width: 93px;
+  }
+
+  .md\:w-\[80px\] {
+    width: 80px;
+  }
+
+  .md\:w-auto {
+    width: auto;
   }
 
   .md\:max-w-\[744px\] {
@@ -2886,10 +2859,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:max-w-full {
     max-width: 100%;
-  }
-
-  .md\:flex-none {
-    flex: none;
   }
 
   .md\:flex-row {
@@ -3293,6 +3262,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 24rem;
   }
 
+  .xl\:w-\[1080px\] {
+    width: 1080px;
+  }
+
   .xl\:w-full {
     width: 100%;
   }
@@ -3307,10 +3280,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:w-72 {
     width: 18rem;
-  }
-
-  .xl\:w-\[1080px\] {
-    width: 1080px;
   }
 
   .xl\:flex-row {
