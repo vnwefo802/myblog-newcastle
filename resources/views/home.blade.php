@@ -17,8 +17,8 @@
             <!-- donate and volunteer buttons -->
             <div class="flex flex-row w-full justify-evenly md:justify-between">
                 <a href="/volunteer"
-                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20 md:ml-20 font-medium">{!! $allhome->button_1 !!}
-                    <svg width="24" class="pl-2" height="24" viewBox="0 0 24 24" fill="none"
+                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-xl md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20 md:ml-20 font-medium">{!! $allhome->button_1 !!}
+                    <svg width="24" class="pl-2 mt-1" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
@@ -28,8 +28,8 @@
                             fill="white" />
                     </svg></a>
                 <a href="/donate"
-                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20 md:ml-20 font-medium">{!! $allhome->button_2 !!}
-                    <svg width="24" class="pl-2" height="24" viewBox="0 0 24 24" fill="none"
+                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-xl md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20 md:ml-20 font-medium">{!! $allhome->button_2 !!}
+                    <svg width="24" class="pl-2 mt-1" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
