@@ -17,7 +17,7 @@ class FooterFactory extends Factory
     public function definition()
     {
         return [
-            'title'=>'The highest forms of understanding we can achieve are laughter and human compassion',
+            'title'=>'The highest forms of understanding we can achieve are laughter and human compassion.',
             'facebook'=>'https://www.facebook.com/',
             'twitter'=>'https://www.twitter.com/',
             'instagram'=>'https://www.instagram.com/',
