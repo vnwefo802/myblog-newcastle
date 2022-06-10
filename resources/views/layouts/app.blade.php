@@ -127,10 +127,6 @@
 
                 @else
 
-                {{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
-                </a> --}}
-
                 {{-- Logout --}}
                 <a class="px-1 py-4 text-base font-semibold text-gray-500 transition duration-300 border-blue-500 md:text-sm lg:text-base hover:text-blue-500" id="registerhl" aria-label="Log Out" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
@@ -155,6 +151,24 @@
                 {{-- Donate --}}
                 <a href="{{route('donate')}}" class="inline-flex items-center justify-center w-full h-12 text-base font-semibold text-white transition duration-200 bg-green-600 border-2 border-green-600 rounded md:px-1 lg:px-6 hover:border-green-700 md:w-auto hover:bg-green-700 focus:shadow-outline focus:outline-none dark:focus:ring-green-700 md:text-sm lg:text-base" aria-label="Donate">
                     Donate
+                </a>
+                
+                @guest
+                @if (Route::has('login'))
+
+                @endif
+
+                @if (Route::has('register'))
+                
+                    @endif
+
+                @else
+
+                
+
+                @endguest
+                <a id="navbarDropdown" class="nav-link dropdown-toggle pl-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
                 </a>
             </div>
             <!-- ============================================ -->
