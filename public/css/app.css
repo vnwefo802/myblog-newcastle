@@ -518,6 +518,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-50 {
   z-index: 50;
 }
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+.order-1 {
+  order: 1;
+}
 .float-right {
   float: right;
 }
@@ -590,6 +599,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -2599,6 +2612,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 10rem;
   }
 
+  .sm\:w-full {
+    width: 100%;
+  }
+
   .sm\:max-w-xl {
     max-width: 36rem;
   }
@@ -2707,6 +2724,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     position: sticky;
   }
 
+  .md\:order-2 {
+    order: 2;
+  }
+
+  .md\:order-3 {
+    order: 3;
+  }
+
   .md\:float-left {
     float: left;
   }
@@ -2771,6 +2796,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 3rem;
   }
 
+  .md\:ml-3 {
+    margin-left: 0.75rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2831,6 +2860,22 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: auto;
   }
 
+  .md\:w-\[80px\] {
+    width: 80px;
+  }
+
+  .md\:w-\[66px\] {
+    width: 66px;
+  }
+
+  .md\:w-\[190px\] {
+    width: 190px;
+  }
+
+  .md\:w-\[93px\] {
+    width: 93px;
+  }
+
   .md\:max-w-\[744px\] {
     max-width: 744px;
   }
@@ -2841,6 +2886,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:max-w-full {
     max-width: 100%;
+  }
+
+  .md\:flex-none {
+    flex: none;
   }
 
   .md\:flex-row {
