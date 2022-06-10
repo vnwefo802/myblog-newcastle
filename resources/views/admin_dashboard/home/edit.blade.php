@@ -216,7 +216,7 @@
                                         </div>
 
                                          <!-- difference image -->
-                                        <div class='col-md-8'>
+                                         <div class='col-md-8'>
                                             <div class="mb-3">
                                                 <label for="difference_image" class="form-label">difference image</label>
                                                 <input name='difference_image' type='file' class="form-control" id="difference_image">
