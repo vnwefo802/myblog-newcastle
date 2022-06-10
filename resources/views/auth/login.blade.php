@@ -8,11 +8,8 @@
 @section('content')
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[237px] h-20 fill-current text-gray-500 border" alt="Newcastle Foundation Logo" />
-            </a>
-        </x-slot>
+
+        <h1 class="font-bold text-2xl text-center text-gray-800 mb-5">Log In</h1>
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
