@@ -15,36 +15,29 @@
                 {!! $allhome->title !!}</h1>
             {{-- <p class="mt-6 text-sm leading-6 text-center text-white lg:text-base drop-shadow-2xl text-shadow-xl">Our goal is to make sure that everyone has access to health services and educational material. We are committed to making it easier for communities in need and would appreciate any support that you would like to give.</p> --}}
             <!-- donate and volunteer buttons -->
-            <div class="flex flex-row">
-                <a href="/volunteer" class="inline-block"><button
-                        class="flex items-center py-4 mt-12 text-sm bg-blue-700 rounded-md mr-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
-                        <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">
-                            {!! $allhome->button_1 !!}</p>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
-                                fill="white" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z"
-                                fill="white" />
-                        </svg>
-                    </button>
-                </a>
-                <a href="/donate" class="inline-block">
-                    <button
-                        class="flex items-center py-4 mt-12 text-sm bg-blue-700 rounded-md ml-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
-                        <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">
-                            {!! $allhome->button_2 !!}</p>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
-                                fill="white" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z"
-                                fill="white" />
-                        </svg>
-                    </button>
-                </a>
+            <div class="flex flex-row w-full justify-evenly md:justify-between">
+                <a href="/volunteer"
+                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20 md:ml-20 font-medium">{!! $allhome->button_1 !!}
+                    <svg width="24" class="pl-2" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z"
+                            fill="white" />
+                    </svg></a>
+                <a href="/donate"
+                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20 md:ml-20 font-medium">{!! $allhome->button_2 !!}
+                    <svg width="24" class="pl-2" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z"
+                            fill="white" />
+                    </svg></a>
             </div>
         </div>
         <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none opacity-99">
@@ -118,13 +111,19 @@
                 <div class="px-4 py-4">
                     <div class="flex flex-col">
                         <h2 class="text-3xl font-medium">The Agudele Project</h2>
-                        <p class="mt-10">In the community at Agudene in Udenu LGA of Nsukka, Enugu State, we provided over 50 plus classroom
-                            desks. Used text books, exercise books, including school drum set, school bags, uniforms for both
-                            junior and senior primary. We included a scholarship fund for the girl child. These motivated the
-                            villagers and the other villages in the locality to release their girls and wards to come to school.
+                        <p class="mt-10">In the community at Agudene in Udenu LGA of Nsukka, Enugu State, we
+                            provided over 50 plus classroom
+                            desks. Used text books, exercise books, including school drum set, school bags, uniforms for
+                            both
+                            junior and senior primary. We included a scholarship fund for the girl child. These motivated
+                            the
+                            villagers and the other villages in the locality to release their girls and wards to come to
+                            school.
                         </p>
 
-                        <button class="self-start px-4 py-2 mt-8 text-white rounded from-blue-500 to-green-400 bg-gradient-to-tl hover:from-blue-600 hover:to-green-500">Find out more</button>
+                        <button
+                            class="self-start px-4 py-2 mt-8 text-white rounded from-blue-500 to-green-400 bg-gradient-to-tl hover:from-blue-600 hover:to-green-500">Find
+                            out more</button>
                     </div>
                 </div>
             </div>
@@ -205,51 +204,50 @@
     </div>
 </div> --}}
 
-<!-- MAKE A Difference-->
-<div>
-    <div class="lg:flex">
-        <!-- contant of make a difference including the buttons -->
-        <div class="w-full px-6 py-10 text-white bg-indigo-600 lg:w-2/5 xl:py-24 xl:px-8">
-            <h2 class="text-3xl font-semibold lg:w-10/12">{!! $allhome->difference_title !!}</h2>
-            <div class="flex items-center">
-                <a href="/volunteer" class="inline-block">
-                    <button
-                        class="flex items-center py-4 mt-12 text-sm rounded-md bg-slate-800 mr-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
-                        <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">
-                            {!! $allhome->difference_button_1 !!}</p>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
-                                fill="white" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z"
-                                fill="white" />
-                        </svg>
-                    </button>
-                </a>
-                <a href="/donate" class="inline-block">
-                    <button
-                        class="flex items-center py-4 mt-12 text-sm rounded-md bg-slate-800 ml-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
-                        <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">
-                            {!! $allhome->difference_button_2 !!}</p>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
-                                fill="white" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z"
-                                fill="white" />
-                        </svg>
-                    </button>
-                </a>
+    <!-- MAKE A Difference-->
+    <div>
+        <div class="lg:flex">
+            <!-- contant of make a difference including the buttons -->
+            <div class="w-full px-6 py-10 text-white bg-indigo-600 lg:w-2/5 xl:py-24 xl:px-8">
+                <h2 class="text-3xl font-semibold lg:w-10/12">{!! $allhome->difference_title !!}</h2>
+                <div class="flex items-center">
+                    <a href="/volunteer" class="inline-block">
+                        <button
+                            class="flex items-center py-4 mt-12 text-sm rounded-md bg-slate-800 mr-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
+                            <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">
+                                {!! $allhome->difference_button_1 !!}</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+                    </a>
+                    <a href="/donate" class="inline-block">
+                        <button
+                            class="flex items-center py-4 mt-12 text-sm rounded-md bg-slate-800 ml-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
+                            <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">
+                                {!! $allhome->difference_button_2 !!}</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.767 4.4545C12.2063 4.01517 12.9187 4.01517 13.358 4.4545L20.108 11.2045C20.5473 11.6438 20.5473 12.3562 20.108 12.7955L13.358 19.5455C12.9187 19.9848 12.2063 19.9848 11.767 19.5455C11.3277 19.1062 11.3277 18.3938 11.767 17.9545L17.7215 12L11.767 6.0455C11.3277 5.60616 11.3277 4.89384 11.767 4.4545Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3.5625 12C3.5625 11.3787 4.06618 10.875 4.6875 10.875H18.375C18.9963 10.875 19.5 11.3787 19.5 12C19.5 12.6213 18.9963 13.125 18.375 13.125H4.6875C4.06618 13.125 3.5625 12.6213 3.5625 12Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!-- make a difference image -->
+            <div class="relative w-full lg:w-3/5">
+                <img class="inset-0 object-cover object-center w-full h-full lg:absolute" loading="lazy"
+                    src="/{{ $allhome->difference_image }}" alt="Senator of America Jessica Geller" role="img" />
             </div>
         </div>
-        <!-- make a difference image -->
-        <div class="relative w-full lg:w-3/5">
-            <img class="inset-0 object-cover object-center w-full h-full lg:absolute" loading="lazy"
-                src="/{{ $allhome->difference_image }}"
-                alt="Senator of America Jessica Geller" role="img" />
-        </div>
     </div>
-</div>
 @endsection
