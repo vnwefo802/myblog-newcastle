@@ -258,7 +258,7 @@
 
 
 
-                                        <button class="text-white btn btn-primary" type='submit'>Update</button>
+                                        <button class="btn btn-primary bg-primary" type='submit'>Update</button>
 
                                     </div>
                                 </div>

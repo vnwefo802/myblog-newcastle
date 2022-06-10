@@ -86,7 +86,7 @@
                                         </div>
                                     </div>
 
-                                    <button class='btn btn-primary' type='submit'>Update Role</button>
+                                    <button class='btn btn-primary bg-primary' type='submit'>Update Role</button>
 
                                     <a 
                                     class='btn btn-danger'
