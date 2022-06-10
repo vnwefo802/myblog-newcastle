@@ -108,7 +108,7 @@
                                             </div>
                                         </div>
 
-                                        <button class='btn btn-primary' type='submit'>Update User</button>
+                                        <button class='btn btn-primary bg-primary' type='submit'>Update User</button>
 
                                         <a 
                                         onclick='event.preventDefault(); document.getElementById("delete_user_{{ $user->id }}").submit()'

@@ -98,7 +98,7 @@
                                             </div>
                                         </div>
 
-                                        <button class='btn btn-primary' type='submit'>Add User</button>
+                                        <button class='btn btn-primary bg-primary' type='submit'>Add User</button>
                                         
                                     </div>
                                 </div>

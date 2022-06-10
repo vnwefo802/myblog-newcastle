@@ -142,7 +142,7 @@
                                             </label>
                                         </div>
                                         </div>
-                                        <button class='btn btn-primary' type='submit'>Update Post</button>
+                                        <button class='btn btn-primary bg-primary' type='submit'>Update Post</button>
                                         <a
                                         class='btn btn-danger'
                                         onclick="event.preventDefault();document.getElementById('delete_post_{{ $post->id }}').submit()"

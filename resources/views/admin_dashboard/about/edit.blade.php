@@ -192,7 +192,7 @@
 
 
 
-                                        <button class='text-blue-500 btn btn-primary hover:text-white' type='submit'>Update</button>
+                                        <button class='btn btn-primary bg-primary' type='submit'>Update</button>
 
                                     </div>
                                 </div>
