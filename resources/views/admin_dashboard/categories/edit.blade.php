@@ -14,7 +14,7 @@
                     <ol class="breadcrumb mb-0 p-0">
                         <li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i class="bx bx-home-alt"></i></a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Edit Category</li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.categories.index') }}">Categories</a></li>
                     </ol>
                 </nav>
             </div>
@@ -60,7 +60,7 @@
                                         @enderror
                                     </div>
 
-                                    <button class='btn btn-primary' type='submit'>Update Category</button>
+                                    <button class='btn btn-primary bg-primary' type='submit'>Update Category</button>
 
                                     <a
                                     class='btn btn-danger'

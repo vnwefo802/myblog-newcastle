@@ -88,7 +88,7 @@ function _handleSubmit() {
               elements: elements,
               confirmParams: {
                 // Make sure to change this to your payment completion page
-                return_url: "http://localhost:8000/complete.php"
+                return_url: "http://localhost:8000/donate/confirmation"
               }
             });
 

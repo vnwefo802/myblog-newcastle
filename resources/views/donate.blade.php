@@ -21,7 +21,25 @@
     <p class="m-5 text-lg text-center text-slate-400">{{ $alldonate->donate_second_short_title }}</p>
 </div>
 
-<!-- Donate Section -->
+<div class="container mx-auto my-8">
+    <form action="{{ route('donate.payment')}}" class="shadow w-3/6 mx-auto flex flex-col px-16 text-center border py-16" method="POST">
+        @csrf
+        <h3 class="text-3xl font-light">Donate now</h3>
+        <p class="py-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo dolor, libero officiis
+            nihil, itaque,
+            temporibus quidem recusandae dignissimos accusamus maiores et impedit vitae quam? Quam nostrum quaerat odit
+            incidunt dolores!</p>
+
+
+        <div class="relative mb-8 flex justify-center items-center text-2xl font-light">
+            <div class="absolute left-3 text-blue-500">&#8358;</div>
+            <input type="text" class="border grow pl-8 py-2 font-light" inputmode='numeric' pattern="[0-9.]*" autocomplete="" name="amount" id="">
+        </div>
+        <button class=" bg-blue-500 text-white px-3 py-2">Donate now</button>
+    </form>
+</div>
+
+{{-- <!-- Donate Section -->
 <div class="justify-center block px-20 py-5 text-center bg-gradient-to-r from-green-600 to-green-500 md:flex drop-shadow-xl">
 
     <form action="https://www.sandbox.paypal.com/donate" method="post" target="_top" >
@@ -29,7 +47,7 @@
         <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
         <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
     </form>
-</div>
+</div> --}}
 
 <!-- Info about what donations do -->
 <div class="mx-5 my-10 md:mx-20">

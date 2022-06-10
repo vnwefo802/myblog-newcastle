@@ -17,7 +17,7 @@
         <div class="container mx-auto ">
             <div>
                 <div class="py-16 bg-indigo-500 rounded-tl rounded-tr xl:rounded-bl xl:rounded-tr-none">
-                    <div class="grid grid-cols-2 grid-rows-4 gap-1 px-8 mx-auto xl:w-5/6 xl:px-0">
+                    <div class="grid md:grid-cols-2 md:grid-rows-4 grid-rows-6 gap-1 px-8 mx-auto xl:w-5/6 xl:px-0">
                         <!-- total posts -->
                         <div class="relative p-6 bg-green-100 rounded shadow-lg ">
                             <a href="{{ route('admin.posts.index') }}"><button class="flex flex-row w-full h-full">

@@ -8,11 +8,8 @@
 @section('content')
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-[237px] h-20 fill-current text-gray-500 border" alt="Newcastle Foundation Logo" />
-            </a>
-        </x-slot>
+
+        <h1 class="font-bold text-2xl text-center text-gray-800 mb-5">Log In</h1>
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -48,21 +45,25 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 mx-5" href="{{ route('register') }}">
-                    {{ __('Register') }}
-                </a>
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
+            <div class="flex md:flex-row flex-col items-center justify-end mt-4">
+                <div class="order-1">
+                    @if (Route::has('password.request'))
+                        <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                            {{ __('Forgot your password?') }}
+                        </a>
+                    @endif
+                </div>
+                <div class="my-2 md:order-2 order-3 md:w-[190px]">
+                    <span class="text-sm">Don't have an account?
+                    <a class="underline  text-gray-600 hover:text-gray-900 m" href="{{ route('register') }}">
+                        {{ __('Register now') }}
+                    </a></span>
+                </div>
+                <div class="md:order-3 order-2 md:w-[93px] w-full">
+                    <x-button class="md:ml-3 my-2 md:w-[80px] w-full text-center">
+                        {{ __('Log in') }}
+                    </x-button>
+                </div>
             </div>
         </form>
     </x-auth-card>

@@ -6,7 +6,7 @@
 
 <div class="w-10/12 mx-auto mt-20">
     <div class="">
-        <div class='grid grid-cols-4 gap-4 '>            
+        <div class='grid grid-cols-1 md:grid-cols-4 gap-4 '>            
             @forelse($categories as $category)
             <div class='border '>
                 <div class="m-7">                
