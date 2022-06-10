@@ -247,7 +247,7 @@
         <!-- make a difference image -->
         <div class="relative w-full lg:w-3/5">
             <img class="inset-0 object-cover object-center w-full h-full lg:absolute" loading="lazy"
-                src="https://cdn.tuk.dev/assets/components/111220/Hero9/header.png"
+                src="/{{ $allhome->difference_image }}"
                 alt="Senator of America Jessica Geller" role="img" />
         </div>
     </div>

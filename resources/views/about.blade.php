@@ -40,8 +40,7 @@
                         </button>
                     </div>
                     <div id="mission" class="p-2 bg-gray-300 ">
-                        <p>										 {!! $allabout->about_our_mission !!}
-</p>
+                        <p>{!! $allabout->about_our_mission !!}</p>
                     </div>
                 </div>
                 <!-- our vision -->

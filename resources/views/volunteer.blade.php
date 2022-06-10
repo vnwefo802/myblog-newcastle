@@ -36,7 +36,7 @@
 
 {{-- We take privacy issues seriously. You can be sure that your personal data is securely protected. --}}
 
-<div class="dark:text-white px-6 py-4 border-0 rounded relative mt-4 mb-4 bg-white dark:bg-gray-800 shadow w-[1080px] mx-auto" id="formscroll">
+<div class="dark:text-white px-6 py-4 border-0 rounded relative mt-4 mb-4 bg-white dark:bg-gray-800 shadow xl:w-[1080px] md:w-11/12 lg:mx-auto" id="formscroll">
 
     <span class="inline-block mr-8 align-middle">
        We take <b class="capitalize">privacy!</b> issues seriously. You can be sure that your personal data is securely protected.
@@ -60,7 +60,7 @@
 
 
 <div>
-    <form id="form" action="{{ route('volunteer.store') }}" method="post" class="container mx-auto w-[1080px] bg-white dark:bg-gray-800 shadow rounded">
+    <form id="form" action="{{ route('volunteer.store') }}" method="post" class="container mx-auto lg:w-[1080px] md:w-11/12 bg-white dark:bg-gray-800 shadow rounded">
         @csrf
         <div class="py-5 border-b border-gray-300 xl:w-full dark:border-gray-700">
             <div class="flex items-center w-11/12 mx-auto">
