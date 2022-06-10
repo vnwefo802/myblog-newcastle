@@ -86,36 +86,7 @@
                     </script>
                 </div>
 
-                    {{-- Log In --}}
-                @guest
-                @if (Route::has('login'))
-                <a  href="{{ route('login') }}" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 lg:pl-4 md:text-sm lg:text-base hover:text-blue-500" id="loginhl" aria-label="Log In">{{ __('Login') }}</a>
-
-                @endif
-                {{-- Sign Up --}}
-
-                @if (Route::has('register'))
-                <a class="py-4 text-base font-semibold text-gray-500 transition duration-300 lg:px-4 md:text-sm lg:text-base hover:text-blue-500" id="registerhl" aria-label="Sign Up" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    @endif
-
-                @else
-
-                {{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
-                </a> --}}
-
-                {{-- Logout --}}
-                <a class="px-1 py-4 text-base font-semibold text-gray-500 transition duration-300 border-blue-500 md:text-sm lg:text-base hover:text-blue-500" id="registerhl" aria-label="Log Out" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-
-                @endguest
+                   
 
                 {{-- Volunteer --}}
                 <a href="{{route('volunteer.create')}}" class="inline-flex items-center justify-center w-full h-12 text-base font-semibold text-white transition duration-200 bg-blue-400 border-2 border-blue-400 rounded md:px-1 lg:px-6 hover:border-blue-500 md:w-auto hover:bg-blue-500 focus:shadow-outline focus:outline-none dark:focus:ring-blue-500 md:text-sm lg:text-base" aria-label="Volunteer">
@@ -129,6 +100,105 @@
                 <a href="{{route('donate')}}" class="inline-flex items-center justify-center w-full h-12 text-base font-semibold text-white transition duration-200 bg-green-600 border-2 border-green-600 rounded md:px-1 lg:px-6 hover:border-green-700 md:w-auto hover:bg-green-700 focus:shadow-outline focus:outline-none dark:focus:ring-green-700 md:text-sm lg:text-base" aria-label="Donate">
                     Donate
                 </a>
+
+                 {{-- Log In --}}
+                 @guest
+                 @if (Route::has('login'))
+                 <a  href="{{ route('login') }}" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 lg:pl-4 md:text-sm lg:text-base hover:text-blue-500" id="loginhl" aria-label="Log In">{{ __('Login') }}</a>
+ 
+                 @endif
+                 {{-- Sign Up --}}
+ 
+                 @if (Route::has('register'))
+                 <a class="py-4 text-base font-semibold text-gray-500 transition duration-300 lg:px-4 md:text-sm lg:text-base hover:text-blue-500" id="registerhl" aria-label="Sign Up" href="{{ route('register') }}">{{ __('Register') }}</a>
+                     @endif
+ 
+                 @else
+
+ 
+                 {{-- Logout --}}
+                 <a class="px-1 py-4 text-base font-semibold text-gray-500 transition duration-300 border-blue-500 md:text-sm lg:text-base hover:text-blue-500" id="registerhl" aria-label="Log Out" href="{{ route('logout') }}"
+                 onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                 {{ __('Logout') }}
+                 </a>
+ 
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                     @csrf
+                 </form>
+ 
+                 @endguest
+
+
+{{-- new lgoin and logout --}}
+                 {{-- @guest
+                 <li class="btn-cta"><a href="{{ route('login') }}"><span>Sign in</span></a></li>
+                 @endguest
+
+@auth
+<div class="relative inline-block text-left">
+     <div>
+       <button type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-button" aria-expanded="true" aria-haspopup="true" onclick="openDropdown(event,'dropdown-id')" type="button">
+         {{ \Str::limit(Auth::user()->name, 15) }}
+         <!-- Heroicon name: solid/chevron-down -->
+         <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+           <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+         </svg>
+       </button>
+     </div>
+   
+     <!--
+       Dropdown menu, show/hide based on menu state.
+   
+       Entering: "transition ease-out duration-100"
+         From: "transform opacity-0 scale-95"
+         To: "transform opacity-100 scale-100"
+       Leaving: "transition ease-in duration-75"
+         From: "transform opacity-100 scale-100"
+         To: "transform opacity-0 scale-95"
+     -->
+     <div class="hidden  origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" id="dropdown-id">
+       <div class="py-1" role="none">
+         <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+         <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">{{ auth()->user()->name }} </a>
+         <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Duplicate</a>
+       </div>
+       <div class="py-1" role="none">
+         <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Archive</a>
+         <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Move</a>
+       </div>
+       <div class="py-1" role="none">
+         <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Share</a>
+         <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Add to favorites</a>
+       </div>
+       <div class="py-1" role="none">
+         <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-6" onclick="event.preventDefault();
+                             document.getElementById('nav-logout-form').submit()" 
+                             >logout</a>
+<form id="nav-logout-form" action="{{ route('logout') }}" method="POST">
+                                 @csrf
+                             </form>
+       </div>
+     </div>
+   </div>
+@endauth
+   <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+   <script>
+     function openDropdown(event,dropdownID){
+       let element = event.target;
+       while(element.nodeName !== "BUTTON"){
+         element = element.parentNode;
+       }
+       var popper = Popper.createPopper(element, document.getElementById(dropdownID), {
+         placement: 'bottom-start'
+       });
+       document.getElementById(dropdownID).classList.toggle("hidden");
+       document.getElementById(dropdownID).classList.toggle("block");
+     }
+   </script> --}}
+   {{-- new logout end --}}
+
+
             </div>
             <!-- ============================================ -->
             <!--               Mobile Menu Button             -->
