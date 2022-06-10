@@ -999,6 +999,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-56 {
   width: 14rem;
 }
+.w-24 {
+  width: 6rem;
+}
+.w-28 {
+  width: 7rem;
+}
 .min-w-full {
   min-width: 100%;
 }
