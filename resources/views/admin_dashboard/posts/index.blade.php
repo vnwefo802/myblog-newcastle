@@ -51,21 +51,18 @@
 
                            <td  class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap " >{{ $post->views }}</td>
 
-
-
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">
                                 <div class="flex items-center">
-
                                     <form method='post' action="{{ route('admin.posts.destroy', $post) }}" id='delete_form_{{ $post->id }}' class="confirmDelete">@csrf @method('DELETE')
+                                        <div>
+                                            {{-- Edit --}}
+                                            <a  href="{{ route('admin.posts.edit', $post) }}">
+                                                <div aria-label="Edit row" role="button" class="mb-3 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none hover:bg-gray-200 active:bg-blue-200 w-[36px] mt-2">
+                                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg4.svg" alt="Edit" class="p-2 m-0">
+                                                </div>
+                                            </a>
 
-                                       {{-- Edit --}}
-                                        <a  href="{{ route('admin.posts.edit', $post) }}">
-                                            <div aria-label="Edit row" role="button" class="mb-3 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none hover:bg-gray-200 active:bg-blue-200 w-[36px]">
-                                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg4.svg" alt="Edit" class="p-2 m-0">
-                                            </div>
-                                        </a>
-
-                                        {{-- <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $post->id }}').submit();" > --}}
+                                            {{-- <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $post->id }}').submit();" > --}}
 
                                             {{-- Delete --}}
                                             <button type="submit"class=" mb-1 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none active:bg-red-500 hover:shadow-lg focus:outline-none hover:bg-red-200" href="javascript: void(0)">
@@ -73,6 +70,7 @@
                                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
                                                 </div>
                                             </button>
+                                        </div>
                                         {{-- </a> --}}
                                         <div class="mb-3">
                                             <div class="form-check">
@@ -80,9 +78,7 @@
                                                 </label>
                                             </div>
                                         </div>
-                                </form>
-
-
+                                    </form>
                                </div>
                            </td>
                        </tr>
