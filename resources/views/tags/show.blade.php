@@ -26,7 +26,7 @@
                             </a></div>
                             <div><a href="#" class="text-gray-500 text-[10px]"><span class="flex">
                             <img src="/{{ $allhome->logo }}" class=" w-[12x] h-[12px] mt-1 mr-1 "  alt="Newcastle logo" aria-label="Newcastle logo" >
-                                <span class="ml-2">NewCastle-Founodation</span></span>
+                                <span class="ml-2">NewCastle-Foundation</span></span>
                             </a></div>
                             <div class="comments-count">
                                 <a href="{{ route('posts.show', $post) }}#post-comments">
