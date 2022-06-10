@@ -23,9 +23,9 @@ class SettingFactory extends Factory
 
             'about_first_image' => 'setting/about-img-1.jpg',
             'about_second_image' => 'setting/about-img-2.jpg',
-            'about_third_image'=> 'setting/about-img-3.jpg',
-            'about_fourth_image'=> 'setting/about-img-4.jpg',
-            'about_fifth_image'=> 'setting/about-img-5.jpg',
+            'about_third_image' => 'setting/about-img-3.jpg',
+            'about_fourth_image' => 'setting/about-img-4.jpg',
+            'about_fifth_image' => 'setting/about-img-5.jpg',
             'about_our_vision' => $this->faker->paragraph(),
             'about_our_mission' => $this->faker->paragraph(),
 

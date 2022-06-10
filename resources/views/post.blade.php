@@ -90,7 +90,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<input type="submit" value="Post Comment" class="border-2 hover:bg-gray-600 p-2 rounded hover:text-white focus:border-gray-700 ml-3">
+								<input type="submit" value="Post Comment" class="border-2 hover:bg-gray-600 p-2 rounded hover:text-white focus:border-gray-700 ml-3 mb-4">
 							</div>
 						</form>
 

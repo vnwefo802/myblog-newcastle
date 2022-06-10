@@ -51,8 +51,8 @@ Route::post('/volunteer', [VolunteerController::class, 'store_volunteer'])->name
 Route::get('/donate', [DonateController::class, 'donate'])->name('donate');
 Route::get('/donate/confirmation', [donateconfirmation::class, 'donateconfirmation'])->name('donateconfirmation');
 
-Route::get('/donatee', [DonateController::class, 'index']);
-Route::post('donatee/payment', [DonateController::class, 'payment'])->name('donate.payment');
+// Route::get('/donatee', [DonateController::class, 'index']);
+Route::post('donate/payment', [DonateController::class, 'payment'])->name('donate.payment');
 // little kid end
 
 Route::post('/create', [DonateController::class, 'create']);

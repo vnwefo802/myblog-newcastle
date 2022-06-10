@@ -63,6 +63,7 @@ class AdminSettingController extends Controller
             $filesToUpload += ['about_fifth_image' => 'storage/setting/' . $file5->hashName()];
         }
 
+        
         About::findOrFail($about_id)->update($updater += $filesToUpload);
 
 
