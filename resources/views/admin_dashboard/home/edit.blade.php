@@ -42,14 +42,15 @@
                                         <span>Existing Logo</span>
                                         <div class='col-md-4'>
                                             <div class='p-2 user-image'>
-                                                <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allhome->logo) }}" >
+                                                <img class='img-fluid img-thumbnail' src="/{{ $allhome->logo }}" >
                                             </div>
+
                                         </div>
                                         <!-- Logo -->
                                         <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="logo" class="form-label">Logo</label>
+                                                    <label for="logo" class="form-label">Change Logo</label>
                                                     <input name='logo' type='file' class="form-control" id="logo">
 
                                                     @error('logo')
@@ -62,14 +63,15 @@
                                         <span>Existing Favicon</span>
                                         <div class='col-md-4'>
                                                 <div class='p-2 user-image'>
-                                                    <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allhome->favicon) }}" >
+
+                                                    <img class='img-fluid img-thumbnail' src=" /{{ $allhome->favicon }}" >
                                                 </div>
                                             </div>
                                         <!-- Favicon -->
                                         <div class='row'>
                                             <div class='col-md-8'>
                                                 <div class="mb-3">
-                                                    <label for="favicon" class="form-label" title="This is the image to the left of the text in the tab.">Favicon</label>
+                                                    <label for="favicon" class="form-label" title="This is the image to the left of the text in the tab.">Change Favicon</label>
                                                     <input name='favicon' type='file' class="form-control" id="favicon">
 
                                                     @error('favicon')
@@ -214,7 +216,7 @@
                                         </div>
 
                                          <!-- difference image -->
-                                        <div class='col-md-8'>
+                                         <div class='col-md-8'>
                                             <div class="mb-3">
                                                 <label for="difference_image" class="form-label">difference image</label>
                                                 <input name='difference_image' type='file' class="form-control" id="difference_image">
@@ -227,24 +229,36 @@
 
                                         <div class='col-md-4'>
                                             <div class='p-2 user-image'>
-                                                <img class='img-fluid img-thumbnail' src="{{ asset('storage/' . $allhome->difference_image) }}" >
+
+                                                <img class='img-fluid img-thumbnail' src="/{{ $allhome->difference_image }}" >
                                             </div>
                                         </div>
                                         <!-- difference image end  -->
 
-
-                                        <!-- difference -->
                                         <div class="mb-3">
-                                            <label for="difference_title" class="form-label">Difference Title</label>
-                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{   old("difference_title", $allhome->difference_title }}</textarea>
+                                            <label for="difference_title" class="form-label">difference_title</label>
+                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{ old("difference_title", $allhome->difference_title) }}</textarea>
 
-                                            @error('difference')
+                                            @error('difference_title')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
 
 
-                                        <button class="btn btn-primary text-white" type='submit'>Update</button>
+
+                                        {{-- <!-- difference -->
+                                        <div class="mb-3">
+                                            <label for="difference_title" class="form-label">Difference Title</label>
+                                            <textarea name='difference_title'  id='difference_title' class="form-control" rows="3">{{ old("difference_title", $allhome->difference_title) }}</textarea>
+
+                                            @error('difference_title')
+                                                <p class='text-danger'>{{ $message }}</p>
+                                            @enderror
+                                        </div> --}}
+
+
+
+                                        <button class="text-white btn btn-primary" type='submit'>Update</button>
 
                                     </div>
                                 </div>
@@ -262,33 +276,30 @@
     <!--end page wrapper -->
     @endsection
 
-@section("script")
+    @section("script")
 <script>
     $(document).ready(function () {
 
         setTimeout(() => {
             $(".general-message").fadeOut();
         }, 5000);
-
         let initTinyMCE = (id) => {
             tinymce.init({
                 selector: '#'+id,
                 plugins: 'advlist autolink lists link charmap print preview hr anchor pagebreak',
                 toolbar_mode: 'floating',
                 height: '300',
-
                 toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image code | rtl ltr',
                 toolbar_mode: 'floating',
             });
         }
-
         initTinyMCE('title');
         initTinyMCE('box_title_1');
         initTinyMCE('box_title_2');
+        initTinyMCE('difference_title');
         initTinyMCE('box_title_3');
         initTinyMCE('box_title_4');
         initTinyMCE('project_short_title');
-        initTinyMCE('difference');
 
     });
 

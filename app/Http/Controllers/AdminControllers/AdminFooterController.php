@@ -32,6 +32,8 @@ class AdminFooterController extends Controller
             'blog_section' => $request->blog_section,
             'community_section' => $request->community_section,
             'contact_us_section' => $request->contact_us_section,
+            'email' => $request->email,
+            'contact_info' => $request->contact_info,
 
         ]);
 
@@ -44,7 +46,10 @@ class AdminFooterController extends Controller
         'blog_section' => 'required|min:4,max:800',
         'community_section' => 'required|min:4,max:800',
         'contact_us_section' => 'required|min:4,max:800',
-        
+        'email' => 'required|min:4,max:35',
+        'contact_info' => 'required|numeric|min:8',
+
+
         ]);
 
         Footer::find(1)->update($validated);
