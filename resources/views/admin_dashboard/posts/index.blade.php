@@ -53,35 +53,32 @@
 
 
 
-                           <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">
-                               <div class="flex items-center">
+                            <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">
+                                <div class="flex items-center">
 
-
-
-                                   <form method='post' action="{{ route('admin.posts.destroy', $post) }}" id='delete_form_{{ $post->id }}' class="confirmDelete">@csrf @method('DELETE')
+                                    <form method='post' action="{{ route('admin.posts.destroy', $post) }}" id='delete_form_{{ $post->id }}' class="confirmDelete">@csrf @method('DELETE')
 
                                        {{-- Edit --}}
-                                    <a  href="{{ route('admin.posts.edit', $post) }}">
-                                        <div aria-label="Edit row" role="button" class="w-[26px] h-[26px] text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
-                                            <img class="w-[25px] h-[25px]" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg4.svg" alt="Edit">
-                                        </div>
-                                    </a>
-
-                                    {{-- <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $post->id }}').submit();" > --}}
-
-                                        {{-- Delete --}}
-                                        <button type="submit"class="w-[26px] h-[26px]" href="javascript: void(0)" >
-                                            <div aria-label="Delete" role="button" class="w-[26px] h-[26px] text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
-                                                    <img class="w-[25px] h-[25px]" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
+                                        <a  href="{{ route('admin.posts.edit', $post) }}">
+                                            <div aria-label="Edit row" role="button" class="mb-3 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none hover:bg-gray-200 active:bg-blue-200 w-[36px]">
+                                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg4.svg" alt="Edit" class="p-2 m-0">
                                             </div>
-                                        </button>
-                                    {{-- </a> --}}
-                                    <div class="mb-3">
-                                        <div class="form-check form-switch">
-                                            <input name='approved' {{ $post->approved ? ' checked' : '' }} class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" >
-                                            <label for="flexSwitchCheckChecked" class="form-check-label {{ $post->approved ? 'text-success' : 'text-warning'}}" >{{ $post->approved ? 'Approved' : 'Not approved' }}
-                                            </label>
-                                        </div>
+                                        </a>
+
+                                        {{-- <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $post->id }}').submit();" > --}}
+
+                                            {{-- Delete --}}
+                                            <button type="submit"class=" mb-1 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none active:bg-red-500 hover:shadow-lg focus:outline-none hover:bg-red-200" href="javascript: void(0)">
+                                                <div aria-label="Delete" role="button" class="p-2 text-red-500  rounded cursor-pointer hover:bg-gray-200">
+                                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
+                                                </div>
+                                            </button>
+                                        {{-- </a> --}}
+                                        <div class="mb-3">
+                                            <div class="form-check">
+                                                <label for="flexSwitchCheckChecked" class="form-check-label {{ $post->approved ? 'text-success' : 'text-warning'}}" >{{ $post->approved ? 'Approved' : 'Not approved' }}
+                                                </label>
+                                            </div>
                                         </div>
                                 </form>
 
