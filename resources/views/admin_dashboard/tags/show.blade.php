@@ -55,9 +55,9 @@
 												</div>
 											</div>
 										</td>
-										<td>{{ $post->title }} </td>
+										<td>{{ \Str::limit($post->title, 30) }} </td>
 
-										<td>{{ $post->excerpt }}</td>
+										<td>{{ \Str::limit($post->title, 30) }}</td>
                                         <td>{{ $post->category->name }}</td>
                                         <td>{{ $post->created_at->diffForHumans() }}</td>
                                         
@@ -70,10 +70,14 @@
                                         
                                         <td>
 											<div class="d-flex order-actions">
-												<a href="{{ route('admin.posts.edit', $post) }}" class=""><i class='bx bxs-edit'></i></a>
-												<a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $post->id }}').submit();" class="ms-3"><i class='bx bxs-trash'></i></a>
-											
-                                                <form method='post' action="{{ route('admin.posts.destroy', $post) }}" id='delete_form_{{ $post->id }}'>@csrf @method('DELETE')</form>
+                                                <form method='post' action="{{ route('admin.posts.destroy', $post) }}" id='delete_form_{{ $post->id }}' class="confirmDelete">
+                                                    @csrf @method('DELETE')
+                                                    
+                                                    <a href="{{ route('admin.posts.edit', $post) }}" class=""><i class='bx bxs-edit'></i></a>
+                                                    <button type="submit" class="ms-3 "><i class='bx bxs-trash'></i></button>
+                                                
+                                                
+                                                </form>
                                             </div>
 										</td>
 									</tr>
@@ -93,14 +97,58 @@
 
     @section("script")
 
+    @if (session('success') == 'Tag has been Deleted.')
+    <script>
+        Swal.fire(
+          'Deleted!',
+          'Tag has been deleted.',
+          'success'
+        )
+    </script>
+    @endif
+
     <script>
         $(document).ready(function () {
-        
+            
+            // search
+            // var table = $('#example2').DataTable( {
+			// 	lengthChange: false,
+			// 	buttons: ['excel']
+			// } );
+            // end search
+
             setTimeout(() => {
                 $(".general-message").fadeOut();
             }, 5000);
 
         });
 
+
+
+        $('.confirmDelete').submit(function(e){
+                e.preventDefault();
+                Swal.fire({
+      title: 'Sure you want to delete this Tag Post?',
+      text: "You won't be able to revert this Tag Post!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel'
+
+    }).then((result) => {
+      if (result.isConfirmed) {
+      /*  Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        ) */
+        this.submit();
+      }
+
+    })
+
+    });
     </script>
     @endsection
