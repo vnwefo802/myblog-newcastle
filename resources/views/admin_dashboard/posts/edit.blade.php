@@ -24,7 +24,7 @@
                         <ol class="p-0 mb-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Posts</li>
+                            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.posts.index') }}">Posts</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -142,7 +142,7 @@
                                             </label>
                                         </div>
                                         </div>
-                                        <button class='btn btn-primary' type='submit'>Update Post</button>
+                                        <button class='btn btn-primary bg-primary' type='submit'>Update Post</button>
                                         <a
                                         class='btn btn-danger'
                                         onclick="event.preventDefault();document.getElementById('delete_post_{{ $post->id }}').submit()"

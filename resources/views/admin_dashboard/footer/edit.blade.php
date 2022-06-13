@@ -136,7 +136,7 @@
                                         @enderror
                                     </div>
 
-                                    <button class='btn btn-primary' type='submit'>Update</button>
+                                    <button class='btn btn-primary bg-primary' type='submit'>Update</button>
                                 </div>
                             </div>
                         </div>
