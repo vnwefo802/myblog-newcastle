@@ -2868,6 +2868,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 230px;
   }
 
+  .md\:mt-9 {
+    margin-top: 2.25rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2938,6 +2942,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-3\/6 {
+    width: 50%;
   }
 
   .md\:max-w-\[744px\] {
@@ -3145,6 +3153,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:mt-\[67px\] {
     margin-top: 67px;
+  }
+
+  .lg\:mt-20 {
+    margin-top: 5rem;
   }
 
   .lg\:flex {
