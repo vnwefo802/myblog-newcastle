@@ -6,7 +6,7 @@
 @section('content')
 
 
-<div class="px-4 py-12 pr-4">
+<div class="px-4  pr-4">
     <div class="lg:max-w-[1440px] md:max-w-[744px] max-w-[375px] w-full mx-auto py-12 lg:px-20 md:px-6 px-4 bg-white">
         <div class="flex-col w-full mt-8 space-y-4 lg:space-y-8 md:space-y-8 lg:mt-0 md:mt-8 ">
             <div class="flex flex-col justify-center w-full lg:flex-row md:flex-row gap-x-6">
