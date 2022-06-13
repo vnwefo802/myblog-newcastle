@@ -1,23 +1,22 @@
-
 @extends('layouts.app')
 
 @section('title', 'Blog')
 
 @section('content')
 
-<div class="w-10/12 mx-auto mt-20">
-    <div class="">
-        <div class="flex md:flex-row flex-col">
-            <div>
+    <div class="w-10/12 mx-auto mt-20">
+        <div class="">
+            <div class="flex md:flex-row">
 
-                @forelse($posts as $post)
 
-                <div class="lg:w-[750px] md:w-[465px] w-[309px] lg:h-[175px]  md:h-[132px] h-[230px] lg:max-h-[175px] md:max-h-[132px] max-h-[230px] lg:mr-20 border-[1px] container my-4 static">
-                <a href="{{ route('posts.show', $post) }}" class="blog-img" ><img src="{{asset('storage/' . $post->image->path. '')}}" alt="" class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left"></a>
-                    <div class="ml-3 mt-2 lg:float-left relative">
-                        <h3 class="lg:text-2xl md:text-base h-[28px] lg:ml-0 md:ml-60 "><a href="{{ route('posts.show', $post) }}" class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
-                        <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 md:ml-60 md:mt-4">{{ \Str::limit($post->excerpt, 35) }}</p>
-                        <div class="flex flex-row lg:mt-[67px] md:mt-[20px] mt-2 mb-2 lg:ml-0 md:ml-[230px] md:mr-2 gap-2">
+                <div class="lg:w-[750px] md:w-[465px] w-[309px] lg:h-[175px]  md:h-[132px] h-[230px] lg:max-h-[175px] md:max-h-[132px] max-h-[230px] lg:mr-20 border-[1px] container my-4 static flex md:flex-row flex-col">
+                    <div class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left">
+                        <a href="{{ route('posts.show', $post) }}" class="blog-img" ><img src="{{asset('storage/' . $post->image->path. '')}}" alt="" class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left"></a>
+                    </div>
+                    <div class="ml-3 mt-2 w-[330px] float-left static">
+                        <h3 class="lg:text-2xl md:text-base h-[28px] lg:ml-0"><a href="{{ route('posts.show', $post) }}" class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
+                        <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 md:mt-4">{{ \Str::limit($post->excerpt, 60) }}</p>
+                        <div class="flex flex-row lg:mt-20 md:mt-9 mt-5 mb-2 lg:ml-0 md:mr-2 gap-2">
                             <div><a class='text-gray-500 text-[10px]' href="#"><span class="flex">
                                 <svg class="w-[12x] h-[12px] mt-1 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path d="M232 120C232 106.7 242.7 96 256 96C269.3 96 280 106.7 280 120V243.2L365.3 300C376.3 307.4 379.3 322.3 371.1 333.3C364.6 344.3 349.7 347.3 338.7 339.1L242.7 275.1C236 271.5 232 264 232 255.1L232 120zM256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0zM48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48C141.1 48 48 141.1 48 256z"/>
@@ -41,60 +40,75 @@
                             </div>
                         </div>
                     </div>
-                </div>
                 @empty
-                <div class="mb-6">
-                    <p class='lead'>There are no posts to show.</p>
-                </div>
-                @endforelse
-            </div>
-            <!-- SIDEBAR: start -->
-			<div class="ml-4  lg:w-[266px] w-[175px] md:block hidden  mt-4">
-                <div class="">
-                    <div class="mb-[37px]">
-                        <h3 class="text-xl mb-[30px]">Categories</h3>
-                        <div class="">
-                            <ul>
-                                @foreach($categories as $category)
-                                <li class="px-3 mb-[10px] border-l-4 rounded py-1 md:border-white border-blue-500 hover:border-blue-500 hover:bg-gray-300 hover:text-blue-500"><a href="{{ route('categories.show', $category) }}">{{ $category->name }} <span class="float-right">{{ $category->posts_count }}</span></a></li>
-                                @endforeach
-                            </ul>
-                        </div>
+                    <div class="flex w-full justify-center">
+                        <h1 class='lead text-4xl font-light text-center'>There are no posts to show</h1>
                     </div>
-                    <div>
-                        <h3 class="text-xl mb-[30px]">Recent Blog</h3>
-                        @foreach($recent_posts as $recent_post)
-                        <div class="flex lg:flex-row lg:w-[264px] md:w-[100px] lg:mx-0 md:mx-auto md:flex-col my-2 mb-[40px] border">
-                            <a href="{{ route('posts.show', $recent_post) }}">
-                                <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="">
-                            </a>
-                            <div class="md:m-2 mx-2">
-                                <p class="md:text-sm text-xs text-gray-300"><span>{{ $recent_post->created_at->diffForHumans() }}</span></p>
-                                <h2>
-                                    <a href="{{ route('posts.show', $recent_post) }}">
-                                        <span class="md:text-base text-sm">{{ \Str::limit( $recent_post->title, 20) }} </span>
-                                    </a>
-                                </h2>
-                                <p class="text-gray-500 md:text-base text-xs">{{ \Str::limit($recent_post->excerpt, 20) }}</p>
+                @endforelse
+
+
+                <!-- SIDEBAR: start -->
+                <div class="lg:w-[266px] w-[175px] md:block hidden ml-auto">
+                    <div class="">
+                        <div class="mb-[37px]">
+                            <h3 class="text-xl mb-[30px]">Categories</h3>
+                            <div class="">
+                                <ul>
+                                    @foreach ($categories as $category)
+                                        <li
+                                            class="px-3 mb-[10px] border-l-4 rounded py-1 md:border-white border-blue-500 hover:border-blue-500 hover:bg-gray-300 hover:text-blue-500">
+                                            <a href="{{ route('categories.show', $category) }}">{{ $category->name }}
+                                                <span class="float-right">{{ $category->posts_count }}</span></a>
+                                        </li>
+                                    @endforeach
+                                </ul>
                             </div>
                         </div>
-                        @endforeach
-                    </div>
-                    <div class="">
-                        <h3 class="text-xl">Tags</h3>
-                        <div class="m-2">
-                            <ul class="flex flex-row flex-wrap lg:w-[250px] md:w-[100px]">
-                            @foreach($tags as $tag)
-                                <li class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]"><a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a></li>
+                        <div>
+                            <h3 class="text-xl mb-[30px]">Recent Blog</h3>
+                            @foreach ($recent_posts as $recent_post)
+                                <div
+                                    class="flex lg:flex-row lg:w-[264px] md:w-[100px] lg:mx-0 md:mx-auto md:flex-col my-2 mb-[40px] border">
+                                    <a href="{{ route('posts.show', $recent_post) }}">
+                                        <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]"
+                                            src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '') }}"
+                                            alt="">
+                                    </a>
+                                    <div class="md:m-2 mx-2">
+                                        <p class="md:text-sm text-xs text-gray-300">
+                                            <span>{{ $recent_post->created_at->diffForHumans() }}</span>
+                                        </p>
+                                        <h2>
+                                            <a href="{{ route('posts.show', $recent_post) }}">
+                                                <span
+                                                    class="md:text-base text-sm">{{ \Str::limit($recent_post->title, 20) }}
+                                                </span>
+                                            </a>
+                                        </h2>
+                                        <p class="text-gray-500 md:text-base text-xs">
+                                            {{ \Str::limit($recent_post->excerpt, 20) }}</p>
+                                    </div>
+                                </div>
                             @endforeach
-                            </ul>
+                        </div>
+                        <div class="">
+                            <h3 class="text-xl">Tags</h3>
+                            <div class="m-2">
+                                <ul class="flex flex-row flex-wrap lg:w-[250px] md:w-[100px]">
+                                    @foreach ($tags as $tag)
+                                        <li
+                                            class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]">
+                                            <a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
 @endsection

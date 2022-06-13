@@ -16,3 +16,4 @@ yarn-error.log
 storage/.DS_Store
 .DS_Store
 public/css/app.css
+public/.DS_Store

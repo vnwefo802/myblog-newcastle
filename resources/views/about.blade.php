@@ -5,8 +5,8 @@
 @section('content')
 
 
-    <div class="flex flex-col items-center justify-center pb-12 bg-gray-200 px-14">
-        <div class="m-5">
+    <div class="flex flex-col items-center justify-center pb-12 bg-gray-200 md:px-14">
+        <div class="md:m-5">
             <p class="px-4 mt-6 font-semibold leading-6 text-gray-700 text-l">
                 {!! $allabout->about_text !!}
             </p>
