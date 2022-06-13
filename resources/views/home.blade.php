@@ -244,7 +244,7 @@
                 </div>
             </div>
             <!-- make a difference image -->
-            <div class="relative w-full lg:w-3/5">
+            <div class="relative w-full lg:w-3/5 hidden md:block">
                 <img class="inset-0 object-cover object-center w-full h-full lg:absolute" loading="lazy"
                     src="/{{ $allhome->difference_image }}" alt="Senator of America Jessica Geller" role="img" />
             </div>
