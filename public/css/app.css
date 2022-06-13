@@ -506,6 +506,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-10 {
   top: 2.5rem;
 }
+.left-1 {
+  left: 0.25rem;
+}
 .z-40 {
   z-index: 40;
 }
@@ -748,6 +751,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-\[20px\] {
   margin-top: 20px;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mt-7 {
+  margin-top: 1.75rem;
 }
 .block {
   display: block;
@@ -2780,6 +2789,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     position: sticky;
   }
 
+  .md\:left-3 {
+    left: 0.75rem;
+  }
+
   .md\:order-2 {
     order: 2;
   }
@@ -2872,6 +2885,18 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 230p;
   }
 
+  .md\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .md\:mt-9 {
+    margin-top: 2.25rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2942,6 +2967,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-3\/6 {
+    width: 50%;
   }
 
   .md\:max-w-\[744px\] {
@@ -3149,6 +3178,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:-mr-14 {
     margin-right: -3.5rem;
+  }
+
+  .lg\:mt-20 {
+    margin-top: 5rem;
   }
 
   .lg\:flex {
