@@ -208,12 +208,12 @@
     <div>
         <div class="lg:flex">
             <!-- contant of make a difference including the buttons -->
-            <div class="w-full px-6 py-10 text-white bg-indigo-600 lg:w-2/5 xl:py-24 xl:px-8">
+            <div class="w-full px-3 py-10 text-white bg-indigo-600 lg:w-2/5 xl:py-24 xl:px-8">
                 <h2 class="text-3xl font-semibold lg:w-10/12">{!! $allhome->difference_title !!}</h2>
                 <div class="flex items-center">
                     <a href="/volunteer" class="inline-block">
                         <button
-                            class="flex items-center py-4 mt-12 text-sm rounded-md bg-slate-800 mr-7 px-7 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
+                            class="flex items-center py-4 mt-12 text-sm rounded-md bg-slate-800  px-5 lg:py-5 lg:text-lg md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700">
                             <p class="mr-3 text-sm font-medium leading-none text-white lg:text-lg md:text-base">
                                 {!! $allhome->difference_button_1 !!}</p>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -244,7 +244,7 @@
                 </div>
             </div>
             <!-- make a difference image -->
-            <div class="relative w-full lg:w-3/5">
+            <div class="relative w-full lg:w-3/5 hidden md:block">
                 <img class="inset-0 object-cover object-center w-full h-full lg:absolute" loading="lazy"
                     src="/{{ $allhome->difference_image }}" alt="Senator of America Jessica Geller" role="img" />
             </div>
