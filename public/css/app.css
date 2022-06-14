@@ -998,6 +998,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[200px\] {
   width: 200px;
 }
+<<<<<<< HEAD
+=======
 .w-\[50px\] {
   width: 50px;
 }
@@ -1007,6 +1009,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[0px\] {
   width: 0px;
 }
+>>>>>>> 9480ce2339443a7e72ce38d4f50a4980b48129c7
 .w-\[35px\] {
   width: 35px;
 }
