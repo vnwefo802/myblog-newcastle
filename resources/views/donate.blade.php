@@ -22,7 +22,7 @@
 </div>
 
 <div class="container mx-auto my-8">
-    <form action="{{ route('donate.payment')}}" class="shadow md:w-3/6 w-11/12 mx-auto flex flex-col px-16 text-center border py-16" method="POST">
+    <form action="{{ route('donate.payment')}}" class="shadow md:w-3/6 w-11/12 mx-auto flex flex-col md:px-16 text-center border md:py-16 py-6 px-6" method="POST">
         @csrf
         <h3 class="text-3xl font-light">Donate now</h3>
         <p class="py-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo dolor, libero officiis
