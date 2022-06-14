@@ -29,13 +29,13 @@
 							<div class="">
 								<div class="m-2">
 									<ul class="flex flex-row flex-wrap lg:w-[250px] md:w-[100px]">
-                                        {{-- @foreach($tags as $tag) --}}
+                                        
 											<li
 												class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]">
-												{{-- {{ $tags->name }} --}}
-                                                sgtth
+											 {{ $tags[1]->name }} 
+                                                
 											</li>
-                                            {{-- @endforeach --}}
+                                             
 									</ul>
 								</div>
 							</div>
