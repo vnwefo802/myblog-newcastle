@@ -32,7 +32,7 @@
                                         
 											<li
 												class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]">
-											 {{ $tags[1]->name }} 
+											 {{ $tags[0]->name }} 
                                                 
 											</li>
                                              
