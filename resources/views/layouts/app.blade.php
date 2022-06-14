@@ -126,54 +126,97 @@
                             }
                         </script>
 
-                        @php
-                            
-                            $showAdmin = false;
-                            // $showPosts = false;
-                $showtag  = false;
-                $showcomments_index  = false;
-                $show_comments_create  = false;
-                $show_roles_index   = false;
-                $show_roles_create   = false;
-                $show_roles_create   = false;
-                $show_roles_create   = false;
+@php
+
+$showAdmin = false;
+$showallposts = false;
+$showcomments = false;
+$showcomments_index = false;
+$show_comments_create = false;
+$show_users_index = false;
+$show_users_create = false;
+$show_roles_index = false;
+$show_roles_create = false;
+$showcontacts = false;
+$showVolunteer = false;
+$show_setting_edit = false;
+$show_donate_edit  = false;
+$show_home_edit  = false;
+$show_footer_edit  = false;
+$showtag  = false;
+
+if (Auth::check()) {
+    $roles = auth()
+        ->user()
+        ->role->permissions->toArray();
+
+    foreach ($roles as $role) {
+        if ($role['name'] == 'admin.index') {
+            $showAdmin = true;
+         }  else if ($role['name'] == 'admin.posts') {
+             $showallposts = true;
+       }
+          else if ($role['name'] == 'admin.comments') {
+            $showcomments = true;
+        } 
+
+        else if ($role['name'] == 'admin.comments.index') {
+            $showcomments_index = true;
+        } 
+
+        else if ($role['name'] == 'admin.comments.create') {
+            $show_comments_create = true;
+        } 
+
+        else if ($role['name'] == 'admin.users.index') {
+            $show_users_index = true;
+        }
+        
+        else if ($role['name'] == 'admin.users.create') {
+            $show_users_create = true;
+        } 
+
+        else if ($role['name'] == 'admin.roles.index') {
+            $show_roles_index = true;
+        } 
+
+        else if ($role['name'] == 'admin.roles.create') {
+            $show_roles_create = true;
+        } 
+
+         else if ($role['name'] == 'admin.contacts') {
+            $showcontacts = true;
+        } 
+
+        else if ($role['name'] == 'admin.volunteer') {
+            $showVolunteer = true;
+        } 
+
+        else if ($role['name'] == 'admin.setting.edit') {
+            $show_setting_edit = true;
+        } 
+
+        else if ($role['name'] == 'admin.donate') {
+            $show_donate_edit  = true;
+        } 
+
+         else if ($role['name'] == 'admin.home.edit') {
+            $show_home_edit   = true;
+        } 
+
+        else if ($role['name'] == 'admin.footer.edit') {
+            $show_footer_edit   = true;
+        } 
+
+        else if ($role['name'] == 'admin.tags.index') {
+            $showtag   = true;
+        } 
+
+    } 
 
 
-                            if (Auth::check()) {
-                                $roles = auth()
-                                    ->user()
-                                    ->role->permissions->toArray();
-                            
-                                foreach ($roles as $role) {
-                                    if ($role['name'] == 'admin.index') {
-                                        $showAdmin = true;
-                                     } // else if ($role['name'] == 'admin.posts') {
-                                        // $showPosts = true;
-                                    // }
-
-                            else if ($role['name'] == 'admin.tags.index') {
-                            $showtag   = true;
-                        } 
-
-                        else if ($role['name'] == 'admin.comments.index') {
-                            $showcomments_index   = true;
-                        } 
-
-                          else if ($role['name'] == 'admin.comments.create') {
-                            $show_comments_create   = true;
-                        } 
-
-                        else if ($role['name'] == 'admin.roles.index') {
-                            $show_roles_index    = true;
-                        } 
-
-                        else if ($role['name'] == 'admin.roles.create') {
-                            $show_roles_create    = true;
-                        } 
-
-                                }
-                            }
-                        @endphp
+    }
+@endphp
 
                         @if (Auth::check() && $showAdmin)
                             <a href="{{ route('admin.index') }}"><button type="button"
@@ -498,7 +541,7 @@
     </main>
 
 
-    <div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 p-8">
+    <div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 md:p-8 p-2">
         {{-- <img class="absolute dark:hidden top-10 h-full w-full xl:mt-10 z-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">    <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center"> --}}
         <div class="flex flex-col justify-center">
 
@@ -512,7 +555,7 @@
                         </a>
 
                     </div>
-                    <div class="text-white">
+                    <div class="whitespace-pre-line md:text-base text-sm text-white mx-2">
                         {!! $footer->title !!}
                     </div>
                 </div>
@@ -549,14 +592,14 @@
             <div class="flex flex-col-reverse justify-center w-full mt-16 xl:flex-row xl:items-start ">
                 <div
                     class="flex flex-col items-start justify-start w-full mt-10 space-y-4 md:mt-12 xl:mt-0 md:flex-row md:justify-center md:w-auto md:space-y-0 md:items-center md:space-x-4 xl:space-x-6 mr-7">
-                    <button class="text-base leading-none text-white hover:text-gray-300">
+                    <button class="md:text-base text-sm leading-none text-white hover:text-gray-300">
                         <a href="tel:{{ $footer->contact_info }}">
                             <p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>
                                 {{ $footer->contact_info }} </p>
                     </button>
-                    <button class="text-base leading-none text-white hover:text-gray-300">
+                    <button class="md:text-base text-sm leading-none text-white hover:text-gray-300">
                         <a href="mailto: $allfooter->email ">
-                            <p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i> {{ $footer->email }}
+                            <p class="inline-block whitespace-nowrap"><i class="mx-2 fa-solid fa-envelope"></i> {{ $footer->email }}
                             </p>
                         </a>
                     </button>

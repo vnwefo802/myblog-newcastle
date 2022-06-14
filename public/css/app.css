@@ -1231,6 +1231,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .whitespace-nowrap {
   white-space: nowrap;
 }
+.whitespace-pre-line {
+  white-space: pre-line;
+}
 .rounded {
   border-radius: 0.25rem;
 }
@@ -3043,6 +3046,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:border-white {
     --tw-border-opacity: 1;
     border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:px-14 {
