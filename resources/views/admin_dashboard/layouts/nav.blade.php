@@ -2,7 +2,7 @@
                 @php
 
                 $showAdmin = false;
-                // $showPosts = false;
+                $showallpost = false;
                 $showcomments = false;
                 $showcomments_index = false;
                 $show_comments_create = false;
@@ -26,9 +26,9 @@
                     foreach ($roles as $role) {
                         if ($role['name'] == 'admin.index') {
                             $showAdmin = true;
-                         } // else if ($role['name'] == 'admin.posts') {
-                            // $showPosts = true;
-                       // }
+                         } else if ($role['name'] == 'admin.posts.index') {
+                            $showallpost = true;
+                       }
                           else if ($role['name'] == 'admin.comments') {
                             $showcomments = true;
                         } 
@@ -140,8 +140,11 @@
                     </a>
 
                     <ul>
+                    @if (Auth::check() && $showallpost)
+
                         <li> <a href="{{ route('admin.posts.index') }}"><i class="bx bx-right-arrow-alt"></i>All Posts</a>
                         </li>
+                        @endif
                         <li> <a href="{{ route('admin.posts.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Post</a>
                         </li>
 
