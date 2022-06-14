@@ -2,7 +2,7 @@
                 @php
 
                 $showAdmin = false;
-                $showallposts = false;
+                $showallpost = false;
                 $showcomments = false;
                 $showcomments_index = false;
                 $show_comments_create = false;
@@ -26,8 +26,8 @@
                     foreach ($roles as $role) {
                         if ($role['name'] == 'admin.index') {
                             $showAdmin = true;
-                         } else if ($role['name'] == 'admin.posts') {
-                            $showallposts = true;
+                         } else if ($role['name'] == 'admin.posts.index') {
+                            $showallpost = true;
                        }
                           else if ($role['name'] == 'admin.comments') {
                             $showcomments = true;
