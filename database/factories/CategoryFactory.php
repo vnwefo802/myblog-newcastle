@@ -24,10 +24,10 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word(),
-            'short_description' => $this->faker->word(),
-            'slug' => $this->faker->unique()->slug(),
-            'user_id' => User::all()->random()->id
+            'name' => 'Fundrasier For Newcastle Foundation',
+            'short_description' => 'Want to get involved in charity events or charity fundraising? Try joining one of our events or set up your own - it could be the most fun you have all year!',
+            'slug' => 'events-and-fundraising',
+            'user_id' => '1',
         ];
     }
 }
