@@ -102,51 +102,66 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- SIDEBAR: start -->
-			<div class="ml-4 md:block hidden lg:w-[266px] w-[175px]  mt-4">
-                <div class="">
-                    <div class="mb-[37px]">
-                        <h3 class="text-xl mb-[30px]">Categories</h3>
-                        <div class="">
-                            <ul>
-                                @foreach($categories as $category)
-                                <li class="px-3 mb-[10px] border-l-4 rounded py-1 md:border-white border-blue-500 hover:border-blue-500 hover:bg-gray-300 hover:text-blue-500"><a href="{{ route('categories.show', $category) }}">{{ $category->name }} <span class="float-right">{{ $category->posts_count }}</span></a></li>
-                                @endforeach
-                            </ul>
-                        </div>
+          <!-- SIDEBAR: start -->
+          <div class="lg:w-[266px] w-[175px] md:block hidden ml-auto">
+            <div class="">
+                <div class="mb-[37px]">
+                    <h3 class="text-xl mb-[30px]">Categories</h3>
+                    <div class="">
+                        <ul>
+                            @foreach ($categories as $category)
+                                <li
+                                    class="px-3 mb-[10px] border-l-4 rounded py-1 md:border-white border-blue-500 hover:border-blue-500 hover:bg-gray-300 hover:text-blue-500">
+                                    <a href="{{ route('categories.show', $category) }}">{{ $category->name }}
+                                        <span class="float-right">{{ $category->posts_count }}</span></a>
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
-                    <div>
-                        <h3 class="text-xl mb-[30px]">Recent Blog</h3>
-                        @foreach($recent_posts as $recent_post)
-                        <div class="flex lg:flex-row lg:w-[264px] md:w-[100px] lg:mx-0 md:mx-auto md:flex-col my-2 mb-[40px] border">
+                </div>
+                <div>
+                    <h3 class="text-xl mb-[30px]">Recent Blog</h3>
+                    @foreach ($recent_posts as $recent_post)
+                        <div
+                            class="flex lg:flex-row lg:w-[264px] md:w-[100px] lg:mx-0 md:mx-auto md:flex-col my-2 mb-[40px] border">
                             <a href="{{ route('posts.show', $recent_post) }}">
-                                <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="">
+                                <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]"
+                                    src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '') }}"
+                                    alt="">
                             </a>
                             <div class="md:m-2 mx-2">
-                                <p class="md:text-sm text-xs text-gray-300"><span>{{ $recent_post->created_at->diffForHumans() }}</span></p>
+                                <p class="md:text-sm text-xs text-gray-300">
+                                    <span>{{ $recent_post->created_at->diffForHumans() }}</span>
+                                </p>
                                 <h2>
                                     <a href="{{ route('posts.show', $recent_post) }}">
-                                        <span class="md:text-base text-sm">{{ \Str::limit( $recent_post->title, 20) }} </span>
+                                        <span
+                                            class="md:text-base text-sm">{{ \Str::limit($recent_post->title, 20) }}
+                                        </span>
                                     </a>
                                 </h2>
-                                <p class="text-gray-500 md:text-base text-xs">{{ \Str::limit($recent_post->excerpt, 20) }}</p>
+                                <p class="text-gray-500 md:text-base text-xs">
+                                    {{ \Str::limit($recent_post->excerpt, 20) }}</p>
                             </div>
                         </div>
-                        @endforeach
-                    </div>
-                    <div class="">
-                        <h3 class="text-xl">Tags</h3>
-                        <div class="m-2">
-                            <ul class="flex flex-row flex-wrap w-[250px]">
-                            @foreach($tags as $tag)
-                                <li class="mx-1 my-1 bg-blue-500 text-white rounded px-1 hover:bg-blue-700 h-[25.5px]"><a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a></li>
+                    @endforeach
+                </div>
+                <div class="">
+                    <h3 class="text-xl">Tags</h3>
+                    <div class="m-2">
+                        <ul class="flex flex-row flex-wrap lg:w-[250px] md:w-[100px]">
+                            @foreach ($tags as $tag)
+                                <li
+                                    class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]">
+                                    <a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a>
+                                </li>
                             @endforeach
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
+
 		</div>
 	</div>	
 </div>
