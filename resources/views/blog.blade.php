@@ -39,7 +39,7 @@
 									</ul>
 								</div>
 							</div>
-                                <div class="flex flex-row mt-5 mb-2 lg:ml-0 md:mr-2 gap-2 relative Bottom-3">
+                                <div class="flex flex-row mb-2 lg:ml-0 md:mr-2 gap-2 relative Bottom-3">
                                     <div><a class='text-gray-500 text-[10px]' href="#"><span class="flex">
                                                 <svg class="w-[12x] h-[12px] mt-1 mr-1" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 512 512">
