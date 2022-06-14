@@ -126,54 +126,97 @@
                             }
                         </script>
 
-                        @php
-                            
-                            $showAdmin = false;
-                            // $showPosts = false;
-                $showtag  = false;
-                $showcomments_index  = false;
-                $show_comments_create  = false;
-                $show_roles_index   = false;
-                $show_roles_create   = false;
-                $show_roles_create   = false;
-                $show_roles_create   = false;
+@php
+
+$showAdmin = false;
+$showallposts = false;
+$showcomments = false;
+$showcomments_index = false;
+$show_comments_create = false;
+$show_users_index = false;
+$show_users_create = false;
+$show_roles_index = false;
+$show_roles_create = false;
+$showcontacts = false;
+$showVolunteer = false;
+$show_setting_edit = false;
+$show_donate_edit  = false;
+$show_home_edit  = false;
+$show_footer_edit  = false;
+$showtag  = false;
+
+if (Auth::check()) {
+    $roles = auth()
+        ->user()
+        ->role->permissions->toArray();
+
+    foreach ($roles as $role) {
+        if ($role['name'] == 'admin.index') {
+            $showAdmin = true;
+         }  else if ($role['name'] == 'admin.posts') {
+             $showallposts = true;
+       }
+          else if ($role['name'] == 'admin.comments') {
+            $showcomments = true;
+        } 
+
+        else if ($role['name'] == 'admin.comments.index') {
+            $showcomments_index = true;
+        } 
+
+        else if ($role['name'] == 'admin.comments.create') {
+            $show_comments_create = true;
+        } 
+
+        else if ($role['name'] == 'admin.users.index') {
+            $show_users_index = true;
+        }
+        
+        else if ($role['name'] == 'admin.users.create') {
+            $show_users_create = true;
+        } 
+
+        else if ($role['name'] == 'admin.roles.index') {
+            $show_roles_index = true;
+        } 
+
+        else if ($role['name'] == 'admin.roles.create') {
+            $show_roles_create = true;
+        } 
+
+         else if ($role['name'] == 'admin.contacts') {
+            $showcontacts = true;
+        } 
+
+        else if ($role['name'] == 'admin.volunteer') {
+            $showVolunteer = true;
+        } 
+
+        else if ($role['name'] == 'admin.setting.edit') {
+            $show_setting_edit = true;
+        } 
+
+        else if ($role['name'] == 'admin.donate') {
+            $show_donate_edit  = true;
+        } 
+
+         else if ($role['name'] == 'admin.home.edit') {
+            $show_home_edit   = true;
+        } 
+
+        else if ($role['name'] == 'admin.footer.edit') {
+            $show_footer_edit   = true;
+        } 
+
+        else if ($role['name'] == 'admin.tags.index') {
+            $showtag   = true;
+        } 
+
+    } 
 
 
-                            if (Auth::check()) {
-                                $roles = auth()
-                                    ->user()
-                                    ->role->permissions->toArray();
-                            
-                                foreach ($roles as $role) {
-                                    if ($role['name'] == 'admin.index') {
-                                        $showAdmin = true;
-                                     } // else if ($role['name'] == 'admin.posts') {
-                                        // $showPosts = true;
-                                    // }
-
-                            else if ($role['name'] == 'admin.tags.index') {
-                            $showtag   = true;
-                        } 
-
-                        else if ($role['name'] == 'admin.comments.index') {
-                            $showcomments_index   = true;
-                        } 
-
-                          else if ($role['name'] == 'admin.comments.create') {
-                            $show_comments_create   = true;
-                        } 
-
-                        else if ($role['name'] == 'admin.roles.index') {
-                            $show_roles_index    = true;
-                        } 
-
-                        else if ($role['name'] == 'admin.roles.create') {
-                            $show_roles_create    = true;
-                        } 
-
-                                }
-                            }
-                        @endphp
+    }
+@endphp
 
                         @if (Auth::check() && $showAdmin)
                             <a href="{{ route('admin.index') }}"><button type="button"
