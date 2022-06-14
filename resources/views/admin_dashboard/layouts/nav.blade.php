@@ -81,7 +81,7 @@
                             $show_footer_edit   = true;
                         } 
 
-                        else if ($role['name'] == 'admin.tag') {
+                        else if ($role['name'] == 'admin.tags.index') {
                             $showtag   = true;
                         } 
 

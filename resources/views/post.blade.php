@@ -87,6 +87,9 @@
 								<div class="">
 									<!-- <label for="message">Message</label> -->
 									<textarea name="the_comment" id="the_comment" class="w-full h-24 border-2 p-1" placeholder="Say something about us"></textarea>
+                                    @error('the_comment')
+                                    <p class='text-red-500'>{{ $message }}</p>
+                                @enderror
 								</div>
 							</div>
 							<div class="form-group">
