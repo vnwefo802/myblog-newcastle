@@ -59,15 +59,15 @@
     <!-- ========================================= -->
     <nav class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="px-2 mx-auto lg:px-4">
-            <div class="flex justify-between max-h-[60px]">
-                <div class="flex space-x-7">
+            <div class="flex justify-between h-[65px] max-h-[65px]">
+                <div class="flex space-x-9 ml-7">
                     <div>
                         <!-- ============================================ -->
                         <!--                 Website Logo                 -->
                         <!-- ============================================ -->
                         <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
                             <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}"
-                                class="w-[163px] h-[55px] max-w-[163px]" alt="Newcastle logo"
+                                class="w-[192.719px] h-[65px] max-w-[208px] object-cover" alt="Newcastle logo"
                                 aria-label="Newcastle logo">
                             {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
                         </a>
