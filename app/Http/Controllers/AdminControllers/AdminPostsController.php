@@ -78,15 +78,7 @@ class AdminPostsController extends Controller
         if(count($tags_ids) > 0)
             $post->tags()->sync( $tags_ids );
 
-                // approve posts
-            // if(isset($request->status))
-            // {
-            //     $post->status = true;
-            // }else {
-            //     $post->status = false;
-            // }
-            // $post->is_approved = true;
-            // $post->save();  //end approv posts
+               
 
             Alert::success('success', 'Post has been created.');
         return redirect()->route('admin.posts.create');
@@ -165,22 +157,7 @@ class AdminPostsController extends Controller
 
 
 
-    // approvel posts pending
-    // public function approval($id)
-    // {
-    //     $post = Post::find($id);
-    //     if ($post->is_approved == false)
-    //     {
-    //         $post->is_approved = true;
-    //         $post->save();
-
-            // Toastr::success('success','Post Successfully Approved :)');
-        // }
-        // else {
-        //     Toastr::info('This Post is already approved','Info');
-        // }
-    //     return redirect()->back()->with('success','Post Successfully Approved :)');
-    // }
+   
 
     public function destroy(Post $post)
     {

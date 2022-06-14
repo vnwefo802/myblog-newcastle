@@ -1,7 +1,7 @@
 @extends("admin_dashboard.layouts.app")
 @section('title', 'Admin - Roles')
 <link href="{{ asset('admin_dashboard_assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
-		
+
 		@section("wrapper")
 		<!--start page wrapper -->
 		<div class="page-wrapper">
@@ -20,7 +20,7 @@
 					</div>
 				</div>
 				<!--end breadcrumb-->
-			  
+
 				<div class="card">
 					<div class="card-body">
 						<div class="d-lg-flex align-items-center mb-4 gap-3">
@@ -58,8 +58,8 @@
 											<div class="d-flex order-actions">
 												<a href="{{ route('admin.roles.edit', $role) }}" class=""><i class='bx bxs-edit'></i></a>
 												<a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $role->id }}').submit();" class="ms-3"><i class='bx bxs-trash'></i></a>
-											
-                                                <form method='post' action="{{ route('admin.roles.destroy', $role) }}" id='delete_form_{{ $role->id }}'>@csrf @method('DELETE')</form>
+
+                                                <form method='post' action="{{ route('admin.roles.destroy', $role) }}" id='delete_form_{{ $role->id }}' class="confirmDelete">@csrf @method('DELETE')</form>
                                             </div>
 										</td>
 									</tr>
@@ -71,33 +71,72 @@
                         <div class='mt-4'>
                         {{ $roles->links() }}
                         </div>
-                        
+
 					</div>
 				</div>
 			</div>
 		</div>
 		<!--end page wrapper -->
 		@endsection
-	
+
 
     @section("script")
     <script src="{{ asset('admin_dashboard_assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
 
+
+
+    @if (session('success') == 'Tag has been Deleted.')
+    <script>
+        Swal.fire(
+          'Deleted!',
+          'Tag has been deleted.',
+          'success'
+        )
+    </script>
+    @endif
+
     <script>
         $(document).ready(function () {
 
-             // search
-             var table = $('#example2').DataTable( {
-				lengthChange: false,
-				buttons: ['excel']
-			} );
+            // search
+            // var table = $('#example2').DataTable( {
+			// 	lengthChange: false,
+			// 	buttons: ['excel']
+			// } );
             // end search
-        
+
             setTimeout(() => {
                 $(".general-message").fadeOut();
             }, 5000);
 
         });
 
+
+
+        $('.confirmDelete').submit(function(e){
+                e.preventDefault();
+                Swal.fire({
+      title: 'Sure you want to delete this Tag Post?',
+      text: "You won't be able to revert this Tag Post!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel'
+
+    }).then((result) => {
+      if (result.isConfirmed) {
+      /*  Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        ) */
+        this.submit();
+      }
+
+    })
+
+    });
     </script>
     @endsection

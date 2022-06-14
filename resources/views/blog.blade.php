@@ -23,8 +23,22 @@
                                 <h3 class="lg:text-2xl md:text-base h-[28px] lg:ml-0"><a
                                         href="{{ route('posts.show', $post) }}"
                                         class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
-                                <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 md:mt-4">
+                                <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 md:mt-4 py-5">
                                     {{ \Str::limit($post->excerpt, 35) }}</p>
+                                    {{-- Post Tags --}}
+							<div class="">
+								<div class="m-2">
+									<ul class="flex flex-row flex-wrap lg:w-[250px] md:w-[100px]">
+                                        {{-- @foreach($tags as $tag) --}}
+											<li
+												class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]">
+												{{-- {{ $tags->name }} --}}
+                                                sgtth
+											</li>
+                                            {{-- @endforeach --}}
+									</ul>
+								</div>
+							</div>
                                 <div class="flex flex-row mt-5 mb-2 lg:ml-0 md:mr-2 gap-2 relative Bottom-3">
                                     <div><a class='text-gray-500 text-[10px]' href="#"><span class="flex">
                                                 <svg class="w-[12x] h-[12px] mt-1 mr-1" xmlns="http://www.w3.org/2000/svg"
@@ -34,12 +48,10 @@
                                                 </svg>
                                                 {{ $post->created_at->diffForHumans() }}</span>
                                         </a></div>
-                                    <div><a href="#" class="text-gray-500 text-[10px]"><span class="flex">
-                                                <svg class="w-[12x] h-[12px] mt-1 mr-1" xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 448 512">
-                                                    <path
-                                                        d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z" />
-                                                </svg>
+                                    <div><a href="#" class="text-gray-500 text-[10px]">
+                                        
+                                        <span class="flex">
+                                            <img src="{{"$allhome->logo"}}" class="w-[35px]" alt="Newcastle Edumed Foundation Circular Logo">
                                                 NewCastle Edumed Foundation</span>
                                         </a></div>
                                     <div class="comments-count">
@@ -123,6 +135,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>

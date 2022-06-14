@@ -848,6 +848,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[38px\] {
   height: 38px;
 }
+.h-\[65px\] {
+  height: 65px;
+}
 .max-h-\[230px\] {
   max-height: 230px;
 }
@@ -992,6 +995,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[200px\] {
   width: 200px;
 }
+.w-\[35px\] {
+  width: 35px;
+}
+.w-\[192\.719px\] {
+  width: 192.719px;
+}
 .min-w-full {
   min-width: 100%;
 }
@@ -1027,6 +1036,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-7xl {
   max-width: 80rem;
+}
+.max-w-\[208px\] {
+  max-width: 208px;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1187,6 +1199,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-x-9 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1210,6 +1227,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .whitespace-nowrap {
   white-space: nowrap;
+}
+.whitespace-pre-line {
+  white-space: pre-line;
 }
 .rounded {
   border-radius: 0.25rem;
@@ -3023,6 +3043,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:border-white {
     --tw-border-opacity: 1;
     border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:px-14 {
