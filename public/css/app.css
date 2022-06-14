@@ -506,6 +506,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-10 {
   top: 2.5rem;
 }
+.top-5 {
+  top: 1.25rem;
+}
 .z-40 {
   z-index: 40;
 }
@@ -991,6 +994,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[200px\] {
   width: 200px;
+}
+.w-\[50px\] {
+  width: 50px;
+}
+.w-\[30px\] {
+  width: 30px;
 }
 .min-w-full {
   min-width: 100%;

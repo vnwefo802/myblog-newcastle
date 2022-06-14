@@ -25,10 +25,7 @@
     <form action="{{ route('donate.payment')}}" class="shadow md:w-3/6 w-11/12 mx-auto flex flex-col md:px-16 text-center border md:py-16 py-6 px-6" method="POST">
         @csrf
         <h3 class="text-3xl font-light">Donate now</h3>
-        <p class="py-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo dolor, libero officiis
-            nihil, itaque,
-            temporibus quidem recusandae dignissimos accusamus maiores et impedit vitae quam? Quam nostrum quaerat odit
-            incidunt dolores!</p>
+        <p class="py-6">We appreciate all the help we can get. Anything you can contribute will help us achieve our goals quicker.</p>
 
 
         <div class="relative mb-8 flex justify-center items-center text-2xl font-light">
