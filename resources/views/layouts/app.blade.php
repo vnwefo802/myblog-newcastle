@@ -130,6 +130,14 @@
                             
                             $showAdmin = false;
                             // $showPosts = false;
+                $showtag  = false;
+                $showcomments_index  = false;
+                $show_comments_create  = false;
+                $show_roles_index   = false;
+                $show_roles_create   = false;
+                $show_roles_create   = false;
+                $show_roles_create   = false;
+
 
                             if (Auth::check()) {
                                 $roles = auth()
@@ -143,6 +151,26 @@
                                         // $showPosts = true;
                                     // }
 
+                            else if ($role['name'] == 'admin.tags.index') {
+                            $showtag   = true;
+                        } 
+
+                        else if ($role['name'] == 'admin.comments.index') {
+                            $showcomments_index   = true;
+                        } 
+
+                          else if ($role['name'] == 'admin.comments.create') {
+                            $show_comments_create   = true;
+                        } 
+
+                        else if ($role['name'] == 'admin.roles.index') {
+                            $show_roles_index    = true;
+                        } 
+
+                        else if ($role['name'] == 'admin.roles.create') {
+                            $show_roles_create    = true;
+                        } 
+
                                 }
                             }
                         @endphp
@@ -152,6 +180,8 @@
                                     class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500"
                                     id="bloghl" aria-label="Blog">Admin</button></a>
                         @endif
+
+                        
                     </div>
 
                     {{-- new lgoin and logout --}}
@@ -202,15 +232,55 @@
                                 <div class="py-1" role="none">
                                     <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
                                         id="menu-item-2">Archive</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                                        id="menu-item-3">Move</a>
+
+                    @if (Auth::check() && $showtag)
+                                    <a href="{{ route('admin.tags.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-3">Tags</a>
+                    @endif
                                 </div>
+
+                                {{--starts Comments --}}
                                 <div class="py-1" role="none">
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                                        id="menu-item-4">Share</a>
+                                    {{-- All Comments --}}
+                        @if (Auth::check() && $showcomments_index)
+                                    <a href="{{ route('admin.comments.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-4">All Comments</a>
+                @endif
+                {{-- All Comments ends--}}
+
+                {{-- Add New Comment --}}
+                @if (Auth::check() && $show_comments_create)
+                                    
                                     <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
                                         id="menu-item-5">Add to favorites</a>
+                        @endif
+                        {{-- Add New Comment ends --}}
                                 </div>
+                                {{-- Comments ends --}}
+
+
+
+
+                                {{--starts Roles --}}
+                                <div class="py-1" role="none">
+                                    {{-- All Comments --}}
+                        @if (Auth::check() && $show_roles_index)
+                                    <a href="{{ route('admin.roles.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-4">All Roles</a>
+                @endif
+                {{-- All Roles ends--}}
+
+                {{-- Create New Roles --}}
+                @if (Auth::check() && $show_roles_create)
+{{--                                     
+                            <a href="{{ route('admin.roles.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Role</a> --}}
+                                    <a href="{{ route('admin.roles.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-5">Add New Role</a>
+                        @endif
+                        {{-- Create New Role ends --}}
+                                </div>
+                                {{-- Role ends --}}
+                                
                                 <div class="py-1" role="none">
                                     <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
                                         id="menu-item-6" onclick="event.preventDefault();
@@ -368,32 +438,32 @@
             console.log(sPage);
             //homepage highlight script
             if (sPage == "/") {
-                document.getElementById("homehl").classList.remove('text-gray-500');
+                document.getElementById("homehl").classListNaNpxove('text-gray-500');
                 document.getElementById("homehl").classList.add('text-blue-500');
                 document.getElementById("homehlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
             //about page highlight script
             if (sPage == "/about") {
-                document.getElementById("abouthl").classList.remove('text-gray-500');
+                document.getElementById("abouthl").classListNaNpxove('text-gray-500');
                 document.getElementById("abouthl").classList.add('text-blue-500');
                 document.getElementById("abouthlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
             //categories page highlight script
             if (sPage == "/categories") {
-                document.getElementById("categorieshl").classList.remove('text-gray-500');
+                document.getElementById("categorieshl").classListNaNpxove('text-gray-500');
                 document.getElementById("categorieshl").classList.add('text-blue-500');
                 document.getElementById("categorieshlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
 
             //blog page highlight script
             if (sPage == "/blog") {
-                document.getElementById("bloghl").classList.remove('text-gray-500');
+                document.getElementById("bloghl").classListNaNpxove('text-gray-500');
                 document.getElementById("bloghl").classList.add('text-blue-500');
                 document.getElementById("bloghlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
             //contact page highlight script
             if (sPage == "/contact") {
-                document.getElementById("contacthl").classList.remove('text-gray-500');
+                document.getElementById("contacthl").classListNaNpxove('text-gray-500');
                 document.getElementById("contacthl").classList.add('text-blue-500');
                 document.getElementById("contacthlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
@@ -407,12 +477,12 @@
             }
             //login page highlight script
             if (sPage == "/login") {
-                document.getElementById("loginhl").classList.remove('text-gray-500');
+                document.getElementById("loginhl").classListNaNpxove('text-gray-500');
                 document.getElementById("loginhl").classList.add('text-blue-500');
             }
             //register page highlight script
             if (sPage == "/register") {
-                document.getElementById("registerhl").classList.remove('text-gray-500');
+                document.getElementById("registerhl").classListNaNpxove('text-gray-500');
                 document.getElementById("registerhl").classList.add('text-blue-500');
             }
         </script>
