@@ -26,7 +26,7 @@
 								<img src="{{ asset($post->image ? 'storage/' . $post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="" class="m-auto">
 							</div>
 							<div class="mt-9"> 
-								<h1 class="text-4xl uppercase font-bold">{{ $post->title }}</h1>
+								<h1 class="text-xl md:text-4xl uppercase font-bold">{{ $post->title }}</h1>
 							</div>
 							{{-- clock goes here --}}
 							<div class="mt-4">
