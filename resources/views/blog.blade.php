@@ -37,7 +37,7 @@
                                     <div><a href="#" class="text-gray-500 text-[10px]">
                                         
                                         <span class="flex">
-                                            <img src="{{"$allhome->logo"}}" class="w-[50px]" alt="Newcastle Edumed Foundation Circular Logo">
+                                            <img src="{{"$allhome->logo"}}" class="w-[35px]" alt="Newcastle Edumed Foundation Circular Logo">
                                                 NewCastle Edumed Foundation</span>
                                         </a></div>
                                     <div class="comments-count">
