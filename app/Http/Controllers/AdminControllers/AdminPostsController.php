@@ -18,7 +18,7 @@ class AdminPostsController extends Controller
         'slug' => 'required|max:200',
         'excerpt' => 'required|max:1000',
         'category_id' => 'required|numeric',
-        'thumbnail' => 'required|file|mimes:jpg,png,webp,svg,jpeg',
+        'thumbnail' => 'required|file|mimes:jpg,png,webp,svg,jpeg|dimensions:max_width=750,max_height=357',
         'body' => 'required',
     ];
 
@@ -108,7 +108,7 @@ class AdminPostsController extends Controller
 
     public function update(Request $request, Post $post)
     {
-        $this->rules['thumbnail'] = 'nullable|file|mimes:jpg,png,webp,svg,jpeg|dimensions:max_width=800,max_height=300';
+        $this->rules['thumbnail'] = 'nullable|file|mimes:jpg,png,webp,svg,jpeg|dimensions:max_width=750,max_height=357';
         $validated = $request->validate($this->rules);
         $validated['approved'] = $request->input('approved') !== null;
         $post->update($validated);

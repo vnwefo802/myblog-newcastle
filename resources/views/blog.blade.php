@@ -25,7 +25,21 @@
                                         class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
                                 <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 md:mt-4 py-5">
                                     {{ \Str::limit($post->excerpt, 35) }}</p>
-                                <div class="flex flex-row mt-5 mb-2 lg:ml-0 md:mr-2 gap-2 relative Bottom-3">
+                                    {{-- Post Tags --}}
+							<div class="">
+								<div class="m-2">
+									<ul class="flex flex-row flex-wrap lg:w-[250px] md:w-[100px]">
+                                        
+											<li
+												class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]">
+											 {{ $tags[1]->name }} 
+                                                
+											</li>
+                                             
+									</ul>
+								</div>
+							</div>
+                                <div class="flex flex-row mb-2 lg:ml-0 md:mr-2 gap-2 relative Bottom-3">
                                     <div><a class='text-gray-500 text-[10px]' href="#"><span class="flex">
                                                 <svg class="w-[12x] h-[12px] mt-1 mr-1" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 512 512">
