@@ -4,6 +4,8 @@ namespace App\Http\Controllers\AdminControllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 use App\Models\Tag;
 
@@ -28,6 +30,8 @@ class AdminTagsController extends Controller
     {
         $tag->posts()->detach();
         $tag->delete();
-        return redirect()->route('admin.tags.index')->with('success', 'Tag has been Deleted.');
+        Alert::success('success', 'Tag has been Deleted.');
+
+        return redirect()->route('admin.tags.index');
     }
 }
