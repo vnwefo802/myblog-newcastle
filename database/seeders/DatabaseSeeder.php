@@ -56,25 +56,24 @@ class DatabaseSeeder extends Seeder
             $user->image()->save( \App\Models\Image::factory()->make() );
         }
 
-        \App\Models\Category::factory(10)->create();
-        \App\Models\Category::factory()->create(['name' => 'Uncategorized']);
+        \App\Models\Category::factory()->create();
 
-        $posts = \App\Models\Post::factory(50)->create();
+        $posts = \App\Models\Post::factory()->create();
 
         \App\Models\Comment::factory(100)->create();
 
-        \App\Models\Tag::factory(10)->create();
+        \App\Models\Tag::factory()->create();
 
-        foreach($posts as $post)
-        {
-            $tags_ids = [];
-            $tags_ids[] = \App\Models\Tag::all()->random()->id;
-            $tags_ids[] = \App\Models\Tag::all()->random()->id;
-            $tags_ids[] = \App\Models\Tag::all()->random()->id;
+        // foreach($posts as $post)
+        // {
+        //     $tags_ids = [];
+        //     $tags_ids[] = \App\Models\Tag::all()->random()->id;
+        //     $tags_ids[] = \App\Models\Tag::all()->random()->id;
+        //     $tags_ids[] = \App\Models\Tag::all()->random()->id;
 
-            $post->tags()->sync( $tags_ids );
-            $post->image()->save( \App\Models\Image::factory()->make() );
-        }
+        //     $post->tags()->sync( $tags_ids );
+        //     $post->image()->save( \App\Models\Image::factory()->make() );
+        // }
 
         \App\Models\Setting::factory(1)->create();
         \App\Models\Donate::factory()->create();
