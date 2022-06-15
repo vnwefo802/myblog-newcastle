@@ -541,35 +541,33 @@ if (Auth::check()) {
     </main>
 
 
-    <div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 md:p-8 p-2">
+    <div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 md:p-8">
         {{-- <img class="absolute dark:hidden top-10 h-full w-full xl:mt-10 z-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">    <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center"> --}}
-        <div class="flex flex-col justify-center">
+        <div class="flex flex-col justify-center m-2">
 
-            <div
-                class="grid justify-center w-full grid-cols-1 mt-12 xl:mt-0 sm:grid-cols-4 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
-                <div>
+            <div class="grid justify-center w-full grid-cols-2 mt-12 xl:mt-0 sm:grid-cols-4 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 xl:gap-8 ">
+                <div class="order-1">
                     <div class="mb-8 cursor-pointer ">
                         <a href="/">
                             <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy"
                                 src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
                         </a>
-
                     </div>
-                    <div class="whitespace-pre-line md:text-base text-sm text-white mx-2">
+                    <div class="whitespace-pre-line md:text-base text-sm text-white ">
                         {!! $footer->title !!}
                     </div>
                 </div>
-                <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
+                <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72 order-3">
                     <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">
                         COMMUNITY</h2>
 
-                    <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
+                    <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400 w-[160px]">
                         {!! $footer->community_section !!}
                     </button>
                 </div>
 
                 {{-- ROLE 2 --}}
-                <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72">
+                <div class="flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72 order-4">
                     <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">BLOG
                     </h2>
                     <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">
@@ -577,9 +575,12 @@ if (Auth::check()) {
                     </button>
 
                 </div>
+                <div class="order-2 md:hidden">
+
+                </div>
 
 
-                <div class="flex flex-col items-start justify-start space-y-6 xl:w-72">
+                <div class="flex flex-col items-start justify-start space-y-6 xl:w-72 order-5">
                     <h2 class="text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5">
                         CONTACT US</h2>
                     <button class="text-base leading-none text-left text-gray-100 hover:text-gray-400">

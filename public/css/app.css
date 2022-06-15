@@ -530,6 +530,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .order-2 {
   order: 2;
 }
+.order-4 {
+  order: 4;
+}
+.order-5 {
+  order: 5;
+}
 .float-right {
   float: right;
 }
@@ -601,6 +607,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-24 {
   margin-top: 6rem;
   margin-bottom: 6rem;
+}
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -749,9 +759,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-ml-px {
   margin-left: -1px;
 }
-.mt-0 {
-  margin-top: 0px;
-}
 .block {
   display: block;
 }
@@ -896,8 +903,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[12x\] {
   width: 12x;
 }
-.w-\[35px\] {
-  width: 35px;
+.w-\[20px\] {
+  width: 20px;
 }
 .w-\[175px\] {
   width: 175px;
@@ -919,9 +926,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[14px\] {
   width: 14px;
-}
-.w-\[20px\] {
-  width: 20px;
 }
 .w-\[12px\] {
   width: 12px;
@@ -958,6 +962,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[163px\] {
   width: 163px;
+}
+.w-\[160px\] {
+  width: 160px;
 }
 .w-\[21px\] {
   width: 21px;
@@ -997,12 +1004,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[200px\] {
   width: 200px;
-}
-.w-\[px\] {
-  width: px;
-}
-.w-\[30px\] {
-  width: 30px;
 }
 .min-w-full {
   min-width: 100%;
@@ -1092,6 +1093,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-rows-6 {
   grid-template-rows: repeat(6, minmax(0, 1fr));
