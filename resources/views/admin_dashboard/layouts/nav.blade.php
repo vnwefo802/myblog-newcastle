@@ -4,8 +4,8 @@
 
 $showAdmin = false;
 $showallpost = false;
-$showcreateposts = false;
-$showcreateposts = false;
+$show_create_posts = false;
+$show_create_posts = false;
 $showallcategories = false;
 $show_categories_index = false;
 $showcomments = false;
@@ -39,7 +39,7 @@ if (Auth::check()) {
                         }
 
         else if ($role['name'] == 'admin.posts.create') {
-            $showcreateposts   = true;
+            $show_create_posts   = true;
         }
 
         else if ($role['name'] == 'admin.categories.index') {
@@ -144,7 +144,7 @@ if (Auth::check()) {
                         <li> <a href="{{ route('admin.posts.index') }}"><i class="bx bx-right-arrow-alt"></i>All Posts</a>
                         </li>
                         @endif
-                    @if (Auth::check() && $showcreateposts)
+                    @if (Auth::check() && $show_create_posts)
                         <li> <a href="{{ route('admin.posts.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Post</a>
                         </li>
                         @endif
