@@ -21,8 +21,6 @@ class TagFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'name' => 'Challenges'
-        ];
+        return ['name' => 'Challenges'];
     }
 }
