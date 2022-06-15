@@ -31,8 +31,8 @@ class PostFactory extends Factory
             // body
             'body' => '<p><span style="color: #222221; font-family: lato_regular, sans-serif; font-size: 18px; text-align: center; background-color: #ffffff;">There isnt one size fits all when it comes to fundraising. Whatever you chose to do, we&rsquo;ll be there to support you every step of the way.</span></p>',
             // body end
-            'user_id' => '11',
-            'category_id' => '53',
+            'user_id' => '1',
+            'category_id' => '1',
         ];
     }
 }
