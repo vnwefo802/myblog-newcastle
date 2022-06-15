@@ -18,7 +18,7 @@ class AdminPostsController extends Controller
         'slug' => 'required|max:200',
         'excerpt' => 'required|max:1000',
         'category_id' => 'required|numeric',
-        'thumbnail' => 'required|file|mimes:jpg,png,webp,svg,jpeg',
+        'thumbnail' => 'required|file|mimes:jpg,png,webp,svg,jpeg|dimensions:max_width=750,max_height=357',
         'body' => 'required',
     ];
 
@@ -78,15 +78,7 @@ class AdminPostsController extends Controller
         if(count($tags_ids) > 0)
             $post->tags()->sync( $tags_ids );
 
-                // approve posts
-            // if(isset($request->status))
-            // {
-            //     $post->status = true;
-            // }else {
-            //     $post->status = false;
-            // }
-            // $post->is_approved = true;
-            // $post->save();  //end approv posts
+               
 
             Alert::success('success', 'Post has been created.');
         return redirect()->route('admin.posts.create');
@@ -116,7 +108,7 @@ class AdminPostsController extends Controller
 
     public function update(Request $request, Post $post)
     {
-        $this->rules['thumbnail'] = 'nullable|file|mimes:jpg,png,webp,svg,jpeg|dimensions:max_width=800,max_height=300';
+        $this->rules['thumbnail'] = 'nullable|file|mimes:jpg,png,webp,svg,jpeg|dimensions:max_width=750,max_height=357';
         $validated = $request->validate($this->rules);
         $validated['approved'] = $request->input('approved') !== null;
         $post->update($validated);
@@ -165,22 +157,7 @@ class AdminPostsController extends Controller
 
 
 
-    // approvel posts pending
-    // public function approval($id)
-    // {
-    //     $post = Post::find($id);
-    //     if ($post->is_approved == false)
-    //     {
-    //         $post->is_approved = true;
-    //         $post->save();
-
-            // Toastr::success('success','Post Successfully Approved :)');
-        // }
-        // else {
-        //     Toastr::info('This Post is already approved','Info');
-        // }
-    //     return redirect()->back()->with('success','Post Successfully Approved :)');
-    // }
+   
 
     public function destroy(Post $post)
     {

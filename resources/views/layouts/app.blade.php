@@ -59,15 +59,15 @@
     <!-- ========================================= -->
     <nav class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="px-2 mx-auto lg:px-4">
-            <div class="flex justify-between max-h-[60px]">
-                <div class="flex space-x-7">
+            <div class="flex justify-between h-[65px] max-h-[65px]">
+                <div class="flex space-x-9 md:ml-7">
                     <div>
                         <!-- ============================================ -->
                         <!--                 Website Logo                 -->
                         <!-- ============================================ -->
                         <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
                             <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}"
-                                class="w-[163px] h-[55px] max-w-[163px]" alt="Newcastle logo"
+                                class="w-[192.719px] h-[65px] max-w-[208px] object-cover" alt="Newcastle logo"
                                 aria-label="Newcastle logo">
                             {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
                         </a>
@@ -126,32 +126,105 @@
                             }
                         </script>
 
-                        @php
-                            
-                            $showAdmin = false;
-                            // $showPosts = false;
+@php
 
-                            if (Auth::check()) {
-                                $roles = auth()
-                                    ->user()
-                                    ->role->permissions->toArray();
-                            
-                                foreach ($roles as $role) {
-                                    if ($role['name'] == 'admin.index') {
-                                        $showAdmin = true;
-                                     } // else if ($role['name'] == 'admin.posts') {
-                                        // $showPosts = true;
-                                    // }
+$showAdmin = false;
+$showallposts = false;
+$showcomments = false;
+$showcomments_index = false;
+$show_comments_create = false;
+$show_users_index = false;
+$show_users_create = false;
+$show_roles_index = false;
+$show_roles_create = false;
+$showcontacts = false;
+$showVolunteer = false;
+$show_setting_edit = false;
+$show_donate_edit  = false;
+$show_home_edit  = false;
+$show_footer_edit  = false;
+$showtag  = false;
 
-                                }
-                            }
-                        @endphp
+if (Auth::check()) {
+    $roles = auth()
+        ->user()
+        ->role->permissions->toArray();
+
+    foreach ($roles as $role) {
+        if ($role['name'] == 'admin.index') {
+            $showAdmin = true;
+         }  else if ($role['name'] == 'admin.posts') {
+             $showallposts = true;
+       }
+          else if ($role['name'] == 'admin.comments') {
+            $showcomments = true;
+        } 
+
+        else if ($role['name'] == 'admin.comments.index') {
+            $showcomments_index = true;
+        } 
+
+        else if ($role['name'] == 'admin.comments.create') {
+            $show_comments_create = true;
+        } 
+
+        else if ($role['name'] == 'admin.users.index') {
+            $show_users_index = true;
+        }
+        
+        else if ($role['name'] == 'admin.users.create') {
+            $show_users_create = true;
+        } 
+
+        else if ($role['name'] == 'admin.roles.index') {
+            $show_roles_index = true;
+        } 
+
+        else if ($role['name'] == 'admin.roles.create') {
+            $show_roles_create = true;
+        } 
+
+         else if ($role['name'] == 'admin.contacts') {
+            $showcontacts = true;
+        } 
+
+        else if ($role['name'] == 'admin.volunteer') {
+            $showVolunteer = true;
+        } 
+
+        else if ($role['name'] == 'admin.setting.edit') {
+            $show_setting_edit = true;
+        } 
+
+        else if ($role['name'] == 'admin.donate') {
+            $show_donate_edit  = true;
+        } 
+
+         else if ($role['name'] == 'admin.home.edit') {
+            $show_home_edit   = true;
+        } 
+
+        else if ($role['name'] == 'admin.footer.edit') {
+            $show_footer_edit   = true;
+        } 
+
+        else if ($role['name'] == 'admin.tags.index') {
+            $showtag   = true;
+        } 
+
+    } 
+
+
+    }
+@endphp
 
                         @if (Auth::check() && $showAdmin)
                             <a href="{{ route('admin.index') }}"><button type="button"
                                     class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500"
                                     id="bloghl" aria-label="Blog">Admin</button></a>
                         @endif
+
+                        
                     </div>
 
                     {{-- new lgoin and logout --}}
@@ -202,15 +275,55 @@
                                 <div class="py-1" role="none">
                                     <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
                                         id="menu-item-2">Archive</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                                        id="menu-item-3">Move</a>
+
+                    @if (Auth::check() && $showtag)
+                                    <a href="{{ route('admin.tags.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-3">Tags</a>
+                    @endif
                                 </div>
+
+                                {{--starts Comments --}}
                                 <div class="py-1" role="none">
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                                        id="menu-item-4">Share</a>
+                                    {{-- All Comments --}}
+                        @if (Auth::check() && $showcomments_index)
+                                    <a href="{{ route('admin.comments.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-4">All Comments</a>
+                @endif
+                {{-- All Comments ends--}}
+
+                {{-- Add New Comment --}}
+                @if (Auth::check() && $show_comments_create)
+                                    
                                     <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
                                         id="menu-item-5">Add to favorites</a>
+                        @endif
+                        {{-- Add New Comment ends --}}
                                 </div>
+                                {{-- Comments ends --}}
+
+
+
+
+                                {{--starts Roles --}}
+                                <div class="py-1" role="none">
+                                    {{-- All Comments --}}
+                        @if (Auth::check() && $show_roles_index)
+                                    <a href="{{ route('admin.roles.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-4">All Roles</a>
+                @endif
+                {{-- All Roles ends--}}
+
+                {{-- Create New Roles --}}
+                @if (Auth::check() && $show_roles_create)
+{{--                                     
+                            <a href="{{ route('admin.roles.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Role</a> --}}
+                                    <a href="{{ route('admin.roles.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-5">Add New Role</a>
+                        @endif
+                        {{-- Create New Role ends --}}
+                                </div>
+                                {{-- Role ends --}}
+                                
                                 <div class="py-1" role="none">
                                     <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
                                         id="menu-item-6" onclick="event.preventDefault();
@@ -368,32 +481,32 @@
             console.log(sPage);
             //homepage highlight script
             if (sPage == "/") {
-                document.getElementById("homehl").classList.remove('text-gray-500');
+                document.getElementById("homehl").classListNaNpxove('text-gray-500');
                 document.getElementById("homehl").classList.add('text-blue-500');
                 document.getElementById("homehlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
             //about page highlight script
             if (sPage == "/about") {
-                document.getElementById("abouthl").classList.remove('text-gray-500');
+                document.getElementById("abouthl").classListNaNpxove('text-gray-500');
                 document.getElementById("abouthl").classList.add('text-blue-500');
                 document.getElementById("abouthlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
             //categories page highlight script
             if (sPage == "/categories") {
-                document.getElementById("categorieshl").classList.remove('text-gray-500');
+                document.getElementById("categorieshl").classListNaNpxove('text-gray-500');
                 document.getElementById("categorieshl").classList.add('text-blue-500');
                 document.getElementById("categorieshlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
 
             //blog page highlight script
             if (sPage == "/blog") {
-                document.getElementById("bloghl").classList.remove('text-gray-500');
+                document.getElementById("bloghl").classListNaNpxove('text-gray-500');
                 document.getElementById("bloghl").classList.add('text-blue-500');
                 document.getElementById("bloghlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
             //contact page highlight script
             if (sPage == "/contact") {
-                document.getElementById("contacthl").classList.remove('text-gray-500');
+                document.getElementById("contacthl").classListNaNpxove('text-gray-500');
                 document.getElementById("contacthl").classList.add('text-blue-500');
                 document.getElementById("contacthlm").classList.add('border-b-4', 'text-slate-700', 'semi-bold');
             }
@@ -407,12 +520,12 @@
             }
             //login page highlight script
             if (sPage == "/login") {
-                document.getElementById("loginhl").classList.remove('text-gray-500');
+                document.getElementById("loginhl").classListNaNpxove('text-gray-500');
                 document.getElementById("loginhl").classList.add('text-blue-500');
             }
             //register page highlight script
             if (sPage == "/register") {
-                document.getElementById("registerhl").classList.remove('text-gray-500');
+                document.getElementById("registerhl").classListNaNpxove('text-gray-500');
                 document.getElementById("registerhl").classList.add('text-blue-500');
             }
         </script>
@@ -428,7 +541,7 @@
     </main>
 
 
-    <div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 p-8">
+    <div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 md:p-8 p-2">
         {{-- <img class="absolute dark:hidden top-10 h-full w-full xl:mt-10 z-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">    <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center"> --}}
         <div class="flex flex-col justify-center">
 
@@ -442,7 +555,7 @@
                         </a>
 
                     </div>
-                    <div class="text-white">
+                    <div class="whitespace-pre-line md:text-base text-sm text-white mx-2">
                         {!! $footer->title !!}
                     </div>
                 </div>
@@ -479,14 +592,14 @@
             <div class="flex flex-col-reverse justify-center w-full mt-16 xl:flex-row xl:items-start ">
                 <div
                     class="flex flex-col items-start justify-start w-full mt-10 space-y-4 md:mt-12 xl:mt-0 md:flex-row md:justify-center md:w-auto md:space-y-0 md:items-center md:space-x-4 xl:space-x-6 mr-7">
-                    <button class="text-base leading-none text-white hover:text-gray-300">
+                    <button class="md:text-base text-sm leading-none text-white hover:text-gray-300">
                         <a href="tel:{{ $footer->contact_info }}">
                             <p class="inline-block"><i class="mx-2 fa-solid fa-phone"></i>
                                 {{ $footer->contact_info }} </p>
                     </button>
-                    <button class="text-base leading-none text-white hover:text-gray-300">
+                    <button class="md:text-base text-sm leading-none text-white hover:text-gray-300">
                         <a href="mailto: $allfooter->email ">
-                            <p class="inline-block"><i class="mx-2 fa-solid fa-envelope"></i> {{ $footer->email }}
+                            <p class="inline-block whitespace-nowrap"><i class="mx-2 fa-solid fa-envelope"></i> {{ $footer->email }}
                             </p>
                         </a>
                     </button>

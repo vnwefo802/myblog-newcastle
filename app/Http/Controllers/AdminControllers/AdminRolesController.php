@@ -70,6 +70,10 @@ class AdminRolesController extends Controller
     public function destroy(Role $role)
     {
         $role->delete();
+
+         //sweetalert
+        Alert::success('success', 'Role has been created');
+
         return redirect()->route('admin.roles.index')->with('success', 'Role has been deleted');
     }
 }
