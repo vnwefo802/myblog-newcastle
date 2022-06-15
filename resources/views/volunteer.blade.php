@@ -21,7 +21,7 @@
         </div>
         <div class="flex items-center justify-center">
             {{-- <button class="px-4 py-2 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 border border-indigo-700 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600 lg:text-xl lg:font-bold sm:px-10 sm:py-4" onclick="scrollForm()">Get Started</button> --}}
-            <button onclick="scrollForm()" class="px-4 py-2 ml-4 text-sm text-indigo-700 transition duration-150 ease-in-out bg-transparent border border-indigo-700 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:border-indigo-600 lg:text-xl lg:font-bold sm:px-10 sm:py-4 hover:bg-gray-700 hover:text-white">Volunteer Now!</button>
+            <!-- <button onclick="scrollForm()" class="px-4 py-2 ml-4 text-sm text-indigo-700 transition duration-150 ease-in-out bg-transparent border border-indigo-700 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:border-indigo-600 lg:text-xl lg:font-bold sm:px-10 sm:py-4 hover:bg-gray-700 hover:text-white">Volunteer Now!</button> -->
 <script>
     function scrollForm() {
     const element = document.getElementById("formscroll");
