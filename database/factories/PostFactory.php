@@ -25,12 +25,14 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence(),
-            'slug' => $this->faker->unique()->slug(),
-            'excerpt' => $this->faker->sentence(),
-            'body' => $this->faker->paragraph(),
-            'user_id' => User::factory(),
-            'category_id' => Category::all()->random()->id,
+            'title' => 'Your Challenges Changes Your Futures',
+            'slug' => 'organise-your-event',
+            'excerpt' => 'FUNDRAISE NEWCASTLE FOUNDATION',
+            // body
+            'body' => '<p><span style="color: #222221; font-family: lato_regular, sans-serif; font-size: 18px; text-align: center; background-color: #ffffff;">There isnt one size fits all when it comes to fundraising. Whatever you chose to do, we&rsquo;ll be there to support you every step of the way.</span></p>',
+            // body end
+            'user_id' => '11',
+            'category_id' => '53',
         ];
     }
 }

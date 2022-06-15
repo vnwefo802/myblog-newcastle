@@ -59,8 +59,8 @@
     <!-- ========================================= -->
     <nav class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="px-2 mx-auto lg:px-4">
-            <div class="flex justify-between h-[4.0625rem] max-h-[4.0625rem]">
-                <div class="flex space-x-9 ml-7">
+            <div class="flex justify-between h-[65px] max-h-[65px]">
+                <div class="flex space-x-9 md:ml-7">
                     <div>
                         <!-- ============================================ -->
                         <!--                 Website Logo                 -->
