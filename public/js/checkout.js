@@ -18,24 +18,74 @@ var items = [{
   id: "xl-tshirt"
 }];
 var elements;
-initialize();
-checkStatus();
-document.querySelector("#payment-form").addEventListener("submit", handleSubmit); // Fetches a payment intent and captures the client secret
+var donateButton = document.querySelector('.donate-button').addEventListener('click', handleDonate);
+var donateSpinner = document.querySelector('#donate-spinner'); // initialize();
+// checkStatus();
+
+document.querySelector("#payment-form").addEventListener("submit", handleSubmit); // checks the price
+
+function handleDonate() {
+  return _handleDonate.apply(this, arguments);
+} // Fetches a payment intent and captures the client secret
+
+
+function _handleDonate() {
+  _handleDonate = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var csrf, amount, data;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            csrf = document.querySelector('meta[name="csrf-token"]').content;
+            amount = document.querySelector('.donate-amount').value;
+            data = {
+              'amount': amount
+            };
+            fetch('/donate/check', {
+              method: 'POST',
+              // or 'PUT'
+              headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrf
+              },
+              body: JSON.stringify(data)
+            }).then(function (response) {
+              if (response.ok) {
+                return response.json();
+              }
+            }).then(function (data) {
+              console.log('Success:', data);
+              initialize();
+              checkStatus();
+              donateSpinner.classList.remove('hidden');
+            })["catch"](function (error) {
+              console.error('Error:', error);
+            });
+
+          case 4:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _handleDonate.apply(this, arguments);
+}
 
 function initialize() {
   return _initialize.apply(this, arguments);
 }
 
 function _initialize() {
-  _initialize = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-    var csrf, _yield$fetch$then, clientSecret, paymentElement;
+  _initialize = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+    var csrf, _yield$fetch$then, clientSecret, paymentElement, paymentForm, donateDesc;
 
-    return _regeneratorRuntime().wrap(function _callee$(_context) {
+    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) {
-        switch (_context.prev = _context.next) {
+        switch (_context2.prev = _context2.next) {
           case 0:
             csrf = document.querySelector('meta[name="csrf-token"]').content;
-            _context.next = 3;
+            _context2.next = 3;
             return fetch("/create", {
               method: "POST",
               headers: {
@@ -50,20 +100,25 @@ function _initialize() {
             });
 
           case 3:
-            _yield$fetch$then = _context.sent;
+            _yield$fetch$then = _context2.sent;
             clientSecret = _yield$fetch$then.clientSecret;
             elements = stripe.elements({
               clientSecret: clientSecret
             });
             paymentElement = elements.create("payment");
             paymentElement.mount("#payment-element");
+            paymentForm = document.querySelector("#payment-form");
+            donateDesc = document.querySelector('.donate-desc');
+            paymentForm.classList.remove('hidden');
+            donateDesc.classList.add('hidden');
+            donateSpinner.classList.add('hidden');
 
-          case 8:
+          case 13:
           case "end":
-            return _context.stop();
+            return _context2.stop();
         }
       }
-    }, _callee);
+    }, _callee2);
   }));
   return _initialize.apply(this, arguments);
 }
@@ -74,16 +129,16 @@ function handleSubmit(_x) {
 
 
 function _handleSubmit() {
-  _handleSubmit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(e) {
+  _handleSubmit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(e) {
     var _yield$stripe$confirm, error;
 
-    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) {
-        switch (_context2.prev = _context2.next) {
+        switch (_context3.prev = _context3.next) {
           case 0:
             e.preventDefault();
             setLoading(true);
-            _context2.next = 4;
+            _context3.next = 4;
             return stripe.confirmPayment({
               elements: elements,
               confirmParams: {
@@ -93,7 +148,7 @@ function _handleSubmit() {
             });
 
           case 4:
-            _yield$stripe$confirm = _context2.sent;
+            _yield$stripe$confirm = _context3.sent;
             error = _yield$stripe$confirm.error;
 
             // This point will only be reached if there is an immediate error when
@@ -111,10 +166,10 @@ function _handleSubmit() {
 
           case 8:
           case "end":
-            return _context2.stop();
+            return _context3.stop();
         }
       }
-    }, _callee2);
+    }, _callee3);
   }));
   return _handleSubmit.apply(this, arguments);
 }
@@ -125,55 +180,55 @@ function checkStatus() {
 
 
 function _checkStatus() {
-  _checkStatus = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+  _checkStatus = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
     var clientSecret, _yield$stripe$retriev, paymentIntent;
 
-    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+    return _regeneratorRuntime().wrap(function _callee4$(_context4) {
       while (1) {
-        switch (_context3.prev = _context3.next) {
+        switch (_context4.prev = _context4.next) {
           case 0:
             clientSecret = new URLSearchParams(window.location.search).get("payment_intent_client_secret");
 
             if (clientSecret) {
-              _context3.next = 3;
+              _context4.next = 3;
               break;
             }
 
-            return _context3.abrupt("return");
+            return _context4.abrupt("return");
 
           case 3:
-            _context3.next = 5;
+            _context4.next = 5;
             return stripe.retrievePaymentIntent(clientSecret);
 
           case 5:
-            _yield$stripe$retriev = _context3.sent;
+            _yield$stripe$retriev = _context4.sent;
             paymentIntent = _yield$stripe$retriev.paymentIntent;
-            _context3.t0 = paymentIntent.status;
-            _context3.next = _context3.t0 === "succeeded" ? 10 : _context3.t0 === "processing" ? 12 : _context3.t0 === "requires_payment_method" ? 14 : 16;
+            _context4.t0 = paymentIntent.status;
+            _context4.next = _context4.t0 === "succeeded" ? 10 : _context4.t0 === "processing" ? 12 : _context4.t0 === "requires_payment_method" ? 14 : 16;
             break;
 
           case 10:
             showMessage("Payment succeeded!");
-            return _context3.abrupt("break", 18);
+            return _context4.abrupt("break", 18);
 
           case 12:
             showMessage("Your payment is processing.");
-            return _context3.abrupt("break", 18);
+            return _context4.abrupt("break", 18);
 
           case 14:
             showMessage("Your payment was not successful, please try again.");
-            return _context3.abrupt("break", 18);
+            return _context4.abrupt("break", 18);
 
           case 16:
             showMessage("Something went wrong.");
-            return _context3.abrupt("break", 18);
+            return _context4.abrupt("break", 18);
 
           case 18:
           case "end":
-            return _context3.stop();
+            return _context4.stop();
         }
       }
-    }, _callee3);
+    }, _callee4);
   }));
   return _checkStatus.apply(this, arguments);
 }
