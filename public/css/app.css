@@ -861,6 +861,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[38px\] {
   height: 38px;
 }
+.h-\[4\.0625rem\] {
+  height: 4.0625rem;
+}
+.h-\[3\.4375rem\] {
+  height: 3.4375rem;
+}
 .max-h-\[230px\] {
   max-height: 230px;
 }
@@ -1005,6 +1011,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[200px\] {
   width: 200px;
 }
+.w-\[12\.0449rem\] {
+  width: 12.0449rem;
+}
+.w-\[3\.75rem\] {
+  width: 3.75rem;
+}
+.w-\[10\.1875rem\] {
+  width: 10.1875rem;
+}
+.w-\[1\.3125rem\] {
+  width: 1.3125rem;
+}
 .min-w-full {
   min-width: 100%;
 }
@@ -1040,6 +1058,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-7xl {
   max-width: 80rem;
+}
+.max-w-\[13rem\] {
+  max-width: 13rem;
 }
 .flex-1 {
   flex: 1 1 0%;
