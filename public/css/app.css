@@ -533,6 +533,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .order-2 {
   order: 2;
 }
+.order-4 {
+  order: 4;
+}
+.order-5 {
+  order: 5;
+}
 .float-right {
   float: right;
 }
@@ -604,6 +610,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-24 {
   margin-top: 6rem;
   margin-bottom: 6rem;
+}
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -854,6 +864,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[38px\] {
   height: 38px;
 }
+.h-\[4\.0625rem\] {
+  height: 4.0625rem;
+}
+.h-\[3\.4375rem\] {
+  height: 3.4375rem;
+}
 .max-h-\[230px\] {
   max-height: 230px;
 }
@@ -998,6 +1014,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-6\/12 {
   width: 50%;
 }
+.w-\[12\.0449rem\] {
+  width: 12.0449rem;
+}
+.w-\[3\.75rem\] {
+  width: 3.75rem;
+}
+.w-\[10\.1875rem\] {
+  width: 10.1875rem;
+}
+.w-\[160px\] {
+  width: 160px;
+}
+.w-\[1\.3125rem\] {
+  width: 1.3125rem;
+}
 .min-w-full {
   min-width: 100%;
 }
@@ -1033,6 +1064,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-7xl {
   max-width: 80rem;
+}
+.max-w-\[13rem\] {
+  max-width: 13rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1102,6 +1136,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-rows-6 {
   grid-template-rows: repeat(6, minmax(0, 1fr));
