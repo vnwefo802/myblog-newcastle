@@ -59,7 +59,7 @@
     <!-- ========================================= -->
     <nav class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="px-2 mx-auto lg:px-4">
-            <div class="flex justify-between h-[65px] max-h-[65px]">
+            <div class="flex justify-between h-[4.0625rem] max-h-[4.0625rem]">
                 <div class="flex space-x-9 ml-7">
                     <div>
                         <!-- ============================================ -->
@@ -67,7 +67,7 @@
                         <!-- ============================================ -->
                         <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
                             <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}"
-                                class="w-[192.719px] h-[65px] max-w-[208px] object-cover" alt="Newcastle logo"
+                                class="w-[12.0449rem] h-[4.0625rem] max-w-[13rem] object-cover" alt="Newcastle logo"
                                 aria-label="Newcastle logo">
                             {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
                         </a>
@@ -126,97 +126,116 @@
                             }
                         </script>
 
-@php
+        @php
 
-$showAdmin = false;
-$showallposts = false;
-$showcomments = false;
-$showcomments_index = false;
-$show_comments_create = false;
-$show_users_index = false;
-$show_users_create = false;
-$show_roles_index = false;
-$show_roles_create = false;
-$showcontacts = false;
-$showVolunteer = false;
-$show_setting_edit = false;
-$show_donate_edit  = false;
-$show_home_edit  = false;
-$show_footer_edit  = false;
-$showtag  = false;
+        $showAdmin = false;
+        $showallpost = false;
+        $showcreateposts = false;
+        $showcreateposts = false;
+        $showallcategories = false;
+        $show_categories_index = false;
+        $show_categories_create = false;
+        $showcomments = false;
+        $showcomments_index = false;
+        $show_comments_create = false;
+        $show_users_index = false;
+        $show_users_create = false;
+        $show_roles_index = false;
+        $show_roles_create = false;
+        $showcontacts = false;
+        $showVolunteer = false;
+        $show_setting_edit = false;
+        $show_donate_edit  = false;
+        $show_home_edit  = false;
+        $show_footer_edit  = false;
+        $showtag  = false;
 
-if (Auth::check()) {
-    $roles = auth()
-        ->user()
-        ->role->permissions->toArray();
+        if (Auth::check()) {
+            $roles = auth()
+                ->user()
+                ->role->permissions->toArray();
 
-    foreach ($roles as $role) {
-        if ($role['name'] == 'admin.index') {
-            $showAdmin = true;
-         }  else if ($role['name'] == 'admin.posts') {
-             $showallposts = true;
-       }
-          else if ($role['name'] == 'admin.comments') {
-            $showcomments = true;
-        } 
+            foreach ($roles as $role) {
+                if ($role['name'] == 'admin.index') {
+                    $showAdmin = true;
+                 }
+                 else if ($role['name'] == 'admin.posts.index') {
+                    $showallpost   = true;
+                }
 
-        else if ($role['name'] == 'admin.comments.index') {
-            $showcomments_index = true;
-        } 
+                else if ($role['name'] == 'admin.posts.create') {
+                    $showcreateposts   = true;
+                }
 
-        else if ($role['name'] == 'admin.comments.create') {
-            $show_comments_create = true;
-        } 
+                else if ($role['name'] == 'admin.categories.index') {
+                    $showallcategories   = true;
+                }
 
-        else if ($role['name'] == 'admin.users.index') {
-            $show_users_index = true;
-        }
-        
-        else if ($role['name'] == 'admin.users.create') {
-            $show_users_create = true;
-        } 
+                else if ($role['name'] == 'admin.categories.create') {
+                    $show_categories_create   = true;
+                }
 
-        else if ($role['name'] == 'admin.roles.index') {
-            $show_roles_index = true;
-        } 
+                  else if ($role['name'] == 'admin.comments') {
+                    $showcomments = true;
+                }
 
-        else if ($role['name'] == 'admin.roles.create') {
-            $show_roles_create = true;
-        } 
+                else if ($role['name'] == 'admin.comments.index') {
+                    $showcomments_index = true;
+                }
 
-         else if ($role['name'] == 'admin.contacts') {
-            $showcontacts = true;
-        } 
+                else if ($role['name'] == 'admin.comments.create') {
+                    $show_comments_create = true;
+                }
 
-        else if ($role['name'] == 'admin.volunteer') {
-            $showVolunteer = true;
-        } 
+                else if ($role['name'] == 'admin.users.index') {
+                    $show_users_index = true;
+                }
 
-        else if ($role['name'] == 'admin.setting.edit') {
-            $show_setting_edit = true;
-        } 
+                else if ($role['name'] == 'admin.users.create') {
+                    $show_users_create = true;
+                }
 
-        else if ($role['name'] == 'admin.donate') {
-            $show_donate_edit  = true;
-        } 
+                else if ($role['name'] == 'admin.roles.index') {
+                    $show_roles_index = true;
+                }
 
-         else if ($role['name'] == 'admin.home.edit') {
-            $show_home_edit   = true;
-        } 
+                else if ($role['name'] == 'admin.roles.create') {
+                    $show_roles_create = true;
+                }
 
-        else if ($role['name'] == 'admin.footer.edit') {
-            $show_footer_edit   = true;
-        } 
+                 else if ($role['name'] == 'admin.contacts') {
+                    $showcontacts = true;
+                }
 
-        else if ($role['name'] == 'admin.tags.index') {
-            $showtag   = true;
-        } 
+                else if ($role['name'] == 'admin.volunteer') {
+                    $showVolunteer = true;
+                }
 
-    } 
+                else if ($role['name'] == 'admin.setting.edit') {
+                    $show_setting_edit = true;
+                }
+
+                else if ($role['name'] == 'admin.donate') {
+                    $show_donate_edit  = true;
+                }
+
+                 else if ($role['name'] == 'admin.home.edit') {
+                    $show_home_edit   = true;
+                }
+
+                else if ($role['name'] == 'admin.footer.edit') {
+                    $show_footer_edit   = true;
+                }
+
+                else if ($role['name'] == 'admin.tags.index') {
+                    $showtag   = true;
+                }
 
 
-    }
-@endphp
+            }
+
+            }
+        @endphp
 
                         @if (Auth::check() && $showAdmin)
                             <a href="{{ route('admin.index') }}"><button type="button"
@@ -224,7 +243,7 @@ if (Auth::check()) {
                                     id="bloghl" aria-label="Blog">Admin</button></a>
                         @endif
 
-                        
+
                     </div>
 
                     {{-- new lgoin and logout --}}
@@ -254,7 +273,7 @@ if (Auth::check()) {
 
                             <!--
               Dropdown menu, show/hide based on menu state.
-          
+
               Entering: "transition ease-out duration-100"
                 From: "transform opacity-0 scale-95"
                 To: "transform opacity-100 scale-100"
@@ -265,16 +284,53 @@ if (Auth::check()) {
                             <div class="hidden  origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
                                 role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
                                 id="dropdown-id">
+
                                 <div class="py-1" role="none">
-                                    <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                                        id="menu-item-0">{{ auth()->user()->name }} </a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                                        id="menu-item-1">Duplicate</a>
-                                </div>
-                                <div class="py-1" role="none">
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                                        id="menu-item-2">Archive</a>
+                              {{-- Contacts --}}
+   @if (Auth::check() && $showcontacts)
+   <a href="{{ route('admin.contacts') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+id="menu-item-5">Contacts</a>
+@endif
+{{-- Contacts --}}
+
+{{-- volunteer --}}
+@if (Auth::check() && $showVolunteer)
+<a href="{{ route('admin.volunteer') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+id="menu-item-5">volunteer</a>
+@endif
+{{-- volunteer --}}
+
+   {{-- setting --}}
+   @if (Auth::check() && $show_setting_edit)
+   <a href="{{ route('admin.setting.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+id="menu-item-5">About</a>
+@endif
+{{-- setting --}}
+
+     {{-- Donate --}}
+     @if (Auth::check() && $show_donate_edit)
+     <a href="{{ route('admin.donate.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+ id="menu-item-5">Donate</a>
+ @endif
+ {{-- Donate --}}
+
+  {{-- Home --}}
+  @if (Auth::check() && $show_home_edit)
+  <a href="{{ route('admin.home.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+id="menu-item-5">Home</a>
+@endif
+{{-- Home --}}
+
+ {{-- Footer --}}
+ @if (Auth::check() && $show_footer_edit)
+ <a href="{{ route('admin.footer.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+id="menu-item-5">Footer</a>
+@endif
+{{-- Footer --}}
+
+
+
+
 
                     @if (Auth::check() && $showtag)
                                     <a href="{{ route('admin.tags.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
@@ -282,31 +338,40 @@ if (Auth::check()) {
                     @endif
                                 </div>
 
-                                {{--starts Comments --}}
-                                <div class="py-1" role="none">
-                                    {{-- All Comments --}}
-                        @if (Auth::check() && $showcomments_index)
-                                    <a href="{{ route('admin.comments.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                                        id="menu-item-4">All Comments</a>
-                @endif
-                {{-- All Comments ends--}}
 
-                {{-- Add New Comment --}}
-                @if (Auth::check() && $show_comments_create)
-                                    
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                                        id="menu-item-5">Add to favorites</a>
-                        @endif
-                        {{-- Add New Comment ends --}}
-                                </div>
-                                {{-- Comments ends --}}
+<div class="py-1" role="none">
+    {{-- All Comments --}}
+@if (Auth::check() && $showcomments_index)
+    <a href="{{ route('admin.comments.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+        id="menu-item-4">All Comments</a>
+@endif
+{{-- All Comments ends--}}
+
+{{-- Add New Comment --}}
+@if (Auth::check() && $show_comments_create)
+
+    <a href="{{ route('admin.comments.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+        id="menu-item-5">Add New Comments</a>
+@endif
+{{-- Add New Comment ends --}}
 
 
 
+ {{-- post --}}
+ @if (Auth::check() && $showallpost)
+ <a href="{{ route('admin.posts.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+     id="menu-item-5">All Posts</a>
+@endif
 
-                                {{--starts Roles --}}
-                                <div class="py-1" role="none">
-                                    {{-- All Comments --}}
+
+@if (Auth::check() && $showcreateposts)
+     <a href="{{ route('admin.posts.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+     id="menu-item-5">Add New Post</a>
+@endif
+ {{-- post --}}
+
+
+                                    {{-- All Roles --}}
                         @if (Auth::check() && $show_roles_index)
                                     <a href="{{ route('admin.roles.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
                                         id="menu-item-4">All Roles</a>
@@ -315,15 +380,172 @@ if (Auth::check()) {
 
                 {{-- Create New Roles --}}
                 @if (Auth::check() && $show_roles_create)
-{{--                                     
-                            <a href="{{ route('admin.roles.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Role</a> --}}
                                     <a href="{{ route('admin.roles.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
                                         id="menu-item-5">Add New Role</a>
                         @endif
                         {{-- Create New Role ends --}}
+                        {{-- Role ends --}}
+
+{{-- Categories --}}
+                        @if (Auth::check() && $showallcategories)
+                        <a href="{{ route('admin.categories.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                            id="menu-item-5">All Categories</a>
+                            @endif
+
+
+                            @if (Auth::check() && $show_categories_create)
+                            <a href="{{ route('admin.categories.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                            id="menu-item-5">Add New Categories</a>
+            @endif
+{{-- Categories --}}
+
+
+{{-- user --}}
+            @if (Auth::check() && $show_users_index)
+            <a href="{{ route('admin.users.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+            id="menu-item-5">All Users</a>
+            @endif
+
+
+            @if (Auth::check() && $show_users_create)
+            <a href="{{ route('admin.users.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+            id="menu-item-5">Add New Users</a>
+            @endif
+            {{-- user --}}
+
                                 </div>
-                                {{-- Role ends --}}
-                                
+
+
+                                {{-- post --}}
+                                {{-- <div class="py-1" role="none"> --}}
+                    {{-- @if (Auth::check() && $showallpost)
+                                    <a href="{{ route('admin.posts.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-5">All Posts</a>
+                        @endif
+
+
+                    @if (Auth::check() && $showcreateposts)
+                                        <a href="{{ route('admin.posts.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-5">Add New Post</a>
+                        @endif --}}
+
+                                {{-- </div> --}}
+                                {{-- post --}}
+
+
+
+                                 {{-- Categories --}}
+                                 {{-- <div class="py-1" role="none"> --}}
+                    {{-- @if (Auth::check() && $showallcategories)
+                                    <a href="{{ route('admin.categories.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-5">All Categories</a>
+                                        @endif
+
+
+                                        @if (Auth::check() && $show_categories_create)
+                                        <a href="{{ route('admin.categories.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                        id="menu-item-5">Add New Categories</a>
+                        @endif --}}
+
+                                {{-- </div> --}}
+                                {{-- Categories --}}
+
+
+
+ {{-- tags --}}
+ {{-- <div class="py-1" role="none">
+                    @if (Auth::check() && $showtag)
+
+    <a href="{{ route('admin.tags.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+        id="menu-item-5">TAgs</a>
+        @endif
+
+</div> --}}
+{{-- tags --}}
+
+
+
+                    {{-- user --}}
+ {{-- <div class="py-1" role="none"> --}}
+    {{-- @if (Auth::check() && $show_users_index)
+<a href="{{ route('admin.users.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+id="menu-item-5">All Users</a>
+@endif
+
+
+@if (Auth::check() && $show_users_create)
+<a href="{{ route('admin.users.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+id="menu-item-5">Add New Users</a>
+@endif --}}
+
+{{-- </div> --}}
+{{-- User --}}
+
+
+    {{-- Contacts --}}
+    {{-- <div class="py-1" role="none">
+        @if (Auth::check() && $showcontacts)
+        <a href="{{ route('admin.contacts') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+    id="menu-item-5">Contacts</a>
+    @endif
+    </div> --}}
+    {{-- Contacts --}}
+
+
+
+     {{-- volunteer --}}
+     {{-- <div class="py-1" role="none">
+        @if (Auth::check() && $showVolunteer)
+        <a href="{{ route('admin.volunteer') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+    id="menu-item-5">volunteer</a>
+    @endif
+    </div> --}}
+    {{-- volunteer --}}
+
+
+
+     {{-- setting --}}
+     {{-- <div class="py-1" role="none">
+        @if (Auth::check() && $show_setting_edit)
+        <a href="{{ route('admin.setting.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+    id="menu-item-5">About</a>
+    @endif
+    </div> --}}
+    {{-- setting --}}
+
+
+
+     {{-- Donate --}}
+     {{-- <div class="py-1" role="none">
+        @if (Auth::check() && $show_donate_edit)
+        <a href="{{ route('admin.donate.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+    id="menu-item-5">Donate</a>
+    @endif
+    </div> --}}
+    {{-- Donate --}}
+
+     {{-- Home --}}
+     {{-- <div class="py-1" role="none">
+        @if (Auth::check() && $show_home_edit)
+        <a href="{{ route('admin.home.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+    id="menu-item-5">Home</a>
+    @endif
+    </div> --}}
+    {{-- Home --}}
+
+
+
+    {{-- Footer --}}
+    {{-- <div class="py-1" role="none">
+        @if (Auth::check() && $show_footer_edit)
+        <a href="{{ route('admin.footer.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+    id="menu-item-5">Footer</a>
+    @endif
+    </div> --}}
+    {{-- Footer --}}
+
+
+
                                 <div class="py-1" role="none">
                                     <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
                                         id="menu-item-6" onclick="event.preventDefault();
@@ -372,28 +594,28 @@ if (Auth::check()) {
                     {{-- }} @guest
                  @if (Route::has('login'))
                  <a  href="{{ route('login') }}" class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 lg:pl-4 md:text-sm lg:text-base hover:text-blue-500" id="loginhl" aria-label="Log In">{{ __('Login') }}</a>
- 
+
                  @endif
-                 
- 
+
+
                  @if (Route::has('register'))
                  <a class="py-4 text-base font-semibold text-gray-500 transition duration-300 lg:px-4 md:text-sm lg:text-base hover:text-blue-500" id="registerhl" aria-label="Sign Up" href="{{ route('register') }}">{{ __('Register') }}</a>
                      @endif
- 
+
                  @else
 
- 
-                 
+
+
                  <a class="px-1 py-4 text-base font-semibold text-gray-500 transition duration-300 border-blue-500 md:text-sm lg:text-base hover:text-blue-500" id="registerhl" aria-label="Log Out" href="{{ route('logout') }}"
                  onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                  {{ __('Logout') }}
                  </a>
- 
+
                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                      @csrf
                  </form>
- 
+
                  @endguest --}}
 
                 </div>
@@ -409,7 +631,7 @@ if (Auth::check()) {
                         @endif
                     @else
                         <a aria-label="Logout" href="{{ route('logout') }}"
-                            class="px-2 inline-flex items-center justify-center w-[60px] h-7 m-2 text-base font-semibold text-white transition duration-200 bg-indigo-800 border-2 border-indigo-800 rounded-full hover:border-indigo-500 md:w-auto hover:bg-indigo-500 focus:shadow-outline focus:outline-none dark:focus:ring-indigo-500"
+                            class="px-2 inline-flex items-center justify-center w-[3.75rem] h-7 m-2 text-base font-semibold text-white transition duration-200 bg-indigo-800 border-2 border-indigo-800 rounded-full hover:border-indigo-500 md:w-auto hover:bg-indigo-500 focus:shadow-outline focus:outline-none dark:focus:ring-indigo-500"
                             aria-label="Logout" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
@@ -550,7 +772,7 @@ if (Auth::check()) {
                 <div>
                     <div class="mb-8 cursor-pointer ">
                         <a href="/">
-                            <img class="w-[163px] h-[55px] hover:scale-[1.1]" loading="lazy"
+                            <img class="w-[10.1875rem] h-[3.4375rem] hover:scale-[1.1]" loading="lazy"
                                 src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
                         </a>
 
@@ -632,7 +854,7 @@ if (Auth::check()) {
                         </button></a>
                     <!-- instagram -->
                     <a href=" {{ $footer->instagram }} "><button class="w-6 text-white hover:text-gray-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-[21px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-[1.3125rem]">
                                 <path class="fill-white"
                                     d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                             </svg>

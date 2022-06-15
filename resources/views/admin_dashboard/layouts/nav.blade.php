@@ -1,95 +1,114 @@
 <!--sidebar wrapper -->
-                @php
+                
+@php
 
-                $showAdmin = false;
-                $showallposts = false;
-                $showcomments = false;
-                $showcomments_index = false;
-                $show_comments_create = false;
-                $show_users_index = false;
-                $show_users_create = false;
-                $show_roles_index = false;
-                $show_roles_create = false;
-                $showcontacts = false;
-                $showVolunteer = false;
-                $show_setting_edit = false;
-                $show_donate_edit  = false;
-                $show_home_edit  = false;
-                $show_footer_edit  = false;
-                $showtag  = false;
+$showAdmin = false;
+$showallpost = false;
+$showcreateposts = false;
+$showcreateposts = false;
+$showallcategories = false;
+$show_categories_index = false;
+$showcomments = false;
+$showcomments_index = false;
+$show_comments_create = false;
+$show_users_index = false;
+$show_users_create = false;
+$show_roles_index = false;
+$show_roles_create = false;
+$showcontacts = false;
+$showVolunteer = false;
+$show_setting_edit = false;
+$show_donate_edit  = false;
+$show_home_edit  = false;
+$show_footer_edit  = false;
+$showtag  = false;
 
-                if (Auth::check()) {
-                    $roles = auth()
-                        ->user()
-                        ->role->permissions->toArray();
+if (Auth::check()) {
+    $roles = auth()
+        ->user()
+        ->role->permissions->toArray();
 
-                    foreach ($roles as $role) {
-                        if ($role['name'] == 'admin.index') {
-                            $showAdmin = true;
-                         } else if ($role['name'] == 'admin.posts') {
-                            $showallposts = true;
-                       }
-                          else if ($role['name'] == 'admin.comments') {
-                            $showcomments = true;
-                        } 
+    foreach ($roles as $role) {
+        if ($role['name'] == 'admin.index') {
+            $showAdmin = true;
+         }
+         else if ($role['name'] == 'admin.posts.index') {
+            $showallpost   = true;
+        } 
 
-                        else if ($role['name'] == 'admin.comments.index') {
-                            $showcomments_index = true;
-                        } 
+        else if ($role['name'] == 'admin.posts.create') {
+            $showcreateposts   = true;
+        } 
 
-                        else if ($role['name'] == 'admin.comments.create') {
-                            $show_comments_create = true;
-                        } 
+        else if ($role['name'] == 'admin.categories.index') {
+            $showallcategories   = true;
+        } 
 
-                        else if ($role['name'] == 'admin.users.index') {
-                            $show_users_index = true;
-                        }
-                        
-                        else if ($role['name'] == 'admin.users.create') {
-                            $show_users_create = true;
-                        } 
+        else if ($role['name'] == 'admin.categories.create') {
+            $show_categories_create   = true;
+        }  
 
-                        else if ($role['name'] == 'admin.roles.index') {
-                            $show_roles_index = true;
-                        } 
+          else if ($role['name'] == 'admin.comments') {
+            $showcomments = true;
+        } 
 
-                        else if ($role['name'] == 'admin.roles.create') {
-                            $show_roles_create = true;
-                        } 
+        else if ($role['name'] == 'admin.comments.index') {
+            $showcomments_index = true;
+        } 
 
-                         else if ($role['name'] == 'admin.contacts') {
-                            $showcontacts = true;
-                        } 
+        else if ($role['name'] == 'admin.comments.create') {
+            $show_comments_create = true;
+        } 
 
-                        else if ($role['name'] == 'admin.volunteer') {
-                            $showVolunteer = true;
-                        } 
+        else if ($role['name'] == 'admin.users.index') {
+            $show_users_index = true;
+        }
+        
+        else if ($role['name'] == 'admin.users.create') {
+            $show_users_create = true;
+        } 
 
-                        else if ($role['name'] == 'admin.setting.edit') {
-                            $show_setting_edit = true;
-                        } 
+        else if ($role['name'] == 'admin.roles.index') {
+            $show_roles_index = true;
+        } 
 
-                        else if ($role['name'] == 'admin.donate') {
-                            $show_donate_edit  = true;
-                        } 
+        else if ($role['name'] == 'admin.roles.create') {
+            $show_roles_create = true;
+        } 
 
-                         else if ($role['name'] == 'admin.home.edit') {
-                            $show_home_edit   = true;
-                        } 
+         else if ($role['name'] == 'admin.contacts') {
+            $showcontacts = true;
+        } 
 
-                        else if ($role['name'] == 'admin.footer.edit') {
-                            $show_footer_edit   = true;
-                        } 
+        else if ($role['name'] == 'admin.volunteer') {
+            $showVolunteer = true;
+        } 
 
-                        else if ($role['name'] == 'admin.tags.index') {
-                            $showtag   = true;
-                        } 
+        else if ($role['name'] == 'admin.setting.edit') {
+            $show_setting_edit = true;
+        } 
 
-                    } 
+        else if ($role['name'] == 'admin.donate') {
+            $show_donate_edit  = true;
+        } 
+
+         else if ($role['name'] == 'admin.home.edit') {
+            $show_home_edit   = true;
+        } 
+
+        else if ($role['name'] == 'admin.footer.edit') {
+            $show_footer_edit   = true;
+        } 
+
+        else if ($role['name'] == 'admin.tags.index') {
+            $showtag   = true;
+        } 
 
 
-                    }
-            @endphp
+    } 
+
+    }
+@endphp
             
 <div class="sidebar-wrapper" data-simplebar="true">
             <div class="sidebar-header">
@@ -110,28 +129,6 @@
                     @endif
                 </li>
 
-
-
-            {{-- @if (Auth::check() && $showAdmin)
-                <a href="{{ route('admin.index') }}"><button type="button"
-                        class="px-2 py-4 text-base font-semibold text-gray-500 transition duration-300 md:text-sm lg:text-lg hover:text-indigo-500"
-                        id="bloghl" aria-label="Blog">Admin</button></a>
-            @endif --}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <li>
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class='bx bx-message-square-edit'></i>
@@ -145,8 +142,11 @@
                         <li> <a href="{{ route('admin.posts.index') }}"><i class="bx bx-right-arrow-alt"></i>All Posts</a>
                         </li>
                         @endif
+                    @if (Auth::check() && $showcreateposts)
                         <li> <a href="{{ route('admin.posts.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Post</a>
                         </li>
+                        @endif
+
 
                     </ul>
                 </li>
@@ -159,10 +159,15 @@
                     </a>
 
                     <ul>
-                        <li> <a href="{{ route('admin.categories.index') }}"><i class="bx bx-right-arrow-alt"></i>All Categories</a>
+                    @if (Auth::check() && $showallcategories)
+                    <li> <a href="{{ route('admin.categories.index') }}"><i class="bx bx-right-arrow-alt"></i>All Categories</a>
                         </li>
+                        @endif
+                        @if (Auth::check() && $show_categories_create)
                         <li> <a href="{{ route('admin.categories.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Category</a>
                         </li>
+                        @endif
+
 
                     </ul>
                 </li>
