@@ -34,14 +34,19 @@
             <div class="shadow md:w-3/6 w-11/12 flex flex-col md:px-16 text-center border md:py-16 py-6 px-6 bg-white"
                 method="POST">
                 @csrf
-                <div class="grid grid-cols-2 grid-rows-1">
-                    <Button class="border-2 text-center border-gray-600 rounded-l-lg py-2" onclick="showoneoff()">ONE OFF</Button>
-                    <Button class="border-2 text-center border-gray-600 rounded-r-lg py-2" onclick="showmonthly()">MONTHLY</button>
+                <div class="grid grid-cols-2 grid-rows-1 mb-4">
+                    <Button class="border-2 text-center border-gray-600 rounded-l-lg py-2" style=" color:white; background-color:rgb(75, 85, 99); " id='oneoffbutton' onclick="showoneoff()">ONE OFF</Button>
+                    <Button class="border-2 text-center border-gray-600 rounded-r-lg py-2" style=" color:black; background-color:white;" id='monthlybutton' onclick="showmonthly()">MONTHLY</button>
                 </div>
+                <!-- donate one off -->
                 <div style="display: block;" id="one_off">
                     <h3 class="text-2xl font-light pb-4">Choose amount to donate</h3>
-
                     <div class="donate-desc flex flex-col">
+                        <div class="flex flex-row mb-4 w-full">
+                            <button class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-3" id="" style="color:black; background-color:white;">&#8358;12500</button>
+                            <button class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-3 mx-auto" id="" style=" color:white; background-color:rgb(75, 85, 99);">&#8358;25000</button>
+                            <button class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-3" id="" style="color:black; background-color:white;">&#8358;50000</button>
+                        </div>
                         <div class="relative mb-8 flex justify-center items-center text-2xl font-light">
                             <div class="absolute left-3 text-blue-500">&#8358;</div>
                             <input type="text" class="border grow pl-8 py-2 font-light w-full donate-amount" inputmode='numeric'
@@ -63,9 +68,15 @@
 
                     </div>
                 </div>
+                <!-- donate monthly -->
                 <div id="monthly" style="display: none;">
                     <h3 class="text-2xl font-light pb-4">Choose amount to donate</h3>
                     <div class="donate-desc flex flex-col">
+                        <div class="flex flex-row mb-4">
+                            <button type="button" class="border rounded-md py-2 px-[50px]">&#8358;2500</button>
+                            <button type="button" class="border rounded-md py-2 px-[50px] mx-[35px]" style=" color:white; background-color:rgb(75, 85, 99);">&#8358;5000</button>
+                            <button type="button" class="border rounded-md py-2 px-[50px]">&#8358;1000</button>
+                        </div>
                         <div class="relative mb-8 flex justify-center items-center text-2xl font-light">
                             <div class="absolute left-3 text-blue-500">&#8358;</div>
                             <input type="text" class="border grow pl-8 py-2 font-light w-full donate-amount" inputmode='numeric'
@@ -84,6 +95,7 @@
                             </svg>
                             Donate Now
                         </button>
+                        <P class="text-sm my-2">* Monthly donations mean we can plan further into the future</P>
                     </div>
                 </div>
                 <form id="payment-form" class="py-5 my-4 hidden">
@@ -149,14 +161,24 @@
 <script>
     var x = document.getElementById("one_off");
     var z = document.getElementById("monthly");
+    var c = document.getElementById("monthlybutton")
+    var v = document.getElementById("oneoffbutton")
 
     function showoneoff(){
         x.style.display = "block"
+        v.style.color = "white"
+        v.style.backgroundColor = "rgb(75, 85, 99)"
         z.style.display = "none"
+        c.style.color = "black"
+        c.style.backgroundColor = "white"
     }
     function showmonthly(){
         z.style.display = "block"
+        c.style.color = "white"
+        c.style.backgroundColor = "rgb(75, 85, 99)"
         x.style.display = "none"
+        v.style.color = "black"
+        v.style.backgroundColor = "white"
     }
 
 
