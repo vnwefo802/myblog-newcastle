@@ -60,6 +60,9 @@ class DatabaseSeeder extends Seeder
 
         $posts = \App\Models\Post::factory()->create();
 
+        
+        $posts->image()->save( \App\Models\Image::factory()->make() );
+        
         \App\Models\Comment::factory(100)->create();
 
         \App\Models\Tag::factory()->create();

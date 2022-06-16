@@ -25,20 +25,23 @@
                                         class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
                                 <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 md:mt-4 py-5">
                                     {{ \Str::limit($post->excerpt, 35) }}</p>
-                                    {{-- Post Tags --}}
-							<div class="">
-								<div class="m-2">
-									<ul class="flex flex-row flex-wrap lg:w-[250px] md:w-[100px]">
-                                        
-											<li
-												class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]">
-											 {{ $tags[0]->name }} 
-                                                
-											</li>
-                                             
-									</ul>
-								</div>
-							</div>
+                                {{-- Post Tags --}}
+                                <div class="">
+                                    <div class="m-2">
+                                        <ul class="flex flex-row flex-wrap lg:w-[250px] md:w-[100px]">
+
+
+                                            @foreach ($tags as $tag)
+                                                <li
+                                                    class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]">
+                                                    {{ $tag->name }}
+                                                </li>
+                                            @endforeach
+
+
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="flex flex-row mb-2 lg:ml-0 md:mr-2 gap-2 relative Bottom-3">
                                     <div><a class='text-gray-500 text-[10px]' href="#"><span class="flex mt-1">
                                                 <svg class="w-[12x] h-[12px]  mr-1" xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +52,10 @@
                                                 {{ $post->created_at->diffForHumans() }}</span>
                                         </a></div>
                                     <div><a href="#" class="text-gray-500 text-[10px]">
-                                        
-                                        <span class="flex mt-1">
-                                            <img src='{{"$allhome->logo"}}' class="w-[20px] mb-2" alt="Newcastle Edumed Foundation Circular Logo">
+
+                                            <span class="flex mt-1">
+                                                <img src='{{ "$allhome->logo" }}' class="w-[20px] mb-2"
+                                                    alt="Newcastle Edumed Foundation Circular Logo">
                                                 NewCastle Edumed Foundation</span>
                                         </a></div>
                                     <div class="comments-count">
@@ -135,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>

@@ -763,15 +763,15 @@ id="menu-item-5">Add New Users</a>
     </main>
 
 
-    <div class="relative flex justify-start md:justify-center md:items-end bg-slate-800 md:p-8">
+    <div class=" flex justify-start md:justify-center md:items-end bg-slate-800 md:p-8 w-full">
         {{-- <img class="absolute dark:hidden top-10 h-full w-full xl:mt-10 z-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">    <div class="relative z-10 flex flex-col items-start justify-start px-4 pt-36 md:pt-32 lg:pt-40 xl:pt-96 md:px-6 xl:px-20 md:justify-center md:items-center"> --}}
-        <div class="flex flex-col justify-center m-2">
+        <div class="flex flex-col justify-center p-2 w-full">
 
             <div class="grid justify-center w-full grid-cols-2 mt-12 xl:mt-0 sm:grid-cols-4 gap-y-12 sm:gap-y-0 md:w-auto sm:gap-x-20 xl:gap-8 ">
                 <div class="order-1">
                     <div class="mb-8 cursor-pointer ">
                         <a href="/">
-                            <img class="w-[10.1875rem] h-[3.4375rem] hover:scale-[1.1]" loading="lazy"
+                            <img class="w-[10.1875rem] h-[3.4375rem]" loading="lazy"
                                 src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
                         </a>
                     </div>

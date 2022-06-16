@@ -6,11 +6,47 @@ const items = [{ id: "xl-tshirt" }];
 
 let elements;
 
-initialize();
-checkStatus();
+const donateButton = document.querySelector('.donate-button').addEventListener('click', handleDonate);
+const donateSpinner = document.querySelector('#donate-spinner');
+// initialize();
+// checkStatus();
 
 document.querySelector("#payment-form").addEventListener("submit", handleSubmit);
 
+// checks the price
+async function handleDonate() {
+  const csrf = document.querySelector('meta[name="csrf-token"]').content;
+
+  const amount = document.querySelector('.donate-amount').value;
+
+  const data = { 'amount': amount };
+
+  fetch('/donate/check', {
+    method: 'POST', // or 'PUT'
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': csrf
+    },
+    body: JSON.stringify(data),
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json()
+      }
+    })
+    .then(data => {
+
+      console.log('Success:', data);
+      initialize();
+      checkStatus();
+      donateSpinner.classList.remove('hidden');
+
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+}
 // Fetches a payment intent and captures the client secret
 async function initialize() {
   const csrf = document.querySelector('meta[name="csrf-token"]').content;
@@ -28,6 +64,18 @@ async function initialize() {
 
   const paymentElement = elements.create("payment");
   paymentElement.mount("#payment-element");
+
+  const paymentForm = document.querySelector("#payment-form");
+  const donateDesc = document.querySelector('.donate-desc');
+
+
+    paymentForm.classList.remove('hidden');
+    donateDesc.classList.add('hidden');
+
+
+  donateSpinner.classList.add('hidden');
+ 
+
 }
 
 async function handleSubmit(e) {

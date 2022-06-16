@@ -26,6 +26,17 @@ class DonateController extends Controller
         return view('donate', compact('alldonate'));
     }
 
+    public function donateCheck (Request $request) {
+
+
+        $amount = $request->input('amount');
+
+        $request->session()->put('amount', $amount);
+
+        $json = ['status', 'success'];
+        return response()->json($json);
+    }
+
     private function calculateOrderAmount($request): int
     {
         // Replace this constant with a calculation of the order's amount

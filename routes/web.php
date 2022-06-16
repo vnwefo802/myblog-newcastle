@@ -53,6 +53,8 @@ Route::get('/donate/confirmation', [donateconfirmation::class, 'donateconfirmati
 
 // Route::get('/donatee', [DonateController::class, 'index']);
 Route::post('donate/payment', [DonateController::class, 'payment'])->name('donate.payment');
+
+Route::post('donate/check', [DonateController::class, 'donateCheck'])->name('donate.check');
 // little kid end
 
 Route::post('/create', [DonateController::class, 'create']);

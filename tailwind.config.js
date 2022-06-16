@@ -6,7 +6,12 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'banner': "url('/images/banner.jpg')",
+                'footer-texture': "url('/img/footer-texture.png')",
+              },
+        },
     },
     plugins: [],
 }
