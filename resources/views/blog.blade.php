@@ -80,7 +80,7 @@
                 <div class="lg:w-[266px] w-[175px] md:block hidden ml-auto">
                     <div class="">
                         <div class="mb-[37px]">
-                            <h3 class="text-xl mb-[30px]">Categories</h3>
+                            <h3 class="text-3xl mb-[30px]">Categories</h3>
                             <div class="">
                                 <ul>
                                     @foreach ($categories as $category)
