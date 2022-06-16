@@ -66,14 +66,82 @@
                                 </div>
                             </button></a>
                         </div>
-                        <!-- pending posts -->
-                        <!-- <div class="relative p-6 bg-teal-100 rounded shadow-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class='float-left w-12 h-12 mt-4 mr-2'>
-                                <path d="M256 31.1c-141.4 0-255.1 93.12-255.1 208c0 49.62 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734c1.249 3 4.021 4.766 7.271 4.766c66.25 0 115.1-31.76 140.6-51.39c32.63 12.25 69.02 19.39 107.4 19.39c141.4 0 255.1-93.13 255.1-207.1S397.4 31.1 256 31.1zM127.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S145.7 271.1 127.1 271.1zM256 271.1c-17.75 0-31.1-14.25-31.1-31.1s14.25-32 31.1-32s31.1 14.25 31.1 32S273.8 271.1 256 271.1zM383.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S401.7 271.1 383.1 271.1z"/>
-                            </svg>
-                            <h1 class="pt-4 font-bold leading-none text-gray-800 ">
-                            Contacts</h1>
-                        </div> -->
+
+
+
+
+
+                        <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                            <a href="{{ route('admin.contacts') }}"><button class="flex flex-row w-full h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
+                                    <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
+                                </svg>
+                                <div>
+                                    <h1 class="pt-4 font-bold leading-none text-gray-800 ">Contacts</h1>
+                                    {{-- <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $Categories->count() }}</h2> --}}
+                                </div>
+                            </button></a>
+                        </div>
+
+
+                        {{-- Volunteer --}}
+                        <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                            <a href="{{ route('admin.volunteer') }}"><button class="flex flex-row w-full h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
+                                    <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
+                                </svg>
+                                <div>
+                                    <h1 class="pt-4 font-bold leading-none text-gray-800 ">Volunteer</h1>
+                                    {{-- <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $Categories->count() }}</h2> --}}
+                                </div>
+                            </button></a>
+                        </div>
+
+
+
+                           {{-- Donate --}}
+                           <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                            <a href="{{ route('admin.donate.edit') }}"><button class="flex flex-row w-full h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
+                                    <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
+                                </svg>
+                                <div>
+                                    <h1 class="pt-4 font-bold leading-none text-gray-800 ">Donate</h1>
+                                    {{-- <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $Categories->count() }}</h2> --}}
+                                </div>
+                            </button></a>
+                        </div>
+
+
+
+                         {{-- home --}}
+                         <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                            <a href="{{ route('admin.home.edit') }}"><button class="flex flex-row w-full h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
+                                    <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
+                                </svg>
+                                <div>
+                                    <h1 class="pt-4 font-bold leading-none text-gray-800 ">Home</h1>
+                                    {{-- <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $Categories->count() }}</h2> --}}
+                                </div>
+                            </button></a>
+                        </div>
+
+
+
+                         {{-- footer --}}
+                         <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                            <a href="{{ route('admin.footer.edit') }}"><button class="flex flex-row w-full h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
+                                    <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
+                                </svg>
+                                <div>
+                                    <h1 class="pt-4 font-bold leading-none text-gray-800 ">Footer</h1>
+                                    {{-- <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $Categories->count() }}</h2> --}}
+                                </div>
+                            </button></a>
+                        </div>
+
                         <!-- categories -->
                         <div class="relative p-6 rounded shadow-lg bg-slate-100">
                             <a href="{{ route('admin.categories.index') }}"><button class="flex flex-row w-full h-full">
