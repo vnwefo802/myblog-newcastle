@@ -110,7 +110,7 @@
                                     class="absolute right-0 left-2 top-12 w-48 py-2 mt-2 bg-gray-100 rounded-md shadow-xl">
                                     @foreach ($navbar_categories as $category)
                                         <a href="{{ route('categories.show', $category) }}"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400 hover:text-white">{{ $category->name }}</a>
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400 hover:text-white">{{ \Str::limit ($category->name, 18) }}</a>
                                     @endforeach
                                 </div>
                             </div>
