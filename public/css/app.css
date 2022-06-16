@@ -599,10 +599,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.mx-\[35px\] {
-  margin-left: 35px;
-  margin-right: 35px;
-}
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -847,9 +843,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[65px\] {
   height: 65px;
 }
-.h-\[4\.0625rem\] {
-  height: 4.0625rem;
-}
 .h-7 {
   height: 1.75rem;
 }
@@ -960,9 +953,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-1\/2 {
   width: 50%;
-}
-.w-\[12\.0449rem\] {
-  width: 12.0449rem;
 }
 .w-56 {
   width: 14rem;
@@ -1143,6 +1133,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .flex-wrap {
   flex-wrap: wrap;
+}
+.place-items-center {
+  place-items: center;
 }
 .items-start {
   align-items: flex-start;
@@ -1624,9 +1617,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.px-\[50px\] {
-  padding-left: 50px;
-  padding-right: 50px;
+.px-\[12px\] {
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .px-20 {
   padding-left: 5rem;
@@ -1697,6 +1690,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pl-8 {
   padding-left: 2rem;
 }
+.pb-8 {
+  padding-bottom: 2rem;
+}
+.pt-24 {
+  padding-top: 6rem;
+}
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -1711,9 +1710,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-6 {
   padding-top: 1.5rem;
-}
-.pb-8 {
-  padding-bottom: 2rem;
 }
 .pt-4 {
   padding-top: 1rem;
@@ -2946,10 +2942,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 230px;
   }
 
-  .md\:ml-7 {
-    margin-left: 1.75rem;
-  }
-
   .md\:block {
     display: block;
   }
@@ -2968,6 +2960,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:h-\[130px\] {
     height: 130px;
+  }
+
+  .md\:h-\[2\.03125rem\] {
+    height: 2.03125rem;
   }
 
   .md\:max-h-\[132px\] {
@@ -3020,6 +3016,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-\[80px\] {
     width: 80px;
+  }
+
+  .md\:w-\[6\.02245rem\] {
+    width: 6.02245rem;
   }
 
   .md\:w-auto {
@@ -3257,12 +3257,20 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 67px;
   }
 
+  .lg\:ml-7 {
+    margin-left: 1.75rem;
+  }
+
   .lg\:flex {
     display: flex;
   }
 
   .lg\:h-\[175px\] {
     height: 175px;
+  }
+
+  .lg\:h-\[4\.0625rem\] {
+    height: 4.0625rem;
   }
 
   .lg\:max-h-\[175px\] {
@@ -3315,6 +3323,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-\[1080px\] {
     width: 1080px;
+  }
+
+  .lg\:w-\[12\.0449rem\] {
+    width: 12.0449rem;
   }
 
   .lg\:w-1\/4 {

@@ -43,9 +43,9 @@
                     <h3 class="text-2xl font-light pb-4">Choose amount to donate</h3>
                     <div class="donate-desc flex flex-col">
                         <div class="flex flex-row mb-4 w-full">
-                            <button class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-3" id="" style="color:black; background-color:white;">&#8358;12500</button>
-                            <button class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-3 mx-auto" id="" style=" color:white; background-color:rgb(75, 85, 99);">&#8358;25000</button>
-                            <button class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-3" id="" style="color:black; background-color:white;">&#8358;50000</button>
+                            <button class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-[12px]" id="" style="color:black; background-color:white;">&#8358;12500</button>
+                            <button class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-[12px] mx-auto" id="" style=" color:white; background-color:rgb(75, 85, 99);">&#8358;25000</button>
+                            <button class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-[12px]" id="" style="color:black; background-color:white;">&#8358;50000</button>
                         </div>
                         <div class="relative mb-8 flex justify-center items-center text-2xl font-light">
                             <div class="absolute left-3 text-blue-500">&#8358;</div>
@@ -72,10 +72,10 @@
                 <div id="monthly" style="display: none;">
                     <h3 class="text-2xl font-light pb-4">Choose amount to donate</h3>
                     <div class="donate-desc flex flex-col">
-                        <div class="flex flex-row mb-4">
-                            <button type="button" class="border rounded-md py-2 px-[50px]">&#8358;2500</button>
-                            <button type="button" class="border rounded-md py-2 px-[50px] mx-[35px]" style=" color:white; background-color:rgb(75, 85, 99);">&#8358;5000</button>
-                            <button type="button" class="border rounded-md py-2 px-[50px]">&#8358;1000</button>
+                        <div class="flex flex-row mb-4 w-full">
+                            <button type="button" class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-[12px]">&#8358;2500</button>
+                            <button type="button" class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-[12px] mx-auto" style=" color:white; background-color:rgb(75, 85, 99);">&#8358;5000</button>
+                            <button type="button" class="border rounded-md py-2 xl:px-[50px] lg:px-[29px] md:px-[7.5px] px-[12px]">&#8358;1000</button>
                         </div>
                         <div class="relative mb-8 flex justify-center items-center text-2xl font-light">
                             <div class="absolute left-3 text-blue-500">&#8358;</div>
@@ -119,7 +119,7 @@
 
     <!-- Title and Short Description Section -->
     <div class="block">
-        <div class="py-8 bg-gray-100 bg-gradient-to-t from-gray-100 to-gray-200">
+        <div class="pb-8 pt-24 bg-gray-100 bg-gradient-to-t from-gray-100 to-gray-200">
             <h2 class="m-5 text-4xl font-bold text-center text-slate-600">{{ $alldonate->donate_title }}</h2>
             <p class="m-5 text-2xl font-bold text-center text-slate-500">{{ $alldonate->donate_first_short_title }}</p>
             <p class="m-5 text-lg text-center text-slate-400">{{ $alldonate->donate_second_short_title }}</p>

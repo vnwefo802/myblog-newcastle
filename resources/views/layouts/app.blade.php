@@ -60,14 +60,14 @@
     <nav class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="px-2 mx-auto lg:px-4">
             <div class="flex justify-between h-[65px] max-h-[65px]">
-                <div class="flex space-x-9 md:ml-7">
+                <div class="flex space-x-9 lg:ml-7  items-center">
                     <div>
                         <!-- ============================================ -->
                         <!--                 Website Logo                 -->
                         <!-- ============================================ -->
-                        <a href="/" class="flex items-center" aria-label="NewcastleFoundationLogo">
+                        <a href="/" class="flex" aria-label="NewcastleFoundationLogo">
                             <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}"
-                                class="w-[12.0449rem] h-[4.0625rem] max-w-[13rem] object-cover" alt="Newcastle logo"
+                                class=" lg:w-[12.0449rem] md:w-[6.02245rem] lg:h-[4.0625rem] md:h-[2.03125rem] max-w-[13rem] object-cover" alt="Newcastle logo"
                                 aria-label="Newcastle logo">
                             {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
                         </a>
