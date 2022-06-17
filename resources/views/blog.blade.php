@@ -22,7 +22,7 @@
                                 <h3 class="lg:text-2xl md:text-base w-[318px] h-[28px] lg:ml-0"><a
                                         href="{{ route('posts.show', $post) }}"
                                         class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
-                                <p class="lg:text-lg md:text-xs text-sm h-[20px] w-[318px] text-gray-500 lg:ml-0 lg:mt-4 ">
+                                <p class="lg:text-lg md:text-xs text-sm h-[20px] w-[318px] text-gray-500 lg:ml-0 lg:py-6 lg:mt-4 ">
                                     {{ \Str::limit($post->excerpt, 35) }}</p>
                                 {{-- Post Tags --}}
                                 <div class="">

@@ -17,7 +17,7 @@
             <!-- donate and volunteer buttons -->
             <div class="flex flex-row w-full justify-evenly md:justify-between">
                 <a href="/volunteer"
-                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-xl md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20 md:ml-20 font-medium">{!! $allhome->button_1 !!}
+                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-xl md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20  font-medium">{!! $allhome->button_1 !!}
                     <svg width="24" class="pl-2 mt-1" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -28,7 +28,7 @@
                             fill="white" />
                     </svg></a>
                 <a href="/donate"
-                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-xl md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20 md:ml-20 font-medium">{!! $allhome->button_2 !!}
+                    class="flex text-white py-2 md:py-4 mt-12 text-sm bg-blue-700 rounded-md px-5 md:px-20 lg:py-5 lg:text-xl md:text-base hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-blue-700 ml-8 mr-2 md:mr-20 font-medium">{!! $allhome->button_2 !!}
                     <svg width="24" class="pl-2 mt-1" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
