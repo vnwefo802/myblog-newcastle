@@ -12,7 +12,7 @@
                 @forelse($posts as $post)
 
                 <div class="lg:w-[750px] md:w-[465px] w-[309px] lg:h-[175px]  md:h-[132px] h-[230px] lg:max-h-[175px] md:max-h-[132px] max-h-[230px] lg:mr-20 border-[1px] container my-4 static">
-                <a href="{{ route('posts.show', $post) }}" class="blog-img" ><img src="{{asset('storage/' . $post->image->path. '')}}" alt="" class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left"></a>
+                <a href="{{ route('posts.show', $post) }}" class="blog-img" ><img src="{{asset('/' . $post->image->path. '')}}" alt="" class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left"></a>
                     <div class="ml-3 mt-2 lg:float-left relative">
                         <h3 class="lg:text-2xl md:text-base h-[28px] lg:ml-0 md:ml-60 "><a href="{{ route('posts.show', $post) }}" class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
                         <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 md:ml-60 md:mt-4">{{ \Str::limit($post->excerpt, 35) }}</p>
@@ -63,7 +63,7 @@
                         @foreach($recent_posts as $recent_post)
                         <div class="flex lg:flex-row lg:w-[264px] md:w-[100px] lg:mx-0 md:mx-auto md:flex-col my-2 mb-[40px] border">
                             <a href="{{ route('posts.show', $recent_post) }}">
-                                <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="">
+                                <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]" src="{{ asset($recent_post->image ? '/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="">
                             </a>
                             <div class="md:m-2 mx-2">
                                 <p class="md:text-sm text-xs text-gray-300"><span>{{ $recent_post->created_at->diffForHumans() }}</span></p>

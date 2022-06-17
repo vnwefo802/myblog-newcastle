@@ -279,9 +279,9 @@ class DatabaseSeeder extends Seeder
 
 
 
-        $posts->image()->save( \App\Models\Image::factory()->make() );
-        $posts2->image()->save( \App\Models\Image::factory()->make() );
-        $posts3->image()->save( \App\Models\Image::factory()->make() );
+        $posts->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/1.png']) );
+        $posts2->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/2.png']) );
+        $posts3->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/3.png']) );
 
         \App\Models\Comment::factory(100)->create();
 

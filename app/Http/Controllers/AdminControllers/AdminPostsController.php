@@ -64,7 +64,7 @@ class AdminPostsController extends Controller
             $post->image()->create([
                 'name' => $filename,
                 'extension' => $file_extension,
-                'path' => $path
+                'path' => 'storage/' . $path,
             ]);
         }
 

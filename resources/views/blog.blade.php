@@ -15,7 +15,7 @@
                             <div
                                 class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left text-ellipsis">
                                 <a href="{{ route('posts.show', $post) }}" class="blog-img"><img
-                                        src="{{ asset('storage/' . $post->image->path . '') }}" alt=""
+                                        src="{{ asset('/' . $post->image->path . '') }}" alt=""
                                         class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left"></a>
                             </div>
                             <div class="pl-3 mt-2 w-[320px] float-left static">
@@ -103,7 +103,7 @@
                                     class="flex lg:flex-row lg:w-[264px] md:w-[100px] lg:mx-0 md:mx-auto md:flex-col my-2 mb-[40px] border">
                                     <a href="{{ route('posts.show', $recent_post) }}">
                                         <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]"
-                                            src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '') }}"
+                                            src="{{ asset($recent_post->image ? '/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '') }}"
                                             alt="">
                                     </a>
                                     <div class="md:m-2 mx-2">
