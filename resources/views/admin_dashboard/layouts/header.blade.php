@@ -140,7 +140,7 @@ if (Auth::check()) {
                                 <p class="designattion mb-0">{{ Auth::user()->email }}</p>
                             </div>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
+                        <ul class="dropdown-menu dropdown-menu-end pb-4 md:pb-0 ">
 
                             <li> @if (Auth::check() && $showAdmin)
                                 <a href="{{ route('admin.index') }}"><button type="button"

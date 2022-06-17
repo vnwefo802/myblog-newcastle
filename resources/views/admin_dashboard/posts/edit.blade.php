@@ -98,6 +98,10 @@
                                             <input type="text" class="form-control" value='{{ $tags }}' name='tags' data-role="tagsinput">
                                         </div>
 
+                                        <div class="mb-2">
+                                            <span class="text-xs text-red-500">Images Must Be: Width: 750px x Height: 350px</span>
+                                        </div>
+
                                         <div class="mb-3">
                                             <div class='row'>
 
