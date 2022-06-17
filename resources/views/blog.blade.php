@@ -7,12 +7,11 @@
     <div class="w-10/12 mx-auto mt-20">
         <div class="">
             <div class="flex md:flex-row">
-
-
+                <div>
                 @forelse($posts as $post)
                     <div>
                         <div
-                            class="lg:w-[750px] md:w-[465px] w-[309px] lg:h-[175px]  md:h-[132px] h-[230px] lg:max-h-[175px] md:max-h-[132px] max-h-[230px] lg:mr-20 border-[1px] container my-4 static flex md:flex-row flex-col">
+                            class="lg:w-[750px] md:w-[465px] w-[320px] lg:max-w-[750px] md:max-w-[465px] max-w-[320px] lg:h-[175px]  md:h-[132px] h-[260px] lg:max-h-[175px] md:max-h-[132px] max-h-[260px] lg:mr-20 border-[1px] container my-4 static flex md:flex-row flex-col">
                             <div
                                 class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left text-ellipsis">
                                 <a href="{{ route('posts.show', $post) }}" class="blog-img"><img
@@ -23,17 +22,17 @@
                                 <h3 class="lg:text-2xl md:text-base h-[28px] lg:ml-0"><a
                                         href="{{ route('posts.show', $post) }}"
                                         class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
-                                <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 md:mt-4 py-5">
+                                <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 lg:mt-4 ">
                                     {{ \Str::limit($post->excerpt, 35) }}</p>
                                 {{-- Post Tags --}}
                                 <div class="">
                                     <div class="m-2">
-                                        <ul class="flex flex-row flex-wrap lg:w-[250px] md:w-[100px]">
+                                        <ul class="flex flex-row  lg:w-[250px] md:w-[100px]">
 
 
                                             @foreach ($tags as $tag)
                                                 <li
-                                                    class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 h-[25.5px]">
+                                                    class="mx-1 my-1 bg-blue-500  text-white rounded px-1 hover:bg-blue-700 lg:h-[25.5px] h-[15px] lg:text-base text-xs">
                                                     {{ $tag->name }}
                                                 </li>
                                             @endforeach
@@ -73,12 +72,12 @@
                             </div>
                         </div>
                     </div>
-                @empty
+                    @empty
                     <div class="flex w-full justify-center">
                         <h1 class='lead text-4xl font-light text-center'>There are no posts to show</h1>
                     </div>
-                @endforelse
-
+                    @endforelse
+                </div>
 
                 <!-- SIDEBAR: start -->
                 <div class="lg:w-[266px] w-[175px] md:block hidden ml-auto">
