@@ -49,14 +49,14 @@ class PostFactory extends Factory
             <p class="" style="overflow-wrap: break-word; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; white-space: pre-wrap;">&nbsp;</p>
             <p class="" style="overflow-wrap: break-word; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; white-space: pre-wrap;">&nbsp;</p>
             <p class="" style="overflow-wrap: break-word; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; white-space: pre-wrap;">&nbsp;</p>
-            <div id="block-b0bab484361f08b2d297" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; padding: 0px 17px 17px; clear: none; box-sizing: border-box; width: 850.438px; margin-right: auto; margin-left: auto; color: #4a4a4a; font-family:  font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff;" data-block-type="2">
+            <div id="block-b0bab484361f08b2d297" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; padding: 0px 17px 17px; clear: none; box-sizing: border-box; margin-right: auto; margin-left: auto; color: #4a4a4a; font-family:  font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff;" data-block-type="2">
             <div class="sqs-block-content" style="outline: none;">
             <h1 style="font-size: 51px; margin: 0px; text-rendering: optimizelegibility; letter-spacing: 0em; line-height: 0.75em; color: #ae5929; white-space: pre-wrap;">Nigeria | Projects</h1>
             </div>
             </div>
             <div class="row sqs-row" style="color: #4a4a4a; font-family:  font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; width: auto !important;">
-            <div class="col sqs-col-8 span-8" style="float: left; width: 756px;">
-            <div id="block-yui_3_17_2_1_1531217309792_11622" class="sqs-block html-block sqs-block-html sqs-col-4 span-4 float float-left" style="float: left; width: 378px; position: relative; height: auto; padding: 17px; clear: none; box-sizing: border-box; z-index: 10 !important; margin-right: 17px; background-color: #fffce2;" data-block-type="2">
+            <div class="col sqs-col-8 span-8" style="float: left;">
+            <div id="block-yui_3_17_2_1_1531217309792_11622" class="sqs-block html-block sqs-block-html sqs-col-4 span-4 float float-left" style="float: left; position: relative; height: auto; padding: 17px; clear: none; box-sizing: border-box; z-index: 10 !important; margin-right: 17px; background-color: #fffce2;" data-block-type="2">
             <div class="sqs-block-content" style="outline: none;">
             <h2 style="text-rendering: optimizelegibility; font-size: 40px; letter-spacing: 0em; line-height: 1.2em; margin-top: 0px; text-align: center; white-space: pre-wrap;">49%</h2>
             <h3 style="text-rendering: optimizelegibility; font-size: 22px; letter-spacing: 0.1em; line-height: 1.55em; text-transform: uppercase; color: #e37263; margin-top: 15px; margin-bottom: 0px; text-align: center; white-space: pre-wrap;"><em style="overflow-wrap: break-word;">OF CHILDREN DO NOT COMPLETE THEIR PRIMARY EDUCATION.</em></h3>
@@ -69,7 +69,7 @@ class PostFactory extends Factory
             </div>
             </div>
             </div>
-            <div class="col sqs-col-4 span-4" style="float: left; width: 377.987px; padding-right: 0px;">
+            <div class="col sqs-col-4 span-4" style="float: left; padding-right: 0px;">
             <div id="block-yui_3_17_2_1_1531217309792_13055" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; padding: 17px; clear: none; background-color: #fffce2;" data-block-type="2">
             <div class="sqs-block-content" style="outline: none;">
             <h2 style="text-rendering: optimizelegibility; font-size: 40px; letter-spacing: 0em; line-height: 1.2em; margin-top: 0px; text-align: center; white-space: pre-wrap;">61%</h2>
@@ -78,10 +78,10 @@ class PostFactory extends Factory
             </div>
             </div>
             </div>
-            <div id="block-yui_3_17_2_1_1533033643423_16494" class="sqs-block spacer-block sqs-block-spacer" style="position: relative; height: auto; padding: 17px; clear: both; box-sizing: border-box; width: 850.438px; margin-right: auto; margin-left: auto; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff;" data-aspect-ratio="0.12254901960784313" data-block-type="21">
+            <div id="block-yui_3_17_2_1_1533033643423_16494" class="sqs-block spacer-block sqs-block-spacer" style="position: relative; height: auto; padding: 17px; clear: both; box-sizing: border-box; margin-right: auto; margin-left: auto; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff;" data-aspect-ratio="0.12254901960784313" data-block-type="21">
             <div id="yui_3_17_2_1_1655379554711_259" class="sqs-block-content sqs-intrinsic" style="position: relative !important; visibility: hidden; padding-bottom: 1px;"></div>
             </div>
-            <div id="block-yui_3_17_2_1_1531217309792_9558" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; padding: 17px; clear: none; box-sizing: border-box; width: 850.438px; margin-right: auto; margin-left: auto; color: #4a4a4a; font-family:  font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff;" data-block-type="2">
+            <div id="block-yui_3_17_2_1_1531217309792_9558" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; padding: 17px; clear: none; box-sizing: border-box;  margin-right: auto; margin-left: auto; color: #4a4a4a; font-family:  font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff;" data-block-type="2">
             <div class="sqs-block-content" style="outline: none;">
             <h3 style="text-rendering: optimizelegibility; font-size: 22px; letter-spacing: 0.1em; line-height: 1.55em; text-transform: uppercase; color: #e37263; margin-top: 0px; white-space: pre-wrap;"><strong style="overflow-wrap: break-word;">PORRIDGE CLUBS </strong></h3>
             <p class="" style="overflow-wrap: break-word; white-space: pre-wrap;">Nigeria was the first country African Children&rsquo;s Fund worked in and since 2006, our name has become synonymous with our Porridge Clubs. These now run in 10 primary schools in and around the town of Thika, and enable 2,000 children to go to school every day instead of working, begging or scavenging for food on the street.</p>
