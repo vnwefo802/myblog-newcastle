@@ -22,7 +22,7 @@ class TagFactory extends Factory
     public function definition()
     {
         return [
-            'name' => 'LOve',
+            'name' => 'Challenges, Running, Run, Walk, Sponsorship, Virtual Event, Nigeria ',
     ];
     }
 }
