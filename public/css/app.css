@@ -795,8 +795,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-full {
   height: 100%;
 }
-.h-\[230px\] {
-  height: 230px;
+.h-\[260px\] {
+  height: 260px;
 }
 .h-\[130px\] {
   height: 130px;
@@ -807,14 +807,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[20px\] {
   height: 20px;
 }
-.h-\[25\.5px\] {
-  height: 25.5px;
+.h-\[15px\] {
+  height: 15px;
 }
 .h-\[12px\] {
   height: 12px;
 }
 .h-\[90px\] {
   height: 90px;
+}
+.h-\[25\.5px\] {
+  height: 25.5px;
 }
 .h-5 {
   height: 1.25rem;
@@ -840,6 +843,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-20 {
   height: 5rem;
 }
+.h-\[230px\] {
+  height: 230px;
+}
 .h-\[65px\] {
   height: 65px;
 }
@@ -864,14 +870,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[38px\] {
   height: 38px;
 }
-.h-\[15px\] {
-  height: 15px;
-}
-.h-\[260px\] {
-  height: 260px;
-}
-.max-h-\[230px\] {
-  max-height: 230px;
+.max-h-\[260px\] {
+  max-height: 260px;
 }
 .max-h-\[90px\] {
   max-height: 90px;
@@ -882,11 +882,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-h-\[65px\] {
   max-height: 65px;
 }
-.max-h-\[20px\] {
-  max-height: 20px;
-}
-.max-h-\[260px\] {
-  max-height: 260px;
+.max-h-\[230px\] {
+  max-height: 230px;
 }
 .min-h-full {
   min-height: 100%;
@@ -908,6 +905,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-10\/12 {
   width: 83.333333%;
+}
+.w-\[320px\] {
+  width: 320px;
 }
 .w-\[309px\] {
   width: 309px;
@@ -1020,20 +1020,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[200px\] {
   width: 200px;
 }
-.w-1 {
-  width: 0.25rem;
-}
-.w-\[full\] {
-  width: full;
-}
-.w-\[320px\] {
-  width: 320px;
-}
 .min-w-full {
   min-width: 100%;
 }
 .min-w-\[65px\] {
   min-width: 65px;
+}
+.max-w-\[320px\] {
+  max-width: 320px;
 }
 .max-w-\[100px\] {
   max-width: 100px;
@@ -1064,9 +1058,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-7xl {
   max-width: 80rem;
-}
-.max-w-\[320px\] {
-  max-width: 320px;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1157,9 +1148,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .flex-wrap {
   flex-wrap: wrap;
-}
-.place-items-center {
-  place-items: center;
 }
 .items-start {
   align-items: flex-start;
@@ -1605,10 +1593,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1644,6 +1628,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-\[12px\] {
   padding-left: 12px;
   padding-right: 12px;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .px-20 {
   padding-left: 5rem;
@@ -1814,6 +1802,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .text-\[10px\] {
   font-size: 10px;
 }
@@ -1824,10 +1816,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -2914,10 +2902,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 5rem;
   }
 
-  .md\:mt-4 {
-    margin-top: 1rem;
-  }
-
   .md\:mr-2 {
     margin-right: 0.5rem;
   }
@@ -2958,6 +2942,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 15rem;
   }
 
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .md\:mt-\[20px\] {
     margin-top: 20px;
   }
@@ -2988,10 +2976,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:h-\[2\.03125rem\] {
     height: 2.03125rem;
-  }
-
-  .md\:h-\[15px\] {
-    height: 15px;
   }
 
   .md\:max-h-\[132px\] {
@@ -3054,6 +3038,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: auto;
   }
 
+  .md\:max-w-\[465px\] {
+    max-width: 465px;
+  }
+
   .md\:max-w-\[744px\] {
     max-width: 744px;
   }
@@ -3064,10 +3052,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:max-w-full {
     max-width: 100%;
-  }
-
-  .md\:max-w-\[465px\] {
-    max-width: 465px;
   }
 
   .md\:grid-cols-2 {
@@ -3235,11 +3219,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.75rem;
   }
 
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .md\:leading-10 {
     line-height: 2.5rem;
   }
@@ -3278,6 +3257,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 0px;
   }
 
+  .lg\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -3298,10 +3281,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 1.75rem;
   }
 
-  .lg\:mt-4 {
-    margin-top: 1rem;
-  }
-
   .lg\:flex {
     display: flex;
   }
@@ -3310,12 +3289,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 175px;
   }
 
-  .lg\:h-\[4\.0625rem\] {
-    height: 4.0625rem;
-  }
-
   .lg\:h-\[25\.5px\] {
     height: 25.5px;
+  }
+
+  .lg\:h-\[4\.0625rem\] {
+    height: 4.0625rem;
   }
 
   .lg\:max-h-\[175px\] {
@@ -3378,10 +3357,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 25%;
   }
 
-  .lg\:w-max {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+  .lg\:max-w-\[750px\] {
+    max-width: 750px;
   }
 
   .lg\:max-w-\[1440px\] {
@@ -3394,10 +3371,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:max-w-screen-xl {
     max-width: 1280px;
-  }
-
-  .lg\:max-w-\[750px\] {
-    max-width: 750px;
   }
 
   .lg\:grid-cols-4 {
@@ -3517,14 +3490,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.75rem;
   }
 
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .lg\:text-xl {
