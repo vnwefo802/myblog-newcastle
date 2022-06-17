@@ -849,6 +849,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[65px\] {
   height: 65px;
 }
+.h-\[4\.0625rem\] {
+  height: 4.0625rem;
+}
 .h-7 {
   height: 1.75rem;
 }
@@ -2930,10 +2933,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: 5rem;
   }
 
-  .md\:ml-20 {
-    margin-left: 5rem;
-  }
-
   .md\:ml-3 {
     margin-left: 0.75rem;
   }
@@ -3345,10 +3344,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 60%;
   }
 
-  .lg\:w-\[780px\] {
-    width: 780px;
-  }
-
   .lg\:w-\[1080px\] {
     width: 1080px;
   }
@@ -3407,6 +3402,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: calc(2rem * var(--tw-space-y-reverse));
   }
 
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
   .lg\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -3450,11 +3450,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-
-  .lg\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
   }
 
   .lg\:px-4 {

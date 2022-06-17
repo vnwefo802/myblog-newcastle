@@ -67,7 +67,7 @@
                         <!-- ============================================ -->
                         <a href="/" class="flex" aria-label="NewcastleFoundationLogo">
                             <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}"
-                                class=" lg:w-[12.0449rem] md:w-[6.02245rem] lg:h-[4.0625rem] md:h-[2.03125rem] max-w-[13rem] object-cover" alt="Newcastle logo"
+                                class=" lg:w-[12.0449rem] md:w-[6.02245rem] lg:h-[4.0625rem] md:h-[2.03125rem] h-[4.0625rem] max-w-[13rem] object-cover" alt="Newcastle logo"
                                 aria-label="Newcastle logo">
                             {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
                         </a>
