@@ -54,7 +54,7 @@
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="inputProductTitle" class="form-label">Post Slug</label>
+                                            <label for="inputProductTitle" class="form-label">Post Slug (URL Link)</label>
                                             <input type="text" value='{{ old("slug", $post->slug) }}' class="form-control" required name='slug' id="inputProductTitle">
 
                                             @error('slug')
