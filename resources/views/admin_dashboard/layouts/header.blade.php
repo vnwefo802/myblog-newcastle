@@ -113,8 +113,6 @@ if (Auth::check()) {
         <header>
             <div class="topbar d-flex align-items-center">
                 <nav class="navbar navbar-expand">
-
-
                     <div class="top-menu ms-auto">
                         <ul class="navbar-nav align-items-center">
 
@@ -144,46 +142,46 @@ if (Auth::check()) {
 
                             <li> @if (Auth::check() && $showAdmin)
                                 <a href="{{ route('admin.index') }}"><button type="button"
-                                    class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                    class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                     id="menu-item-5">Admin</button></a>
                             @endif
                             @if (Auth::check() && $showcontacts)
-                            <a href="{{ route('admin.contacts') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                            <a href="{{ route('admin.contacts') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                          id="menu-item-5">Contacts</a>
                          @endif
                          {{-- Contacts --}}
 
                          {{-- volunteer --}}
                          @if (Auth::check() && $showVolunteer)
-                         <a href="{{ route('admin.volunteer') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                         <a href="{{ route('admin.volunteer') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                          id="menu-item-5">volunteer</a>
                          @endif
                          {{-- volunteer --}}
 
                             {{-- setting --}}
                             @if (Auth::check() && $show_setting_edit)
-                            <a href="{{ route('admin.setting.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                            <a href="{{ route('admin.setting.edit') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                          id="menu-item-5">About</a>
                          @endif
                          {{-- setting --}}
 
                               {{-- Donate --}}
                               @if (Auth::check() && $show_donate_edit)
-                              <a href="{{ route('admin.donate.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                              <a href="{{ route('admin.donate.edit') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                           id="menu-item-5">Donate</a>
                           @endif
                           {{-- Donate --}}
 
                            {{-- Home --}}
                            @if (Auth::check() && $show_home_edit)
-                           <a href="{{ route('admin.home.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                           <a href="{{ route('admin.home.edit') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                          id="menu-item-5">Home</a>
                          @endif
                          {{-- Home --}}
 
                           {{-- Footer --}}
                           @if (Auth::check() && $show_footer_edit)
-                          <a href="{{ route('admin.footer.edit') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                          <a href="{{ route('admin.footer.edit') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                          id="menu-item-5">Footer</a>
                          @endif
                          {{-- Footer --}}
@@ -193,7 +191,7 @@ if (Auth::check()) {
 
 
                                              @if (Auth::check() && $showtag)
-                                                             <a href="{{ route('admin.tags.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                                             <a href="{{ route('admin.tags.index') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                                                  id="menu-item-3">Tags</a>
                                              @endif
 
@@ -201,7 +199,7 @@ if (Auth::check()) {
                         <div class="py-1" role="none">
                             {{-- All Comments --}}
                         @if (Auth::check() && $showcomments_index)
-                            <a href="{{ route('admin.comments.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                            <a href="{{ route('admin.comments.index') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                 id="menu-item-4">All Comments</a>
                         @endif
                         {{-- All Comments ends--}}
@@ -209,7 +207,7 @@ if (Auth::check()) {
                         {{-- Add New Comment --}}
                         @if (Auth::check() && $show_comments_create)
 
-                            <a href="{{ route('admin.comments.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                            <a href="{{ route('admin.comments.create') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                 id="menu-item-5">Add New Comments</a>
                         @endif
                         {{-- Add New Comment ends --}}
@@ -218,13 +216,13 @@ if (Auth::check()) {
 
                          {{-- post --}}
                          @if (Auth::check() && $showallpost)
-                         <a href="{{ route('admin.posts.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                         <a href="{{ route('admin.posts.index') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                              id="menu-item-5">All Posts</a>
                         @endif
 
 
                         @if (Auth::check() && $showcreateposts)
-                             <a href="{{ route('admin.posts.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                             <a href="{{ route('admin.posts.create') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                              id="menu-item-5">Add New Post</a>
                         @endif
                          {{-- post --}}
@@ -232,14 +230,14 @@ if (Auth::check()) {
 
                                                             {{-- All Roles --}}
                                                 @if (Auth::check() && $show_roles_index)
-                                                            <a href="{{ route('admin.roles.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                                            <a href="{{ route('admin.roles.index') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                                                 id="menu-item-4">All Roles</a>
                                         @endif
                                         {{-- All Roles ends--}}
 
                                         {{-- Create New Roles --}}
                                         @if (Auth::check() && $show_roles_create)
-                                                            <a href="{{ route('admin.roles.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                                            <a href="{{ route('admin.roles.create') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                                                 id="menu-item-5">Add New Role</a>
                                                 @endif
                                                 {{-- Create New Role ends --}}
@@ -247,13 +245,13 @@ if (Auth::check()) {
 
                         {{-- Categories --}}
                                                 @if (Auth::check() && $showallcategories)
-                                                <a href="{{ route('admin.categories.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                                <a href="{{ route('admin.categories.index') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                                     id="menu-item-5">All Categories</a>
                                                     @endif
 
 
                                                     @if (Auth::check() && $show_categories_create)
-                                                    <a href="{{ route('admin.categories.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                                    <a href="{{ route('admin.categories.create') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                                     id="menu-item-5">Add New Categories</a>
                                     @endif
                         {{-- Categories --}}
@@ -261,13 +259,13 @@ if (Auth::check()) {
 
                         {{-- user --}}
                                     @if (Auth::check() && $show_users_index)
-                                    <a href="{{ route('admin.users.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                    <a href="{{ route('admin.users.index') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                     id="menu-item-5">All Users</a>
                                     @endif
 
 
                                     @if (Auth::check() && $show_users_create)
-                                    <a href="{{ route('admin.users.create') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                    <a href="{{ route('admin.users.create') }}" class="text-gray-700 block px-4 py-1 text-sm" role="menuitem" tabindex="-1"
                                     id="menu-item-5">Add New Users</a>
                                     @endif
                                     {{-- user --}}
