@@ -1029,6 +1029,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[320px\] {
   width: 320px;
 }
+.w-\[31px\] {
+  width: 31px;
+}
+.w-\[318px\] {
+  width: 318px;
+}
 .min-w-full {
   min-width: 100%;
 }
@@ -3052,6 +3058,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-10\/12 {
+    width: 83.333333%;
   }
 
   .md\:max-w-\[744px\] {

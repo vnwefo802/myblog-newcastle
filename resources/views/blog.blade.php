@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="w-10/12 mx-auto mt-20">
+    <div class="md:w-10/12 mx-auto mt-20">
         <div class="">
             <div class="flex md:flex-row">
                 <div>
@@ -18,11 +18,11 @@
                                         src="{{ asset('storage/' . $post->image->path . '') }}" alt=""
                                         class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left"></a>
                             </div>
-                            <div class="ml-3 mt-2 w-[330px] float-left static">
-                                <h3 class="lg:text-2xl md:text-base h-[28px] lg:ml-0"><a
+                            <div class="pl-3 mt-2 w-[320px] float-left static">
+                                <h3 class="lg:text-2xl md:text-base w-[318px] h-[28px] lg:ml-0"><a
                                         href="{{ route('posts.show', $post) }}"
                                         class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
-                                <p class="lg:text-lg md:text-xs text-sm h-[20px] text-gray-500 lg:ml-0 lg:mt-4 ">
+                                <p class="lg:text-lg md:text-xs text-sm h-[20px] w-[318px] text-gray-500 lg:ml-0 lg:mt-4 ">
                                     {{ \Str::limit($post->excerpt, 35) }}</p>
                                 {{-- Post Tags --}}
                                 <div class="">
