@@ -1,4 +1,3 @@
-
 @extends("admin_dashboard.layouts.app")
 @section('title', 'Admin - Edit Post')
 @section("style")
@@ -123,7 +122,7 @@
                                                 </div>
 
                                                 <div class='text-center col-md-4'>
-                                                    <img style='width: 100%' src="/storage/{{ $post->image ? $post->image->path : 'placeholders/thumbnail_placeholder.svg' }}" class='img-responsive' alt="Post Thumbnail">
+                                                    <img style='width: 100%' src="/{{ $post->image ? $post->image->path : 'placeholders/thumbnail_placeholder.svg' }}" class='img-responsive' alt="Post Thumbnail">
                                                 </div>
 
                                             </div>

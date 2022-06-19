@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="md:w-10/12 mx-auto mt-20">
+<div class="mx-auto mt-20 md:w-10/12">
         <div class="">
             <div class="flex md:flex-row">
                 <div>
@@ -41,7 +41,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="flex flex-row mb-2 lg:ml-0 md:mr-2 gap-2 relative Bottom-3">
+                                <div class="relative flex flex-row gap-2 mb-2 lg:ml-0 md:mr-2 Bottom-3">
                                     <div><a class='text-gray-500 text-[10px]' href="#"><span class="flex mt-1">
                                                 <svg class="w-[12x] h-[12px]  mr-1" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 512 512">
@@ -73,8 +73,8 @@
                         </div>
                     </div>
                     @empty
-                    <div class="flex w-full justify-center">
-                        <h1 class='lead text-4xl font-light text-center'>There are no posts to show</h1>
+                    <div class="flex justify-center w-full">
+                        <h1 class='text-4xl font-light text-center lead'>There are no posts to show</h1>
                     </div>
                     @endforelse
                 </div>
@@ -97,16 +97,16 @@
                         @foreach($recent_posts as $recent_post)
                         <div class="flex lg:flex-row lg:w-[264px] md:w-[100px] lg:mx-0 md:mx-auto md:flex-col my-2 mb-[40px] border">
                             <a href="{{ route('posts.show', $recent_post) }}">
-                                <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]" src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="">
+                                <img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]" src="{{ asset($recent_post->image ? '/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="">
                             </a>
-                            <div class="md:m-2 mx-2">
-                                <p class="md:text-sm text-xs text-gray-300"><span>{{ $recent_post->created_at->diffForHumans() }}</span></p>
+                            <div class="mx-2 md:m-2">
+                                <p class="text-xs text-gray-300 md:text-sm"><span>{{ $recent_post->created_at->diffForHumans() }}</span></p>
                                 <h2>
                                     <a href="{{ route('posts.show', $recent_post) }}">
-                                        <span class="md:text-base text-sm">{{ \Str::limit( $recent_post->title, 20) }} </span>
+                                        <span class="text-sm md:text-base">{{ \Str::limit( $recent_post->title, 20) }} </span>
                                     </a>
                                 </h2>
-                                <p class="text-gray-500 md:text-base text-xs">{{ \Str::limit($recent_post->excerpt, 20) }}</p>
+                                <p class="text-xs text-gray-500 md:text-base">{{ \Str::limit($recent_post->excerpt, 20) }}</p>
                             </div>
                         </div>
                         @endforeach

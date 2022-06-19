@@ -112,7 +112,7 @@ class DatabaseSeeder extends Seeder
                 </div>
                 <div class="row sqs-row" style="color: #4a4a4a; font-family:  font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; width: auto !important;">
                 <div class="col sqs-col-8 span-8" style="float: left; ">
-                <div id="block-yui_3_17_2_1_1531217309792_11622" class="sqs-block html-block sqs-block-html sqs-col-4 span-4 float float-left" style="float: left; position: relative; height: auto; padding: 17px; clear: none; box-sizing: border-box; z-index: 10 !important; margin-right: 17px; background-color: #fffce2;" data-block-type="2">
+                <div id="block-yui_3_17_2_1_1531217309792_11622" class="float-left sqs-block html-block sqs-block-html sqs-col-4 span-4 float" style="float: left; position: relative; height: auto; padding: 17px; clear: none; box-sizing: border-box; z-index: 10 !important; margin-right: 17px; background-color: #fffce2;" data-block-type="2">
                 <div class="sqs-block-content" style="outline: none;">
                 <h2 style="text-rendering: optimizelegibility; font-size: 40px; letter-spacing: 0em; line-height: 1.2em; margin-top: 0px; text-align: center; white-space: pre-wrap;">49%</h2>
                 <h3 style="text-rendering: optimizelegibility; font-size: 22px; letter-spacing: 0.1em; line-height: 1.55em; text-transform: uppercase; color: #e37263; margin-top: 15px; margin-bottom: 0px; text-align: center; white-space: pre-wrap;"><em style="overflow-wrap: break-word;">OF CHILDREN DO NOT COMPLETE THEIR PRIMARY EDUCATION.</em></h3>
@@ -213,7 +213,7 @@ class DatabaseSeeder extends Seeder
                 </div>
                 </div>
                 </div>
-                <div id="block-yui_3_17_2_1_1525962388471_8709" class="sqs-block video-block sqs-block-video sqs-col-6 span-6 float float-right" style="float: right; position: relative; height: auto; padding: 17px; box-sizing: border-box; clear: both; margin-left: 17px; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; z-index: 10 !important;" data-block-json="{&quot;blockAnimation&quot;:&quot;none&quot;,&quot;layout&quot;:&quot;caption-hidden&quot;,&quot;overlay&quot;:false,&quot;description&quot;:{&quot;html&quot;:&quot;&lt;p&gt;The amount allocated for provision of free sanitary towels was slashed by 99 million shillings in the financial year 2013/2014, this is from the 300 million shillings allocated previously to the ministry of education for the provision of sanitary towels to 568,925 needy girls between class 6 and 8, a fraction of the 2.5 million in need of the towels.&lt;/p&gt;&quot;,&quot;raw&quot;:false},&quot;hSize&quot;:6,&quot;floatDir&quot;:&quot;right&quot;,&quot;html&quot;:&quot;&lt;iframe src=\&quot;//www.youtube.com/embed/1hn822TrKXo?start=4&amp;amp;wmode=opaque&amp;amp;enablejsapi=1\&quot; height=\&quot;480\&quot; width=\&quot;854\&quot; scrolling=\&quot;no\&quot; frameborder=\&quot;0\&quot; allowfullscreen=\&quot;\&quot;&gt;\n&lt;/iframe&gt;&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=1hn822TrKXo&amp;t=4s&quot;,&quot;thumbnailUrl&quot;:&quot;https://i.ytimg.com/vi/1hn822TrKXo/hqdefault.jpg&quot;,&quot;resolvedBy&quot;:&quot;youtube&quot;}" data-block-type="32">
+                <div id="block-yui_3_17_2_1_1525962388471_8709" class="float-right sqs-block video-block sqs-block-video sqs-col-6 span-6 float" style="float: right; position: relative; height: auto; padding: 17px; box-sizing: border-box; clear: both; margin-left: 17px; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; z-index: 10 !important;" data-block-json="{&quot;blockAnimation&quot;:&quot;none&quot;,&quot;layout&quot;:&quot;caption-hidden&quot;,&quot;overlay&quot;:false,&quot;description&quot;:{&quot;html&quot;:&quot;&lt;p&gt;The amount allocated for provision of free sanitary towels was slashed by 99 million shillings in the financial year 2013/2014, this is from the 300 million shillings allocated previously to the ministry of education for the provision of sanitary towels to 568,925 needy girls between class 6 and 8, a fraction of the 2.5 million in need of the towels.&lt;/p&gt;&quot;,&quot;raw&quot;:false},&quot;hSize&quot;:6,&quot;floatDir&quot;:&quot;right&quot;,&quot;html&quot;:&quot;&lt;iframe src=\&quot;//www.youtube.com/embed/1hn822TrKXo?start=4&amp;amp;wmode=opaque&amp;amp;enablejsapi=1\&quot; height=\&quot;480\&quot; width=\&quot;854\&quot; scrolling=\&quot;no\&quot; frameborder=\&quot;0\&quot; allowfullscreen=\&quot;\&quot;&gt;\n&lt;/iframe&gt;&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=1hn822TrKXo&amp;t=4s&quot;,&quot;thumbnailUrl&quot;:&quot;https://i.ytimg.com/vi/1hn822TrKXo/hqdefault.jpg&quot;,&quot;resolvedBy&quot;:&quot;youtube&quot;}" data-block-type="32">
                 <div id="yui_3_17_2_1_1655382978198_69" class="sqs-block-content">
                 <div id="yui_3_17_2_1_1655382978198_76" class="sqs-video-wrapper video-none" style="position: relative;" data-provider-name="" data-html="&lt;iframe src=&quot;//www.youtube.com/embed/1hn822TrKXo?start=4&amp;wmode=opaque&amp;enablejsapi=1&quot; height=&quot;480&quot; width=&quot;854&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;br/&gt;&lt;/iframe&gt;">
                 <div class="intrinsic" style="max-width: 100%; position: relative;">&nbsp;</div>
@@ -279,17 +279,25 @@ class DatabaseSeeder extends Seeder
 
 
 
-        $posts->image()->save( \App\Models\Image::factory()->make() );
-        $posts2->image()->save( \App\Models\Image::factory()->make() );
-        $posts3->image()->save( \App\Models\Image::factory()->make() );
+        $posts->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/1.png']) );
+        $posts2->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/2.png']) );
+        $posts3->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/3.png']) );
 
         \App\Models\Comment::factory(100)->create();
 
         \App\Models\Tag::factory()->create([
-            'name' => 'Challenges',
+            'name' => 'Nigeria, kids, Change, Future',
     ]);
-        \App\Models\Tag::factory()->create();
-        \App\Models\Tag::factory()->create();
+
+    \App\Models\Tag::factory()->create([
+        'name' => 'Challenges, Running, Run, Walk, Sponsorship, Virtual Event, Nigeria ',
+]);
+
+\App\Models\Tag::factory()->create([
+    'name' => 'Challenges',
+]);
+
+      
 
         // foreach($posts as $post)
         // {
