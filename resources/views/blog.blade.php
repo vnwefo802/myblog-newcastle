@@ -27,7 +27,7 @@
                                 {{-- Post Tags --}}
                                 <div class="">
                                     <div class="m-2">
-                                        <ul class="flex flex-row  lg:w-[250px] md:w-[100px]">
+                                        {{-- <ul class="flex flex-row  lg:w-[250px] md:w-[100px]">
 
 
                                             @foreach ($tags as $tag)
@@ -38,7 +38,7 @@
                                             @endforeach
 
 
-                                        </ul>
+                                        </ul> --}}
                                     </div>
                                 </div>
                                 <div class="relative flex flex-row gap-2 mb-2 lg:ml-0 md:mr-2 Bottom-3">
