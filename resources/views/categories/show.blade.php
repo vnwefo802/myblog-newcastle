@@ -5,13 +5,30 @@
 
 @section('content')
 
-
-<div class="w-10/12 mx-auto mt-20">
-    <div class="">
-        <div class="flex md:flex-row flex-col">
-            <div>
-
+<div class="md:w-10/12 mx-auto mt-20">
+        <div class="">
+            <div class="flex md:flex-row">
+                <div>
                 @forelse($posts as $post)
+                    <div>
+                        <div
+                            class="lg:w-[750px] md:w-[465px] w-[320px] lg:max-w-[750px] md:max-w-[465px] max-w-[320px] lg:h-[175px]  md:h-[132px] h-[260px] lg:max-h-[175px] md:max-h-[132px] max-h-[260px] lg:mr-20 border-[1px] container my-4 static flex md:flex-row flex-col">
+                            <div
+                                class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left text-ellipsis">
+                                <a href="{{ route('posts.show', $post) }}" class="blog-img"><img
+                                        src="{{ asset('storage/' . $post->image->path . '') }}" alt=""
+                                        class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left"></a>
+                            </div>
+                            <div class="pl-3 mt-2 w-[320px] float-left static">
+                                <h3 class="lg:text-2xl md:text-base w-[318px] h-[28px] lg:ml-0"><a
+                                        href="{{ route('posts.show', $post) }}"
+                                        class="hover:text-blue-600">{{ \Str::limit($post->title, 35) }}</a></h3>
+                                <p class="lg:text-lg md:text-xs text-sm h-[20px] w-[318px] text-gray-500 lg:ml-0 lg:py-6 lg:mt-4 ">
+                                    {{ \Str::limit($post->excerpt, 35) }}</p>
+                                {{-- Post Tags --}}
+                                <div class="">
+                                    <div class="m-2">
+                                        <ul class="flex flex-row  lg:w-[250px] md:w-[100px]">
 
                 <div class="lg:w-[750px] md:w-[465px] w-[309px] lg:h-[175px]  md:h-[132px] h-[230px] lg:max-h-[175px] md:max-h-[132px] max-h-[230px] lg:mr-20 border-[1px] container my-4 static">
                 <a href="{{ route('posts.show', $post) }}" class="blog-img" ><img src="{{asset('/' . $post->image->path. '')}}" alt="" class="lg:w-[300px] md:w-[238px] w-[309px] lg:h-[175px] md:h-[130px] h-[130px] md:float-left"></a>
@@ -42,12 +59,12 @@
                             </div>
                         </div>
                     </div>
+                    @empty
+                    <div class="flex w-full justify-center">
+                        <h1 class='lead text-4xl font-light text-center'>There are no posts to show</h1>
+                    </div>
+                    @endforelse
                 </div>
-                @empty
-                <p class='lead'>There are no posts to show.</p>
-
-                @endforelse
-            </div>
             <!-- SIDEBAR: start -->
 			<div class="ml-4  lg:w-[266px] w-[175px] md:block hidden  mt-4">
                 <div class="">
