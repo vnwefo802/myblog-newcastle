@@ -84,11 +84,11 @@ return [
     */
 
     'from' => [
-        'address' => 'Contact@myblog.com',
+        'address' => 'newcastlefoundation@outlook.com',
         'name' => "MyBlog Contact",
     ],
 
-    'reply_to' => ['address' => 'Contact@myblog.com', 'name' => 'MyBlog Contact'],
+    'reply_to' => ['address' => 'newcastlefoundation@outlook.com', 'name' => 'MyBlog Contact'],
 
     /*
     |--------------------------------------------------------------------------

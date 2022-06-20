@@ -37,6 +37,9 @@ $show_home_edit  = false;
 $show_footer_edit  = false;
 $showtag  = false;
 
+
+
+
 if (Auth::check()) {
     $roles = auth()
         ->user()
@@ -124,6 +127,8 @@ if (Auth::check()) {
     }
 
     }
+
+
 @endphp
 <div class="page-wrapper">
     <div class="page-content">
@@ -174,6 +179,8 @@ if (Auth::check()) {
                             </button></a>
                         </div>
                         @endif
+
+                        
                         <!-- roles -->
                         @if (Auth::check() && $show_roles_index)
 
@@ -184,7 +191,7 @@ if (Auth::check()) {
                                 </svg>
                                 <div>
                                     <h1 class="pt-4 font-bold leading-none text-gray-800 ">Roles</h1>
-                                    <h2 class="m-2 ml-5 text-lg font-semibold">{{$role->count()}}</h2>
+                                    <h2 class="m-2 ml-5 text-lg font-semibold">{{$accountRoles->count()}}</h2>
                                 </div>
                             </button></a>
                         </div>

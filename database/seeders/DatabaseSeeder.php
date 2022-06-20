@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\PostTag;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 
@@ -56,7 +58,7 @@ class DatabaseSeeder extends Seeder
             $user->image()->save( \App\Models\Image::factory()->make() );
         }
 
-        \App\Models\Category::factory()->create(
+        Category::factory()->create(
             [
                 'name' => 'Fundrasier For Newcastle Foundation',
                 'short_description' => 'Want to get involved in charity events or charity fundraising? Try joining one of our events or set up your own - it could be the most fun you have all year!',
@@ -163,7 +165,7 @@ class DatabaseSeeder extends Seeder
                 <p class="" style="margin-bottom: 0px; overflow-wrap: break-word; white-space: pre-wrap;">More students are continuing their education with over 90% choosing to enrol into secondary school upon completion of their primary school examinations, presenting yet more opportunities for a prosperous future.</p>
                 </div>
                 </div>',
-
+                'approved' => 1,
                 // body end
                 'user_id' => '1',
                 'category_id' => '1',
@@ -223,6 +225,7 @@ class DatabaseSeeder extends Seeder
                ',
 
                 // body end
+                'approved' => 1,
                 'user_id' => '2',
                 'category_id' => '2',
             ]
@@ -272,12 +275,16 @@ class DatabaseSeeder extends Seeder
                    </div>',
 
                 // body end
+                'approved' => 1,
                 'user_id' => '2',
                 'category_id' => '3',
             ]
         );
 
 
+        PostTag::factory()->create(['post_id' => 1, 'tag_id' => 1]);
+        PostTag::factory()->create(['post_id' => 2, 'tag_id' => 2]);
+        PostTag::factory()->create(['post_id' => 3, 'tag_id' => 3]);
 
         $posts->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/1.png']) );
         $posts2->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/2.png']) );
@@ -310,6 +317,7 @@ class DatabaseSeeder extends Seeder
         //     $post->image()->save( \App\Models\Image::factory()->make() );
         // }
 
+      
         \App\Models\Setting::factory(1)->create();
         \App\Models\Donate::factory()->create();
         \App\Models\Home::factory()->create();
