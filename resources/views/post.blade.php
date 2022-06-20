@@ -16,7 +16,7 @@
 
 
 <div class="pt-[68px]">
-	<div class="w-10/12 mx-auto">
+	<div class="md:w-10/12 mx-auto">
 		<div class="flex flex-row ">
 			<div class="w-full ">
 				<div>
@@ -36,7 +36,7 @@
 									</svg><span class="text-[14px] text-gray-500">Posted {{ $post->created_at->diffForHumans() }}</span>
 								</p>
 							</div>
-							<div class="pt-[34px] text-gray-500">
+							<div class="pt-[34px] md:p-[20px] text-gray-500">
 								{!! $post->body !!}
 							</div>
 						</div>
