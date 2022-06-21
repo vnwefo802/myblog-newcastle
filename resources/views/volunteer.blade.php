@@ -174,7 +174,7 @@
 		formData.append('email', email);
 
 		$.ajax({
-			url: "{{ route('contact.store') }}",
+			url: "{{ route('volunteer.store') }}",
 			data: formData,
 			type: 'POST',
 			dataType: 'JSON',
