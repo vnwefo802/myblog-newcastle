@@ -45,8 +45,8 @@ use App\Http\Controllers\BlogController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 // volunteer
-Route::get('/volunteer', [VolunteerController::class, 'create_volunteer'])->name('volunteer.create');
-Route::post('/volunteer', [VolunteerController::class, 'store_volunteer'])->name('volunteer.store');
+Route::get('/volunteer', [VolunteerController::class, 'create'])->name('volunteer.create');
+Route::post('/volunteer', [VolunteerController::class, 'store'])->name('volunteer.store');
 // volunteer ends
 Route::get('/donate', [DonateController::class, 'donate'])->name('donate');
 Route::get('/donate/confirmation', [donateconfirmation::class, 'donateconfirmation'])->name('donateconfirmation');

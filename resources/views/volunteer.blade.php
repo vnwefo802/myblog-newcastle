@@ -6,7 +6,7 @@
 </head>
 @section('content')
 
-{{-- hero --}}
+<div class='global-message info d-none'></div>
 
 
 <div class="bg-gray-100 dark:bg-gray-800">
@@ -34,7 +34,7 @@
 
 
 
-{{-- We take privacy issues seriously. You can be sure that your personal data is securely protected. --}}
+
 
 <div class="dark:text-white px-6 py-4 border-0 rounded relative mt-4 mb-4 bg-white dark:bg-gray-800 shadow xl:w-[1080px] md:w-11/12 lg:mx-auto" id="formscroll">
 
@@ -81,7 +81,7 @@
                             <div class="flex flex-col md:w-72">
                                 <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name" class="py-2 px-4" />
                                 <small class='error text-danger first_name'></small>
-                            </div>   
+                            </div>
                             @error('first_name')
                             <p class='text-red-500'>{{ $message }}</p>
                             @enderror
@@ -134,37 +134,79 @@
             <input type="submit" class="px-10 py-4 text-base font-semibold leading-none text-white bg-indigo-700 rounded mt-9 hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none send-message-btn" value="submit">
         </div>
     </form>
-    
+
 
 </div>
 
 @endsection
 
 
+@section('custom_js')
 
-@section("script")
 <script>
-    // $(document).ready(function () {
 
-$('.confirmDelete').submit(function(e){
-    e.preventDefault();
-const Toast = Swal.mixin({
-    toast: true,
-    position: 'top-right',
-    iconColor: 'white',
-    customClass: {
-      popup: 'colored-toast'
-    },
-    showConfirmButton: false,
-    timer: 1500,
-    timerProgressBar: true
-  })
-  await Toast.fire({
-    icon: 'success',
-    title: 'Success'
-  })
+	$(document).on("click", '.send-message-btn', (e) => {
+		// e.preventDefault();
+		let $this = e.target;
 
-});
+		let csrf_token = $($this).parents("form").find("input[name='_token']").val()
+
+		let first_name = $($this).parents("form").find("input[name='first_name']").val()
+
+		let last_name = $($this).parents("form").find("input[name='last_name']").val()
+
+		let phone_number = $($this).parents("form").find("input[name='phone_number']").val()
+
+        console.log(phone_number);
+		let country = $($this).parents("form").find("input[name='country']").val()
+
+
+		let email = $($this).parents("form").find("input[name='email']").val()
+
+
+
+		let formData = new FormData();
+		formData.append('_token', csrf_token);
+		formData.append('first_name', first_name);
+		formData.append('last_name', last_name);
+		formData.append('phone_number', phone_number);
+		formData.append('country', country);
+		formData.append('email', email);
+
+		$.ajax({
+			url: "{{ route('contact.store') }}",
+			data: formData,
+			type: 'POST',
+			dataType: 'JSON',
+			processData:false,
+			contentType: false,
+			success: function(data){
+
+				if(data.success)
+				{
+                    console.log(data);
+					$(".global-message").addClass('alert , alert-info')
+					$(".global-message").fadeIn()
+					$(".global-message").text(data.message)
+
+					clearData($($this).parents("form"), ['first_name', 'last_name', 'phone_number', 'country', 'email']);
+
+					setTimeout(() => {
+						$(".global-message").fadeOut()
+					}, 5000);
+				}
+				else
+				{
+					for (const error in data.errors)
+					{
+						$("small."+error).text(data.errors[error]);
+					}
+				}
+			}
+		})
+
+	})
+
 </script>
 @endsection
 

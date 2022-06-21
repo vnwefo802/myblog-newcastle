@@ -7,7 +7,7 @@
 <link href="{{ asset('admin_dashboard_assets/plugins/select2/css/select2-bootstrap4.css') }}" rel="stylesheet" />
 
 @endsection
-    
+
     @section("wrapper")
     <!--start page wrapper -->
     <div class="page-wrapper">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <!--end breadcrumb-->
-          
+
             <div class="card">
                 <div class="card-body p-4">
                     <h5 class="card-title">Add New User</h5>
@@ -35,7 +35,7 @@
                     <form action="{{ route('admin.users.update', $user) }}" method='post' enctype='multipart/form-data'>
                         @csrf
                         @method('PATCH')
-    
+
                         <div class="form-body mt-4">
                             <div class="row">
                                 <div class="col-lg-12">
@@ -44,7 +44,7 @@
                                         <div class="mb-3">
                                             <label for="input_name" class="form-label">Name</label>
                                             <input name='name' type='text' class="form-control" id="input_name" value='{{ old("name", $user->name) }}'>
-                                        
+
                                             @error('name')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
@@ -53,37 +53,19 @@
                                         <div class="mb-3">
                                             <label for="input_email" class="form-label">Email</label>
                                             <input name='email' type='email' class="form-control" id="input_email" value='{{ old("email", $user->email) }}'>
-                                        
+
                                             @error('email')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        
+
                                         <div class="mb-3">
                                             <label for="input_password" class="form-label">Password</label>
                                             <input name='password' type='password' class="form-control" id="input_password">
-                                        
+
                                             @error('password')
                                                 <p class='text-danger'>{{ $message }}</p>
                                             @enderror
-                                        </div>
-
-                                        <div class='row'>
-                                            <div class='col-md-8'>
-                                                <div class="mb-3">
-                                                    <label for="input_image" class="form-label">Image</label>
-                                                    <input name='image' type='file' class="form-control" id="input_image">
-                                                
-                                                    @error('image')
-                                                        <p class='text-danger'>{{ $message }}</p>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class='col-md-4'>
-                                                <div class='user-image'>
-                                                    <img src="{{ $user->image ? asset('storage/' . $user->image->path) : asset('storage/placeholders/user_placeholder.jpg') }}" alt="">
-                                                </div>
-                                            </div>
                                         </div>
 
                                         <div class="mb-3">
@@ -110,16 +92,16 @@
 
                                         <button class='btn btn-primary bg-primary' type='submit'>Update User</button>
 
-                                        <a 
+                                        <a
                                         onclick='event.preventDefault(); document.getElementById("delete_user_{{ $user->id }}").submit()'
                                         href="#"
                                         class='btn btn-danger'>
                                             Delete User
                                         </a>
-                                        
+
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </form>
@@ -140,7 +122,7 @@
 
 <script>
     $(document).ready(function () {
-        
+
 
         $('.single-select').select2({
             theme: 'bootstrap4',

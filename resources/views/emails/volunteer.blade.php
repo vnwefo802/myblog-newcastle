@@ -1,19 +1,19 @@
 @component('mail::message')
 # Visitor Message
-Some Visitor Left a message:
 
+Some Visitor Left a message:
 @component('mail::table')
 |               |               |
 | ------------- |:-------------:|
-| Firstname:    |{{ $firstname }}|
-| Secondname:   |{{ $secondname }}|
-| Phonenumber:  |{{ $phonenumber }}|
+| Firstname:    |{{ $first_name }}|
+| Secondname:   |{{ $last_name }}|
+| Phonenumber:  |{{ $phone_number }}|
 | Country:      |{{ $country }}|
 | Email:        |{{ $email }}|
-| Subject:      |{{ $subject }}|
-| Message:      |{{ $message }}|
 @endcomponent
-@component('mail::button', ['url' => 'http://127.0.0.1:8000/admin/contacts'])
+
+
+@component('mail::button', ['url' => 'http://127.0.0.1:8000/admin/volunteer'])
 View Message
 @endcomponent
 
