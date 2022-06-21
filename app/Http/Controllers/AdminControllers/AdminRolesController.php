@@ -18,7 +18,7 @@ class AdminRolesController extends Controller
     public function index()
     {
         return view('admin_dashboard.roles.index', [
-            'roles' => Role::paginate(20),
+            'roles' => Role::paginate(15151254546576565656),
         ]);
     }
 

@@ -25,7 +25,7 @@ class AdminUsersController extends Controller
     public function index()
     {
         return view('admin_dashboard.users.index', [
-            'users' => User::with('role')->paginate('50')
+            'users' => User::with('role')->paginate('5000000000000000000000')
         ]);
     }
 

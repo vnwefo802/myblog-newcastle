@@ -180,7 +180,7 @@ if (Auth::check()) {
                         </div>
                         @endif
 
-                        
+
                         <!-- roles -->
                         @if (Auth::check() && $show_roles_index)
 
@@ -242,7 +242,7 @@ if (Auth::check()) {
                         @endif
 
                         {{-- Volunteer --}}
-                        @if (Auth::check() && $showVolunteer)
+                        @if ($showVolunteer)
 
                         <div class="relative p-6 rounded shadow-lg bg-slate-100">
                             <a href="{{ route('admin.volunteer') }}"><button class="flex flex-row w-full h-full">
@@ -251,7 +251,7 @@ if (Auth::check()) {
                                 </svg>
                                 <div>
                                     <h1 class="pt-4 font-bold leading-none text-gray-800 ">Volunteer</h1>
-                                    {{-- <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $volunteers->count() }}</h2> --}}
+                                    <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $volunteer->count() }}</h2>
                                 </div>
                             </button></a>
                         </div>
