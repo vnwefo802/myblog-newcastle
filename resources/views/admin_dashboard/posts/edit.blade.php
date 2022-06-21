@@ -1,4 +1,3 @@
-
 @extends("admin_dashboard.layouts.app")
 @section('title', 'Admin - Edit Post')
 @section("style")

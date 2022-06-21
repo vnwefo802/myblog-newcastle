@@ -23,14 +23,14 @@
 					<div class="px-[15px]">
 						<div class="pb-[119px]">
 							<div>
-								<img src="{{ asset($post->image ? 'storage/' . $post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="" class="m-auto">
+								<img src="{{ asset($post->image ? '/' . $post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '')  }}" alt="" class="m-auto">
 							</div>
-							<div class="mt-9"> 
-								<h1 class="text-xl md:text-4xl uppercase font-bold">{{ $post->title }}</h1>
+							<div class="mt-9">
+								<h1 class="text-xl font-bold uppercase md:text-4xl">{{ $post->title }}</h1>
 							</div>
 							{{-- clock goes here --}}
 							<div class="mt-4">
-								<p> 
+								<p>
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[14px] h-[14px] float-left mt-[5px] mr-3 ">
 										<path class="fill-gray-500" d="M232 120C232 106.7 242.7 96 256 96C269.3 96 280 106.7 280 120V243.2L365.3 300C376.3 307.4 379.3 322.3 371.1 333.3C364.6 344.3 349.7 347.3 338.7 339.1L242.7 275.1C236 271.5 232 264 232 255.1L232 120zM256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0zM48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48C141.1 48 48 141.1 48 256z"/>
 									</svg><span class="text-[14px] text-gray-500">Posted {{ $post->created_at->diffForHumans() }}</span>
@@ -49,7 +49,7 @@
 						@foreach($post->comments as $comment)
 						<div id="comment_{{ $comment->id }}" class="flex flex-row p-1">
 							<div class=" pr-2 min-w-[65px] min-h-[65px] max-h-[65px] max-w-[65px]">
-								<img class="" src="{{ $comment->user->image ? asset('storage/' . $comment->user->image->path. '') : 'https://images.assetsdelivery.com/compings_v2/salamatik/salamatik1801/salamatik180100019.jpg'  }}" alt="">
+								<img class="" src="{{ $comment->user->image ? asset('/' . $comment->user->image->path. '') : 'https://images.assetsdelivery.com/compings_v2/salamatik/salamatik1801/salamatik180100019.jpg'  }}" alt="">
 							</div>
 							<div class="flex flex-col">
 								<div class="relative">
@@ -82,18 +82,18 @@
 
 						<form method="POST" action="{{ route('posts.add_comment', $post) }}">
 							@csrf
-							
-							<div class=" mt-2">
+
+							<div class="mt-2 ">
 								<div class="">
 									<!-- <label for="message">Message</label> -->
-									<textarea name="the_comment" id="the_comment" class="w-full h-24 border-2 p-1" placeholder="Say something about us"></textarea>
+									<textarea name="the_comment" id="the_comment" class="w-full h-24 p-1 border-2" placeholder="Say something about us"></textarea>
                                     @error('the_comment')
                                     <p class='text-red-500'>{{ $message }}</p>
 									@enderror
 								</div>
 							</div>
 							<div class="form-group">
-								<input type="submit" value="Post Comment" class="border-2 hover:bg-gray-600 p-2 rounded hover:text-white focus:border-gray-700 ml-3 mb-4">
+								<input type="submit" value="Post Comment" class="p-2 mb-4 ml-3 border-2 rounded hover:bg-gray-600 hover:text-white focus:border-gray-700">
 							</div>
 						</form>
 
@@ -101,7 +101,7 @@
 
 						@guest
 						<p class="lead"><a href="{{ route('login') }}">Login </a> OR <a href="{{ route('register') }}">Register</a> to write comments</p>
-						@endguest	
+						@endguest
 					</div>
 				</div>
 			</div>
@@ -129,21 +129,21 @@
 								class="flex lg:flex-row lg:w-[264px] md:w-[100px] lg:mx-0 md:mx-auto md:flex-col my-2 mb-[40px] border">
 								<a href="{{ route('posts.show', $recent_post) }}">
 									<img class="w-[100px] max-w-[100px] h-[90px] max-h-[90px]"
-										src="{{ asset($recent_post->image ? 'storage/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '') }}"
+										src="{{ asset($recent_post->image ? '/' . $recent_post->image->path : 'storage/placeholders/thumbnail_placeholder.svg' . '') }}"
 										alt="">
 								</a>
-								<div class="md:m-2 mx-2">
-									<p class="md:text-sm text-xs text-gray-300">
+								<div class="mx-2 md:m-2">
+									<p class="text-xs text-gray-300 md:text-sm">
 										<span>{{ $recent_post->created_at->diffForHumans() }}</span>
 									</p>
 									<h2>
 										<a href="{{ route('posts.show', $recent_post) }}">
 											<span
-												class="md:text-base text-sm">{{ \Str::limit($recent_post->title, 20) }}
+												class="text-sm md:text-base">{{ \Str::limit($recent_post->title, 20) }}
 											</span>
 										</a>
 									</h2>
-									<p class="text-gray-500 md:text-base text-xs">
+									<p class="text-xs text-gray-500 md:text-base">
 										{{ \Str::limit($recent_post->excerpt, 20) }}</p>
 								</div>
 							</div>
@@ -165,7 +165,7 @@
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 </div>
 @endsection
 

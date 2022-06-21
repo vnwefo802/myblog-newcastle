@@ -78,7 +78,7 @@ class AdminPostsController extends Controller
         if(count($tags_ids) > 0)
             $post->tags()->sync( $tags_ids );
 
-               
+
 
             Alert::success('success', 'Post has been created.');
         return redirect()->route('admin.posts.create');
@@ -157,7 +157,7 @@ class AdminPostsController extends Controller
 
 
 
-   
+
 
     public function destroy(Post $post)
     {
