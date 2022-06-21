@@ -78,14 +78,20 @@
                     <div class="flex-wrap xl:flex lg:flex md:flex justify-evenly">
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="FirstName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">First Name</label>
-                            <input tabindex="0" aria-label="Enter first name" type="text" name="first_name" required id="first_name" class="py-3 pl-3 text-sm text-gray-800 bg-transparent border border-gray-300 rounded shadow-sm dark:border-gray-700 focus:outline-none focus:border-indigo-700 dark:text-gray-100" placeholder="" value="{{ old('first_name') }}"/>
+                            <div class="flex flex-col md:w-72">
+                                <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name" class="py-2 px-4" />
+                                <small class='error text-danger first_name'></small>
+                            </div>   
                             @error('first_name')
-                                <p class='text-red-500'>{{ $message }}</p>
+                            <p class='text-red-500'>{{ $message }}</p>
                             @enderror
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="LastName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Last Name</label>
-                            <input tabindex="0" aria-label="Enter last name" type="text" id="last_name" name="last_name" required class="py-3 pl-3 text-sm text-gray-800 bg-transparent border border-gray-300 rounded shadow-sm dark:border-gray-700 focus:outline-none focus:border-indigo-700 dark:text-gray-100" placeholder="" value="{{ old('last_name') }}" />
+                            <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0">
+                                <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Lastname' name="last_name" class="py-2 px-4 w-full" />
+                                <small class='error text-danger last_name'></small>
+                            </div>
                             @error('last_name')
                                 <p class='text-red-500'>{{ $message }}</p>
                             @enderror
@@ -93,26 +99,29 @@
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Email</label>
                             <div class="relative">
-                                <div class="absolute flex items-center h-full px-4 text-gray-600 border-r dark:text-gray-400">
-                                    <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg2.svg" alt="mail">
-                                    <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_card_with_inputs-svg2dark.svg" alt="mail">
+                                <div class="flex flex-col mt-8 md:mt-0">
+                                    <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" class="py-2 px-4" />
+                                    <small class='error text-danger email'></small>
                                 </div>
-                                <input tabindex="0" aria-label="Enter email address" id="email" name="email" required class="flex items-center w-full py-3 pl-16 text-sm font-normal text-gray-800 bg-transparent border border-gray-300 rounded shadow dark:text-gray-100 focus:outline-none focus:border focus:border-indigo-700" placeholder="example@gmail.com" value="{{ old('email') }}"/>
                                 @error('email')
                                     <p class='text-red-500'>{{ $message }}</p>
                                 @enderror
                             </div>
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
-                            <label for="Country" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Country</label>
-                            <input tabindex="0" aria-label="Enter country" type="text" id="country" name="country" required class="py-3 pl-3 text-sm text-gray-800 bg-transparent border border-gray-300 rounded shadow-sm dark:border-gray-700 focus:outline-none focus:border-indigo-700 dark:text-gray-100" placeholder="" value="{{ old('country') }}"/>
+                            <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
+                                <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" class="py-2 px-4" />
+                                <small class='error text-danger country'></small>
+                            </div>
                             @error('country')
                                 <p class='text-red-500'>{{ $message }}</p>
                             @enderror
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
-                            <label for="phone_number" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Phone Number</label>
-                            <input tabindex="0" aria-label="Enter Phone number" type="text" id="phone_number" name="phone_number" required class="py-3 pl-3 text-sm text-gray-800 bg-transparent border border-gray-300 rounded shadow-sm dark:border-gray-700 focus:outline-none focus:border-indigo-700 dark:text-gray-100" placeholder="" value="{{ old('phone_number') }}"/>
+                            <div class="flex flex-col md:w-72 mb-7">
+                                <x-blog.form.input value='{{ old("phone_number") }}' placeholder='Your Phone Number' name="phone_number" class="py-2 px-4" />
+                                <small class='error text-danger phone_number'></small>
+                            </div>
                             @error('phone_number')
                                 <p class='text-red-500'>{{ $message }}</p>
                             @enderror
@@ -122,7 +131,7 @@
             </div>
         </div>
         <div class="flex justify-end w-full px-4 py-4 mt-6 bg-gray-100 rounded-bl rounded-br sm:px-12 dark:bg-gray-700">
-            <button role="button" aria-label="save form" class="px-8 py-2 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 rounded confirmDelete focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600 focus:outline-none" type="submit">Save</button>
+            <input type="submit" class="px-10 py-4 text-base font-semibold leading-none text-white bg-indigo-700 rounded mt-9 hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none send-message-btn" value="submit">
         </div>
     </form>
 
