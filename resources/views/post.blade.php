@@ -42,6 +42,40 @@
 						</div>
 					</div>
 				</div>
+                <div class="">
+					<div class="">
+
+						<x-blog.message :status="'success'"/>
+
+						<h2 class="text-2xl">Say something</h2>
+
+						@auth
+
+						<form method="POST" action="{{ route('posts.add_comment', $post) }}">
+							@csrf
+
+							<div class="mt-2 ">
+								<div class="">
+									<!-- <label for="message">Message</label> -->
+									<textarea name="the_comment" id="the_comment" class="w-full h-24 p-1 border-2" placeholder="Say something about us"></textarea>
+                                    @error('the_comment')
+                                    <p class='text-red-500'>{{ $message }}</p>
+									@enderror
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Post Comment" class="p-2 mb-4 ml-3 border-2 rounded hover:bg-gray-600 hover:text-white focus:border-gray-700">
+							</div>
+						</form>
+
+						@endauth
+
+						@guest
+						<p class="lead"><a href="{{ route('login') }}">Login </a> OR
+                            <a href="{{ route('register') }}" class="text-teal-600">Register</a> to write comments</p>
+						@endguest
+					</div>
+				</div>
 				<div class="pb-28">
 					<div class="">
 						<h2 class="text-[30px] font-[400px]">{{ count($post->comments) }} Comments</h2>
@@ -71,39 +105,7 @@
 						@endforeach
 					</div>
 				</div>
-				<div class="">
-					<div class="">
 
-						<x-blog.message :status="'success'"/>
-
-						<h2 class="text-2xl">Say something</h2>
-
-						@auth
-
-						<form method="POST" action="{{ route('posts.add_comment', $post) }}">
-							@csrf
-
-							<div class="mt-2 ">
-								<div class="">
-									<!-- <label for="message">Message</label> -->
-									<textarea name="the_comment" id="the_comment" class="w-full h-24 p-1 border-2" placeholder="Say something about us"></textarea>
-                                    @error('the_comment')
-                                    <p class='text-red-500'>{{ $message }}</p>
-									@enderror
-								</div>
-							</div>
-							<div class="form-group">
-								<input type="submit" value="Post Comment" class="p-2 mb-4 ml-3 border-2 rounded hover:bg-gray-600 hover:text-white focus:border-gray-700">
-							</div>
-						</form>
-
-						@endauth
-
-						@guest
-						<p class="lead"><a href="{{ route('login') }}">Login </a> OR <a href="{{ route('register') }}">Register</a> to write comments</p>
-						@endguest
-					</div>
-				</div>
 			</div>
 			<!-- SIDEBAR: start -->
 			<div class="lg:w-[266px] w-[175px] md:block hidden ml-auto">

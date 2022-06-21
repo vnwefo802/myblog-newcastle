@@ -55,7 +55,7 @@
                                 <div><a href="#" class="text-gray-500 text-[10px]">
 
                                         <span class="flex mt-1">
-                                            <img src='/{{ "$allhome->logo" }}' class="w-[20px] mb-2"
+                                            <img src='/{{ "$allhome->favicon" }}' class="w-[20px] mb-2"
                                                 alt="Newcastle Edumed Foundation Circular Logo">
                                             NewCastle Edumed Foundation</span>
                                     </a></div>
