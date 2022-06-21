@@ -16,7 +16,7 @@ Some Visitor Left a message:
 
 
 @endcomponent
-@component('mail::button', ['url' => ''])
+@component('mail::button', ['url' => 'http://127.0.0.1:8000/admin/contacts'])
 View Message
 @endcomponent
 
