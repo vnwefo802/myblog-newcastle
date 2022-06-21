@@ -1,22 +1,21 @@
 @component('mail::message')
 # Visitor Message
-
 Some Visitor Left a message:
-<br><br>
-Firstname: {{ $firstname }}
-<br>
-Secondname: {{ $secondname }}
-<br>
-Phonenumber: {{ $phonenumber }}
-<br>
-Country: {{ $country }}
-<br>
-Email: {{ $email }}
-<br>
-Subject: {{ $subject }}
-<br>
-Message: {{ $message }}
+@component('mail::table')
+|               |               |
+| ------------- |:-------------:|
+| Firstname:    |{{ $firstname }}|
+| Secondname:   |{{ $secondname }}|
+| Phonenumber:  |{{ $phonenumber }}|
+| Country:      |{{ $country }}|
+| Email:        |{{ $email }}|
+| Subject:      |{{ $subject }}|
+| Message:      |{{ $message }}|
 
+
+
+
+@endcomponent
 @component('mail::button', ['url' => ''])
 View Message
 @endcomponent
