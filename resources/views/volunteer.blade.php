@@ -98,17 +98,16 @@
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Email</label>
-                            <div class="relative">
-                                <div class="flex flex-col mt-8 md:mt-0">
-                                    <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" class="py-2 px-4" />
-                                    <small class='error text-danger email'></small>
-                                </div>
-                                @error('email')
-                                    <p class='text-red-500'>{{ $message }}</p>
-                                @enderror
+                            <div class="flex flex-col mt-8 md:mt-0">
+                                <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" class="py-2 px-4" />
+                                <small class='error text-danger email'></small>
                             </div>
+                            @error('email')
+                                <p class='text-red-500'>{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
+                            <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Country</label>
                             <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
                                 <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" class="py-2 px-4" />
                                 <small class='error text-danger country'></small>
@@ -118,6 +117,7 @@
                             @enderror
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
+                            <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Phone Number</label>
                             <div class="flex flex-col md:w-72 mb-7">
                                 <x-blog.form.input value='{{ old("phone_number") }}' placeholder='Your Phone Number' name="phone_number" class="py-2 px-4" />
                                 <small class='error text-danger phone_number'></small>
