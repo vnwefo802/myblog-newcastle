@@ -8,6 +8,7 @@ $show_create_posts = false;
 $show_create_posts = false;
 $showallcategories = false;
 $show_categories_index = false;
+$show_categories_create = false;
 $showcomments = false;
 $showcomments_index = false;
 $show_comments_create = false;
@@ -115,7 +116,7 @@ if (Auth::check()) {
 <div class="sidebar-wrapper" data-simplebar="true">
             <div class="sidebar-header">
                 <div>
-                    <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" class="w-28" alt="logo icon">
+                    <img src="/{{ $allhome->logo }}" class="w-28" alt="logo icon">
                 </div>
                 <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
                 </div>

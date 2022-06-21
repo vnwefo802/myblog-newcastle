@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\PostTag;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 
@@ -56,7 +58,7 @@ class DatabaseSeeder extends Seeder
             $user->image()->save( \App\Models\Image::factory()->make() );
         }
 
-        \App\Models\Category::factory()->create(
+        Category::factory()->create(
             [
                 'name' => 'Fundrasier For Newcastle Foundation',
                 'short_description' => 'Want to get involved in charity events or charity fundraising? Try joining one of our events or set up your own - it could be the most fun you have all year!',
@@ -107,7 +109,7 @@ class DatabaseSeeder extends Seeder
                 <p class="" style="overflow-wrap: break-word; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; white-space: pre-wrap;">&nbsp;</p>
                 <div id="block-b0bab484361f08b2d297" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; padding: 0px 17px 17px; clear: none; box-sizing: border-box;  margin-right: auto; margin-left: auto; color: #4a4a4a; font-family:  font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff;" data-block-type="2">
                 <div class="sqs-block-content" style="outline: none;">
-                <h1 style="font-size: 51px; margin: 0px; text-rendering: optimizelegibility; letter-spacing: 0em; line-height: 0.75em; color: #ae5929; white-space: pre-wrap;">Nigeria | Projects</h1>
+                <h1 style="font-size: 34px; margin: 0px; text-rendering: optimizelegibility; letter-spacing: 0em; line-height: 0.75em; color: #ae5929; white-space: pre-wrap;">Nigeria | Projects</h1>
                 </div>
                 </div>
                 <div class="row sqs-row" style="color: #4a4a4a; font-family:  font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; width: auto !important;">
@@ -163,7 +165,7 @@ class DatabaseSeeder extends Seeder
                 <p class="" style="margin-bottom: 0px; overflow-wrap: break-word; white-space: pre-wrap;">More students are continuing their education with over 90% choosing to enrol into secondary school upon completion of their primary school examinations, presenting yet more opportunities for a prosperous future.</p>
                 </div>
                 </div>',
-
+                'approved' => 1,
                 // body end
                 'user_id' => '1',
                 'category_id' => '1',
@@ -178,10 +180,10 @@ class DatabaseSeeder extends Seeder
                 // body
                 'body' => '<div id="yui_3_17_2_1_1655382978198_145" class="row sqs-row" style="color: #4a4a4a; font-family:  font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; width: auto !important;">
                 <div class="col sqs-col-9 span-9" style="float: left; padding-right: 0px;">
-                <div id="block-yui_3_17_2_1_1523893776895_21402" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; padding: 17px; clear: none;" data-block-type="2">
+                <div id="block-yui_3_17_2_1_1523893776895_21402" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; clear: none;" data-block-type="2">
                 <div class="sqs-block-content" style="outline: none;">
-                <h3 style="text-rendering: optimizelegibility; font-size: 22px; letter-spacing: 0.1em; line-height: 1.55em; text-transform: uppercase; color: #e37263; margin-top: 15px; margin-bottom: 0px; white-space: pre-wrap;"><strong style="overflow-wrap: break-word;">EDUCATION ALL MONTH, EVERY MONTH </strong></h3>
-                <div id="block-yui_3_17_2_1_1526293097071_12739" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; padding: 17px; clear: none; box-sizing: border-box; margin-right: auto; margin-left: auto; letter-spacing: 0.36px;" data-block-type="2">
+                <h3 style="text-rendering: optimizelegibility; font-size: 22px; line-height: 1.55em; text-transform: uppercase; color: #e37263; margin-top: 15px; margin-bottom: 0px; white-space: pre-wrap;"><strong style="overflow-wrap: break-word;">EDUCATION ALL MONTH, EVERY MONTH </strong></h3>
+                <div id="block-yui_3_17_2_1_1526293097071_12739" class="sqs-block html-block sqs-block-html" style="position: relative; height: auto; clear: none; box-sizing: border-box; margin-right: auto; margin-left: auto; letter-spacing: 0.36px;" data-block-type="2">
                 <div class="sqs-block-content" style="outline: none;">
                 <p class="" style="margin-top: 0px; overflow-wrap: break-word; white-space: pre-wrap;">African girls miss school every month &ndash; just because they are girls. The problem is a lack of affordable sanitary towels. Poor families cannot afford sanitary towels or even underwear and feeding their children takes priority. Many girls are forced to use unsanitary rags, animal skins and even chicken feathers as protection while they menstruate. We have even heard of young women digging holes in the ground to sit over in isolation all day.</p>
                 <p class="" style="overflow-wrap: break-word; white-space: pre-wrap;">This makes the prospect of going to school while menstruating impossible. Missing a week&rsquo;s schooling each month has a massive detrimental impact on a child&rsquo;s progress and girls fall so far behind that they drop out of school completely, often before they have completed Primary School.</p>
@@ -202,7 +204,7 @@ class DatabaseSeeder extends Seeder
                 </div>
                 </div>
                 <p>&nbsp;</p>
-                <div id="block-yui_3_17_2_1_1523893776895_28808" class="sqs-block quote-block sqs-block-quote null" style="position: relative; height: auto; padding: 17px 17px 0.5em; font-weight: 600; font-style: italic; font-size: 25px; letter-spacing: 0em; line-height: 1.4em; margin: -25px auto; text-align: center; clear: both; box-sizing: border-box;" data-block-type="31">
+                <div id="block-yui_3_17_2_1_1523893776895_28808" class="sqs-block quote-block sqs-block-quote null" style="position: relative; height: auto; font-weight: 600; font-style: italic; font-size: 25px; letter-spacing: 0em; line-height: 1.4em; margin: -25px auto; text-align: center; clear: both; box-sizing: border-box;" data-block-type="31">
                 <div class="sqs-block-content">
                 <figure class="block-animation-none" style="display: block; margin: 1em 0px;">
                 <blockquote style="margin: 0px;" data-animation-role="quote">&ldquo;Your programme has really made us improve academically since there is no absenteeism like the previous years. The sanitary towels are really helping us.&rdquo;</blockquote>
@@ -213,7 +215,7 @@ class DatabaseSeeder extends Seeder
                 </div>
                 </div>
                 </div>
-                <div id="block-yui_3_17_2_1_1525962388471_8709" class="float-right sqs-block video-block sqs-block-video sqs-col-6 span-6 float" style="float: right; position: relative; height: auto; padding: 17px; box-sizing: border-box; clear: both; margin-left: 17px; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; z-index: 10 !important;" data-block-json="{&quot;blockAnimation&quot;:&quot;none&quot;,&quot;layout&quot;:&quot;caption-hidden&quot;,&quot;overlay&quot;:false,&quot;description&quot;:{&quot;html&quot;:&quot;&lt;p&gt;The amount allocated for provision of free sanitary towels was slashed by 99 million shillings in the financial year 2013/2014, this is from the 300 million shillings allocated previously to the ministry of education for the provision of sanitary towels to 568,925 needy girls between class 6 and 8, a fraction of the 2.5 million in need of the towels.&lt;/p&gt;&quot;,&quot;raw&quot;:false},&quot;hSize&quot;:6,&quot;floatDir&quot;:&quot;right&quot;,&quot;html&quot;:&quot;&lt;iframe src=\&quot;//www.youtube.com/embed/1hn822TrKXo?start=4&amp;amp;wmode=opaque&amp;amp;enablejsapi=1\&quot; height=\&quot;480\&quot; width=\&quot;854\&quot; scrolling=\&quot;no\&quot; frameborder=\&quot;0\&quot; allowfullscreen=\&quot;\&quot;&gt;\n&lt;/iframe&gt;&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=1hn822TrKXo&amp;t=4s&quot;,&quot;thumbnailUrl&quot;:&quot;https://i.ytimg.com/vi/1hn822TrKXo/hqdefault.jpg&quot;,&quot;resolvedBy&quot;:&quot;youtube&quot;}" data-block-type="32">
+                <div id="block-yui_3_17_2_1_1525962388471_8709" class=" sqs-block video-block sqs-block-video sqs-col-6 span-6" style=" position: relative; height: auto; padding: 17px; box-sizing: border-box; clear: both; margin-left: 17px; color: #4a4a4a; font-family: font-size: 18px; letter-spacing: 0.36px; background-color: #ffffff; z-index: 10 !important;" data-block-json="{&quot;blockAnimation&quot;:&quot;none&quot;,&quot;layout&quot;:&quot;caption-hidden&quot;,&quot;overlay&quot;:false,&quot;description&quot;:{&quot;html&quot;:&quot;&lt;p&gt;The amount allocated for provision of free sanitary towels was slashed by 99 million shillings in the financial year 2013/2014, this is from the 300 million shillings allocated previously to the ministry of education for the provision of sanitary towels to 568,925 needy girls between class 6 and 8, a fraction of the 2.5 million in need of the towels.&lt;/p&gt;&quot;,&quot;raw&quot;:false},&quot;hSize&quot;:6,&quot;floatDir&quot;:&quot;right&quot;,&quot;html&quot;:&quot;&lt;iframe src=\&quot;//www.youtube.com/embed/1hn822TrKXo?start=4&amp;amp;wmode=opaque&amp;amp;enablejsapi=1\&quot; height=\&quot;480\&quot; width=\&quot;854\&quot; scrolling=\&quot;no\&quot; frameborder=\&quot;0\&quot; allowfullscreen=\&quot;\&quot;&gt;\n&lt;/iframe&gt;&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=1hn822TrKXo&amp;t=4s&quot;,&quot;thumbnailUrl&quot;:&quot;https://i.ytimg.com/vi/1hn822TrKXo/hqdefault.jpg&quot;,&quot;resolvedBy&quot;:&quot;youtube&quot;}" data-block-type="32">
                 <div id="yui_3_17_2_1_1655382978198_69" class="sqs-block-content">
                 <div id="yui_3_17_2_1_1655382978198_76" class="sqs-video-wrapper video-none" style="position: relative;" data-provider-name="" data-html="&lt;iframe src=&quot;//www.youtube.com/embed/1hn822TrKXo?start=4&amp;wmode=opaque&amp;enablejsapi=1&quot; height=&quot;480&quot; width=&quot;854&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;br/&gt;&lt;/iframe&gt;">
                 <div class="intrinsic" style="max-width: 100%; position: relative;">&nbsp;</div>
@@ -223,6 +225,7 @@ class DatabaseSeeder extends Seeder
                ',
 
                 // body end
+                'approved' => 1,
                 'user_id' => '2',
                 'category_id' => '2',
             ]
@@ -272,12 +275,16 @@ class DatabaseSeeder extends Seeder
                    </div>',
 
                 // body end
+                'approved' => 1,
                 'user_id' => '2',
                 'category_id' => '3',
             ]
         );
 
 
+        PostTag::factory()->create(['post_id' => 1, 'tag_id' => 1]);
+        PostTag::factory()->create(['post_id' => 2, 'tag_id' => 2]);
+        PostTag::factory()->create(['post_id' => 3, 'tag_id' => 3]);
 
         $posts->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/1.png']) );
         $posts2->image()->save( \App\Models\Image::factory()->make(['path' => 'storage/images/2.png']) );
@@ -310,6 +317,7 @@ class DatabaseSeeder extends Seeder
         //     $post->image()->save( \App\Models\Image::factory()->make() );
         // }
 
+      
         \App\Models\Setting::factory(1)->create();
         \App\Models\Donate::factory()->create();
         \App\Models\Home::factory()->create();

@@ -53,7 +53,7 @@
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="inputProductTitle" class="form-label">Post Slug</label>
+                                            <label for="inputProductTitle" class="form-label">Post Slug (URL Link)</label>
                                             <input type="text" value='{{ old("slug") }}' class="form-control" required name='slug' id="inputProductTitle">
 
                                             @error('slug')
@@ -97,6 +97,10 @@
                                             <input type="text" class="form-control" name='tags' data-role="tagsinput">
                                         </div>
 
+                                        <div class="mb-2">
+                                            <span class="text-xs text-red-500">Images Must Be: Width: 750px x Height: 350px</span>
+                                        </div>
+                                        
                                         <div class="mb-3">
                                             <div class="card">
                                                 <div class="card-body">

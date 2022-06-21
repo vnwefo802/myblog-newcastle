@@ -151,13 +151,14 @@
 <script>
 
 	$(document).on("click", '.send-message-btn', (e) => {
-		e.preventDefault();
+		// e.preventDefault();
 		let $this = e.target;
 
 		let csrf_token = $($this).parents("form").find("input[name='_token']").val()
 		let first_name = $($this).parents("form").find("input[name='first_name']").val()
 		let last_name = $($this).parents("form").find("input[name='last_name']").val()
 		let phone_number = $($this).parents("form").find("input[name='phone_number']").val()
+        console.log(phone_number);
 		let country = $($this).parents("form").find("input[name='country']").val()
 		let email = $($this).parents("form").find("input[name='email']").val()
 		let subject = $($this).parents("form").find("input[name='subject']").val()

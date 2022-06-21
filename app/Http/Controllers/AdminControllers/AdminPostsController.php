@@ -65,7 +65,6 @@ class AdminPostsController extends Controller
                 'name' => $filename,
                 'extension' => $file_extension,
                 'path' => 'storage/' . $path,
-
             ]);
         }
 

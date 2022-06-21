@@ -36,6 +36,7 @@
     {{-- Categories Dropdown --}}
     <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -66,7 +67,7 @@
                         <!--                 Website Logo                 -->
                         <!-- ============================================ -->
                         <a href="/" class="flex" aria-label="NewcastleFoundationLogo">
-                            <img src="{{ asset('images/NewcastleFoundationLogo.jpg') }}"
+                            <img src="/{{ $allhome->logo }}"
                                 class=" lg:w-[12.0449rem] md:w-[6.02245rem] lg:h-[4.0625rem] md:h-[2.03125rem] h-[4.0625rem] max-w-[13rem] object-cover" alt="Newcastle logo"
                                 aria-label="Newcastle logo">
                             {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
@@ -767,7 +768,7 @@ id="menu-item-5">Add New Users</a>
                     <div class="mb-8 cursor-pointer ">
                         <a href="/">
                             <img class="w-[10.1875rem] h-[3.4375rem]" loading="lazy"
-                                src="{{ asset('images/NewcastleFoundationLogo.jpg') }}" alt="logo">
+                                src="/{{ $allhome->logo }}" alt="logo">
                         </a>
                     </div>
                     <div class="whitespace-pre-line md:text-base text-sm text-white ">
