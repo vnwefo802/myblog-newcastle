@@ -121,9 +121,9 @@
                             school.
                         </p>
 
-                        <button
+                        <a href="{{ route('donate') }}"><button
                             class="self-start px-4 py-2 mt-8 text-white rounded from-blue-500 to-green-400 bg-gradient-to-tl hover:from-blue-600 hover:to-green-500">Find
-                            out more</button>
+                            out more</button></a>
                     </div>
                 </div>
             </div>
