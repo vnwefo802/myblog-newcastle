@@ -63,21 +63,10 @@ class HomeFactory extends Factory
 
             'difference_button_1'=>'Volunteer',
             'difference_button_2'=>'Donate',
-<<<<<<< HEAD
             'difference_image'=>'storage/setting/kidsinschool.jpg',
             'logo'=>'storage/setting/NewcastleLogo.png',
             'favicon'=>'storage/setting/Newcastle-FoundationLogo.png',
-=======
-<<<<<<< HEAD
-            'difference_image'=>'storage/settings/kidsinschool.jpg',
-            'logo'=>'storage/setting/NewcastleLogo.jpg',
-            'favicon'=>'storage/setting/Newcastlebloglogo.jpg',
-=======
-            'difference_image'=>'storage/setting/kidsinschool.jpg',
-            'logo'=>'storage/setting/NewcastleLogo.png',
-            'favicon'=>'storage/setting/Newcastle-FoundationLogo.jpg',
->>>>>>> 19677e9b2419d3a4f98d652bfe2251c60b2e47ae
->>>>>>> e8c2190d03fad71efed52d7cf4a0e6589e59a4ad
+
 
         ];
     }

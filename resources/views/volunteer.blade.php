@@ -81,7 +81,7 @@
                             <div class="flex flex-col md:w-72">
                                 <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name" class="py-2 px-4" />
                                 <small class='error text-danger first_name'></small>
-                            </div>   
+                            </div>
                             @error('first_name')
                             <p class='text-red-500'>{{ $message }}</p>
                             @enderror
@@ -157,7 +157,7 @@
 
 		let phone_number = $($this).parents("form").find("input[name='phone_number']").val()
 
-        // console.log(phone_number);
+        console.log(phone_number);
 		let country = $($this).parents("form").find("input[name='country']").val()
 
 
