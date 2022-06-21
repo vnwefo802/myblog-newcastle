@@ -131,7 +131,7 @@
             </div>
         </div>
         <div class="flex justify-end w-full px-4 py-4 mt-6 bg-gray-100 rounded-bl rounded-br sm:px-12 dark:bg-gray-700">
-            <button role="button" aria-label="save form" class="px-8 py-2 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 rounded confirmDelete focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600 focus:outline-none" type="submit">Save</button>
+            <input type="submit" class="px-10 py-4 text-base font-semibold leading-none text-white bg-indigo-700 rounded mt-9 hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none send-message-btn" value="submit">
         </div>
     </form>
     
