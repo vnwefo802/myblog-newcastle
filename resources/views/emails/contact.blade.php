@@ -7,9 +7,9 @@ Firstname: {{ $firstname }}
 <br>
 Secondname: {{ $secondname }}
 <br>
-Phonenumber: {{ $Phonenumber }}
+Phonenumber: {{ $phonenumber }}
 <br>
-Country: {{ $Country }}
+Country: {{ $country }}
 <br>
 Email: {{ $email }}
 <br>

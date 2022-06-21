@@ -21,9 +21,9 @@ class DashboardController extends Controller
         $Categories = Category::findOrFail(1);
 
         $comment = Comment::all();
-        $role = Permission::all();
+        $accountRoles = Permission::all();
         $contact = Contact::all();
         $user = User::all();
-        return view('admin_dashboard.index',compact('post', 'tag', 'Categories', 'comment', 'role', 'contact', 'user' ));
+        return view('admin_dashboard.index',compact('post', 'tag', 'Categories', 'comment', 'accountRoles', 'contact', 'user' ));
     }
 }

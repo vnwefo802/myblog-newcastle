@@ -8,6 +8,7 @@ $show_create_posts = false;
 $show_create_posts = false;
 $showallcategories = false;
 $show_categories_index = false;
+$show_categories_create = false;
 $showcomments = false;
 $showcomments_index = false;
 $show_comments_create = false;

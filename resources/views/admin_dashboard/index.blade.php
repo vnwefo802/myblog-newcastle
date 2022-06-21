@@ -1,3 +1,4 @@
+
 @extends("admin_dashboard.layouts.app")
 
 @section('title', 'Admin - Dashboard')
@@ -12,6 +13,123 @@
 </a>
 
 
+@php
+
+$showAdmin = false;
+$showallpost = false;
+$show_create_posts = false;
+$show_create_posts = false;
+$showallcategories = false;
+$show_categories_index = false;
+$show_categories_create = false;
+$showcomments = false;
+$showcomments_index = false;
+$show_comments_create = false;
+$show_users_index = false;
+$show_users_create = false;
+$show_roles_index = false;
+$show_roles_create = false;
+$showcontacts = false;
+$showVolunteer = false;
+$show_setting_edit = false;
+$show_donate_edit  = false;
+$show_home_edit  = false;
+$show_footer_edit  = false;
+$showtag  = false;
+
+
+
+
+if (Auth::check()) {
+    $roles = auth()
+        ->user()
+        ->role->permissions->toArray();
+
+                    foreach ($roles as $role) {
+                        if ($role['name'] == 'admin.index') {
+                            $showAdmin = true;
+                         } else if ($role['name'] == 'admin.posts.index') {
+                            $showallpost = true;
+                       }
+                          else if ($role['name'] == 'admin.comments') {
+                            $showcomments = true;
+                        }
+
+        else if ($role['name'] == 'admin.posts.create') {
+            $show_create_posts   = true;
+        }
+
+        else if ($role['name'] == 'admin.categories.index') {
+            $showallcategories   = true;
+        }
+
+        else if ($role['name'] == 'admin.categories.create') {
+            $show_categories_create   = true;
+        }
+
+          else if ($role['name'] == 'admin.comments') {
+            $showcomments = true;
+        }
+
+        else if ($role['name'] == 'admin.comments.index') {
+            $showcomments_index = true;
+        }
+
+        else if ($role['name'] == 'admin.comments.create') {
+            $show_comments_create = true;
+        }
+
+        else if ($role['name'] == 'admin.users.index') {
+            $show_users_index = true;
+        }
+
+        else if ($role['name'] == 'admin.users.create') {
+            $show_users_create = true;
+        }
+
+        else if ($role['name'] == 'admin.roles.index') {
+            $show_roles_index = true;
+        }
+
+        else if ($role['name'] == 'admin.roles.create') {
+            $show_roles_create = true;
+        }
+
+         else if ($role['name'] == 'admin.contacts') {
+            $showcontacts = true;
+        }
+
+        else if ($role['name'] == 'admin.volunteer') {
+            $showVolunteer = true;
+        }
+
+        else if ($role['name'] == 'admin.setting.edit') {
+            $show_setting_edit = true;
+        }
+
+        else if ($role['name'] == 'admin.donate') {
+            $show_donate_edit  = true;
+        }
+
+         else if ($role['name'] == 'admin.home.edit') {
+            $show_home_edit   = true;
+        }
+
+        else if ($role['name'] == 'admin.footer.edit') {
+            $show_footer_edit   = true;
+        }
+
+        else if ($role['name'] == 'admin.tags.index') {
+            $showtag   = true;
+        }
+
+
+    }
+
+    }
+
+
+@endphp
 <div class="page-wrapper">
     <div class="page-content">
         <div class="container mx-auto ">
@@ -19,6 +137,7 @@
                 <div class="py-16 bg-indigo-500 rounded-tl rounded-tr xl:rounded-bl xl:rounded-tr-none">
                     <div class="grid grid-rows-6 gap-1 px-8 mx-auto md:grid-cols-2 md:grid-rows-4 xl:w-5/6 xl:px-0">
                         <!-- total posts -->
+                        @if (Auth::check() && $showallpost)
                         <div class="relative p-6 bg-green-100 rounded shadow-lg ">
                             <a href="{{ route('admin.posts.index') }}"><button class="flex flex-row w-full h-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="float-left w-12 h-12 mt-4 mr-2">
@@ -30,7 +149,9 @@
                                 </div>
                             </button></a>
                         </div>
+                        @endif
                         <!-- tags -->
+                        @if (Auth::check() && $showtag)
                         <div class="relative p-6 bg-pink-100 rounded shadow-lg">
                             <a href="{{ route('admin.tags.index') }}"><button class="flex flex-row w-full h-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="float-left w-12 h-12 mt-4 mr-2">
@@ -42,7 +163,10 @@
                                 </div>
                             </button></a>
                         </div>
+                        @endif
                         <!-- total comments -->
+                        @if (Auth::check() && $showcomments_index)
+
                         <div class="relative p-6 bg-purple-100 rounded shadow-lg">
                             <a href="{{ route('admin.comments.index') }}"><button class="flex flex-row w-full h-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="float-left w-12 h-12 mt-4 mr-2">
@@ -54,7 +178,12 @@
                                 </div>
                             </button></a>
                         </div>
+                        @endif
+
+                        
                         <!-- roles -->
+                        @if (Auth::check() && $show_roles_index)
+
                         <div class="relative p-6 bg-orange-100 rounded shadow-lg">
                             <a href="{{ route('admin.roles.index') }}"><button class="flex flex-row w-full h-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="float-left w-12 h-12 mt-4 mr-2">
@@ -62,38 +191,43 @@
                                 </svg>
                                 <div>
                                     <h1 class="pt-4 font-bold leading-none text-gray-800 ">Roles</h1>
-                                    <h2 class="m-2 ml-5 text-lg font-semibold">{{$role->count()}}</h2>
+                                    <h2 class="m-2 ml-5 text-lg font-semibold">{{$accountRoles->count()}}</h2>
                                 </div>
                             </button></a>
                         </div>
-
- <!-- categories -->
- <div class="relative p-6 rounded shadow-lg bg-slate-100">
-    <a href="{{ route('admin.categories.index') }}"><button class="flex flex-row w-full h-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
-            <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
-        </svg>
-        <div>
-            <h1 class="pt-4 font-bold leading-none text-gray-800 ">Categories</h1>
-            <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $Categories->count() }}</h2>
-        </div>
-    </button></a>
-</div>
-<!-- user count -->
-<div class="relative p-6 rounded shadow-lg bg-slate-100">
-    <a href="{{ route('admin.users.index') }}"><button class="flex flex-row w-full h-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-12 h-12 mt-4 mr-2">
-            <path d="M495.9 166.6C499.2 175.2 496.4 184.9 489.6 191.2L446.3 230.6C447.4 238.9 448 247.4 448 256C448 264.6 447.4 273.1 446.3 281.4L489.6 320.8C496.4 327.1 499.2 336.8 495.9 345.4C491.5 357.3 486.2 368.8 480.2 379.7L475.5 387.8C468.9 398.8 461.5 409.2 453.4 419.1C447.4 426.2 437.7 428.7 428.9 425.9L373.2 408.1C359.8 418.4 344.1 427 329.2 433.6L316.7 490.7C314.7 499.7 307.7 506.1 298.5 508.5C284.7 510.8 270.5 512 255.1 512C241.5 512 227.3 510.8 213.5 508.5C204.3 506.1 197.3 499.7 195.3 490.7L182.8 433.6C167 427 152.2 418.4 138.8 408.1L83.14 425.9C74.3 428.7 64.55 426.2 58.63 419.1C50.52 409.2 43.12 398.8 36.52 387.8L31.84 379.7C25.77 368.8 20.49 357.3 16.06 345.4C12.82 336.8 15.55 327.1 22.41 320.8L65.67 281.4C64.57 273.1 64 264.6 64 256C64 247.4 64.57 238.9 65.67 230.6L22.41 191.2C15.55 184.9 12.82 175.3 16.06 166.6C20.49 154.7 25.78 143.2 31.84 132.3L36.51 124.2C43.12 113.2 50.52 102.8 58.63 92.95C64.55 85.8 74.3 83.32 83.14 86.14L138.8 103.9C152.2 93.56 167 84.96 182.8 78.43L195.3 21.33C197.3 12.25 204.3 5.04 213.5 3.51C227.3 1.201 241.5 0 256 0C270.5 0 284.7 1.201 298.5 3.51C307.7 5.04 314.7 12.25 316.7 21.33L329.2 78.43C344.1 84.96 359.8 93.56 373.2 103.9L428.9 86.14C437.7 83.32 447.4 85.8 453.4 92.95C461.5 102.8 468.9 113.2 475.5 124.2L480.2 132.3C486.2 143.2 491.5 154.7 495.9 166.6V166.6zM256 336C300.2 336 336 300.2 336 255.1C336 211.8 300.2 175.1 256 175.1C211.8 175.1 176 211.8 176 255.1C176 300.2 211.8 336 256 336z"/>
-        </svg>
-        <div>
-            <h1 class="pt-4 font-bold leading-none text-gray-800 ">Users</h1>
-            <h2 class="m-2 ml-5 text-lg font-semibold">{{$user->count()}}</h2>
-        </div>
-    </button></a>
-</div>
+                        @endif
 
 
+                        <!-- categories -->
+                        @if (Auth::check() && $showallcategories)
+                        <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                            <a href="{{ route('admin.categories.index') }}"><button class="flex flex-row w-full h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
+                                    <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
+                                </svg>
+                                <div>
+                                    <h1 class="pt-4 font-bold leading-none text-gray-800 ">Categories</h1>
+                                    <h2 class="m-2 ml-5 text-lg font-semibold" >{{ $Categories->count() }}</h2>
+                                </div>
+                            </button></a>
+                        </div>
+                        @endif
 
+                        <!-- user count -->
+                        @if (Auth::check() && $show_users_index)
+                        <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                            <a href="{{ route('admin.users.index') }}"><button class="flex flex-row w-full h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-12 h-12 mt-4 mr-2">
+                                    <path d="M495.9 166.6C499.2 175.2 496.4 184.9 489.6 191.2L446.3 230.6C447.4 238.9 448 247.4 448 256C448 264.6 447.4 273.1 446.3 281.4L489.6 320.8C496.4 327.1 499.2 336.8 495.9 345.4C491.5 357.3 486.2 368.8 480.2 379.7L475.5 387.8C468.9 398.8 461.5 409.2 453.4 419.1C447.4 426.2 437.7 428.7 428.9 425.9L373.2 408.1C359.8 418.4 344.1 427 329.2 433.6L316.7 490.7C314.7 499.7 307.7 506.1 298.5 508.5C284.7 510.8 270.5 512 255.1 512C241.5 512 227.3 510.8 213.5 508.5C204.3 506.1 197.3 499.7 195.3 490.7L182.8 433.6C167 427 152.2 418.4 138.8 408.1L83.14 425.9C74.3 428.7 64.55 426.2 58.63 419.1C50.52 409.2 43.12 398.8 36.52 387.8L31.84 379.7C25.77 368.8 20.49 357.3 16.06 345.4C12.82 336.8 15.55 327.1 22.41 320.8L65.67 281.4C64.57 273.1 64 264.6 64 256C64 247.4 64.57 238.9 65.67 230.6L22.41 191.2C15.55 184.9 12.82 175.3 16.06 166.6C20.49 154.7 25.78 143.2 31.84 132.3L36.51 124.2C43.12 113.2 50.52 102.8 58.63 92.95C64.55 85.8 74.3 83.32 83.14 86.14L138.8 103.9C152.2 93.56 167 84.96 182.8 78.43L195.3 21.33C197.3 12.25 204.3 5.04 213.5 3.51C227.3 1.201 241.5 0 256 0C270.5 0 284.7 1.201 298.5 3.51C307.7 5.04 314.7 12.25 316.7 21.33L329.2 78.43C344.1 84.96 359.8 93.56 373.2 103.9L428.9 86.14C437.7 83.32 447.4 85.8 453.4 92.95C461.5 102.8 468.9 113.2 475.5 124.2L480.2 132.3C486.2 143.2 491.5 154.7 495.9 166.6V166.6zM256 336C300.2 336 336 300.2 336 255.1C336 211.8 300.2 175.1 256 175.1C211.8 175.1 176 211.8 176 255.1C176 300.2 211.8 336 256 336z"/>
+                                </svg>
+                                <div>
+                                    <h1 class="pt-4 font-bold leading-none text-gray-800 ">Users</h1>
+                                    <h2 class="m-2 ml-5 text-lg font-semibold">{{$user->count()}}</h2>
+                                </div>
+                            </button></a>
+                        </div>
+                        @endif
+                        @if (Auth::check() && $showcontacts)
                         <div class="relative p-6 rounded shadow-lg bg-slate-100">
                             <a href="{{ route('admin.contacts') }}"><button class="flex flex-row w-full h-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
@@ -105,9 +239,11 @@
                                 </div>
                             </button></a>
                         </div>
-
+                        @endif
 
                         {{-- Volunteer --}}
+                        @if (Auth::check() && $showVolunteer)
+
                         <div class="relative p-6 rounded shadow-lg bg-slate-100">
                             <a href="{{ route('admin.volunteer') }}"><button class="flex flex-row w-full h-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
@@ -119,11 +255,13 @@
                                 </div>
                             </button></a>
                         </div>
+                        @endif
 
 
 
-                           {{-- Donate --}}
-                           <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                        {{-- Donate --}}
+                        @if (Auth::check() && $show_donate_edit)
+                        <div class="relative p-6 rounded shadow-lg bg-slate-100">
                             <a href="{{ route('admin.donate.edit') }}"><button class="flex flex-row w-full h-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
                                     <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
@@ -134,11 +272,12 @@
                                 </div>
                             </button></a>
                         </div>
+                        @endif
 
 
-
-                         {{-- home --}}
-                         <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                        {{-- home --}}
+                        @if (Auth::check() && $show_home_edit)
+                        <div class="relative p-6 rounded shadow-lg bg-slate-100">
                             <a href="{{ route('admin.home.edit') }}"><button class="flex flex-row w-full h-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
                                     <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
@@ -149,11 +288,12 @@
                                 </div>
                             </button></a>
                         </div>
+                        @endif
 
 
-
-                         {{-- footer --}}
-                         <div class="relative p-6 rounded shadow-lg bg-slate-100">
+                        {{-- footer --}}
+                        @if (Auth::check() && $show_footer_edit)
+                        <div class="relative p-6 rounded shadow-lg bg-slate-100">
                             <a href="{{ route('admin.footer.edit') }}"><button class="flex flex-row w-full h-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="float-left w-10 h-10 mt-4 mr-1">
                                     <path d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/>
@@ -164,9 +304,7 @@
                                 </div>
                             </button></a>
                         </div>
-
-
-
+                        @endif
                     </div>
                 </div>
             </div>

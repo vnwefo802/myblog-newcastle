@@ -132,6 +132,7 @@ $(document).ready(function () {
 			} );
             // end search
 
+            console.log(table);
    setTimeout(() => {
        $(".general-message").fadeOut();
    }, 5000);
