@@ -20,7 +20,6 @@
                     <thead>
                         <tr class="w-full h-16 py-8 border-b border-gray-300 dark:border-gray-200 bg-indigo-50">
                             <th role="columnheader" class="pl-8 pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">User ID</th>
-                            <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Image</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">User Name</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 ">User Email</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Role</th>
@@ -34,9 +33,7 @@
 
                         <tr role="row" class="h-24 transition duration-150 ease-in-out border-t border-b border-gray-300 cursor-pointer hover:border-indigo-300 hover:shadow-md">
                             <td class="pl-8 pr-6 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap ">{{ $user->id }}</td>
-                            <td>
-                                <img class="w-16" src="{{ $user->image ? asset('storage/' . $user->image->path) : asset('storage/placeholders/user_placeholder.jpg') }}">
-                            </td>
+
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800  whitespace-no-wrap ">{{ \Str::limit($user->name, 15) }} </td>
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap w-[200px]">{{ \Str::limit($user->email, 30) }}</td>
 
@@ -79,11 +76,11 @@
             <div class='mt-4'>
                 {{ $users->links() }}
                 </div>
-           
+
         </div>
     </div>
 </div>
-   
+
         <!--end page wrapper -->
         @endsection
 

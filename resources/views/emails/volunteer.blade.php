@@ -10,7 +10,6 @@ Some Visitor Left a message:
 | Phonenumber:  |{{ $phone_number }}|
 | Country:      |{{ $country }}|
 | Email:        |{{ $email }}|
-| Message:      |{{ $message }}|
 @endcomponent
 
 

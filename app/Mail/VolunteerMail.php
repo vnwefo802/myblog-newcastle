@@ -16,7 +16,6 @@ class VolunteerMail extends Mailable
     public $email;
     public $phone_number;
     public $country;
-    public $message;
 
     public function __construct($first_name, $last_name, $email, $phone_number, $country)
     {

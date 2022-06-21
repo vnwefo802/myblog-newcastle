@@ -5,6 +5,7 @@
 
 @section('content')
 
+<div class='global-message info d-none'></div>
 
 <div class="px-4  pr-4">
     <div class="lg:max-w-[1440px] md:max-w-[744px] max-w-[375px] w-full mx-auto py-12 lg:px-20 md:px-6 px-4 bg-white">
@@ -111,7 +112,7 @@
                         </a>
                         {{-- twitter end --}}
 
-                        
+
                         {{-- youtube --}}
                         <a href="{{$footer->youtube}}">
                         <svg class="mx-auto mb-6 cursor-pointer" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,6 +186,7 @@
 
 				if(data.success)
 				{
+                    console.log(data);
 					$(".global-message").addClass('alert , alert-info')
 					$(".global-message").fadeIn()
 					$(".global-message").text(data.message)

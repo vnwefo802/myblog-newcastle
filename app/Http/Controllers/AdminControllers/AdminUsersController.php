@@ -18,7 +18,7 @@ class AdminUsersController extends Controller
         'name' => 'required|min:3',
         'email' => 'required|email|unique:users,email',
         'password' => 'required|min:8|max:20',
-        'image' => 'nullable|file|mimes:jpg,png,webp,svg,jpeg|dimensions:max_width=300,max_height=300',
+        // 'image' => 'nullable|file|mimes:jpg,png,webp,svg,',
         'role_id' => 'required|numeric'
     ];
 
@@ -43,20 +43,20 @@ class AdminUsersController extends Controller
 
         $user = User::create($validated);
 
-        if($request->has('image'))
-        {
-            $image = $request->file('image');
+        // if($request->has('image'))
+        // {
+        //     $image = $request->file('image');
 
-            $filename = $image->getClientOriginalName();
-            $file_extension = $image->getClientOriginalExtension();
-            $path = $image->store('images', 'public');
+        //     $filename = $image->getClientOriginalName();
+        //     $file_extension = $image->getClientOriginalExtension();
+        //     $path = $image->store('images', 'public');
 
-            $user->image()->create([
-                'name' => $filename,
-                'extension' => $file_extension,
-                'path' => $path
-            ]);
-        }
+        //     $user->image()->create([
+        //         'name' => $filename,
+        //         'extension' => $file_extension,
+        //         'path' => $path
+        //     ]);
+        // }
 
         //sweetalert
         Alert::success('success', 'User has been created.');
