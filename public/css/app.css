@@ -843,6 +843,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-20 {
   height: 5rem;
 }
+.h-\[230px\] {
+  height: 230px;
+}
 .h-\[65px\] {
   height: 65px;
 }
@@ -881,6 +884,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-h-\[65px\] {
   max-height: 65px;
+}
+.max-h-\[230px\] {
+  max-height: 230px;
 }
 .min-h-full {
   min-height: 100%;
@@ -936,9 +942,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-6 {
   width: 1.5rem;
 }
-.w-10\/12 {
-  width: 83.333333%;
-}
 .w-\[14px\] {
   width: 14px;
 }
@@ -953,6 +956,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-20 {
   width: 5rem;
+}
+.w-10\/12 {
+  width: 83.333333%;
 }
 .w-48 {
   width: 12rem;
@@ -1982,6 +1988,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
+.text-red-300 {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity));
+}
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2931,6 +2941,22 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 0.75rem;
   }
 
+  .md\:ml-60 {
+    margin-left: 15rem;
+  }
+
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .md\:mt-\[20px\] {
+    margin-top: 20px;
+  }
+
+  .md\:ml-\[230px\] {
+    margin-left: 230px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3107,12 +3133,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     border-color: rgb(255 255 255 / var(--tw-border-opacity));
   }
 
-  .md\:p-8 {
-    padding: 2rem;
-  }
-
   .md\:p-\[20px\] {
     padding: 20px;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:px-14 {
@@ -3219,6 +3245,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     position: absolute;
   }
 
+  .lg\:float-left {
+    float: left;
+  }
+
   .lg\:mx-3 {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
@@ -3256,6 +3286,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:-mr-14 {
     margin-right: -3.5rem;
+  }
+
+  .lg\:mt-\[67px\] {
+    margin-top: 67px;
   }
 
   .lg\:ml-7 {
