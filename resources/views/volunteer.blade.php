@@ -78,7 +78,7 @@
                     <div class="flex-wrap xl:flex lg:flex md:flex justify-evenly">
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="FirstName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">First Name</label>
-                            <div class="flex flex-col md:w-72">
+                            <div class="flex flex-col mt-8 md:mt-0">
                                 <x-blog.form.input value='{{ old("first_name") }}' placeholder='Your Firstname' name="first_name" class="py-2 px-4" />
                                 <small class='error text-danger first_name'></small>
                             </div>
@@ -88,7 +88,7 @@
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="LastName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Last Name</label>
-                            <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0">
+                            <div class="flex flex-col mt-8 md:mt-0">
                                 <x-blog.form.input value='{{ old("last_name") }}' placeholder='Your Lastname' name="last_name" class="py-2 px-4 w-full" />
                                 <small class='error text-danger last_name'></small>
                             </div>
@@ -98,18 +98,17 @@
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
                             <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Email</label>
-                            <div class="relative">
-                                <div class="flex flex-col mt-8 md:mt-0">
-                                    <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" class="py-2 px-4" />
-                                    <small class='error text-danger email'></small>
-                                </div>
-                                @error('email')
-                                    <p class='text-red-500'>{{ $message }}</p>
-                                @enderror
+                            <div class="flex flex-col mt-8 md:mt-0">
+                                <x-blog.form.input value='{{ old("email") }}' placeholder='Your Email' type='email' name="email" class="py-2 px-4" />
+                                <small class='error text-danger email'></small>
                             </div>
+                            @error('email')
+                                <p class='text-red-500'>{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
-                            <div class="flex flex-col mt-4 md:w-72 md:ml-6 md:mt-0 mb-7">
+                            <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Country</label>
+                            <div class="flex flex-col mt-8 md:mt-0">
                                 <x-blog.form.input value='{{ old("country") }}' placeholder='Your Country' name="country" class="py-2 px-4" />
                                 <small class='error text-danger country'></small>
                             </div>
@@ -118,7 +117,8 @@
                             @enderror
                         </div>
                         <div class="flex flex-col mb-6 xl:w-2/5 lg:w-2/5 md:w-2/5">
-                            <div class="flex flex-col md:w-72 mb-7">
+                            <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Phone Number</label>
+                            <div class="flex flex-col mt-8 md:mt-0">
                                 <x-blog.form.input value='{{ old("phone_number") }}' placeholder='Your Phone Number' name="phone_number" class="py-2 px-4" />
                                 <small class='error text-danger phone_number'></small>
                             </div>
