@@ -60,7 +60,7 @@
 
 
 <div>
-    <form id="form" action="{{ route('volunteer.store') }}" method="post" class="container mx-auto lg:w-[1080px] md:w-11/12 bg-white dark:bg-gray-800 shadow rounded">
+    <form onsubmit="return false;" autocomplete="off" method="POST" class="container mx-auto lg:w-[1080px] md:w-11/12 bg-white dark:bg-gray-800 shadow rounded">
         @csrf
         <div class="py-5 border-b border-gray-300 xl:w-full dark:border-gray-700">
             <div class="flex items-center w-11/12 mx-auto">

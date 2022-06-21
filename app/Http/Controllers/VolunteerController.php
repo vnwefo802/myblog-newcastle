@@ -30,9 +30,9 @@ class VolunteerController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
-            'phone_number' => 'required|number',
+            'phone_number' => 'required|nullable',
             'country' => 'required',
-            'phone_number' => 'nullable',
+            // 'phone_number' => 'nullable',
         ];
         $validated = Validator::make(request()->all(), $rules);
 
