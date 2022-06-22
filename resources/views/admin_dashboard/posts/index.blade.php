@@ -18,16 +18,16 @@
                <table id="example2" class="min-w-full bg-white rounded dark:bg-gray-800">
                    <thead>
                        <tr class="w-full h-16 py-8 border-b border-gray-300 dark:border-gray-200 bg-indigo-50">
-                           <th role="columnheader" class="pl-8 pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Post ID</th>
-                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">POST Author</th>
-                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">	Post Title</th>
-                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Post Excerpt</th>
-                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Category Name</th>
-                           {{-- <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Tag</th> --}}
-                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Created </th>
-                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Status</th>
-                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Views</th>
-                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Actions</th>
+                           <th role="columnheader" class="pl-8 pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">Post ID</th>
+                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">POST Author</th>
+                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">	Post Title</th>
+                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">Post Excerpt</th>
+                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">Category Name</th>
+                           {{-- <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">Tag</th> --}}
+                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">Created </th>
+                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">Status</th>
+                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">Views</th>
+                           <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 whitespace-nowrap w-fit">Actions</th>
                        </tr>
                    </thead>
                    <tbody role="rowgroup" >

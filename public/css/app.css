@@ -1017,6 +1017,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[192\.719px\] {
   width: 192.719px;
 }
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .min-w-full {
   min-width: 100%;
 }
