@@ -20,7 +20,7 @@ class AdminCommentsController extends Controller
     public function index()
     {
         return view('admin_dashboard.comments.index', [
-            'comments' => Comment::latest()->paginate(50)
+            'comments' => Comment::all()
         ]);
     }
 
@@ -40,7 +40,7 @@ class AdminCommentsController extends Controller
 
         //sweetalert
         Alert::success('success', 'Comment has been added.');
-        
+
         return redirect()->route('admin.comments.create');
     }
 

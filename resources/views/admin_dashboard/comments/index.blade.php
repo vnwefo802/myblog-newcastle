@@ -6,8 +6,8 @@
 <div class="page-wrapper">
     <div class="page-content">
         <div class="container mx-auto bg-white rounded shadow dark:bg-gray-800">
-            <div class="flex flex-col w-full pb-4 pt-8 lg:flex-row lg:items-stretch">
-                <div class="flex flex-col  w-full gap-2  lg:flex-row lg:items-center">
+            <div class="flex flex-col w-full pt-8 pb-4 lg:flex-row lg:items-stretch">
+                <div class="flex flex-col w-full gap-2 lg:flex-row lg:items-center">
                     <a href="{{ route('admin.users.create') }}" class=" w-[162px] h-[38px]">
                         <button class="py-2 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 border border-transparent rounded focus:shadow-outline-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600 w-[162px] h-[38px]" > Add New Post </button>
                     </a>
@@ -20,7 +20,7 @@
                             <th role="columnheader" class="pl-8 pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Comment id</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Comment Author</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Comment body</th>
-                            <th role="columnheader" class="pr-9 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 ">View Comment</th>
+                            <th role="columnheader" class="text-sm font-normal leading-4 tracking-normal text-left text-gray-600 pr-9 ">View Comment</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Created at</th>
                             <th role="columnheader" class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600">Actions</th>
                         </tr>
@@ -54,8 +54,8 @@
                                     </a> --}}
                                     {{-- Delete --}}
                                     <form method='post' action="{{ route('admin.comments.destroy', $comment) }}" id='delete_form_{{ $comment->id }}' class="confirmDelete">@csrf @method('DELETE')
-                                        <button type="submit"class=" mb-1 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none active:bg-red-500 hover:shadow-lg focus:outline-none hover:bg-red-200" href="javascript: void(0)">
-                                            <div aria-label="Delete" role="button" class="p-2 text-red-500  rounded cursor-pointer hover:bg-gray-200">
+                                        <button type="submit"class="mb-1 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none active:bg-red-500 hover:shadow-lg focus:outline-none hover:bg-red-200" href="javascript: void(0)">
+                                            <div aria-label="Delete" role="button" class="p-2 text-red-500 rounded cursor-pointer hover:bg-gray-200">
                                                 <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
                                             </div>
                                         </button>
@@ -66,8 +66,11 @@
                         @endforeach
                     </tbody>
                 </table>
-                {{ $comments->links() }}
             </div>
+            <div class='mt-4'>
+               
+                </div>
+
         </div>
     </div>
 </div>
