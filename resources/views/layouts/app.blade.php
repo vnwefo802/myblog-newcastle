@@ -26,11 +26,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     {{-- font-awesome --}}
     <script src="https://kit.fontawesome.com/c6b703c269.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    <link rel="stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link  href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Mukta:wght@500&display=swap" rel="stylesheet">
 
     {{-- Categories Dropdown --}}
@@ -68,7 +68,7 @@
                         <!-- ============================================ -->
                         <a href="/" class="flex" aria-label="NewcastleFoundationLogo">
                             <img src="/{{ $allhome->logo }}"
-                                class=" lg:w-[12.0449rem] md:w-[6.02245rem] lg:h-[4.0625rem] md:h-[2.03125rem] h-[4.0625rem] max-w-[13rem] object-cover" alt="Newcastle logo"
+                                class=" lg:w-[12.0449rem] md:w-[6.02245rem] w-[192.719px] lg:h-[4.0625rem] md:h-[2.03125rem] h-[4.0625rem] max-w-[13rem] object-cover" alt="Newcastle logo"
                                 aria-label="Newcastle logo">
                             {{-- <img src="{{ asset('storage/'.$home->logo) }}" class="w-20 h-12 mr-2 sm:h-20 sm:w-32" alt="Newcastle logo" aria-label="Newcastle logo" > --}}
                         </a>
