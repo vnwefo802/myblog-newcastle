@@ -141,7 +141,7 @@
                             <p class="text-center text-gray-600 dark:text-gray-200 text-base pt-3 font-normal">The CEO's
                                 role in raising a company's corporate IQ is to establish an atmosphere that promotes
                                 knowledge sharing and collaboration.</p>
-                            {{-- <div class="w-full flex justify-center pt-5 pb-5">
+                            <div class="w-full flex justify-center pt-5 pb-5">
                                 <a href="javascript:void(0)" class="mx-5">
                                     <div aria-label="Github" role="img">
                                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg"
@@ -160,7 +160,7 @@
                                             alt="instagram" />
                                     </div>
                                 </a>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                             <p class="text-center text-gray-600 dark:text-gray-200 text-base pt-3 font-normal">The emphasis
                                 on innovation and technology in our companies has resulted in a few of them establishing
                                 global benchmarks in product design and development.</p>
-                            {{-- <div class="w-full flex justify-center pt-5 pb-5">
+                            <div class="w-full flex justify-center pt-5 pb-5">
                                 <a href="javascript:void(0)" class="mx-5">
                                     <div aria-label="Github" role="img">
                                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg"
@@ -199,7 +199,7 @@
                                             alt="instagram" />
                                     </div>
                                 </a>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -218,7 +218,7 @@
                             <p class="text-center text-gray-600 dark:text-gray-200 text-base pt-3 font-normal">Our services
                                 encompass the assessment and repair of property damage caused by water, fire, smoke, or
                                 mold. We can also be a part of the restoration.</p>
-                            {{-- <div class="w-full flex justify-center pt-5 pb-5">
+                            <div class="w-full flex justify-center pt-5 pb-5">
                                 <a href="javascript:void(0)" class="mx-5">
                                     <div aria-label="Github" role="img">
                                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg"
@@ -237,7 +237,7 @@
                                             alt="instagram" />
                                     </div>
                                 </a>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                             <p class="text-center text-gray-600 dark:text-gray-200 text-base pt-3 font-normal">An avid
                                 open-source developer who loves to be creative and inventive. I have 20 years of experience
                                 in the field.</p>
-                            {{-- <div class="w-full flex justify-center pt-5 pb-5">
+                            <div class="w-full flex justify-center pt-5 pb-5">
                                 <a href="javascript:void(0)" class="mx-5">
                                     <div aria-label="Github" role="img">
                                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg"
@@ -275,7 +275,7 @@
                                             alt="instagram" />
                                     </div>
                                 </a>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -294,7 +294,7 @@
                             <p class="text-center text-gray-600 dark:text-gray-200 text-base pt-3 font-normal">Product
                                 designer with interests in immersive computing and XR, political ventures, and emerging
                                 technologies. Able to take ideas and give them a life.</p>
-                            {{-- <div class="w-full flex justify-center pt-5 pb-5">
+                            <div class="w-full flex justify-center pt-5 pb-5">
                                 <a href="javascript:void(0)" class="mx-5">
                                     <div aria-label="Github" role="img">
                                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg"
@@ -313,7 +313,7 @@
                                             alt="instagram" />
                                     </div>
                                 </a>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -332,7 +332,7 @@
                             <p class="text-center text-gray-600 dark:text-gray-200 text-base pt-3 font-normal">A UX
                                 designer is the voice of the customer. Our job is to look beyond the business goals. We
                                 don't just experience user interface but also questions it.</p>
-                            {{-- <div class="w-full flex justify-center pt-5 pb-5">
+                            <div class="w-full flex justify-center pt-5 pb-5">
                                 <a href="javascript:void(0)" class="mx-5">
                                     <div aria-label="Github" role="img">
                                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg"
@@ -351,7 +351,7 @@
                                             alt="instagram" />
                                     </div>
                                 </a>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
