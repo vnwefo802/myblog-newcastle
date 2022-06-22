@@ -49,8 +49,8 @@ class DatabaseSeeder extends Seeder
 
         $users = \App\Models\User::factory(10)->create();
         \App\Models\User::factory()->create([
-            'name' => 'newcastle-edumed-foundation',
-        'email' => 'newcastle-edumed-foundation@gmail.com',
+            'name' => 'newcastle-edmed-foundation',
+        'email' => 'newcastle-edmed-foundation@gmail.com',
             'role_id' => 2
         ]);
 

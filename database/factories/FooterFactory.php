@@ -23,7 +23,7 @@ class FooterFactory extends Factory
             'instagram'=>'https://www.instagram.com/',
             'youtube'=>'https://www.youtube.com/',
             'contact_info' => '07723817654',
-            'email'=> 'Newcastle-Edumed-Fundation@gmail.com',
+            'email'=> 'Newcastle-Edmed-Fundation@gmail.com',
 
             // community_section
             'community_section'=>'<p><a href="../about" target="_blank" rel="noopener">About<span style="color: #000000;"> </span>us</a></p>
