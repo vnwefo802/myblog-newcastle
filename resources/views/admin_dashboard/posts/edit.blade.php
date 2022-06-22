@@ -98,8 +98,10 @@
                                         </div>
 
                                         <div class="mb-2">
-                                            <a href="https://intellipaat.com/community/64086/how-to-insert-image-in-mysql-database-table">
-                                                <span class="text-xs uppercase text-red-500">Images Must Be: Width: 750px x Height: 350px</span>
+                                            <span class="font-medium uppercase text-red-500">Images Must Be: Width: 750px x Height: 350px</span>
+                                            <br>
+                                            <a href="">
+                                                <button class="font-medium">Resize Image</button>
                                             </a>
                                         </div>
 
