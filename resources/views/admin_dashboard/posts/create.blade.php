@@ -98,7 +98,9 @@
                                         </div>
 
                                         <div class="mb-2">
-                                            <span class="text-xs text-red-500">Images Must Be: Width: 750px x Height: 350px</span>
+                                            <a href="https://intellipaat.com/community/64086/how-to-insert-image-in-mysql-database-table">
+                                                <span class="text-xs uppercase text-red-500">Images Must Be: Width: 750px x Height: 350px</span>
+                                            </a>
                                         </div>
                                         
                                         <div class="mb-3">
