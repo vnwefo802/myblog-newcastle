@@ -98,7 +98,11 @@
                                         </div>
 
                                         <div class="mb-2">
-                                            <span class="text-xs text-red-500">Images Must Be: Width: 750px x Height: 350px</span>
+                                            <span class="font-medium uppercase text-red-500">Images Must Be: Width: 750px x Height: 350px</span>
+                                            <br>
+                                            <a href="">
+                                                <button class="font-medium">Resize Image</button>
+                                            </a>
                                         </div>
 
                                         <div class="mb-3">

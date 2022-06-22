@@ -33,33 +33,6 @@ class AdminDonateController extends Controller
                 ]);
 
 
-        // $request->validate([
-        //     'donate_title' => $request->,
-        //     'donate_first_short_title' => '|max:',
-        //     'donate_second_short_title' => $request->,
-        //     'donate_project_title' => $request->,
-        //     'donate_first_project__short_title' => $request->,
-        //     'donate_second_project__short_title' => $request->,
-        //     'donate_first_project__long_description' => $request->,
-        //     'donate_second_project__long_description' => $request->,
-        //     'donate_objectives__title' => $request->,
-        //     'donate_first__Objectives__description' => $request->,
-        //     'donate_second__Objectives__description' => $request->,
-        //     'donate_third__Objectives__description' => $request->,
-        //     'donate_fourth__Objectives__description' => $request->,
-        //     'donate_fifth__Objectives__description' => $request->,
-        //     'donate_sixth__Objectives__description' => $request->,
-        //     'donate_values_title' => $request->,
-        //     'donate_first__Values__description' => $request->,
-        //     'donate_second__Values__description' => $request->,
-        //     'donate_third__Values__description' => $request->,
-        //     'donate_fourth__Values__description' => $request->,
-        //     'donate_fifth__Values__description' => $request->,
-        // ]);
-
-        // $alldonate::find(1)->update($request->all());
-
-
         //sweetalert
         Alert::success('success','Donate updated successfully');
 

@@ -18,7 +18,7 @@ class AdminCategoriesController extends Controller
     public function index()
     {
         return view('admin_dashboard.categories.index', [
-            'categories' => Category::with('user')->orderBy('id', 'DESC')->paginate(50)
+            'categories' => Category::all()
         ]);
     }
 

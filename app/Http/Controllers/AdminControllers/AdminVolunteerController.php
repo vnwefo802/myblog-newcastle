@@ -5,6 +5,8 @@ namespace App\Http\Controllers\AdminControllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\volunteer;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 
 class AdminVolunteerController extends Controller
@@ -18,6 +20,8 @@ class AdminVolunteerController extends Controller
     public function destroy(volunteer $volunteer)
     {
         $volunteer->delete();
-        return redirect()->route('admin.volunteer')->with('success', 'volunteer has been Deleted.');
+
+        Alert::success('success', 'volunteer has been Deleted.');
+        return redirect()->route('admin.volunteer');
     }
 }

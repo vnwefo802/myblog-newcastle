@@ -25,7 +25,7 @@ class AdminPostsController extends Controller
     public function index()
     {
         return view('admin_dashboard.posts.index', [
-            'posts' => Post::with('category')->orderBy('id', 'DESC')->paginate(25),
+            'posts' => Post::with('category')->orderBy('id', 'DESC')->paginate(4565465465655465),
         ]);
     }
 

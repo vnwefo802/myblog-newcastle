@@ -8,9 +8,9 @@
    <div class="page-content">
        <div class="container mx-auto bg-white rounded shadow dark:bg-gray-800">
            <div class="flex flex-col items-start justify-between w-full pt-8 pb-4 lg:flex-row lg:items-stretch">
-               <div class=" w-full gap-2 lg:flex-row lg:items-center float-left">
+               <div class="float-left w-full gap-2 lg:flex-row lg:items-center">
                    <a href="{{ route('admin.categories.create') }}" class="float-left">
-                       <button class="py-2 my-2 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 border border-transparent rounded focus:shadow-outline-gray w-44 lg:w-1/4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600 float-left" > <a href="{{ route('admin.posts.create') }}"> Add New Post </button> </a>
+                       <button class="float-left py-2 my-2 text-sm text-white transition duration-150 ease-in-out bg-indigo-700 border border-transparent rounded focus:shadow-outline-gray w-44 lg:w-1/4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:bg-indigo-600" > <a href="{{ route('admin.posts.create') }}"> Add New Post </button> </a>
                    </a>
                </div>
            </div>
@@ -65,8 +65,8 @@
                                             {{-- <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $post->id }}').submit();" > --}}
 
                                             {{-- Delete --}}
-                                            <button type="submit" class=" mb-1 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none active:bg-red-500 hover:shadow-lg focus:outline-none hover:bg-red-200" href="javascript: void(0)">
-                                                <div aria-label="Delete" role="button" class="p-2 text-red-500  rounded cursor-pointer hover:bg-gray-200">
+                                            <button type="submit" class="mb-1 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none active:bg-red-500 hover:shadow-lg focus:outline-none hover:bg-red-200" href="javascript: void(0)">
+                                                <div aria-label="Delete" role="button" class="p-2 text-red-500 rounded cursor-pointer hover:bg-gray-200">
                                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
                                                 </div>
                                             </button>
@@ -84,25 +84,13 @@
                        </tr>
                        @endforeach
                     </tbody>
-                    {{ $posts->links() }}
                 </table>
             </div>
+            <div class='mt-4'>
+                {{ $posts->links() }}
+                </div>
        </div>
-       <div class="container flex items-center justify-center pt-8 mx-auto sm:justify-end">
-           <a class="mr-2 text-gray-600 border border-transparent rounded sm:mr-5 focus:outline-none focus:border-gray-800 focus:shadow-outline-gray" aria-label="Previous Page" role="link" href="javascript: void(0)">
-               <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg7.svg" alt="Previous">
-           </a>
-           <p class="text-base text-gray-800 fot-normal">Page</p>
-           <label for="selectedPage" class="hidden"></label>
-           <input placeholder="0" id="selectedPage" type="text" class="flex items-center w-8 px-2 mx-2 text-base font-normal text-gray-800 bg-white border border-gray-300 rounded dark:bg-gray-800 focus:outline-none focus:shadow-outline-gray focus:border focus:border-indigo-700" value="4" />
-           <p class="text-base text-gray-800 fot-normal">of 20</p>
-           <a class="mx-2 text-gray-600 border border-transparent rounded sm:mx-5 focus:outline-none focus:border-gray-800 focus:shadow-outline-gray" aria-label="Next Page" role="link" href="javascript: void(0)">
-               <img class="transform rotate-180" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg7.svg" alt="Previous">
-           </a>
-           <label for="totalPage" class="hidden"></label>
-           <input placeholder="0" id="totalPage" type="text" class="flex items-center w-10 px-2 mr-2 text-base font-normal text-gray-800 bg-white border border-gray-300 rounded dark:bg-gray-800 focus:outline-none focus:shadow-outline-gray focus:border focus:border-indigo-700" value="30" />
-           <p class="-mt-1 text-base text-gray-800 fot-normal">per page</p>
-       </div>
+
    </div>
 </div>
 <!--end page wrapper -->

@@ -6,7 +6,7 @@
 		@section("wrapper")
 <div class="page-wrapper">
     <div class="page-content">
-        <div class="container mx-auto bg-white rounded shadow dark:bg-gray-800 pt-4">
+        <div class="container pt-4 mx-auto bg-white rounded shadow dark:bg-gray-800">
             <div class="w-full overflow-x-scroll xl:overflow-x-hidden">
                 <table id="example2" class="min-w-full bg-white rounded dark:bg-gray-800">
                     <thead>
@@ -31,18 +31,12 @@
 							<td>{{ $tag->created_at->diffForHumans() }}</td>
                             <td class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap ">
                                 <div class="flex items-center">
-									{{-- <a href="#" onclick="event.preventDefault(); document.getElementById('delete_form_{{ $tag->id }}').submit();" >
-                                        <button type="submit"class="w-[26px] h-[26px]" href="javascript: void(0)">
-                                            <div aria-label="Delete" role="button" class="w-[26px] h-[26px] mt-1 text-indigo-700 bg-gray-100 rounded cursor-pointer hover:bg-gray-200">
-                                                    <img class="w-[25px] h-[25px]" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
-                                            </div>
-                                        </button>
-                                    </a> --}}
+
 
                                     {{-- Delete --}}
                                     <form method='post' action="{{ route('admin.tags.destroy', $tag) }}" id='delete_form_{{ $tag->id }}' class="confirmDelete">@csrf @method('DELETE')
-                                        <button type="submit"class=" mb-1 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none active:bg-red-500 hover:shadow-lg focus:outline-none hover:bg-red-200" href="javascript: void(0)">
-                                            <div aria-label="Delete" role="button" class="p-2 text-red-500  rounded cursor-pointer hover:bg-gray-200">
+                                        <button type="submit"class="mb-1 mr-1 transition-all duration-150 ease-linear rounded shadow outline-none active:bg-red-500 hover:shadow-lg focus:outline-none hover:bg-red-200" href="javascript: void(0)">
+                                            <div aria-label="Delete" role="button" class="p-2 text-red-500 rounded cursor-pointer hover:bg-gray-200">
                                                 <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/advance_table_with_filters_search_and_two_level_action_buttons-svg6.svg" alt="Delete">
                                             </div>
                                         </button>
@@ -58,7 +52,7 @@
                 </table>
             </div>
             <div class='mt-4'>
-                {{ $tags->links() }}
+                {{-- {{ $tags->links() }} --}}
                 </div>
         </div>
     </div>
@@ -82,7 +76,7 @@
 
     <script>
         $(document).ready(function () {
-            
+
             // search
             var table = $('#example2').DataTable( {
 				lengthChange: false,
